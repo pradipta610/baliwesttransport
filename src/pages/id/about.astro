@@ -1,0 +1,183 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const stats = [
+  { number: "5,000+", label: lang === 'en' ? "Happy Travelers" : "Pelancong Bahagia" },
+  { number: "8+", label: lang === 'en' ? "Years Experience" : "Tahun Pengalaman" },
+  { number: "50+", label: lang === 'en' ? "Destinations" : "Destinasi" },
+  { number: "4.9", label: lang === 'en' ? "Average Rating" : "Rating Rata-rata" },
+];
+---
+
+<Layout 
+  title={t('meta.about.title')}
+  description={t('meta.about.desc')}
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1604999333679-b86d54738315?w=1920&h=1080&fit=crop" 
+          alt="Bali temple"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 text-center text-white px-6">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-4 drop-shadow-md">{lang === 'en' ? "Our Story" : "Cerita Kami"}</p>
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium mb-6 drop-shadow-lg">{lang === 'en' ? "About Us" : "Tentang Kami"}</h1>
+        <p class="text-xl text-white/90 max-w-xl mx-auto font-light drop-shadow-md">
+          {lang === 'en' ? "Crafting extraordinary journeys since 2015" : "Menciptakan perjalanan luar biasa sejak 2015"}
+        </p>
+      </div>
+    </section>
+    
+    <!-- Vision Section -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-6">{lang === 'en' ? "Our Vision" : "Visi Kami"}</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-8 leading-relaxed">
+          {lang === 'en' ? "To become Indonesia's leading travel service, delivering innovative, personal, and sustainable experiences for every guest." : "Menjadi layanan perjalanan terkemuka di Indonesia, memberikan pengalaman inovatif, personal, dan berkelanjutan untuk setiap tamu."}
+        </h2>
+      </div>
+    </section>
+    
+    <!-- Story Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <img 
+              src="/images/kelingking-beach.jpg" 
+              alt="Kelingking Beach Nusa Penida"
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "The Beginning" : "Awal Mula"}</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-8">{lang === 'en' ? "Our Story" : "Cerita Kami"}</h2>
+            <div class="space-y-6 text-brand-dark/70 leading-relaxed">
+              <p>
+                {lang === 'en' ? "Founded by passionate Balinese locals, Bali West Transport was born from a simple belief: every traveler deserves to experience the real Bali, not just the tourist spots." : "Didirikan oleh penduduk lokal Bali yang bersemangat, Bali West Transport lahir dari keyakinan sederhana: setiap pelancong berhak merasakan Bali yang sesungguhnya, bukan hanya tempat wisata biasa."}
+              </p>
+              <p>
+                {lang === 'en' ? "We started with a single car and a dream to share our island's beauty with the world. Today, we've helped thousands of travelers from Europe, America, and Australia discover the magic of Bali." : "Kami mulai dengan satu mobil dan impian untuk membagikan keindahan pulau kami kepada dunia. Hari ini, kami telah membantu ribuan pelancong dari Eropa, Amerika, dan Australia menemukan keajaiban Bali."}
+              </p>
+              <p>
+                {lang === 'en' ? "What sets us apart? We listen. Whether you want to chase waterfalls, explore ancient temples, or simply relax on pristine beaches, we craft experiences that match your vision." : "Apa yang membedakan kami? Kami mendengarkan. Apakah Anda ingin mengejar air terjun, menjelajahi pura kuno, atau sekadar bersantai di pantai yang masih asli, kami menciptakan pengalaman yang sesuai dengan visi Anda."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <p class="font-serif text-5xl md:text-6xl text-brand-gold mb-2">{stat.number}</p>
+              <p class="text-brand-cream/60 tracking-wide">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "Our Values" : "Nilai Kami"}</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">{lang === 'en' ? "What We Stand For" : "Prinsip Kami"}</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="flex gap-6">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-gold text-xl">01</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{lang === 'en' ? "Innovative Experiences" : "Pengalaman Inovatif"}</h3>
+              <p class="text-brand-dark/60 leading-relaxed">{lang === 'en' ? "We constantly seek new ways to make your Bali journey unique and memorable, going beyond the ordinary." : "Kami terus mencari cara baru untuk membuat perjalanan Bali Anda unik dan berkesan, melampaui yang biasa."}</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-gold text-xl">02</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{lang === 'en' ? "Personal Touch" : "Sentuhan Personal"}</h3>
+              <p class="text-brand-dark/60 leading-relaxed">{lang === 'en' ? "Every tour is tailored to your preferences, interests, and pace. No two journeys are the same." : "Setiap tur disesuaikan dengan preferensi, minat, dan kecepatan Anda. Tidak ada dua perjalanan yang sama."}</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-gold text-xl">03</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{lang === 'en' ? "Sustainable Tourism" : "Pariwisata Berkelanjutan"}</h3>
+              <p class="text-brand-dark/60 leading-relaxed">{lang === 'en' ? "We're committed to responsible travel that benefits local communities and preserves Bali's natural beauty." : "Kami berkomitmen pada perjalanan bertanggung jawab yang menguntungkan komunitas lokal dan melestarikan keindahan alam Bali."}</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-gold text-xl">04</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{lang === 'en' ? "Local Expertise" : "Keahlian Lokal"}</h3>
+              <p class="text-brand-dark/60 leading-relaxed">{lang === 'en' ? "Our guides are Bali natives who share authentic insights and hidden gems you won't find in guidebooks." : "Pemandu kami adalah penduduk asli Bali yang berbagi wawasan otentik dan permata tersembunyi yang tidak akan Anda temukan di buku panduan."}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="relative py-32">
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1920&h=800&fit=crop" 
+          alt="Bali sunset"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center text-white">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4 drop-shadow-md">{lang === 'en' ? "Let's Connect" : "Mari Terhubung"}</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6 drop-shadow-lg">{lang === 'en' ? "Ready to Start Your Journey?" : "Siap Memulai Perjalanan Anda?"}</h2>
+        <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto drop-shadow-md">
+          {lang === 'en' ? "Send us a message on WhatsApp and let's plan your perfect Bali experience together." : "Kirimi kami pesan di WhatsApp dan mari rencanakan pengalaman Bali sempurna Anda bersama."}
+        </p>
+        <a 
+          href={`https://wa.me/6281234567890?text=${encodeURIComponent(t('whatsapp.learn_more'))}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          {lang === 'en' ? "Get in Touch" : "Hubungi Kami"}
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+  <WhatsAppFloat />
+</Layout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bali-travel.com/sitemap-index.xml

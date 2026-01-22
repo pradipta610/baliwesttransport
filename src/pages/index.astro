@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import Testimonials from '../components/Testimonials.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+import VideoShowcase from '../components/VideoShowcase.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const services = [
+  {
+    title: t('tours.hero.title'),
+    description: t('tours.hero.desc'),
+    price: "IDR 1,300,000",
+    image: "/images/kelingking-beach.jpg",
+    link: lang === 'en' ? "/tours" : `/${lang}/tours`
+  },
+  {
+    title: t('transfers.hero.title'),
+    description: t('transfers.hero.desc'),
+    price: "From IDR 650,000",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
+    link: lang === 'en' ? "/transfers" : `/${lang}/transfers`
+  }
+];
+
+const destinations = [
+  { 
+    name: "Ubud", 
+    desc: lang === 'en' ? "Cultural heart" : "Pusat budaya", 
+    image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&h=500&fit=crop"
+  },
+  { 
+    name: "Uluwatu", 
+    desc: lang === 'en' ? "Clifftop temples" : "Pura tebing", 
+    image: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=400&h=500&fit=crop"
+  },
+  { 
+    name: "Nusa Penida", 
+    desc: lang === 'en' ? "Island paradise" : "Surga pulau", 
+    image: "/images/nusa-penida-viewpoint.jpg"
+  },
+  { 
+    name: "Tegallalang", 
+    desc: lang === 'en' ? "Rice terraces" : "Sawah terasering", 
+    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=500&fit=crop"
+  },
+];
+---
+
+<Layout title={t('meta.home.title')} description={t('meta.home.desc')}>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img 
+          src="/images/beach-sunset-swing.jpg" 
+          alt="Bali beach sunset"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">{t('hero.subtitle')}</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">
+          {t('hero.title')}
+        </h1>
+        <p class="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          {t('hero.desc')}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href={`https://wa.me/6281234567890?text=${encodeURIComponent(t('whatsapp.inquire'))}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-all inline-flex items-center justify-center gap-3"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            {t('hero.cta')}
+          </a>
+          <a 
+            href={lang === 'en' ? "/tours" : `/${lang}/tours`}
+            class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all"
+          >
+            {t('hero.cta_secondary')}
+          </a>
+        </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2">
+        <div class="w-px h-16 bg-gradient-to-b from-white/0 via-white/50 to-white/0"></div>
+      </div>
+    </section>
+    
+    <!-- Intro Section -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-6">{t('intro.welcome')}</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-8 leading-relaxed">
+          {t('intro.title')}
+        </h2>
+        <p class="text-brand-dark/70 text-lg leading-relaxed max-w-2xl mx-auto">
+          {t('intro.desc')}
+        </p>
+      </div>
+    </section>
+    
+    <!-- Experiences Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{t('services.subtitle')}</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">{t('services.title')}</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {services.map((service) => (
+            <a href={service.link} class="group block">
+              <div class="overflow-hidden mb-6">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{service.title}</h3>
+              <p class="text-brand-dark/60 mb-4 leading-relaxed">{service.description}</p>
+              <p class="text-brand-gold font-medium tracking-wide">{service.price}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Destinations Section -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{t('destinations.subtitle')}</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">{t('destinations.title')}</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {destinations.map((dest) => (
+            <div class="group relative overflow-hidden aspect-[3/4]">
+              <img 
+                src={dest.image} 
+                alt={dest.name}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="font-serif text-2xl text-white mb-1">{dest.name}</h3>
+                <p class="text-white/70 text-sm">{dest.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Video Showcase -->
+    <VideoShowcase />
+    
+    <!-- Image Gallery -->
+    <ImageGallery />
+    
+    <!-- Testimonials -->
+    <Testimonials />
+    
+    <!-- CTA Section -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-6">{t('cta.title')}</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-8">{t('cta.desc')}</h2>
+        <a 
+          href={`https://wa.me/6281234567890?text=${encodeURIComponent(t('whatsapp.inquire'))}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          {t('cta.button')}
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+  <WhatsAppFloat />
+</Layout>

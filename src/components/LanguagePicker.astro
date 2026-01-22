@@ -1,0 +1,42 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+function getLocalizedPath(path: string, targetLang: string) {
+  // Remove the language prefix if present (e.g., /id/tours -> /tours)
+  const cleanPath = path.replace(/^\/id/, '') || '/';
+  
+  if (targetLang === 'en') {
+    return cleanPath;
+  } else {
+    // Ensure we don't double slash if cleanPath is /
+    return '/id' + (cleanPath === '/' ? '' : cleanPath);
+  }
+}
+---
+
+<div class="relative group">
+  <button 
+    class="lang-picker-btn flex items-center gap-1.5 text-sm tracking-widest uppercase transition-colors duration-300 py-2"
+    aria-label="Select language"
+  >
+    <span>{languages[lang as keyof typeof languages].split(' ')[0]}</span>
+    <svg class="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  
+  <div class="absolute top-full right-0 mt-1 w-32 py-2 bg-brand-cream border border-brand-dark/5 shadow-lg rounded-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right z-50">
+    {Object.entries(languages).map(([code, label]) => (
+      <a 
+        href={getLocalizedPath(currentPath, code)}
+        class={`block px-4 py-2 text-xs tracking-wide hover:bg-brand-dark/5 hover:text-brand-dark transition-colors ${code === lang ? 'text-brand-gold font-medium' : 'text-brand-dark/70'}`}
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,61 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const images = [
+  {
+    src: "/images/kelingking-beach.jpg",
+    alt: lang === 'en' ? "Kelingking Beach, Nusa Penida" : "Pantai Kelingking, Nusa Penida",
+    span: "col-span-2 row-span-2"
+  },
+  {
+    src: "/images/nusa-penida-viewpoint.jpg",
+    alt: lang === 'en' ? "Nusa Penida viewpoint" : "Pemandangan Nusa Penida",
+    span: ""
+  },
+  {
+    src: "/images/beach-sunset-swing.jpg",
+    alt: lang === 'en' ? "Beach sunset swing" : "Ayunan pantai saat matahari terbenam",
+    span: ""
+  },
+  {
+    src: "https://images.unsplash.com/photo-1604999333679-b86d54738315?w=400&h=300&fit=crop",
+    alt: lang === 'en' ? "Ubud monkey forest" : "Hutan monyet Ubud",
+    span: ""
+  },
+  {
+    src: "https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&h=300&fit=crop",
+    alt: lang === 'en' ? "Balinese waterfall" : "Air terjun Bali",
+    span: ""
+  },
+  {
+    src: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&h=600&fit=crop",
+    alt: lang === 'en' ? "Uluwatu cliff temple" : "Pura tebing Uluwatu",
+    span: "col-span-2"
+  },
+];
+---
+
+<section class="py-24 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16">
+      <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{t('gallery.subtitle')}</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-brand-dark">{t('gallery.title')}</h2>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      {images.map((image) => (
+        <div class={`overflow-hidden group ${image.span}`}>
+          <img 
+            src={image.src} 
+            alt={image.alt}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
