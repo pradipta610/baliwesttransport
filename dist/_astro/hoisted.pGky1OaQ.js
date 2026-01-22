@@ -1,1 +1,0 @@
-const n=document.getElementById("main-header"),t=document.getElementById("mobile-menu"),s=document.getElementById("mobile-menu-btn");function e(){window.scrollY>20||!t?.classList.contains("hidden")?n?.classList.add("is-scrolled"):n?.classList.remove("is-scrolled")}window.addEventListener("scroll",e);s?.addEventListener("click",()=>{t?.classList.toggle("hidden"),e()});e();
