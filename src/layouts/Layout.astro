@@ -4,11 +4,12 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
 }
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { title, description = t('meta.home.desc') } = Astro.props;
+const { title, description = t('meta.home.desc'), keywords = t('meta.home.keywords') } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -17,13 +18,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/baliwesttransport-favicon.png" />
+    <link rel="apple-touch-icon" href="/baliwesttransport-favicon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace(/^\/id/, ''), Astro.site)} />
+    <link rel="alternate" hreflang="id" href={new URL(`/id${Astro.url.pathname.replace(/^\/id/, '') === '/' ? '' : Astro.url.pathname.replace(/^\/id/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/id/, ''), Astro.site)} />
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -43,17 +51,44 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
     <!-- Schema.org -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TravelAgency",
-        "name": "Bali West Transport",
-        "description": "Luxury private tours and transfers in Bali, Indonesia",
-        "url": "https://bali-travel.com",
-        "areaServed": ["Bali", "Indonesia"],
-        "priceRange": "$$$"
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Bali West Transport",
+      "description": description,
+      "url": "https://baliwesttransport.com",
+      "telephone": "+6281234567890",
+      "email": "info@baliwesttransport.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gilimanuk",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-8.1622",
+        "longitude": "114.4417"
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Bali" },
+        { "@type": "Place", "name": "Gilimanuk" },
+        { "@type": "Place", "name": "Ubud" },
+        { "@type": "Place", "name": "Seminyak" },
+        { "@type": "Place", "name": "Kuta" },
+        { "@type": "Place", "name": "Nusa Penida" }
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://wa.me/6281234567890"
+      ]
+    })} />
   </head>
   <body class="font-sans antialiased text-brand-dark bg-brand-cream">
     <slot />

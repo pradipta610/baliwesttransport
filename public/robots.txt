@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bali-travel.com/sitemap-index.xml
+# Sitemap
+Sitemap: https://baliwesttransport.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://bali-travel.com',
+  site: 'https://baliwesttransport.com',
   integrations: [tailwind()],
   i18n: {
     defaultLocale: 'en',

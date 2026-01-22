@@ -49,6 +49,7 @@ const features = [
 <Layout 
   title={t('meta.transfers.title')}
   description={t('meta.transfers.desc')}
+  keywords={t('meta.transfers.keywords')}
 >
   <Header />
   
@@ -165,6 +166,29 @@ const features = [
               {lang === 'en' ? "Book Minibus" : "Pesan Minibus"}
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Related Services -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "Explore More" : "Jelajahi Lebih"}</p>
+          <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Want to Explore Bali?" : "Ingin Menjelajahi Bali?"}</h2>
+        </div>
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">{lang === 'en' ? "Private Full Day Tour" : "Tur Pribadi Seharian"}</h3>
+            <p class="text-brand-dark/60">{lang === 'en' ? "8 hours of personalized exploration. Visit temples, waterfalls, rice terraces & more." : "8 jam eksplorasi personal. Kunjungi pura, air terjun, sawah terasering & lainnya."}</p>
+          </div>
+          <a 
+            href={lang === 'en' ? '/tours' : `/${lang}/tours`}
+            class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-8 py-3 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+          >
+            {lang === 'en' ? "View Tours" : "Lihat Tur"}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>

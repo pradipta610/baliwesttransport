@@ -64,17 +64,21 @@ export const ui = {
     'whatsapp.book_minibus': "Hi, I'd like to book the group minibus transfer",
     'whatsapp.learn_more': "Hi, I'd like to learn more about your services",
 
-    'meta.home.title': "Bali West Transport | Private Tours & Transfers in Bali",
-    'meta.home.desc': "Experience the real Bali with our luxury private tours and transfers. Personalized itineraries, professional drivers, and unforgettable memories.",
+    'meta.home.title': "Private Tours & Airport Transfers in Bali | Bali West Transport",
+    'meta.home.desc': "Book private Bali tours & transfers from Gilimanuk. Trusted by travelers from Europe, USA & Australia. English-speaking drivers, 24/7 WhatsApp booking. Safe, reliable, affordable.",
+    'meta.home.keywords': "Bali private tour, Bali driver, Gilimanuk transfer, Bali airport transfer, private car Bali, Bali day tour, Nusa Penida tour, Ubud tour, Uluwatu tour",
 
-    'meta.tours.title': "Private Day Tour | 8 Hours Full Day Bali Experience | Bali West Transport",
-    'meta.tours.desc': "Private full-day Bali tour. 8 hours with personal driver, drinks and snacks included. Fully customizable itinerary. Book via WhatsApp.",
+    'meta.tours.title': "Private Bali Day Tour | 8-Hour Customizable Experience | From $85 USD",
+    'meta.tours.desc': "Explore Bali your way with our 8-hour private tour. Visit Ubud, Uluwatu, Nusa Penida & more. English-speaking driver, AC vehicle, snacks included. Book via WhatsApp - instant confirmation.",
+    'meta.tours.keywords': "Bali private tour, Bali day trip, custom Bali tour, Ubud tour, Uluwatu sunset tour, Tegallalang rice terrace, Bali temple tour, private driver Bali",
 
-    'meta.transfers.title': "Luxury Transfers | Private Car from Gilimanuk | Bali West Transport",
-    'meta.transfers.desc': "Premium private transfers from Gilimanuk Harbour to all Bali destinations. Luxury vehicles from IDR 650,000. Book via WhatsApp.",
+    'meta.transfers.title': "Gilimanuk to Bali Transfers | Private Car Service | Bali West Transport",
+    'meta.transfers.desc': "Reliable private transfers from Gilimanuk Harbour to Ubud, Seminyak, Kuta, Sanur & all Bali destinations. Meet & greet service, fixed prices from IDR 650,000. Book 24/7 via WhatsApp.",
+    'meta.transfers.keywords': "Gilimanuk transfer, Gilimanuk to Ubud, Gilimanuk to Seminyak, Bali private transfer, Java to Bali transfer, ferry transfer Bali, Gilimanuk harbour pickup",
 
-    'meta.about.title': "About Us | Bali West Transport - Your Trusted Travel Partner",
-    'meta.about.desc': "Learn about Bali West Transport - Indonesia's leading travel service providing innovative, personal, and sustainable tourism experiences.",
+    'meta.about.title': "About Bali West Transport | Trusted Local Tour Operator Since 2020",
+    'meta.about.desc': "Family-owned Bali tour company serving international travelers. Licensed, insured, English-speaking team. Read reviews from guests from Australia, Europe & America. Your safety is our priority.",
+    'meta.about.keywords': "Bali tour company, Bali travel agency, trusted Bali driver, local Bali guide, Bali transport service, safe Bali tours",
   },
   id: {
     'nav.home': 'Beranda',
@@ -134,16 +138,20 @@ export const ui = {
     'whatsapp.book_minibus': "Halo, saya ingin memesan minibus grup",
     'whatsapp.learn_more': "Halo, saya ingin tahu lebih lanjut tentang layanan Anda",
 
-    'meta.home.title': "Bali West Transport | Tur & Antar Jemput Pribadi di Bali",
-    'meta.home.desc': "Rasakan Bali yang sesungguhnya dengan tur dan antar jemput mewah pribadi kami. Rencana perjalanan personal, supir profesional, dan kenangan tak terlupakan.",
+    'meta.home.title': "Tur Pribadi & Antar Jemput di Bali | Bali West Transport",
+    'meta.home.desc': "Pesan tur pribadi & transfer dari Gilimanuk. Supir berpengalaman, kendaraan AC, harga terjangkau. Booking 24/7 via WhatsApp. Aman, nyaman, terpercaya.",
+    'meta.home.keywords': "tur pribadi Bali, supir Bali, transfer Gilimanuk, antar jemput Bali, mobil pribadi Bali, tur harian Bali, tur Nusa Penida, tur Ubud",
 
-    'meta.tours.title': "Tur Pribadi Seharian | Pengalaman Bali 8 Jam Penuh | Bali West Transport",
-    'meta.tours.desc': "Tur pribadi seharian di Bali seharga IDR 1,300,000. 8 jam dengan supir pribadi, termasuk minum dan makanan ringan. Rencana perjalanan yang dapat disesuaikan sepenuhnya. Pesan via WhatsApp.",
+    'meta.tours.title': "Tur Pribadi Bali Seharian | 8 Jam Eksplorasi | IDR 1.300.000",
+    'meta.tours.desc': "Jelajahi Bali sesuai keinginan Anda dengan tur pribadi 8 jam. Kunjungi Ubud, Uluwatu, Nusa Penida & lainnya. Supir ramah, mobil AC, snack termasuk. Pesan via WhatsApp - konfirmasi instan.",
+    'meta.tours.keywords': "tur pribadi Bali, wisata Bali, paket tour Bali, tur Ubud, tur Uluwatu, sawah Tegallalang, tur pura Bali, supir pribadi Bali",
 
-    'meta.transfers.title': "Antar Jemput Mewah | Mobil Pribadi dari Gilimanuk | Bali West Transport",
-    'meta.transfers.desc': "Layanan antar jemput pribadi premium dari Pelabuhan Gilimanuk ke semua tujuan di Bali. Kendaraan mewah mulai IDR 650,000. Pesan via WhatsApp.",
+    'meta.transfers.title': "Transfer Gilimanuk ke Seluruh Bali | Mobil Pribadi | Bali West Transport",
+    'meta.transfers.desc': "Transfer terpercaya dari Pelabuhan Gilimanuk ke Ubud, Seminyak, Kuta, Sanur & seluruh Bali. Penjemputan di pelabuhan, harga tetap mulai IDR 650.000. Pesan 24/7 via WhatsApp.",
+    'meta.transfers.keywords': "transfer Gilimanuk, Gilimanuk ke Ubud, Gilimanuk ke Seminyak, transfer pribadi Bali, transfer Java Bali, penjemputan ferry Bali",
 
-    'meta.about.title': "Tentang Kami | Bali West Transport - Mitra Perjalanan Terpercaya",
-    'meta.about.desc': "Pelajari tentang Bali West Transport - Layanan perjalanan terkemuka di Indonesia yang menyediakan pengalaman wisata yang inovatif, personal, dan berkelanjutan.",
+    'meta.about.title': "Tentang Bali West Transport | Operator Tur Lokal Terpercaya",
+    'meta.about.desc': "Perusahaan tur Bali milik keluarga lokal melayani wisatawan domestik & internasional. Tim profesional, berlisensi, berasuransi. Keamanan Anda prioritas kami.",
+    'meta.about.keywords': "perusahaan tur Bali, agen travel Bali, supir Bali terpercaya, guide lokal Bali, jasa transport Bali",
   },
 } as const;

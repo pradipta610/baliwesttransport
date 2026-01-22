@@ -23,6 +23,7 @@ const highlights = [
 <Layout 
   title={t('meta.tours.title')}
   description={t('meta.tours.desc')}
+  keywords={t('meta.tours.keywords')}
 >
   <Header />
   
@@ -189,6 +190,29 @@ const highlights = [
     
     <!-- Gallery -->
     <ImageGallery />
+    
+    <!-- Related Services -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "More Services" : "Layanan Lainnya"}</p>
+          <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Need a Transfer?" : "Butuh Antar Jemput?"}</h2>
+        </div>
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">{lang === 'en' ? "Gilimanuk to All Bali Destinations" : "Gilimanuk ke Seluruh Destinasi Bali"}</h3>
+            <p class="text-brand-dark/60">{lang === 'en' ? "Private transfers from the ferry port. Fixed prices, meet & greet service." : "Transfer pribadi dari pelabuhan ferry. Harga tetap, layanan penjemputan."}</p>
+          </div>
+          <a 
+            href={lang === 'en' ? '/transfers' : `/${lang}/transfers`}
+            class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-3 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+          >
+            {lang === 'en' ? "View Transfers" : "Lihat Transfer"}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
   
   <Footer />
