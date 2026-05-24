@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
 
 <footer class="bg-brand-dark text-brand-cream py-20">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
       <div class="md:col-span-2">
         <h3 class="font-serif text-3xl mb-6">Bali West Transport</h3>
         <p class="text-brand-cream/60 leading-relaxed max-w-md">
@@ -23,6 +23,14 @@ const currentYear = new Date().getFullYear();
           <li><a href={lang === 'en' ? '/tours' : `/${lang}/tours`} class="hover:text-brand-cream transition-colors">{t('nav.tours')}</a></li>
           <li><a href={lang === 'en' ? '/transfers' : `/${lang}/transfers`} class="hover:text-brand-cream transition-colors">{t('nav.transfers')}</a></li>
           <li><a href={lang === 'en' ? '/about' : `/${lang}/about`} class="hover:text-brand-cream transition-colors">{t('nav.about')}</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-brand-gold text-sm tracking-widest uppercase mb-6">{lang === 'en' ? 'Popular Routes' : 'Rute Populer'}</h4>
+        <ul class="space-y-3 text-brand-cream/60">
+          <li><a href="/transfers/gilimanuk-to-ubud/" class="hover:text-brand-cream transition-colors">{lang === 'en' ? 'Gilimanuk to Ubud' : 'Gilimanuk ke Ubud'}</a></li>
+          <li><a href="/transfers/gilimanuk-to-canggu/" class="hover:text-brand-cream transition-colors">{lang === 'en' ? 'Gilimanuk to Canggu' : 'Gilimanuk ke Canggu'}</a></li>
         </ul>
       </div>
       
