@@ -15,14 +15,14 @@ const services = [
   {
     title: t('tours.hero.title'),
     description: t('tours.hero.desc'),
-    price: "IDR 1,300,000",
+    price: lang === 'en' ? "Ask for best offer" : "Minta penawaran terbaik",
     image: "/images/kelingking-beach.jpg",
     link: lang === 'en' ? "/tours" : `/${lang}/tours`
   },
   {
     title: t('transfers.hero.title'),
     description: t('transfers.hero.desc'),
-    price: "From IDR 650,000",
+    price: lang === 'en' ? "Flexible quote by route" : "Penawaran fleksibel sesuai rute",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
     link: lang === 'en' ? "/transfers" : `/${lang}/transfers`
   }

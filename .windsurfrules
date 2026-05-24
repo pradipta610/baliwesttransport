@@ -1,0 +1,305 @@
+# Bali West Transport — AI Context
+
+## Project
+- Framework: Astro (static site)
+- Path: `c:\Projects\baliwesttransport`
+- Dev server: `npm run dev` → http://localhost:4321/
+- Build: `npm run build`
+- Styling: Tailwind CSS
+- Custom colors: `brand-dark`, `brand-cream`, `brand-gold`, `brand-dark-lighter`
+- Fonts: Serif untuk heading
+- WhatsApp booking number: `6282247648944`
+- Domain canonical: `https://baliwesttransport.com`
+
+## i18n
+- Bahasa: English (`en`, default) dan Indonesian (`id`)
+- Terjemahan: `src/i18n/ui.ts`
+- Utils: `src/i18n/utils.ts` → `getLangFromUrl`, `useTranslations`
+- URL pattern: EN = `/page`, ID = `/id/page`
+- Setiap halaman EN punya duplikat di `src/pages/id/`
+
+## Struktur Halaman
+- `src/pages/index.astro` + `src/pages/id/index.astro` — Home
+- `src/pages/tours.astro` + `src/pages/id/tours.astro` — Tours
+- `src/pages/transfers.astro` + `src/pages/id/transfers.astro` — Transfers (daftar semua rute)
+- `src/pages/about.astro` + `src/pages/id/about.astro` — About
+- `src/pages/transfers/gilimanuk-to-ubud.astro` — SEO landing page rute Gilimanuk→Ubud
+
+## Komponen
+- `src/components/Header.astro` — Fixed header, nav, WhatsApp book button, mobile menu
+- `src/components/Footer.astro` — Logo, quick links, kontak WA + telp
+- `src/components/WhatsAppFloat.astro` — Floating WA button
+- `src/components/Testimonials.astro`
+- `src/components/LanguagePicker.astro`
+
+## Layout
+- `src/layouts/Layout.astro` — props: `title`, `description`, `keywords`
+- Include: canonical URL, hreflang EN/ID, OG tags, Twitter card
+
+## Kebijakan Harga
+- Semua harga sudah DIHAPUS atas permintaan client (supaya bisa ditawar)
+- Jangan pernah tambahkan nominal harga (IDR, USD, Rp, dsb) ke halaman manapun
+- Ganti dengan: "Best Offer" / "Penawaran Terbaik", "Custom Offer" / "Penawaran Khusus", "Group Quote Available" / "Penawaran Grup Tersedia", "Flexible Offer" / "Penawaran Fleksibel"
+- WhatsApp message tidak boleh mengandung nominal harga
+
+## Template Design Pattern (untuk halaman baru)
+1. Hero: `relative min-h-screen`, bg image + overlay `bg-black/50`, container `max-w-5xl mx-auto px-6 text-center text-white pt-20`, CTA gold button + secondary border button
+2. Section bergantian `bg-brand-cream` / `bg-white`, padding `py-24`
+3. Card: `bg-white p-8`, hover shadow
+4. Heading section: label `text-brand-gold text-sm tracking-widest uppercase` + `h2 font-serif`
+5. CTA dark section: `bg-brand-dark text-brand-cream` full-width
+6. Import selalu: `Layout`, `Header`, `Footer`, `WhatsAppFloat`
+
+## Aturan Layout — Wajib Diikuti
+
+### Hero
+- WAJIB `min-h-screen`, BUKAN `h-[75vh]` atau lebih kecil — hero yang terlalu pendek terlihat buruk
+- Teks harus punya container `max-w-5xl mx-auto` dan `pt-20` supaya tidak tertutup fixed header
+- CTA hero WAJIB berupa button (gold + border white), BUKAN hanya teks biasa
+
+### Section Panjang di Desktop
+- Satu section TIDAK BOLEH lebih panjang dari satu viewport height di desktop
+- Jika konten terlalu banyak (misal: intro teks + gambar + route card + CTA), PISAHKAN menjadi 2 section terpisah
+- Contoh yang benar: section 1 = intro teks + gambar, section 2 = route overview card horizontal
+- Route overview card horizontal: `flex flex-col md:flex-row items-center justify-between` — data (route/distance/time) di kiri, CTA di kanan dipisah border
+
+### Warna & Alternating Sections
+- Section harus selalu bergantian: `bg-brand-cream` → `bg-white` → `bg-brand-cream` → dst
+- Dua section berurutan dengan warna sama TIDAK DIPERBOLEHKAN
+- Teks di card/list: SELALU gunakan `text-brand-dark` atau `text-brand-dark/70`, JANGAN biarkan default (biru browser untuk `<p>` di dalam `<a>` atau `<div>`)
+
+### Gambar
+- Prioritaskan gambar lokal dari `/images/` (kelingking-beach.jpg, nusa-penida-viewpoint.jpg, beach-sunset-swing.jpg)
+- Unsplash boleh dipakai untuk gambar pendukung (grid kecil, background)
+- Hero WAJIB pakai gambar lokal jika tersedia
+
+### Referensi Design
+- Selalu lihat `src/pages/tours.astro` dan `src/pages/index.astro` sebagai referensi feel dan proporsi yang benar sebelum membuat halaman baru
+
+## SEO Landing Pages (rute transfer khusus)
+- Lokasi: `src/pages/transfers/[rute].astro`
+- Script JSON-LD diletakkan setelah `<WhatsAppFloat />` sebelum `</Layout>`
+- Contoh sudah ada: `src/pages/transfers/gilimanuk-to-ubud.astro`
+
+## Schema JSON-LD — Wajib untuk Semua SEO Landing Page Transfer
+Setiap halaman cluster transfer (misal gilimanuk-to-ubud, gilimanuk-to-kuta, dst) WAJIB menggunakan satu `@graph` dengan hierarki berikut:
+
+```
+Organization
+    ↓
+TravelAgency
+    ↓
+Service
+    ↓
+FAQPage
+    ↓
+BreadcrumbList
+    ↓
+WebPage
+```
+
+Aturan relasi antar node:
+- `TravelAgency` → `parentOrganization: { '@id': organizationId }`
+- `Service` → `provider: { '@id': travelAgencyId }`
+- `WebPage` → `about: { '@id': serviceId }`
+- `WebPage` → `mainEntity: [{ '@id': serviceId }, { '@id': faqId }]`
+- `WebPage` → `breadcrumb: { '@id': breadcrumbId }`
+- `WebPage` → `publisher: { '@id': organizationId }`
+
+Setiap node wajib punya `@id` unik menggunakan format:
+```
+const pageUrl = 'https://baliwesttransport.com/transfers/[rute]/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId      = `${pageUrl}#service`;
+const faqId          = `${pageUrl}#faq`;
+const breadcrumbId   = `${pageUrl}#breadcrumb`;
+const webPageId      = `${pageUrl}#webpage`;
+```
+
+Script ditulis sebagai satu tag:
+```astro
+<script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+```
+
+---
+
+## Content Architecture & SEO Strategy
+
+### Business Context
+Bali West Transport is a Bali-based transportation company specialising in:
+- Private airport transfers
+- Private intercity transfers
+- Ferry port transfers (especially Gilimanuk)
+- Private Bali tours
+- Custom charter services
+
+**Primary goal:** Generate bookings. Rank for high-intent transportation keywords. Become topical authority on Bali transportation. Increase visibility in Google Search, Google AI Overviews, ChatGPT, Gemini, and Perplexity.
+
+---
+
+### Site Silo Structure
+
+```
+Home
+│
+├── /transfers/               ← Silo 1: Bali Transfers (Money Pages)
+│   ├── /transfers/gilimanuk-to-ubud/
+│   ├── /transfers/gilimanuk-to-canggu/
+│   ├── /transfers/gilimanuk-to-seminyak/
+│   ├── /transfers/gilimanuk-to-kuta/
+│   ├── /transfers/gilimanuk-to-sanur/
+│   └── /transfers/gilimanuk-to-uluwatu/
+│
+├── /gilimanuk-transfer/      ← Silo 2: Ferry Transfer Cluster (Hub)
+│   ├── /gilimanuk-to-ubud/
+│   ├── /gilimanuk-to-canggu/
+│   ├── /gilimanuk-to-seminyak/
+│   ├── /gilimanuk-to-kuta/
+│   ├── /gilimanuk-to-sanur/
+│   ├── /gilimanuk-to-uluwatu/
+│   └── /gilimanuk-to-nusa-dua/
+│
+├── /airport-transfer/        ← Silo 3: Airport Transfer Cluster (Hub)
+│   ├── /ngurah-rai-airport-to-ubud/
+│   ├── /ngurah-rai-airport-to-canggu/
+│   ├── /ngurah-rai-airport-to-seminyak/
+│   ├── /ngurah-rai-airport-to-uluwatu/
+│   └── /ngurah-rai-airport-to-sanur/
+│
+├── /ubud-transfer/           ← Silo 4: Destination Hubs
+├── /canggu-transfer/
+├── /seminyak-transfer/
+├── /uluwatu-transfer/
+├── /sanur-transfer/
+├── /kuta-transfer/
+│
+├── /tours/                   ← Silo 5: Bali Tours
+│   ├── /west-bali-tour/
+│   ├── /north-bali-tour/
+│   ├── /east-bali-tour/
+│   ├── /ubud-tour/
+│   ├── /tanah-lot-tour/
+│   └── /uluwatu-tour/
+│
+└── /blog/                    ← Silo 6: Travel Guides (Top Funnel)
+    ├── /how-to-get-from-gilimanuk-to-ubud/
+    ├── /best-way-to-travel-from-gilimanuk-to-ubud/
+    ├── /gilimanuk-ferry-port-guide/
+    ├── /bali-private-driver-guide/
+    └── /airport-transfer-vs-taxi-bali/
+```
+
+---
+
+### Content Types
+
+**1. Service Pages (Highest Priority)**
+- Purpose: Generate leads. Target transactional/commercial intent.
+- Examples: `/gilimanuk-to-ubud-transfer/`, `/airport-to-ubud-transfer/`
+- NEVER write these as blog articles.
+
+**2. Hub Pages**
+- Purpose: Organise topical clusters. Strengthen internal linking.
+- Examples: `/gilimanuk-transfer/`, `/ubud-transfer/`, `/airport-transfer/`
+- Must: explain all available services, link to all child pages, provide route summaries.
+
+**3. Travel Guides (Blog)**
+- Purpose: Capture informational searches. Earn AI citations. Build topical authority.
+- Must always support commercial pages through internal links.
+
+---
+
+### Required Page Structure — Transfer Route Pages
+
+Every transfer route page MUST follow this order:
+
+1. H1
+2. Quick Answer (40–80 words, answers: what, how long, transport type, who it's for)
+3. Why Choose This Transfer
+4. Distance and Travel Time
+5. Pickup Locations
+6. Drop-off Locations
+7. Who Uses This Transfer
+8. Journey Overview
+9. Benefits of Private Transfer
+10. Frequently Asked Questions
+11. Call To Action
+
+**First paragraph template:**
+> Book a private transfer from [Origin] to [Destination] with Bali West Transport. The journey takes approximately [X] hours depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via [context].
+
+---
+
+### AI Citation Optimisation (GEO / AEO / SGE)
+
+Every service page MUST contain concise answer blocks (40–80 words) near the top, directly answering likely user questions. These are designed for Google AI Overviews, ChatGPT, Gemini, and Perplexity citations.
+
+Every service page MUST answer:
+- How long does it take?
+- How far is it?
+- Who is it suitable for?
+- What are the pickup locations?
+- What are the drop-off locations?
+- Why choose private transfer?
+- How do I book?
+
+---
+
+### Entity Optimisation
+
+Every page should naturally reinforce these entities:
+- Gilimanuk Ferry Port, Ketapang Ferry, Ngurah Rai International Airport
+- Ubud, Canggu, Seminyak, Uluwatu, Sanur, Kuta, Nusa Dua
+- Bali, West Bali
+- Private Transfer, Private Driver, Bali Tour, Bali Transport
+
+Avoid keyword stuffing. Entities appear naturally in content.
+
+---
+
+### Internal Linking Rules
+
+Every transfer page MUST link to:
+- 1 parent hub page (e.g. `/gilimanuk-transfer/`)
+- 1 destination hub page (e.g. `/ubud-transfer/`)
+- 3–5 related transfer routes
+
+Every destination hub MUST link to all transfer routes ending in that destination.
+
+Every blog article MUST link to at least 2 commercial transfer pages + 1 relevant destination hub.
+
+No orphan pages. Minimum per page: 5 internal links in, 5 internal links out.
+
+**Use descriptive anchor text:**
+- ✅ "Gilimanuk to Ubud Transfer"
+- ✅ "Private Transfer to Ubud"
+- ✅ "Ubud Transfer Service"
+- ❌ "Click here", "Learn more", "Read more"
+
+---
+
+### Conversion Rules
+
+Every page MUST include at least two booking CTAs:
+- Above the fold
+- Bottom of page
+
+Primary CTA: **Book via WhatsApp**
+WhatsApp URL: `https://wa.me/6282247648944`
+
+---
+
+### Content Writing Rules
+
+- Use Australian English
+- Simple, direct language
+- Avoid: generic filler text, marketing hype, keyword stuffing, AI-sounding phrases, unverified claims
+- Focus on: user intent, travel practicality, journey details, booking conversion
+
+---
+
+### Schema Rules — Do NOT Use on Service Pages
+
+Never use `Article`, `BlogPosting`, or `NewsArticle` schema on service/transfer pages.
+Only use: `Organization`, `TravelAgency`, `Service`, `FAQPage`, `BreadcrumbList`, `WebPage`.

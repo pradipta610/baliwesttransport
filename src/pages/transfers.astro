@@ -10,17 +10,16 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const privateTransfers = [
-  { from: "Gilimanuk Harbour", to: "Ubud", price: "IDR 950,000", time: "~3 hours" },
-  { from: "Gilimanuk Harbour", to: "Canggu", price: "IDR 800,000", time: "~2.5 hours" },
-  { from: "Gilimanuk Harbour", to: "Kuta", price: "IDR 950,000", time: "~3 hours" },
-  { from: "Gilimanuk Harbour", to: "Uluwatu", price: "IDR 1,200,000", time: "~3.5 hours" },
-  { from: "Gilimanuk Harbour", to: "Lovina", price: "IDR 650,000", time: "~2 hours" },
-  { from: "Gilimanuk Harbour", to: "Amed", price: "IDR 1,300,000", time: "~4 hours" },
+  { from: "Gilimanuk Harbour", to: "Ubud", time: "~3 hours" },
+  { from: "Gilimanuk Harbour", to: "Canggu", time: "~2.5 hours" },
+  { from: "Gilimanuk Harbour", to: "Kuta", time: "~3 hours" },
+  { from: "Gilimanuk Harbour", to: "Uluwatu", time: "~3.5 hours" },
+  { from: "Gilimanuk Harbour", to: "Lovina", time: "~2 hours" },
+  { from: "Gilimanuk Harbour", to: "Amed", time: "~4 hours" },
 ];
 
 const minibusInfo = {
   seats: 19,
-  pricePerPerson: "IDR 165,000",
   description: lang === 'en' 
     ? "Perfect for groups traveling together. Comfortable seating with air conditioning."
     : "Sempurna untuk grup yang bepergian bersama. Tempat duduk nyaman dengan AC."
@@ -36,8 +35,8 @@ const features = [
     desc: lang === 'en' ? "Clean, air-conditioned cars" : "Mobil bersih dan ber-AC" 
   },
   { 
-    title: lang === 'en' ? "Fixed Pricing" : "Harga Tetap", 
-    desc: lang === 'en' ? "No hidden charges" : "Tanpa biaya tersembunyi" 
+    title: lang === 'en' ? "Flexible Offer" : "Penawaran Fleksibel", 
+    desc: lang === 'en' ? "Ask for the best available quote" : "Minta penawaran terbaik yang tersedia" 
   },
   { 
     title: lang === 'en' ? "24/7 Available" : "Tersedia 24/7", 
@@ -90,7 +89,7 @@ const features = [
                   <h3 class="font-serif text-2xl text-brand-dark">{transfer.to}</h3>
                 </div>
                 <div class="text-right">
-                  <p class="font-serif text-2xl text-brand-gold">{transfer.price}</p>
+                  <p class="font-serif text-2xl text-brand-gold">{lang === 'en' ? "Best Offer" : "Penawaran Terbaik"}</p>
                   <p class="text-brand-dark/50 text-sm">{transfer.time}</p>
                 </div>
               </div>
@@ -139,10 +138,7 @@ const features = [
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "Group Travel" : "Perjalanan Grup"}</p>
             <h2 class="font-serif text-4xl text-brand-dark mb-6">{lang === 'en' ? "19-Seat Minibus" : "Minibus 19 Kursi"}</h2>
-            <div class="flex items-baseline gap-2 mb-6">
-              <span class="font-serif text-4xl text-brand-gold">{minibusInfo.pricePerPerson}</span>
-              <span class="text-brand-dark/60">{lang === 'en' ? "per person" : "per orang"}</span>
-            </div>
+            <p class="font-serif text-4xl text-brand-gold mb-6">{lang === 'en' ? "Group Quote Available" : "Penawaran Grup Tersedia"}</p>
             <p class="text-brand-dark/70 mb-8 leading-relaxed">
               {minibusInfo.description}
             </p>

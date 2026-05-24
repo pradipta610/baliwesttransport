@@ -68,12 +68,12 @@ export const ui = {
     'meta.home.desc': "Book private Bali tours & transfers from Gilimanuk. Trusted by travelers from Europe, USA & Australia. English-speaking drivers, 24/7 WhatsApp booking. Safe, reliable, affordable.",
     'meta.home.keywords': "Bali private tour, Bali driver, Gilimanuk transfer, Bali airport transfer, private car Bali, Bali day tour, Nusa Penida tour, Ubud tour, Uluwatu tour",
 
-    'meta.tours.title': "Private Bali Day Tour | 8-Hour Customizable Experience | From $85 USD",
+    'meta.tours.title': "Private Bali Day Tour | 8-Hour Customizable Experience",
     'meta.tours.desc': "Explore Bali your way with our 8-hour private tour. Visit Ubud, Uluwatu, Nusa Penida & more. English-speaking driver, AC vehicle, snacks included. Book via WhatsApp - instant confirmation.",
     'meta.tours.keywords': "Bali private tour, Bali day trip, custom Bali tour, Ubud tour, Uluwatu sunset tour, Tegallalang rice terrace, Bali temple tour, private driver Bali",
 
     'meta.transfers.title': "Gilimanuk to Bali Transfers | Private Car Service | Bali West Transport",
-    'meta.transfers.desc': "Reliable private transfers from Gilimanuk Harbour to Ubud, Seminyak, Kuta, Sanur & all Bali destinations. Meet & greet service, fixed prices from IDR 650,000. Book 24/7 via WhatsApp.",
+    'meta.transfers.desc': "Reliable private transfers from Gilimanuk Harbour to Ubud, Seminyak, Kuta, Sanur & all Bali destinations. Meet & greet service with flexible offers. Book 24/7 via WhatsApp.",
     'meta.transfers.keywords': "Gilimanuk transfer, Gilimanuk to Ubud, Gilimanuk to Seminyak, Bali private transfer, Java to Bali transfer, ferry transfer Bali, Gilimanuk harbour pickup",
 
     'meta.about.title': "About Bali West Transport | Trusted Local Tour Operator Since 2020",
@@ -142,12 +142,12 @@ export const ui = {
     'meta.home.desc': "Pesan tur pribadi & transfer dari Gilimanuk. Supir berpengalaman, kendaraan AC, harga terjangkau. Booking 24/7 via WhatsApp. Aman, nyaman, terpercaya.",
     'meta.home.keywords': "tur pribadi Bali, supir Bali, transfer Gilimanuk, antar jemput Bali, mobil pribadi Bali, tur harian Bali, tur Nusa Penida, tur Ubud",
 
-    'meta.tours.title': "Tur Pribadi Bali Seharian | 8 Jam Eksplorasi | IDR 1.300.000",
+    'meta.tours.title': "Tur Pribadi Bali Seharian | 8 Jam Eksplorasi",
     'meta.tours.desc': "Jelajahi Bali sesuai keinginan Anda dengan tur pribadi 8 jam. Kunjungi Ubud, Uluwatu, Nusa Penida & lainnya. Supir ramah, mobil AC, snack termasuk. Pesan via WhatsApp - konfirmasi instan.",
     'meta.tours.keywords': "tur pribadi Bali, wisata Bali, paket tour Bali, tur Ubud, tur Uluwatu, sawah Tegallalang, tur pura Bali, supir pribadi Bali",
 
     'meta.transfers.title': "Transfer Gilimanuk ke Seluruh Bali | Mobil Pribadi | Bali West Transport",
-    'meta.transfers.desc': "Transfer terpercaya dari Pelabuhan Gilimanuk ke Ubud, Seminyak, Kuta, Sanur & seluruh Bali. Penjemputan di pelabuhan, harga tetap mulai IDR 650.000. Pesan 24/7 via WhatsApp.",
+    'meta.transfers.desc': "Transfer terpercaya dari Pelabuhan Gilimanuk ke Ubud, Seminyak, Kuta, Sanur & seluruh Bali. Penjemputan di pelabuhan dengan penawaran fleksibel. Pesan 24/7 via WhatsApp.",
     'meta.transfers.keywords': "transfer Gilimanuk, Gilimanuk ke Ubud, Gilimanuk ke Seminyak, transfer pribadi Bali, transfer Java Bali, penjemputan ferry Bali",
 
     'meta.about.title': "Tentang Bali West Transport | Operator Tur Lokal Terpercaya",
