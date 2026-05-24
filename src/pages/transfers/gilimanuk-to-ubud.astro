@@ -85,15 +85,14 @@ const faqs = [
 ];
 
 const relatedRoutes = [
-  'Gilimanuk to Ubud',
-  'Ubud to Gilimanuk',
-  'Gilimanuk to Denpasar',
-  'Gilimanuk to Kuta',
-  'Gilimanuk to Seminyak',
-  'Gilimanuk to Canggu',
-  'Gilimanuk to Uluwatu',
-  'Gilimanuk to Sanur',
-  'Gilimanuk to Amed'
+  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Ubud to Gilimanuk', href: '/transfers/' },
+  { label: 'Gilimanuk to Canggu', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'Gilimanuk to Kuta', href: '/transfers/' },
+  { label: 'Gilimanuk to Seminyak', href: '/transfers/' },
+  { label: 'Gilimanuk to Uluwatu', href: '/transfers/' },
+  { label: 'Gilimanuk to Sanur', href: '/transfers/' },
+  { label: 'Gilimanuk to Amed', href: '/transfers/' }
 ];
 
 const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-ubud/';
@@ -503,10 +502,31 @@ const schemaGraph = {
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
-            <div class="bg-white p-6 text-center">
-              <p class="text-brand-dark font-medium text-sm">{route}</p>
-            </div>
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{route.label}</span>
+            </a>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore More -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Explore More</p>
+          <h2 class="font-serif text-3xl text-brand-dark">More from Bali West Transport</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Home</span>
+          </a>
+          <a href="/tours" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Private Tours</span>
+          </a>
+          <a href="/about" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">About Us</span>
+          </a>
         </div>
       </div>
     </section>

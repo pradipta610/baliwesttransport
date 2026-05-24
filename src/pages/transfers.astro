@@ -171,19 +171,35 @@ const features = [
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "Explore More" : "Jelajahi Lebih"}</p>
-          <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Want to Explore Bali?" : "Ingin Menjelajahi Bali?"}</h2>
+          <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Explore Bali West Transport" : "Jelajahi Bali West Transport"}</h2>
         </div>
-        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">{lang === 'en' ? "Private Full Day Tour" : "Tur Pribadi Seharian"}</h3>
-            <p class="text-brand-dark/60">{lang === 'en' ? "8 hours of personalized exploration. Visit temples, waterfalls, rice terraces & more." : "8 jam eksplorasi personal. Kunjungi pura, air terjun, sawah terasering & lainnya."}</p>
-          </div>
-          <a 
-            href={lang === 'en' ? '/tours' : `/${lang}/tours`}
-            class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-8 py-3 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
-          >
-            {lang === 'en' ? "View Tours" : "Lihat Tur"}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href={lang === 'en' ? '/' : `/${lang}/`} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Home" : "Beranda"}</span>
+          </a>
+          <a href={lang === 'en' ? '/tours' : `/${lang}/tours`} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Private Tours" : "Tur Pribadi"}</span>
+          </a>
+          <a href={lang === 'en' ? '/about' : `/${lang}/about`} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "About Us" : "Tentang Kami"}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Transfer Routes -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "Popular Routes" : "Rute Populer"}</p>
+          <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Private Transfers from Gilimanuk" : "Transfer Pribadi dari Gilimanuk"}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/transfers/gilimanuk-to-ubud/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Ubud" : "Gilimanuk ke Ubud"}</span>
+          </a>
+          <a href="/transfers/gilimanuk-to-canggu/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Canggu" : "Gilimanuk ke Canggu"}</span>
           </a>
         </div>
       </div>

@@ -179,6 +179,22 @@ const destinations = [
     <!-- Testimonials -->
     <Testimonials />
     
+    <!-- About Us -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">{lang === 'en' ? "About Bali West Transport" : "Tentang Bali West Transport"}</h3>
+            <p class="text-brand-dark/60">{lang === 'en' ? "Passionate local drivers, premium vehicles, and personalized Bali experiences since 2015." : "Supir lokal yang bersemangat, kendaraan premium, dan pengalaman Bali personal sejak 2015."}</p>
+          </div>
+          <a href={lang === 'en' ? '/about' : `/${lang}/about`} class="inline-flex items-center gap-2 border border-brand-dark/30 hover:border-brand-dark text-brand-dark px-8 py-3 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">
+            {lang === 'en' ? "About Us" : "Tentang Kami"}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-4xl mx-auto px-6 text-center">
