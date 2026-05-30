@@ -25,6 +25,13 @@ const services = [
     price: lang === 'en' ? "Flexible quote by route" : "Penawaran fleksibel sesuai rute",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
     link: lang === 'en' ? "/transfers" : `/${lang}/transfers`
+  },
+  {
+    title: lang === 'en' ? "Bali Airport Transfer" : "Transfer Bandara Bali",
+    description: lang === 'en' ? "Private transfers from Ngurah Rai Airport to Ubud, Canggu, Seminyak, Uluwatu, Sanur, and all Bali areas." : "Transfer pribadi dari Bandara Ngurah Rai ke Ubud, Canggu, Seminyak, Uluwatu, Sanur, dan seluruh Bali.",
+    price: lang === 'en' ? "Fixed pricing, direct hotel drop-off" : "Harga tetap, langsung ke hotel",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop",
+    link: "/airport-transfer/"
   }
 ];
 
@@ -122,7 +129,7 @@ const destinations = [
           <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">{t('services.title')}</h2>
         </div>
         
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
           {services.map((service) => (
             <a href={service.link} class="group block">
               <div class="overflow-hidden mb-6">

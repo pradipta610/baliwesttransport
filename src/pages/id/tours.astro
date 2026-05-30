@@ -194,9 +194,12 @@ const highlights = [
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">{lang === 'en' ? "More Services" : "Layanan Lainnya"}</p>
           <h2 class="font-serif text-3xl text-brand-dark">{lang === 'en' ? "Explore Bali West Transport" : "Jelajahi Bali West Transport"}</h2>
         </div>
-        <div class="grid md:grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-4 gap-4">
           <a href={lang === 'en' ? '/' : `/${lang}/`} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">{lang === 'en' ? "Home" : "Beranda"}</span>
+          </a>
+          <a href={lang === 'en' ? '/airport-transfer/' : `/${lang}/airport-transfer/`} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Airport Transfer" : "Transfer Bandara"}</span>
           </a>
           <a href={lang === 'en' ? '/transfers' : `/${lang}/transfers`} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">{lang === 'en' ? "Private Transfers" : "Transfer Pribadi"}</span>

@@ -1,0 +1,584 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+
+// SEO – Indonesian-language page targeting domestic & international travelers searching in Bahasa
+const pageTitle = 'Transfer Bandara Bali – Antar Jemput Pribadi dari Bandara Ngurah Rai | Bali West Transport';
+const pageDescription = 'Jasa transfer bandara Bali terpercaya dari Bandara Ngurah Rai Internasional (DPS) ke Ubud, Canggu, Seminyak, Uluwatu, Sanur, dan seluruh wilayah Bali. Mobil pribadi ber-AC, harga tetap, layanan 24 jam.';
+const pageKeywords = 'transfer bandara bali, antar jemput bandara ngurah rai, jasa transfer bandara bali, transfer bandara ke ubud, transfer bandara ke canggu, transfer bandara ke seminyak, transfer bandara ke uluwatu, transfer bandara ke sanur, bandara DPS bali, bali west transport';
+
+const whatsappText = 'Halo, saya ingin memesan transfer bandara Bali. Mohon informasi penawaran terbaik Anda.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+// GEO: Specific service info with local context
+const infoLayanan = [
+  { label: 'Layanan', value: 'Antar Jemput Bandara Pribadi' },
+  { label: 'Bandara', value: 'Bandara Ngurah Rai Internasional (DPS)' },
+  { label: 'Area Layanan', value: 'Ubud, Canggu, Seminyak, Uluwatu, Sanur & seluruh Bali' },
+  { label: 'Jenis Kendaraan', value: 'Mobil Pribadi dengan Supir' },
+  { label: 'Ketersediaan', value: '24 Jam' },
+  { label: 'Jemput & Antar', value: 'Penjemputan Bandara & Antar ke Hotel' },
+  { label: 'Armada', value: 'Kendaraan Pribadi Ber-AC' },
+  { label: 'Penyedia', value: 'Bali West Transport' },
+];
+
+// AEO: Benefit list as direct answers
+const keunggulan = [
+  'Harga tetap dan transparan, tanpa negosiasi',
+  'Supir lokal profesional menunggu di area kedatangan',
+  'Tidak perlu repot mencari taksi atau aplikasi ojol',
+  'Kendaraan pribadi ber-AC yang nyaman',
+  'Langsung diantar ke hotel atau villa tujuan',
+  'Cocok untuk solo traveler, pasangan, keluarga, maupun rombongan',
+  'Tersedia untuk penerbangan malam dan dini hari',
+  'Pengalaman perjalanan yang lebih mudah untuk kunjungan pertama ke Bali',
+];
+
+// SGE: Destination data with rich facts
+const tujuan = [
+  {
+    nama: 'Ubud',
+    deskripsi: 'Ubud adalah salah satu destinasi paling populer di Bali, dikenal dengan sawah terasering, resort di tengah hutan, pusat yoga, air terjun, dan kekayaan budaya Bali.',
+    waktu: '1,5–2,5 jam',
+    cocokUntuk: 'Pasangan, wisatawan wellness, keluarga, pecinta budaya',
+    area: 'Pusat Ubud, Tegallalang, Sayan, Kedewatan',
+    catatan: 'Transfer bandara ke Ubud direkomendasikan karena perjalanannya cukup jauh dan kondisi lalu lintas sering berubah sepanjang hari.',
+    href: '/id/airport-transfer/',
+    linkLabel: 'Detail transfer Bandara Ngurah Rai ke Ubud',
+  },
+  {
+    nama: 'Canggu',
+    deskripsi: 'Canggu terkenal dengan pantai surfing, kafe tepi pantai, kehidupan malam, coworking space, dan komunitas digital nomad yang aktif.',
+    waktu: '1–2 jam',
+    cocokUntuk: 'Peselancar, remote worker, wisatawan jangka panjang',
+    area: 'Berawa, Batu Bolong, Pererenan, Echo Beach',
+    catatan: 'Lalu lintas menuju Canggu bisa sangat padat di jam sibuk, sehingga transfer bandara pribadi adalah pilihan transportasi paling efisien dari bandara.',
+    href: '/id/airport-transfer/',
+    linkLabel: 'Detail transfer Bandara Ngurah Rai ke Canggu',
+  },
+  {
+    nama: 'Seminyak',
+    deskripsi: 'Seminyak dikenal dengan villa mewah, pusat perbelanjaan, beach club, dan restoran fine dining berkelas.',
+    waktu: '30–60 menit',
+    cocokUntuk: 'Wisatawan luxury, pasangan, pencinta kehidupan malam',
+    area: 'Petitenget, Oberoi, Batu Belig',
+    catatan: 'Seminyak adalah salah satu kawasan wisata terdekat dari Bandara Bali, sehingga transfer bandara relatif cepat dan mudah.',
+    href: '/id/airport-transfer/',
+    linkLabel: 'Detail transfer Bandara Ngurah Rai ke Seminyak',
+  },
+  {
+    nama: 'Uluwatu',
+    deskripsi: 'Uluwatu terletak di semenanjung selatan Bali, terkenal dengan tebing dramatis, pantai tersembunyi, ombak kelas dunia, dan resort mewah.',
+    waktu: '45–90 menit',
+    cocokUntuk: 'Peselancar, pasangan bulan madu, wisatawan luxury',
+    area: 'Bingin, Pecatu, Balangan, Ungasan',
+    catatan: 'Transfer bandara ke Uluwatu sangat populer karena banyak resort berada jauh dari area transportasi umum.',
+    href: '/id/airport-transfer/',
+    linkLabel: 'Detail transfer Bandara Ngurah Rai ke Uluwatu',
+  },
+  {
+    nama: 'Sanur',
+    deskripsi: 'Sanur menawarkan suasana yang lebih tenang dan merupakan destinasi favorit keluarga serta wisatawan yang akan melanjutkan perjalanan ke Nusa Penida.',
+    waktu: '30–45 menit',
+    cocokUntuk: 'Keluarga, liburan santai, koneksi ke pulau-pulau sekitar',
+    area: 'Pantai Sanur, Sindhu, Mertasari',
+    catatan: 'Sanur juga sering digunakan sebagai titik keberangkatan untuk speedboat ke pulau-pulau terdekat seperti Nusa Penida.',
+    href: '/id/airport-transfer/',
+    linkLabel: 'Detail transfer Bandara Ngurah Rai ke Sanur',
+  },
+];
+
+const layananKami = [
+  'Transfer bandara Bali',
+  'Transfer antar hotel',
+  'Supir pribadi Bali',
+  'Tur seharian penuh Bali',
+  'Transportasi Bali yang disesuaikan',
+  'Layanan transportasi rombongan',
+];
+
+// AEO: FAQ structured for AI answer engines
+const faq = [
+  {
+    pertanyaan: 'Bagaimana cara pergi dari Bandara Bali ke hotel saya?',
+    jawaban: 'Cara termudah adalah dengan memesan transfer bandara pribadi. Supir kami akan menjemput Anda di Bandara Internasional Ngurah Rai dan mengantarkan langsung ke hotel atau villa Anda.',
+  },
+  {
+    pertanyaan: 'Apakah transfer bandara pribadi di Bali worth it?',
+    jawaban: 'Ya. Banyak wisatawan memilih transfer bandara pribadi karena lebih nyaman, lebih mudah, dan bebas stres setelah penerbangan panjang. Tidak perlu antri taksi atau negosiasi harga.',
+  },
+  {
+    pertanyaan: 'Bisakah saya memesan transfer bandara sebelum tiba di Bali?',
+    jawaban: 'Ya. Pemesanan transfer bandara jauh hari sangat direkomendasikan, terutama saat musim liburan atau high season di Bali.',
+  },
+  {
+    pertanyaan: 'Apakah transfer bandara Bali tersedia 24 jam?',
+    jawaban: 'Ya. Bali West Transport menyediakan layanan penjemputan bandara sesuai jadwal kedatangan penerbangan Anda, termasuk penerbangan malam dan dini hari.',
+  },
+  {
+    pertanyaan: 'Tujuan mana saja yang paling populer dari Bandara Ngurah Rai?',
+    jawaban: 'Tujuan transfer bandara Bali paling banyak dipesan adalah Ubud, Canggu, Seminyak, Uluwatu, Sanur, Kuta, Nusa Dua, dan Jimbaran.',
+  },
+  {
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Ubud?',
+    jawaban: 'Perjalanan dari Bandara Ngurah Rai ke Ubud biasanya memakan waktu sekitar 1,5 hingga 2,5 jam tergantung kondisi lalu lintas.',
+  },
+  {
+    pertanyaan: 'Apakah tersedia transfer bandara untuk rombongan besar?',
+    jawaban: 'Ya. Bali West Transport menyediakan kendaraan yang sesuai untuk solo traveler, pasangan, keluarga, hingga rombongan besar. Hubungi kami untuk penawaran khusus rombongan.',
+  },
+  {
+    pertanyaan: 'Bagaimana cara memesan transfer bandara Bali?',
+    jawaban: 'Pemesanan dapat dilakukan melalui WhatsApp. Hubungi Bali West Transport, informasikan jadwal penerbangan, jumlah penumpang, dan tujuan Anda. Kami akan memberikan konfirmasi dan detail penjemputan.',
+  },
+];
+
+// Schema for SEO/AEO/SGE
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/';
+const canonicalEnUrl = 'https://baliwesttransport.com/airport-transfer/';
+const orgId = `${pageUrl}#organization`;
+const agencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bali',
+        addressCountry: 'ID',
+      },
+      sameAs: [],
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': agencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Bali, Indonesia',
+      },
+      parentOrganization: { '@id': orgId },
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Transfer Bandara Bali',
+      alternateName: 'Bali Airport Transfer',
+      description: pageDescription,
+      serviceType: 'Transfer bandara pribadi',
+      provider: { '@id': agencyId },
+      availableLanguage: [
+        { '@type': 'Language', name: 'Indonesian' },
+        { '@type': 'Language', name: 'English' },
+      ],
+      areaServed: [
+        { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
+        { '@type': 'Place', name: 'Ubud' },
+        { '@type': 'Place', name: 'Canggu' },
+        { '@type': 'Place', name: 'Seminyak' },
+        { '@type': 'Place', name: 'Uluwatu' },
+        { '@type': 'Place', name: 'Sanur' },
+        { '@type': 'Place', name: 'Kuta' },
+        { '@type': 'Place', name: 'Nusa Dua' },
+        { '@type': 'AdministrativeArea', name: 'Bali' },
+        { '@type': 'Country', name: 'Indonesia' },
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: {
+          '@type': 'ContactPoint',
+          telephone: '+6282247648944',
+          contactType: 'customer service',
+          availableLanguage: ['Indonesian', 'English'],
+          hoursAvailable: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+            opens: '00:00',
+            closes: '23:59',
+          },
+        },
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.pertanyaan,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.jawaban,
+        },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
+        { '@type': 'ListItem', position: 2, name: 'Transfer Bandara Bali', item: pageUrl },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'id',
+      isPartOf: { '@id': orgId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': orgId },
+    },
+  ],
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1920&h=1080&fit=crop"
+          alt="Transfer bandara Bali – Bandara Internasional Ngurah Rai"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/55"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Pribadi — Bali West Transport</p>
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-8 leading-tight drop-shadow-lg">
+          Transfer Bandara Bali
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">
+          Antar jemput pribadi dari Bandara Ngurah Rai ke Ubud, Canggu, Seminyak, Uluwatu, Sanur, dan seluruh wilayah Bali.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Pesan Transfer Bandara
+          </a>
+          <a href="/id/transfers/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">
+            Semua Layanan Transfer
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Bandara Ngurah Rai Internasional (DPS)</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Jasa Transfer Bandara Bali yang Terpercaya</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Mencari transfer bandara Bali yang terpercaya setelah mendarat di Bandara Internasional Ngurah Rai (DPS)? Bali West Transport menyediakan transfer bandara pribadi dari Bandara Bali ke Ubud, Canggu, Seminyak, Uluwatu, Sanur, dan berbagai destinasi populer lainnya di seluruh Bali.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Baik Anda berlibur, bulan madu, surfing trip, liburan keluarga, maupun perjalanan bisnis ke Bali, memesan transfer bandara pribadi akan membuat kedatangan Anda lebih mudah, aman, dan nyaman.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Layanan transfer bandara pribadi Bali West Transport"
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Layanan -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Ringkasan Layanan</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Informasi Cepat</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {infoLayanan.map((item) => (
+            <div class="bg-brand-cream p-6">
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">{item.label}</p>
+              <p class="text-brand-dark font-medium leading-snug">{item.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Pilih Transfer Bandara Pribadi -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Keunggulan</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Memilih Transfer Bandara Pribadi di Bali?</h2>
+          <p class="text-brand-dark/60 mt-6 max-w-2xl mx-auto text-lg">
+            Setelah mendarat di Bali, banyak wisatawan lebih memilih transfer bandara yang sudah dipesan sebelumnya dibandingkan mencari taksi atau ojol di tempat.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {keunggulan.map((item) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tujuan Populer -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Transfer Bandara</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Tujuan Populer Transfer Bandara Bali</h2>
+        </div>
+        <div class="space-y-8">
+          {tujuan.map((dest) => (
+            <div class="bg-brand-cream p-8 md:p-12">
+              <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                  <h3 class="font-serif text-3xl text-brand-dark mb-3">Bandara Ngurah Rai ke {dest.nama}</h3>
+                  <p class="text-brand-dark/70 leading-relaxed mb-6">{dest.deskripsi}</p>
+                  <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                    <div>
+                      <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-1">Estimasi Waktu</p>
+                      <p class="text-brand-dark font-medium">{dest.waktu}</p>
+                    </div>
+                    <div>
+                      <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-1">Cocok Untuk</p>
+                      <p class="text-brand-dark font-medium">{dest.cocokUntuk}</p>
+                    </div>
+                    <div>
+                      <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-1">Area Populer</p>
+                      <p class="text-brand-dark font-medium">{dest.area}</p>
+                    </div>
+                  </div>
+                  <p class="text-brand-dark/60 text-sm italic mb-6">{dest.catatan}</p>
+                  <a
+                    href={dest.href}
+                    class="inline-flex items-center gap-2 text-brand-dark hover:text-brand-gold transition-colors text-sm tracking-widest uppercase font-medium"
+                  >
+                    {dest.linkLabel}
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex flex-col justify-center items-start lg:items-center gap-4">
+                  <a
+                    href={`https://wa.me/6282247648944?text=${encodeURIComponent(`Halo, saya ingin memesan transfer dari Bandara Bali ke ${dest.nama}. Mohon informasi penawaran terbaik Anda.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors w-full lg:w-auto text-center"
+                  >
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Pesan ke {dest.nama}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cara Pesan – HowTo untuk SGE -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Pemesanan</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Memesan Transfer Bandara Bali</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-8">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center mb-6">
+              <span class="text-brand-gold font-serif text-2xl">01</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-3">Hubungi via WhatsApp</h3>
+            <p class="text-brand-dark/70 leading-relaxed">Kirim pesan ke Bali West Transport melalui WhatsApp. Informasikan jadwal penerbangan, jumlah penumpang, dan tujuan Anda di Bali.</p>
+          </div>
+          <div class="bg-white p-8">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center mb-6">
+              <span class="text-brand-gold font-serif text-2xl">02</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-3">Dapatkan Konfirmasi</h3>
+            <p class="text-brand-dark/70 leading-relaxed">Tim kami akan mengkonfirmasi ketersediaan, memberikan penawaran harga, dan detail penjemputan termasuk titik pertemuan di bandara.</p>
+          </div>
+          <div class="bg-white p-8">
+            <div class="w-12 h-12 bg-brand-gold/20 flex items-center justify-center mb-6">
+              <span class="text-brand-gold font-serif text-2xl">03</span>
+            </div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-3">Supir Menjemput Anda</h3>
+            <p class="text-brand-dark/70 leading-relaxed">Supir profesional kami akan menunggu di area kedatangan bandara dan mengantarkan Anda langsung ke hotel atau villa tanpa kerumitan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Bali West Transport -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Layanan Kami</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mengapa Wisatawan Memilih Bali West Transport</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
+              Bali West Transport menyediakan layanan transportasi pribadi di seluruh Bali untuk wisatawan domestik maupun mancanegara.
+            </p>
+            <div class="space-y-3 mb-8">
+              {layananKami.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/70">{item}</span>
+                </div>
+              ))}
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Pesan via WhatsApp
+              </a>
+              <a href="/id/about/" class="border border-brand-dark/30 hover:bg-brand-dark/5 text-brand-dark px-8 py-4 text-sm tracking-widest uppercase transition-all text-center">
+                Tentang Kami
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src="/images/beach-sunset-swing.jpg"
+              alt="Supir dan layanan transportasi pribadi Bali West Transport"
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ – AEO / SGE optimized -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Pertanyaan yang Sering Diajukan</h2>
+          <p class="text-brand-dark/60 mt-6 max-w-2xl mx-auto">Temukan jawaban langsung untuk pertanyaan umum seputar transfer bandara Bali.</p>
+        </div>
+        <div class="space-y-4">
+          {faq.map((item) => (
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-xl text-brand-dark mb-3">{item.pertanyaan}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">Pesan Transfer Bandara Bali Sekarang</h3>
+            <p class="text-brand-dark/60">Butuh transfer bandara yang nyaman dan terpercaya di Bali? Pesan langsung dengan Bali West Transport untuk penjemputan bandara pribadi dan transportasi ke seluruh Bali.</p>
+          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Pesan Transfer Bandara
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jelajahi Lebih – Internal Links /id/ -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jelajahi Lebih</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Layanan Lainnya dari Bali West Transport</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          <a href="/id/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Beranda</span>
+          </a>
+          <a href="/id/transfers/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Semua Transfer</span>
+          </a>
+          <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
+          </a>
+          <a href="/id/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Tentang Kami</span>
+          </a>
+        </div>
+        <!-- Hreflang cross-link -->
+        <div class="mt-6 text-center">
+          <a href="/airport-transfer/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+            View this page in English
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
