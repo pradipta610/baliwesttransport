@@ -1,0 +1,542 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Transfer Gilimanuk ke Canggu | Antar Jemput Pribadi dari Pelabuhan Gilimanuk';
+const pageDescription = 'Pesan transfer pribadi Gilimanuk ke Canggu bersama Bali West Transport. Layanan door-to-door dari Pelabuhan Gilimanuk ke hotel, villa, resort, surf camp, dan coworking space di Canggu Bali.';
+const pageKeywords = 'transfer gilimanuk ke canggu, antar jemput gilimanuk canggu, transfer pribadi gilimanuk canggu, pelabuhan gilimanuk ke canggu, supir pribadi bali, bali west transport, transfer canggu bali, ketapang gilimanuk feri transfer, mobil sewa gilimanuk canggu';
+
+const whatsappText = 'Halo, saya ingin memesan transfer pribadi dari Gilimanuk ke Canggu. Mohon informasi penawaran terbaik Anda.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+const keunggulan = [
+  'Kendaraan pribadi eksklusif untuk rombongan Anda',
+  'Penjemputan langsung dari Pelabuhan Gilimanuk',
+  'Layanan door-to-door ke Canggu',
+  'Supir lokal profesional yang berpengalaman',
+  'Kendaraan ber-AC yang nyaman',
+  'Jadwal keberangkatan yang fleksibel',
+  'Perjalanan nyaman dengan banyak bagasi',
+  'Cocok untuk solo traveler, pasangan, keluarga, dan rombongan',
+  'Tidak perlu menunggu transportasi umum atau berpindah kendaraan',
+];
+
+const lokasiJemput = [
+  'Pelabuhan Gilimanuk',
+  'Hotel di Gilimanuk',
+  'Guest house dan penginapan',
+  'Lokasi terdekat di Bali Barat',
+];
+
+const areaTujuan = [
+  'Batu Bolong',
+  'Berawa',
+  'Pererenan',
+  'Echo Beach',
+  'Nelayan',
+  'Babakan',
+  'Cemagi',
+  'Tumbak Bayuh',
+  'Seseh',
+];
+
+const lokasiAntar = [
+  'Hotel',
+  'Villa',
+  'Resort',
+  'Guest house',
+  'Coworking space',
+  'Restoran dan kafe',
+  'Objek wisata',
+];
+
+const tipePengguna = [
+  {
+    judul: 'Wisatawan yang Tiba dari Jawa',
+    deskripsi: 'Banyak pengunjung menyeberang dari Banyuwangi ke Bali via Feri Ketapang–Gilimanuk dan melanjutkan perjalanan langsung ke Canggu.',
+  },
+  {
+    judul: 'Digital Nomad',
+    deskripsi: 'Canggu adalah salah satu destinasi remote work terkemuka di Bali, menarik ribuan digital nomad dari seluruh dunia.',
+  },
+  {
+    judul: 'Peselancar',
+    deskripsi: 'Canggu memiliki beberapa pantai surfing paling populer di Bali, membuat transfer pribadi sangat praktis bagi wisatawan yang membawa papan selancar.',
+  },
+  {
+    judul: 'Keluarga dan Rombongan',
+    deskripsi: 'Transportasi pribadi menghilangkan kerumitan mengkoordinasikan beberapa taksi atau transportasi umum untuk rombongan.',
+  },
+];
+
+const pemandanganRute = [
+  'Pedesaan Bali Barat',
+  'Desa-desa Bali tradisional',
+  'Sawah dan perkebunan',
+  'Pemandangan pegunungan',
+  'Pasar lokal',
+  'Kawasan pesisir Bali Selatan',
+];
+
+const keuntunganTransferPribadi = [
+  {
+    judul: 'Lebih Praktis',
+    deskripsi: 'Perjalanan langsung dari lokasi penjemputan ke akomodasi Anda tanpa ganti kendaraan.',
+  },
+  {
+    judul: 'Lebih Nyaman',
+    deskripsi: 'Nikmati kendaraan ber-AC dengan ruang bagasi yang luas selama perjalanan.',
+  },
+  {
+    judul: 'Lebih Efisien Waktu',
+    deskripsi: 'Tidak perlu menunggu bus, jadwal shuttle, atau ketersediaan ojol.',
+  },
+  {
+    judul: 'Perjalanan Lebih Aman',
+    deskripsi: 'Supir profesional yang familiar dengan jalan-jalan Bali membantu memastikan perjalanan yang lancar dan terpercaya.',
+  },
+];
+
+// AEO: FAQ
+const faq = [
+  {
+    pertanyaan: 'Berapa lama perjalanan dari Gilimanuk ke Canggu?',
+    jawaban: 'Perjalanan dari Gilimanuk ke Canggu biasanya memakan waktu antara 4 hingga 5 jam tergantung kondisi lalu lintas dan lokasi tujuan Anda di Canggu.',
+  },
+  {
+    pertanyaan: 'Apakah ini transfer pribadi atau berbagi dengan penumpang lain?',
+    jawaban: 'Ini adalah transfer pribadi. Kendaraan dipesan secara eksklusif untuk Anda dan rombongan, tidak berbagi dengan penumpang lain.',
+  },
+  {
+    pertanyaan: 'Apakah bisa dijemput langsung di Pelabuhan Gilimanuk?',
+    jawaban: 'Ya. Kami menyediakan penjemputan langsung di Pelabuhan Gilimanuk dan dapat menyesuaikan waktu dengan jadwal kedatangan feri Anda.',
+  },
+  {
+    pertanyaan: 'Apakah bisa berhenti di tengah perjalanan?',
+    jawaban: 'Ya. Pemberhentian singkat untuk makan, minum, atau istirahat dapat diatur atas permintaan.',
+  },
+  {
+    pertanyaan: 'Apakah layanan ini tersedia untuk rombongan?',
+    jawaban: 'Ya. Bali West Transport menyediakan pilihan kendaraan yang sesuai untuk perorangan, pasangan, keluarga, hingga rombongan besar.',
+  },
+  {
+    pertanyaan: 'Bisakah memesan transfer di hari yang sama?',
+    jawaban: 'Tergantung ketersediaan, pemesanan di hari yang sama mungkin bisa dilakukan. Pemesanan jauh hari sangat direkomendasikan.',
+  },
+  {
+    pertanyaan: 'Berapa harga transfer Gilimanuk ke Canggu?',
+    jawaban: 'Harga bervariasi tergantung jenis kendaraan dan jumlah penumpang. Hubungi kami via WhatsApp untuk mendapatkan penawaran terbaik.',
+  },
+];
+
+const ruteTerkait = [
+  { label: 'Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
+  { label: 'Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk ke Kuta', href: '/id/transfers/' },
+  { label: 'Gilimanuk ke Seminyak', href: '/id/transfers/' },
+  { label: 'Gilimanuk ke Uluwatu', href: '/id/transfers/' },
+  { label: 'Gilimanuk ke Sanur', href: '/id/transfers/' },
+];
+
+// Schema
+const pageUrl = 'https://baliwesttransport.com/id/transfers/gilimanuk-to-canggu/';
+const orgId = `${pageUrl}#organization`;
+const agencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bali',
+        addressCountry: 'ID',
+      },
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': agencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' },
+      parentOrganization: { '@id': orgId },
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Transfer Gilimanuk ke Canggu',
+      alternateName: 'Gilimanuk to Canggu Transfer',
+      description: pageDescription,
+      serviceType: 'Transfer pribadi',
+      provider: { '@id': agencyId },
+      availableLanguage: [
+        { '@type': 'Language', name: 'Indonesian' },
+        { '@type': 'Language', name: 'English' },
+      ],
+      areaServed: [
+        { '@type': 'Place', name: 'Gilimanuk' },
+        { '@type': 'Place', name: 'Canggu' },
+        { '@type': 'AdministrativeArea', name: 'Bali' },
+        { '@type': 'Country', name: 'Indonesia' },
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: {
+          '@type': 'ContactPoint',
+          telephone: '+6282247648944',
+          contactType: 'customer service',
+          availableLanguage: ['Indonesian', 'English'],
+        },
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.pertanyaan,
+        acceptedAnswer: { '@type': 'Answer', text: item.jawaban },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
+        { '@type': 'ListItem', position: 2, name: 'Transfer', item: 'https://baliwesttransport.com/id/transfers/' },
+        { '@type': 'ListItem', position: 3, name: 'Transfer Gilimanuk ke Canggu', item: pageUrl },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'id',
+      isPartOf: { '@id': orgId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': orgId },
+    },
+  ],
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img
+          src="/images/kelingking-beach.jpg"
+          alt="Transfer pribadi dari Gilimanuk ke Canggu Bali"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Transfer Pribadi — Bali West Transport</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Gilimanuk ke Canggu</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          Layanan antar jemput door-to-door dari Pelabuhan Gilimanuk ke hotel, villa, surf camp, dan coworking space di Canggu.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Pesan Transfer Sekarang
+          </a>
+          <a href="/id/transfers/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Lihat Semua Transfer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Canggu</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Cara tercepat dan paling praktis untuk perjalanan dari Gilimanuk ke Canggu adalah dengan transfer pribadi. Perjalanan membutuhkan waktu sekitar 4–5 jam tergantung lalu lintas, dengan layanan door-to-door langsung dari Pelabuhan Gilimanuk ke akomodasi Anda di Canggu.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Layanan ini ideal untuk wisatawan yang tiba dari Jawa via Feri Ketapang–Gilimanuk dan ingin perjalanan bebas kerumitan ke salah satu destinasi pesisir paling populer di Bali.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali di rute Gilimanuk ke Canggu" class="w-full h-auto" loading="lazy" />
+            <div class="grid grid-cols-2 gap-4">
+              <img src="/images/beach-sunset-swing.jpg" alt="Pantai Bali" class="w-full h-48 object-cover" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Sawah Bali" class="w-full h-48 object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ringkasan Rute -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+          <div class="grid grid-cols-3 gap-8 flex-1">
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk ke Canggu</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
+              <p class="font-serif text-2xl text-brand-dark">135–150 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
+              <p class="font-serif text-2xl text-brand-dark">4–5 jam</p>
+            </div>
+          </div>
+          <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Penawaran Fleksibel</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal & jumlah penumpang.</p>
+            </div>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">
+              Minta Penawaran Terbaik
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keunggulan -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Memilih Kami</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Keunggulan Transfer Gilimanuk ke Canggu Kami</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {keunggulan.map((item) => (
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Lokasi Jemput & Antar -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Penjemputan</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Penjemputan di Gilimanuk</h2>
+            <p class="text-brand-dark/70 mb-6">Kami dapat menjemput dari:</p>
+            <div class="space-y-3 mb-6">
+              {lokasiJemput.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/70">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-brand-dark/50 text-sm">Supir kami akan berkoordinasi detail penjemputan sebelum perjalanan untuk pengalaman yang mulus.</p>
+          </div>
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pengantaran</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Canggu</h2>
+            <p class="text-brand-dark/70 mb-6">Kami mengantarkan langsung ke seluruh area Canggu, termasuk:</p>
+            <div class="grid grid-cols-2 gap-3 mb-8">
+              {areaTujuan.map((area) => (
+                <div class="bg-white p-3 text-brand-dark/60 text-sm">{area}</div>
+              ))}
+            </div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pengantaran Langsung ke</p>
+            <div class="space-y-3">
+              {lokasiAntar.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/70">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Siapa yang Menggunakan Transfer Ini -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Siapa yang Menggunakan Layanan Ini</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Populer di Kalangan Wisatawan dari Jawa, Peselancar, Digital Nomad, dan Keluarga</h2>
+            <div class="space-y-6">
+              {tipePengguna.map((item) => (
+                <div>
+                  <h3 class="font-serif text-2xl text-brand-dark mb-2">{item.judul}</h3>
+                  <p class="text-brand-dark/70 leading-relaxed">{item.deskripsi}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Gambaran Perjalanan</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Pemandangan Sepanjang Rute</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">Rute dari Gilimanuk ke Canggu membawa Anda melewati berbagai lanskap Bali yang beragam. Pemberhentian opsional untuk makan, istirahat, atau menikmati pemandangan dapat diatur atas permintaan.</p>
+            <div class="grid grid-cols-2 gap-3">
+              {pemandanganRute.map((item) => (
+                <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Transfer Pribadi -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Keunggulan Transfer Pribadi</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Transfer Pribadi Lebih Baik dari Transportasi Umum?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          {keuntunganTransferPribadi.map((item) => (
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.judul}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.deskripsi}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ – AEO -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+        <div class="space-y-4">
+          {faq.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-xl text-brand-dark mb-3">{item.pertanyaan}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">Pesan Transfer Gilimanuk ke Canggu</h3>
+            <p class="text-brand-dark/60">Perjalanan nyaman melintasi Bali bersama layanan transfer pribadi Bali West Transport.</p>
+          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+          >
+            Pesan Transfer Sekarang
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rute Terkait -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Transfer Lainnya</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Rute Transfer dari Gilimanuk</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {ruteTerkait.map((rute) => (
+            <a href={rute.href} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{rute.label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Jelajahi Lebih -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jelajahi Lebih</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Layanan Lainnya dari Bali West Transport</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          <a href="/id/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Beranda</span>
+          </a>
+          <a href="/id/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Transfer Bandara</span>
+          </a>
+          <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
+          </a>
+          <a href="/id/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Tentang Kami</span>
+          </a>
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/transfers/gilimanuk-to-canggu/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+            View this page in English
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
