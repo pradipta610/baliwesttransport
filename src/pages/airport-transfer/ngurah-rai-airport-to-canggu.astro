@@ -1,0 +1,574 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Ngurah Rai Airport to Canggu Transfer | Private Airport Transfer Bali';
+const pageDescription = 'Book a private transfer from Ngurah Rai Airport to Canggu with Bali West Transport. Professional local drivers, air-conditioned vehicles, and direct hotel or villa drop-off service. Available 24 hours.';
+const pageKeywords = 'Ngurah Rai Airport to Canggu transfer, private airport transfer Bali to Canggu, DPS airport to Canggu, Bali airport pickup Canggu, airport transfer Canggu Bali, Bali West Transport';
+
+const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Canggu. Please send me your best offer.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+const benefits = [
+  'Driver waiting upon arrival at the airport',
+  'Fixed pricing with no hidden fees',
+  'No taxi negotiation required',
+  'Direct villa or hotel drop-off throughout Canggu',
+  'Private vehicle exclusively for your group',
+  'Better luggage handling',
+  'Airport pickup available 24 hours',
+  'Convenient for first-time Bali visitors'
+];
+
+const cangguAreas = [
+  'Batu Bolong',
+  'Berawa',
+  'Echo Beach',
+  'Pererenan',
+  'Babakan',
+  'Kayu Tulang',
+  'Padonan',
+  'Tumbak Bayuh'
+];
+
+const cangguBeaches = [
+  'Batu Bolong Beach',
+  'Echo Beach',
+  'Berawa Beach',
+  'Pererenan Beach'
+];
+
+const privateTransferBenefits = [
+  'Airport pickup included',
+  'Fixed price',
+  'Private vehicle',
+  'Flight monitoring',
+  'Less arrival stress'
+];
+
+const faqs = [
+  {
+    question: 'What is the best way to get from Bali Airport to Canggu?',
+    answer: 'For most travellers, a private airport transfer is the easiest option because it provides direct pickup, fixed pricing, and hotel drop-off service without the need for taxi negotiations or ride-hailing app confusion.'
+  },
+  {
+    question: 'How long does it take from Ngurah Rai Airport to Canggu?',
+    answer: 'Travel time is usually between 45 minutes and 2 hours depending on traffic conditions. During peak periods and busy holidays, it may take longer due to Canggu\'s notorious traffic congestion.'
+  },
+  {
+    question: 'Is Canggu far from Bali Airport?',
+    answer: 'Not particularly. The distance is only around 16–20 km, but traffic congestion around Canggu often increases travel time significantly, especially during morning and evening peak hours.'
+  },
+  {
+    question: 'Can I book airport transfer to Canggu before arriving?',
+    answer: 'Yes. Pre-booking airport transportation is recommended, especially during peak travel seasons and busy arrival periods, to ensure your driver is confirmed and ready upon landing.'
+  },
+  {
+    question: 'Is airport pickup available late at night?',
+    answer: 'Yes. Bali West Transport provides airport pickup services based on your flight arrival schedule, including late-night and early-morning arrivals.'
+  }
+];
+
+const relatedRoutes = [
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Airport to Uluwatu', href: '/airport-transfer/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/' },
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' }
+];
+
+const pageUrl = 'https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-canggu/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      sameAs: []
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': travelAgencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Bali, Indonesia'
+      },
+      parentOrganization: { '@id': organizationId }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Ngurah Rai Airport to Canggu Transfer',
+      description: pageDescription,
+      serviceType: 'Private Airport Transfer',
+      provider: { '@id': travelAgencyId },
+      areaServed: [
+        { '@type': 'Place', name: 'Ngurah Rai International Airport' },
+        { '@type': 'Place', name: 'Canggu' },
+        { '@type': 'AdministrativeArea', name: 'Bali' }
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: {
+          '@type': 'ContactPoint',
+          telephone: '+6282247648944',
+          contactType: 'customer service'
+        }
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' },
+        { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Canggu Transfer', item: pageUrl }
+      ]
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: { '@id': organizationId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': organizationId }
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img
+          src="/images/beach-sunset-swing.jpg"
+          alt="Private transfer from Ngurah Rai Airport to Canggu Bali"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Canggu Transfer</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          Private door-to-door transfer from Bali Airport to Canggu with professional local drivers and direct villa or hotel drop-off.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book Your Transfer
+          </a>
+          <a href="/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Airport Transfer Hub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Answer + Intro -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Private Airport Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Bali Airport to Canggu</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Book a private transfer from Ngurah Rai Airport to Canggu with Bali West Transport. The journey takes approximately 45 minutes to 2 hours depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via Ngurah Rai International Airport (DPS).
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Canggu is one of the most popular destinations in Bali for surfers, digital nomads, remote workers, beach club visitors, and long-stay travellers. Instead of dealing with airport taxi queues, ride-hailing confusion, or luggage hassles, travellers can go directly from the airport to their accommodation in Canggu.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Although the distance from Ngurah Rai Airport to Canggu is only around 16–20 km, traffic conditions can significantly affect travel time. With Bali West Transport, travellers can book private transportation directly from the airport to hotels, villas, resorts, coworking spaces, and private accommodations throughout Canggu.
+            </p>
+          </div>
+          <div class="bg-white p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Quick Information</p>
+            <div class="space-y-4">
+              {[
+                ['Service', 'Bali Airport Transfer to Canggu'],
+                ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
+                ['Destination', 'Canggu, Bali'],
+                ['Transport Type', 'Private Car with Driver'],
+                ['Estimated Travel Time', '45 Minutes – 2 Hours'],
+                ['Availability', '24 Hours'],
+                ['Vehicle', 'Private Air-Conditioned Vehicle'],
+                ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
+                ['Provider', 'Bali West Transport'],
+              ].map(([label, value]) => (
+                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
+                  <span class="text-brand-dark/50 text-sm">{label}</span>
+                  <span class="text-brand-dark font-medium text-sm text-right">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Route Overview Card -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+          <div class="grid grid-cols-3 gap-8 flex-1">
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Canggu</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
+              <p class="font-serif text-2xl text-brand-dark">16–20 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
+              <p class="font-serif text-2xl text-brand-dark">45 min – 2 hrs</p>
+            </div>
+          </div>
+          <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
+            </div>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Ask Best Offer
+            </a>
+          </div>
+        </div>
+        <div class="mt-6 bg-brand-cream p-6">
+          <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Average Travel Times</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              'Early morning: 30–50 min',
+              'Normal traffic: 45–70 min',
+              'Peak traffic: 90–120 min',
+              'Busy holidays: 2+ hours'
+            ].map((item) => (
+              <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
+            ))}
+          </div>
+          <p class="text-brand-dark/50 text-sm mt-4">Traffic congestion around Canggu is one of the most common concerns mentioned by travellers visiting Bali.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Book Private Transfer -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Best Way to Get There</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Way to Get from Ngurah Rai Airport to Canggu</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Many travellers search for the easiest airport transport to Canggu. For most visitors, a pre-booked private transfer offers the best balance of comfort, convenience, and reliability.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {benefits.map((benefit) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Canggu Areas -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off Coverage</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Airport Transfer to All Canggu Areas</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Bali West Transport provides private airport transfers throughout Canggu. Many villas and accommodations in Canggu are located inside smaller roads and residential areas, making private transportation more convenient than public transport alternatives.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-8">
+              {cangguAreas.map((area) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
+              ))}
+            </div>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Popular Canggu Beaches</p>
+            <div class="grid grid-cols-2 gap-3">
+              {cangguBeaches.map((beach) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{beach}</div>
+              ))}
+            </div>
+          </div>
+          <div class="space-y-4">
+            <img
+              src="/images/kelingking-beach.jpg"
+              alt="Canggu Bali beach area"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&h=400&fit=crop"
+              alt="Canggu surf beach Bali"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Private Transfer vs Grab/Gojek/Taxi -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Comparison</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Private Transfer vs Grab, Gojek, and Taxi</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">One of the most common questions travellers ask is: should I use Grab, Gojek, taxi, or private transfer?</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-4">Private Airport Transfer</p>
+            <p class="font-serif text-xl text-brand-dark mb-4">Best for</p>
+            <div class="space-y-2 mb-6">
+              {['Families', 'Couples', 'First-time Bali visitors', 'Travellers with multiple bags', 'Late-night arrivals', 'Long-stay travellers'].map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/70 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="font-serif text-lg text-brand-dark mb-3">Advantages</p>
+            <div class="space-y-2">
+              {privateTransferBenefits.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/70 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="bg-white p-8">
+            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Grab or Gojek</p>
+            <p class="font-serif text-xl text-brand-dark mb-4">Often used by budget-conscious travellers</p>
+            <p class="text-brand-dark/50 text-sm mb-4">Possible challenges:</p>
+            <div class="space-y-2">
+              {['Airport pickup point confusion', 'Driver cancellations', 'Surge pricing', 'Limited luggage capacity', 'Longer waiting times during busy periods'].map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/60 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="bg-white p-8">
+            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Airport Taxi</p>
+            <p class="font-serif text-xl text-brand-dark mb-4">Available directly at the airport</p>
+            <p class="text-brand-dark/50 text-sm mb-4">Potential drawbacks:</p>
+            <div class="space-y-2">
+              {['Higher pricing compared to pre-booked transfers', 'Less predictable costs', 'Queue waiting during busy arrival periods'].map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                  <span class="text-brand-dark/60 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Travelers Choose Canggu -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">About Canggu</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Why Travellers Choose Canggu</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Canggu has become one of Bali's most visited destinations thanks to its combination of laid-back beach culture and a thriving international community. Because many travellers arrive specifically to stay in Canggu for several days or weeks, booking airport transportation in advance helps simplify the first day of arrival.
+            </p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">What Canggu Offers</p>
+            <div class="grid grid-cols-2 gap-3">
+              {['Surf beaches', 'Beach clubs', 'Coworking spaces', 'Cafes and restaurants', 'Nightlife', 'Wellness studios', 'Digital nomad community', 'Vibrant food scene'].map((item) => (
+                <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <img
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Bali coastal scenery near Canggu"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Bali West Transport -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, day tours, and customised travel arrangements.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {[
+            'Professional local drivers',
+            'Private transportation service',
+            'Comfortable air-conditioned vehicles',
+            'Airport pickup available 24/7',
+            'Direct hotel and villa transfers',
+            'Flexible Bali transportation options',
+            'Service coverage throughout Bali'
+          ].map((reason) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{reason}</span>
+            </div>
+          ))}
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Airport Transfer Hub</span>
+          </a>
+          <a href="/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Private Bali Tours</span>
+          </a>
+          <a href="/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">About Bali West Transport</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book Now</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Canggu Transfer</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
+          Whether you're staying in Berawa, Batu Bolong, Echo Beach, or Pererenan, Bali West Transport helps make your journey from Ngurah Rai Airport to Canggu easier, more comfortable, and stress-free.
+        </p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Book Via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Related Routes -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedRoutes.map((route) => (
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{route.label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>

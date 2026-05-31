@@ -12,10 +12,13 @@ const navLinks = [
     href: lang === 'en' ? '/transfers' : `/${lang}/transfers`,
     label: t('nav.transfers'),
     children: [
-      { href: '/transfers/', label: lang === 'en' ? 'All Transfers' : 'Semua Transfer' },
-      { href: '/airport-transfer/', label: lang === 'en' ? 'Airport Transfer' : 'Transfer Bandara' },
-      { href: '/transfers/gilimanuk-to-ubud/', label: lang === 'en' ? 'Gilimanuk to Ubud' : 'Gilimanuk ke Ubud' },
-      { href: '/transfers/gilimanuk-to-canggu/', label: lang === 'en' ? 'Gilimanuk to Canggu' : 'Gilimanuk ke Canggu' },
+      { href: lang === 'en' ? '/transfers/' : '/id/transfers/', label: lang === 'en' ? 'All Transfers' : 'Semua Transfer' },
+      { href: lang === 'en' ? '/airport-transfer/' : '/id/airport-transfer/', label: lang === 'en' ? 'Airport Transfer' : 'Transfer Bandara' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-ubud/' : '/id/airport-transfer/ngurah-rai-airport-to-ubud/', label: lang === 'en' ? 'Airport → Ubud' : 'Bandara → Ubud' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-canggu/' : '/id/airport-transfer/ngurah-rai-airport-to-canggu/', label: lang === 'en' ? 'Airport → Canggu' : 'Bandara → Canggu' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-seminyak/' : '/id/airport-transfer/ngurah-rai-airport-to-seminyak/', label: lang === 'en' ? 'Airport → Seminyak' : 'Bandara → Seminyak' },
+      { href: lang === 'en' ? '/transfers/gilimanuk-to-ubud/' : '/id/transfers/gilimanuk-to-ubud/', label: lang === 'en' ? 'Gilimanuk to Ubud' : 'Gilimanuk ke Ubud' },
+      { href: lang === 'en' ? '/transfers/gilimanuk-to-canggu/' : '/id/transfers/gilimanuk-to-canggu/', label: lang === 'en' ? 'Gilimanuk to Canggu' : 'Gilimanuk ke Canggu' },
     ]
   },
   { href: lang === 'en' ? '/about' : `/${lang}/about`, label: t('nav.about') },
