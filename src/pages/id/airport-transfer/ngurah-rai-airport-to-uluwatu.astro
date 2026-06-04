@@ -4,83 +4,87 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Bandara Ngurah Rai ke Canggu | Antar Jemput Bandara Pribadi Bali';
-const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Canggu bersama Bali West Transport. Supir lokal profesional, kendaraan ber-AC, antar langsung ke hotel atau villa. Tersedia 24 jam.';
-const pageKeywords = 'transfer bandara ngurah rai ke canggu, antar jemput bandara bali ke canggu, transfer bandara pribadi canggu, bandara DPS ke canggu, jemput bandara canggu bali, bali west transport';
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Uluwatu | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Uluwatu bersama Bali West Transport. Harga tetap, jemput di bandara, dan antar langsung ke Pecatu, Bingin, Padang Padang, Suluban, dan Balangan.';
+const pageKeywords = 'transfer bandara ngurah rai ke uluwatu, bandara bali ke uluwatu, antar jemput bandara uluwatu, transfer bandara pribadi uluwatu, bandara DPS ke uluwatu, jemput bandara uluwatu bali, bali west transport';
 
-const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Canggu. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Uluwatu. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const keunggulan = [
-  'Supir menunggu saat Anda tiba di bandara',
+  'Supir menunggu di area kedatangan dengan papan nama',
   'Harga tetap tanpa biaya tersembunyi',
-  'Tanpa perlu negosiasi taksi',
-  'Antar langsung ke villa atau hotel di seluruh Canggu',
-  'Kendaraan pribadi eksklusif untuk rombongan Anda',
-  'Penanganan bagasi yang lebih baik',
+  'Antar langsung ke hotel, villa, dan resort di seluruh Uluwatu',
+  'Kendaraan pribadi ber-AC yang nyaman',
+  'Bantuan pengangkatan bagasi termasuk',
+  'Pemantauan penerbangan — penjemputan disesuaikan jika penerbangan terlambat',
   'Penjemputan bandara tersedia 24 jam',
-  'Nyaman untuk wisatawan pertama kali ke Bali'
+  'Cocok untuk peselancar, keluarga, dan rombongan besar'
 ];
 
-const areaCanggu = [
-  'Batu Bolong',
-  'Berawa',
-  'Echo Beach',
-  'Pererenan',
-  'Babakan',
-  'Kayu Tulang',
-  'Padonan',
-  'Tumbak Bayuh'
+const areaUluwatu = [
+  'Pecatu',
+  'Bingin',
+  'Padang Padang',
+  'Suluban',
+  'Balangan',
+  'Dreamland'
 ];
 
-const pantaiCanggu = [
-  'Pantai Batu Bolong',
-  'Echo Beach',
-  'Pantai Berawa',
-  'Pantai Pererenan'
+const atraksiUluwatu = [
+  'Pura Uluwatu',
+  'Pantai Padang Padang',
+  'Pantai Suluban (Blue Point)',
+  'Pantai Bingin',
+  'Pantai Balangan',
+  'Pertunjukan Tari Kecak Uluwatu'
 ];
 
-const keunggulanTransferPribadi = [
-  'Jemput di bandara termasuk',
-  'Harga tetap',
-  'Kendaraan pribadi',
-  'Pemantauan penerbangan',
-  'Kedatangan lebih tenang'
+const tabelRute = [
+  { rute: 'Bandara Bali ke Uluwatu', jarak: '18–25 km', waktu: '35–70 mnt' },
+  { rute: 'Bandara Bali ke Bingin', jarak: '20–24 km', waktu: '40–70 mnt' },
+  { rute: 'Bandara Bali ke Padang Padang', jarak: '21–25 km', waktu: '45–75 mnt' },
+  { rute: 'Bandara Bali ke Suluban', jarak: '22–26 km', waktu: '45–80 mnt' },
+  { rute: 'Bandara Bali ke Balangan', jarak: '16–20 km', waktu: '30–60 mnt' },
 ];
 
 const faq = [
   {
-    pertanyaan: 'Apa cara terbaik dari Bandara Bali ke Canggu?',
-    jawaban: 'Untuk sebagian besar wisatawan, transfer bandara pribadi adalah pilihan termudah karena menyediakan penjemputan langsung, harga tetap, dan layanan antar ke hotel tanpa perlu antrian taksi atau kebingungan aplikasi ojol.'
+    pertanyaan: 'Berapa jauh Uluwatu dari Bandara Bali?',
+    jawaban: 'Uluwatu berjarak sekitar 18 hingga 25 kilometer dari Bandara Internasional I Gusti Ngurah Rai, tergantung lokasi tujuan akhir Anda di kawasan Uluwatu.'
   },
   {
-    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Canggu?',
-    jawaban: 'Waktu tempuh biasanya antara 45 menit hingga 2 jam tergantung kondisi lalu lintas. Saat jam sibuk dan hari libur padat, perjalanan bisa lebih lama akibat kemacetan khas Canggu.'
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Bali ke Uluwatu?',
+    jawaban: 'Perjalanan dari Bandara Bali ke Uluwatu biasanya memakan waktu antara 35 hingga 70 menit tergantung kondisi lalu lintas, waktu keberangkatan, dan tujuan akhir Anda.'
   },
   {
-    pertanyaan: 'Apakah Canggu jauh dari Bandara Bali?',
-    jawaban: 'Tidak terlalu jauh. Jaraknya hanya sekitar 16–20 km, namun kemacetan di sekitar Canggu sering meningkatkan waktu tempuh secara signifikan, terutama saat jam sibuk pagi dan sore.'
+    pertanyaan: 'Apa cara terbaik dari Bandara Ngurah Rai ke Uluwatu?',
+    jawaban: 'Transfer bandara pribadi adalah salah satu pilihan paling nyaman karena menawarkan harga tetap, penjemputan di bandara, bantuan bagasi, dan antar langsung ke hotel atau villa tanpa perlu antri taksi atau tawar-menawar harga.'
   },
   {
-    pertanyaan: 'Bisakah memesan transfer bandara ke Canggu sebelum tiba?',
-    jawaban: 'Ya. Pemesanan transportasi bandara terlebih dahulu sangat direkomendasikan, terutama saat musim liburan dan periode kedatangan padat, untuk memastikan supir sudah siap saat Anda mendarat.'
+    pertanyaan: 'Apakah tersedia transfer ke Bingin dan Padang Padang?',
+    jawaban: 'Ya. Transfer bandara tersedia ke seluruh kawasan Uluwatu termasuk Bingin, Padang Padang, Suluban, Pecatu, Balangan, dan Dreamland.'
   },
   {
-    pertanyaan: 'Apakah penjemputan bandara tersedia larut malam?',
-    jawaban: 'Ya. Bali West Transport menyediakan layanan penjemputan bandara sesuai jadwal kedatangan penerbangan Anda, termasuk penerbangan malam dan dini hari.'
+    pertanyaan: 'Bisakah memesan transfer bandara sebelum tiba di Bali?',
+    jawaban: 'Ya. Pemesanan lebih awal sangat dianjurkan, terutama pada periode liburan padat, untuk memastikan supir sudah siap dan terkonfirmasi saat Anda mendarat.'
+  },
+  {
+    pertanyaan: 'Apakah tersedia transfer untuk wisatawan berselancar yang membawa papan selancar?',
+    jawaban: 'Ya. Transfer bandara dapat mengakomodasi wisatawan yang membawa papan selancar dan bagasi tambahan. Mohon informasikan peralatan Anda saat pemesanan agar kendaraan yang tepat dapat disiapkan.'
   }
 ];
 
 const ruteTerkait = [
   { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
   { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
   { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
-  { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
   { label: 'Bandara ke Sanur', href: '/id/airport-transfer/' },
-  { label: 'Transfer Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' }
+  { label: 'Semua Transfer Bali', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-canggu/';
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-uluwatu/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -112,15 +116,20 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Bandara Ngurah Rai ke Canggu',
-      alternateName: 'Ngurah Rai Airport to Canggu Transfer',
+      name: 'Transfer Bandara Ngurah Rai ke Uluwatu',
+      alternateName: 'Ngurah Rai Airport to Uluwatu Transfer',
       description: pageDescription,
       serviceType: 'Transfer Bandara Pribadi',
       provider: { '@id': agencyId },
       availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
       areaServed: [
         { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
-        { '@type': 'Place', name: 'Canggu' },
+        { '@type': 'Place', name: 'Uluwatu' },
+        { '@type': 'Place', name: 'Pecatu' },
+        { '@type': 'Place', name: 'Bingin' },
+        { '@type': 'Place', name: 'Padang Padang' },
+        { '@type': 'Place', name: 'Suluban' },
+        { '@type': 'Place', name: 'Balangan' },
         { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
@@ -144,7 +153,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Canggu', item: pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Uluwatu', item: pageUrl }
       ]
     },
     {
@@ -172,17 +181,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/beach-sunset-swing.jpg"
-          alt="Transfer pribadi dari Bandara Ngurah Rai ke Canggu Bali"
+          src="/images/kelingking-beach.jpg"
+          alt="Transfer pribadi dari Bandara Ngurah Rai ke Uluwatu Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Canggu</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Uluwatu</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Antar jemput door-to-door dari Bandara Bali ke Canggu dengan supir lokal profesional dan layanan antar langsung ke villa atau hotel.
+          Antar jemput door-to-door dari Bandara Bali ke Uluwatu — melayani Pecatu, Bingin, Padang Padang, Suluban, dan Balangan.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -207,26 +216,26 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Antar Jemput Bandara Pribadi</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Canggu</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Uluwatu</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Pesan transfer dari Bandara Ngurah Rai ke Canggu bersama Bali West Transport. Perjalanan memakan waktu sekitar 45 menit hingga 2 jam tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Ngurah Rai Internasional (DPS).
+              Pesan transfer dari Bandara Ngurah Rai ke Uluwatu bersama Bali West Transport. Perjalanan memakan waktu sekitar 35 hingga 70 menit tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Internasional I Gusti Ngurah Rai (DPS).
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Canggu adalah salah satu destinasi paling populer di Bali untuk peselancar, digital nomad, remote worker, pengunjung beach club, dan wisatawan jangka panjang. Daripada menghadapi antrian taksi, kebingungan aplikasi ojol, atau kerumitan bagasi, wisatawan bisa langsung melanjutkan perjalanan dari bandara ke akomodasi di Canggu.
+              Uluwatu adalah salah satu destinasi paling diminati di Bali, dikenal dengan tebing dramatis, ombak selancar kelas dunia, Pura Uluwatu, dan penginapan butik tepi pantai di Pecatu, Bingin, Padang Padang, Suluban, dan Balangan. Transfer bandara yang sudah dipesan sebelumnya memungkinkan wisatawan menghindari antrian taksi, tawar-menawar harga, dan ketidakpastian transportasi setelah mendarat.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Meski jarak dari Bandara Ngurah Rai ke Canggu hanya sekitar 16–20 km, kondisi lalu lintas bisa sangat mempengaruhi waktu tempuh. Dengan Bali West Transport, wisatawan bisa memesan transportasi pribadi langsung dari bandara ke hotel, villa, resort, coworking space, dan berbagai akomodasi di seluruh Canggu.
+              Baik Anda datang untuk berselancar, bulan madu, liburan keluarga, atau menginap di villa tepi tebing, memesan transfer bandara pribadi adalah salah satu cara paling nyaman untuk langsung menuju Uluwatu dari Bandara Bali.
             </p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Informasi Cepat</p>
             <div class="space-y-4">
               {[
-                ['Layanan', 'Transfer Bandara Bali ke Canggu'],
+                ['Layanan', 'Transfer Bandara Bali ke Uluwatu'],
                 ['Lokasi Jemput', 'Bandara Ngurah Rai Internasional (DPS)'],
-                ['Tujuan', 'Canggu, Bali'],
+                ['Tujuan', 'Uluwatu, Bali (Bukit Peninsula)'],
                 ['Jenis Kendaraan', 'Mobil Pribadi dengan Supir'],
-                ['Estimasi Waktu Tempuh', '45 Menit – 2 Jam'],
+                ['Estimasi Waktu Tempuh', '35–70 Menit'],
                 ['Ketersediaan', '24 Jam'],
                 ['Armada', 'Kendaraan Pribadi Ber-AC'],
                 ['Jenis Layanan', 'Jemput Bandara & Antar ke Hotel'],
@@ -250,15 +259,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Canggu</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Uluwatu</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">16–20 km</p>
+              <p class="font-serif text-2xl text-brand-dark">18–25 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">45 mnt – 2 jam</p>
+              <p class="font-serif text-2xl text-brand-dark">35–70 mnt</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -278,17 +287,16 @@ const schemaGraph = {
         </div>
         <div class="mt-6 bg-brand-cream p-6">
           <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimasi Waktu Tempuh</p>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="grid grid-cols-3 gap-3">
             {[
-              'Dini hari: 30–50 mnt',
-              'Lalu lintas normal: 45–70 mnt',
-              'Jam sibuk: 90–120 mnt',
-              'Hari libur padat: 2+ jam'
+              'Dini hari: 30–45 mnt',
+              'Lalu lintas normal: 45–60 mnt',
+              'Jam sibuk: 70+ mnt'
             ].map((item) => (
               <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
             ))}
           </div>
-          <p class="text-brand-dark/50 text-sm mt-4">Kemacetan di sekitar Canggu adalah salah satu keluhan yang paling sering disampaikan wisatawan yang mengunjungi Bali.</p>
+          <p class="text-brand-dark/50 text-sm mt-4">Kedatangan pagi hari biasanya lebih cepat. Lalu lintas sore di sekitar Jimbaran dan jalan menuju Bukit Peninsula dapat memperpanjang durasi perjalanan.</p>
         </div>
       </div>
     </section>
@@ -297,9 +305,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Canggu</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Canggu</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bagi kebanyakan wisatawan, transfer bandara pribadi yang dipesan sebelumnya menawarkan keseimbangan terbaik antara kenyamanan, kemudahan, dan keandalan.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Uluwatu</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Pilih Transfer Bandara Pribadi ke Uluwatu</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bagi kebanyakan wisatawan, transfer bandara pribadi adalah cara paling nyaman menuju Uluwatu karena menyediakan jemput di bandara, harga tetap, dan antar langsung ke hotel atau villa.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {keunggulan.map((item) => (
@@ -316,38 +324,39 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Area Canggu -->
+    <!-- Area Uluwatu yang Dilayani -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jangkauan Pengantaran</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Canggu</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Uluwatu</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Bali West Transport menyediakan transfer bandara ke seluruh area Canggu. Banyak villa dan akomodasi di Canggu berada di dalam jalan-jalan kecil dan area perumahan, sehingga transportasi pribadi lebih praktis dibandingkan angkutan umum.
+              Bali West Transport menyediakan transfer bandara ke seluruh kawasan Uluwatu dan Bukit Peninsula. Baik Anda menginap di resort tepi tebing, surf camp di Bingin, villa di Pecatu, maupun penginapan dekat Pantai Padang Padang, kami melayani semua area utama.
             </p>
-            <div class="grid grid-cols-2 gap-3 mb-8">
-              {areaCanggu.map((area) => (
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Area Uluwatu yang Dilayani</p>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              {areaUluwatu.map((area) => (
                 <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
               ))}
             </div>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Pantai Populer di Canggu</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Atraksi Populer di Sekitar</p>
             <div class="grid grid-cols-2 gap-3">
-              {pantaiCanggu.map((pantai) => (
-                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{pantai}</div>
+              {atraksiUluwatu.map((atraksi) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{atraksi}</div>
               ))}
             </div>
           </div>
           <div class="space-y-4">
             <img
-              src="/images/kelingking-beach.jpg"
-              alt="Area pantai Canggu Bali"
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Transfer bandara ke Uluwatu Bali tepi tebing"
               class="w-full h-64 object-cover"
               loading="lazy"
             />
             <img
               src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&h=400&fit=crop"
-              alt="Pantai surfing Canggu Bali"
+              alt="Pemandangan Pura Uluwatu Bali"
               class="w-full h-48 object-cover"
               loading="lazy"
             />
@@ -356,103 +365,104 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Transfer Pribadi vs Grab/Gojek/Taksi -->
+    <!-- Perbandingan Pilihan Transportasi -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Perbandingan</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Transfer Pribadi vs Grab, Gojek, dan Taksi</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Pertanyaan yang sering muncul: lebih baik pakai Grab, Gojek, taksi, atau transfer pribadi dari Bandara Bali ke Canggu?</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara dari Bandara Bali ke Uluwatu</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Tersedia beberapa pilihan transportasi dari Bandara Ngurah Rai ke Uluwatu. Berikut perbandingannya untuk membantu Anda memilih.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-8">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-4">Transfer Bandara Pribadi</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Terbaik untuk</p>
-            <div class="space-y-2 mb-6">
-              {['Keluarga', 'Pasangan', 'Wisatawan pertama kali ke Bali', 'Wisatawan dengan banyak tas', 'Kedatangan malam hari', 'Wisatawan jangka panjang'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70 text-sm">{item}</span>
+        <div class="grid md:grid-cols-4 gap-4 mb-12">
+          {[
+            { jenis: 'Transfer Bandara Pribadi', cocok: 'Keluarga, pasangan, peselancar, rombongan', bagasi: 'Ya', langsung: 'Ya' },
+            { jenis: 'Taksi Bandara', cocok: 'Perjalanan fleksibel', bagasi: 'Ya', langsung: 'Ya' },
+            { jenis: 'Ride-Hailing (Grab/Gojek)', cocok: 'Wisatawan hemat', bagasi: 'Terbatas', langsung: 'Ya' },
+            { jenis: 'Sewa Motor', cocok: 'Wisatawan solo', bagasi: 'Sangat terbatas', langsung: 'Ya' },
+          ].map((opt) => (
+            <div class="bg-white p-6">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{opt.jenis}</p>
+              <div class="space-y-3 text-sm">
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Cocok Untuk</span>
+                  <span class="text-brand-dark/70">{opt.cocok}</span>
                 </div>
-              ))}
-            </div>
-            <p class="font-serif text-lg text-brand-dark mb-3">Keunggulan</p>
-            <div class="space-y-2">
-              {keunggulanTransferPribadi.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70 text-sm">{item}</span>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Ramah Bagasi</span>
+                  <span class="text-brand-dark/70">{opt.bagasi}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div class="bg-white p-8">
-            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Grab atau Gojek</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Sering dipakai wisatawan hemat</p>
-            <p class="text-brand-dark/50 text-sm mb-4">Kemungkinan kendala:</p>
-            <div class="space-y-2">
-              {['Kebingungan titik jemput di bandara', 'Pembatalan driver', 'Surge pricing', 'Kapasitas bagasi terbatas', 'Waktu tunggu lebih lama saat ramai'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/60 text-sm">{item}</span>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Transfer Langsung</span>
+                  <span class="text-brand-dark/70">{opt.langsung}</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-          <div class="bg-white p-8">
-            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Taksi Bandara</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Tersedia langsung di bandara</p>
-            <p class="text-brand-dark/50 text-sm mb-4">Kemungkinan kekurangan:</p>
-            <div class="space-y-2">
-              {['Harga lebih tinggi dibanding transfer yang dipesan lebih awal', 'Biaya kurang dapat diprediksi', 'Antrian saat kedatangan padat'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/60 text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
+        <p class="text-brand-dark/60 text-sm text-center">Wisatawan yang membawa papan selancar, banyak koper, bepergian bersama anak-anak, atau dalam rombongan besar umumnya lebih memilih transfer bandara pribadi demi kenyamanan lebih.</p>
       </div>
     </section>
 
-    <!-- Tentang Canggu -->
+    <!-- Tabel Ringkasan Perjalanan -->
     <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Ikhtisar Rute</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Ringkasan Perjalanan Bandara Bali ke Uluwatu</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Jarak dan estimasi waktu tempuh dari Bandara Ngurah Rai ke masing-masing tujuan di kawasan Uluwatu.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-brand-dark text-brand-cream">
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Rute</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Jarak</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Estimasi Waktu Tempuh</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tabelRute.map((baris, i) => (
+                <tr class={i % 2 === 0 ? 'bg-brand-cream' : 'bg-white'}>
+                  <td class="px-6 py-4 text-brand-dark font-medium">{baris.rute}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{baris.jarak}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{baris.waktu}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-brand-dark/50 text-sm mt-4">Waktu tempuh merupakan estimasi dan dapat bervariasi tergantung kondisi lalu lintas dan waktu perjalanan.</p>
+      </div>
+    </section>
+
+    <!-- Penjemputan di Bandara -->
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Tentang Canggu</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mengapa Wisatawan Memilih Canggu</h2>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jemput di Bandara</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Penjemputan di Bandara Bali</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Canggu telah menjadi salah satu destinasi paling banyak dikunjungi di Bali berkat perpaduan budaya pantai yang santai dan komunitas internasional yang aktif. Karena banyak wisatawan datang khusus untuk tinggal di Canggu selama beberapa hari atau minggu, memesan transportasi bandara sebelumnya membantu menyederhanakan hari pertama kedatangan.
+              Setibanya di Bandara Ngurah Rai, supir Anda akan menunggu di area setelah pengambilan bagasi dengan papan nama. Supir akan membantu membawa bagasi dan mengantar Anda ke kendaraan sebelum memulai perjalanan ke Uluwatu.
             </p>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Yang Ditawarkan Canggu</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Layanan Ini Sangat Berguna Untuk</p>
             <div class="grid grid-cols-2 gap-3">
-              {['Pantai surfing', 'Beach club', 'Coworking space', 'Kafe dan restoran', 'Kehidupan malam', 'Studio wellness', 'Komunitas digital nomad', 'Kuliner yang beragam'].map((item) => (
-                <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
+              {[
+                'Wisatawan pertama kali ke Bali',
+                'Keluarga dengan anak-anak',
+                'Rombongan dengan banyak koper',
+                'Peselancar dengan papan selancar',
+                'Kedatangan malam hari',
+                'Penerbangan dini hari'
+              ].map((item) => (
+                <div class="bg-white p-4 text-brand-dark/70 text-sm">{item}</div>
               ))}
             </div>
           </div>
           <div>
             <img
-              src="/images/nusa-penida-viewpoint.jpg"
-              alt="Pemandangan pesisir Bali dekat Canggu"
+              src="/images/beach-sunset-swing.jpg"
+              alt="Transfer ke Uluwatu Bali sunset"
               class="w-full h-auto object-cover"
               loading="lazy"
             />
@@ -462,12 +472,12 @@ const schemaGraph = {
     </section>
 
     <!-- Mengapa Bali West Transport -->
-    <section class="py-24 bg-brand-cream">
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Pilih Kami</p>
           <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Memilih Bali West Transport?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport menyediakan layanan transportasi pribadi di seluruh Bali untuk transfer bandara, transfer hotel, tur harian, dan perjalanan yang disesuaikan.</p>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport menyediakan layanan transportasi pribadi di seluruh Bali untuk transfer bandara, transfer hotel, supir pribadi, dan tur Bali yang disesuaikan.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           {[
@@ -476,10 +486,10 @@ const schemaGraph = {
             'Kendaraan ber-AC yang nyaman',
             'Penjemputan bandara tersedia 24/7',
             'Antar langsung ke hotel dan villa',
-            'Pilihan transportasi Bali yang fleksibel',
+            'Pemantauan penerbangan untuk keterlambatan',
             'Jangkauan layanan di seluruh Bali'
           ].map((alasan) => (
-            <div class="flex items-start gap-4 p-6 bg-white">
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
               <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -490,13 +500,13 @@ const schemaGraph = {
           ))}
         </div>
         <div class="grid md:grid-cols-3 gap-4">
-          <a href="/id/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Hub Transfer Bandara</span>
           </a>
-          <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
           </a>
-          <a href="/id/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/about/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Tentang Bali West Transport</span>
           </a>
         </div>
@@ -504,7 +514,7 @@ const schemaGraph = {
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
@@ -512,7 +522,7 @@ const schemaGraph = {
         </div>
         <div class="space-y-4">
           {faq.map((item) => (
-            <div class="bg-brand-cream p-8">
+            <div class="bg-white p-8">
               <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.pertanyaan}</h3>
               <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
             </div>
@@ -525,9 +535,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Canggu</h2>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Uluwatu</h2>
         <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
-          Baik Anda menginap di Berawa, Batu Bolong, Echo Beach, atau Pererenan, Bali West Transport membantu perjalanan Anda dari Bandara Ngurah Rai ke Canggu menjadi lebih mudah, nyaman, dan bebas stres.
+          Baik Anda menginap di Pecatu, Bingin, Padang Padang, Suluban, maupun Balangan, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dan terpercaya langsung ke akomodasi Anda.
         </p>
         <a
           href={whatsappUrl}
@@ -558,7 +568,7 @@ const schemaGraph = {
           ))}
         </div>
         <div class="mt-6 text-center">
-          <a href="/airport-transfer/ngurah-rai-airport-to-canggu/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>
