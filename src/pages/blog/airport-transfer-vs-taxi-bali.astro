@@ -1,0 +1,265 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const pageTitle = 'Airport Transfer vs Taxi Bali: Which Should You Book? (2026)';
+const pageDescription = 'Compare airport transfers, official taxis, and Grab/Gojek at Ngurah Rai. Fixed prices, pickup rules, and honest advice so you choose the right option for your trip.';
+const pageKeywords = 'airport transfer vs taxi Bali, Bali airport taxi price, private transfer Bali airport, Grab Gojek Bali airport, Ngurah Rai airport transport options';
+
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent('Hi, I\'d like to book an airport transfer in Bali. Please send me your best offer.')}`;
+
+const relatedServices = [
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
+  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
+];
+
+const faqs = [
+  {
+    question: 'What is the difference between an airport transfer and a taxi in Bali?',
+    answer: 'A pre-booked airport transfer gives you a fixed price, a driver waiting at arrivals with your name, and no need to queue. An official airport taxi uses zone-based fixed fares set at the counter, but you must queue and pay on the spot. Grab and Gojek charge meter-based dynamic rates and require you to walk to a designated pickup zone outside the terminal.'
+  },
+  {
+    question: 'Can I use Grab or Gojek at Ngurah Rai Airport?',
+    answer: 'Yes, but not from the arrivals exit. Both apps have designated pickup lounges inside the airport complex, though you may need to walk 200–300 metres to reach them. Grab and Gojek cannot legally pick up passengers at the arrivals gate itself — that zone belongs to official taxis.'
+  },
+  {
+    question: 'How much does a taxi from Bali airport to Ubud cost?',
+    answer: 'The official airport taxi to Ubud costs approximately IDR 360,000 (around USD 22) based on the zone-rate counter. Grab/Gojek to Ubud typically ranges IDR 150,000–250,000 but requires a walk to the pickup zone. For a pre-booked private transfer, contact Bali West Transport via WhatsApp for a best offer.'
+  },
+  {
+    question: 'Is a pre-booked airport transfer worth it in Bali?',
+    answer: 'Yes, especially for families, first-time visitors, or anyone arriving at night. Pre-booked transfers offer a guaranteed fixed price, a driver with a name sign at arrivals, and no queuing or negotiation. The price is often comparable to an official airport taxi once you account for waiting time and stress.'
+  },
+  {
+    question: 'Do Bali airport taxis use a meter?',
+    answer: 'Official taxis from Ngurah Rai International Airport do not use a meter. They operate on a pre-set zone-based fare system. You pay the quoted price at the taxi counter and receive a ticket before boarding. Unofficial drivers outside the terminal may try to negotiate — always use the official counter.'
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/blog/airport-transfer-vs-taxi-bali/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'en',
+      isPartOf: { '@id': 'https://baliwesttransport.com/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://baliwesttransport.com/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Airport Transfer vs Taxi Bali' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: pageTitle,
+      description: pageDescription,
+      datePublished: '2026-06-08',
+      dateModified: '2026-06-08',
+      author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bali West Transport',
+        logo: { '@type': 'ImageObject', url: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+      },
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  ],
+};
+---
+
+<BlogPost
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  heroImage="/images/nusa-penida-viewpoint.jpg"
+  heroAlt="Private transfer driver at Ngurah Rai Airport Bali arrivals"
+  category="Airport Transfer"
+  publishDate="8 June 2026"
+  readTime="7 min read"
+  articleTitle="Airport Transfer vs Taxi Bali: Which One Should You Book?"
+  articleSubtitle="Every transport option at Ngurah Rai explained — with real prices, pickup rules, and honest advice."
+  relatedServices={relatedServices}
+  schemaGraph={schemaGraph}
+>
+
+  <p>You land at Ngurah Rai International Airport. You're tired. There are drivers everywhere. Three different people say "taxi?" before you reach the exit.</p>
+  <p>This page cuts through the noise. It explains every transport option at Bali's airport, gives you real prices, and tells you exactly which option suits your situation.</p>
+
+  <h2>The Short Answer</h2>
+
+  <div class="comparison-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="comparison-card">
+      <span class="comparison-card-title">Pre-booked Private Transfer</span>
+      <h3>Best for families & first-timers</h3>
+      <p>Driver holds your name at arrivals. Fixed offer agreed before you fly. No queuing, no negotiation. Ask Bali West Transport for a best offer via WhatsApp.</p>
+    </div>
+    <div class="comparison-card">
+      <span class="comparison-card-title">Official Airport Taxi</span>
+      <h3>Best for on-arrival flexibility</h3>
+      <p>Zone-based fixed fares at the counter. Kuta/Seminyak ~IDR 150–200k. Ubud ~IDR 360k. No pre-booking needed, but expect a queue during busy periods.</p>
+    </div>
+    <div class="comparison-card">
+      <span class="comparison-card-title">Grab / Gojek</span>
+      <h3>Best for budget solo travellers</h3>
+      <p>Lowest fares (IDR 100–250k to most areas) but you must walk 200–300m to the designated pickup lounge. Fares surge during rush hour.</p>
+    </div>
+    <div class="comparison-card">
+      <span class="comparison-card-title">Hotel Shuttle</span>
+      <h3>Best for mid-range & luxury resorts</h3>
+      <p>Many resorts include airport pickup in the room rate or charge a fixed fee. Check with your accommodation before you land.</p>
+    </div>
+  </div>
+
+  <h2>Option 1 — Pre-Booked Private Transfer</h2>
+
+  <p>A pre-booked airport transfer is the most seamless way to leave Ngurah Rai. You arrange everything before you fly. When you exit arrivals, a driver is already waiting with a sign showing your name.</p>
+
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li>Book via WhatsApp before your flight.</li>
+    <li>Share your flight number and hotel address.</li>
+    <li>The driver tracks your flight and adjusts for delays.</li>
+    <li>You walk out of arrivals straight to your driver — no queuing.</li>
+  </ul>
+
+  <p><strong>Who should book this:</strong></p>
+  <ul>
+    <li>First-time visitors to Bali</li>
+    <li>Families with children or lots of luggage</li>
+    <li>Anyone arriving after 10 pm</li>
+    <li>Groups where a set price per vehicle makes sense</li>
+  </ul>
+
+  <p>Not sure which destination suits you? Browse all routes at the <a href="/airport-transfer/">Bali Airport Transfer Hub</a> — including <a href="/airport-transfer/ngurah-rai-airport-to-ubud/">Airport to Ubud</a>, <a href="/airport-transfer/ngurah-rai-airport-to-canggu/">Airport to Canggu</a>, and <a href="/airport-transfer/ngurah-rai-airport-to-seminyak/">Airport to Seminyak</a>.</p>
+
+  <h2>Option 2 — Official Airport Taxi (Koperasi Ngurah Rai)</h2>
+
+  <p>Ngurah Rai's only authorised taxi operator is the <strong>Koperasi Jasa Angkutan Taxi Ngurah Rai Bali</strong>. They operate fixed-rate counters in both the international and domestic arrival halls.</p>
+
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li>Exit customs and head to the taxi counter (domestic: turn right after the sliding doors; international: past the hotel drivers area).</li>
+    <li>Tell the officer your destination.</li>
+    <li>They quote a price and give you a paper ticket with your cab number.</li>
+    <li>Your driver takes you to the car. Pay the driver — not the counter.</li>
+  </ul>
+
+  <p><strong>Approximate zone rates:</strong></p>
+  <ul>
+    <li>Airport to Kuta / Legian / Seminyak: IDR 150,000 – 200,000</li>
+    <li>Airport to Ubud: IDR 360,000</li>
+    <li>Airport to Nusa Dua: IDR 200,000 – 250,000</li>
+    <li>Airport to Canggu: IDR 250,000 – 300,000</li>
+  </ul>
+
+  <div class="tip-box">
+    <p><strong>The catch:</strong> You must queue. During busy periods — flight banks around 08:00, 14:00, and 21:00 — queues can stretch 20–30 minutes. During late night, the counter may be closed and remaining drivers are unregulated.</p>
+  </div>
+
+  <p><strong>Who should use this:</strong></p>
+  <ul>
+    <li>Travellers arriving mid-morning with no pre-booking</li>
+    <li>Those who prefer paying cash with no app required</li>
+    <li>Anyone comfortable queuing</li>
+  </ul>
+
+  <h2>Option 3 — Grab and Gojek</h2>
+
+  <p>Grab and Gojek are ride-hailing apps that operate legally at Ngurah Rai but face restrictions on where they can collect passengers.</p>
+
+  <div class="info-box">
+    <h3>The key fact most guides get wrong</h3>
+    <p>Grab and Gojek are <strong>not</strong> permitted to pick up directly from the arrivals exit. Both apps now have dedicated lounges inside the airport complex — the <strong>Grab Lounge</strong> and <strong>Gojek Customer Lounge</strong> — located in the International and Domestic Pick-Up Zones. You need to walk there: approximately 200–300 metres. With heavy luggage after a long-haul flight, that matters.</p>
+  </div>
+
+  <p><strong>Approximate fares (dynamic, subject to surge):</strong></p>
+  <ul>
+    <li>Airport to Kuta / Seminyak: IDR 100,000 – 180,000</li>
+    <li>Airport to Canggu: IDR 150,000 – 250,000</li>
+    <li>Airport to Ubud: IDR 150,000 – 250,000 (subject to surge during peak traffic)</li>
+  </ul>
+
+  <p>Rush-hour surges are real — fares can jump 40–60% between 07:00–09:00 and 17:00–20:00.</p>
+
+  <p><strong>Important:</strong> If a driver approaches you inside the terminal claiming to be your Grab or Gojek driver, they are not. Only confirm your driver match through the app at the designated pickup lounge.</p>
+
+  <p><strong>Who should use this:</strong></p>
+  <ul>
+    <li>Solo travellers with light luggage</li>
+    <li>Experienced Bali visitors who know the pickup zone</li>
+    <li>Budget-first travellers willing to wait and walk</li>
+  </ul>
+
+  <h2>Option 4 — Hotel Shuttle</h2>
+
+  <p>Many mid-range and luxury resorts in Bali offer airport pickup. Some include it in the room rate; others charge IDR 100,000 – 200,000. Check with your accommodation before you land. If your hotel offers it, this is often the easiest option — a familiar face from your resort team, a fixed meeting point, and luggage handled for you.</p>
+
+  <h2>Side-by-Side Comparison</h2>
+
+  <p><strong>Convenience:</strong> Private transfer wins. Driver at arrivals, no walk, no queue.</p>
+  <p><strong>Price:</strong> Grab/Gojek wins — when there is no surge and you are willing to walk.</p>
+  <p><strong>Reliability:</strong> Private transfer and official taxi are tied. Grab/Gojek reliability depends on driver availability and app connectivity at the airport.</p>
+  <p><strong>Safety:</strong> All options are safe when used through official channels. Stick to the Koperasi counter for taxis. Use only in-app matching for Grab/Gojek. For private transfers, book through a reputable provider.</p>
+  <p><strong>Flexibility:</strong> Grab/Gojek wins. No pre-booking required, fares shown upfront in the app.</p>
+
+  <h2>What Happens If You Ignore the Official Options</h2>
+
+  <p>The area outside Ngurah Rai arrivals has unofficial drivers who approach travellers directly. They are not part of the Koperasi system. They do not use meters. Prices are negotiated on the spot, and first-time visitors consistently report paying two to three times the going rate.</p>
+
+  <p>Simply decline, walk to the official taxi counter or Grab Lounge, and you are fine.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  {faqs.map((faq) => (
+    <div class="tip-box">
+      <h3>{faq.question}</h3>
+      <p>{faq.answer}</p>
+    </div>
+  ))}
+
+  <h2>Book Your Bali Airport Transfer</h2>
+
+  <p>If you want zero stress on arrival, book a <a href="/airport-transfer/">private airport transfer</a> before your flight. Share your flight number, hotel address, and arrival time — your driver tracks the flight and meets you at arrivals with your name.</p>
+
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="cta-inline">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Book a Private Airport Transfer — WhatsApp
+  </a>
+
+  <h2>Keep Exploring Bali</h2>
+
+  <p>This article is part of the Bali West Transport Travel Guide series:</p>
+  <ul>
+    <li><a href="/blog/bali-private-driver-guide/">Bali Private Driver Guide</a> — What a full-day driver involves, what to expect, and how to book one.</li>
+    <li><a href="/blog/how-to-get-from-gilimanuk-to-ubud/">How to Get from Gilimanuk to Ubud</a> — Step-by-step guide from Bali's western ferry port to Ubud.</li>
+    <li><a href="/blog/best-way-to-travel-from-gilimanuk-to-ubud/">Best Way to Travel from Gilimanuk to Ubud</a> — Cost, time, and comfort compared across every route.</li>
+    <li><a href="/blog/gilimanuk-ferry-port-guide/">Gilimanuk Ferry Port Guide</a> — Everything about the Gilimanuk–Ketapang crossing: schedules, what to do when you land.</li>
+  </ul>
+
+</BlogPost>

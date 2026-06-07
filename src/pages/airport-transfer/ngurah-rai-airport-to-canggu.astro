@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     question: 'Is Canggu far from Bali Airport?',
-    answer: 'Not particularly. The distance is only around 16–20 km, but traffic congestion around Canggu often increases travel time significantly, especially during morning and evening peak hours.'
+    answer: 'Not particularly. The distance is only around 16â€“20 km, but traffic congestion around Canggu often increases travel time significantly, especially during morning and evening peak hours.'
   },
   {
     question: 'Can I book airport transfer to Canggu before arriving?',
@@ -76,7 +76,7 @@ const relatedRoutes = [
   { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
   { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
   { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
-  { label: 'Airport to Sanur', href: '/airport-transfer/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
   { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' }
 ];
 
@@ -183,7 +183,7 @@ const schemaGraph = {
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer â€” Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Canggu Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
           Private door-to-door transfer from Bali Airport to Canggu with professional local drivers and direct villa or hotel drop-off.
@@ -219,7 +219,7 @@ const schemaGraph = {
               Canggu is one of the most popular destinations in Bali for surfers, digital nomads, remote workers, beach club visitors, and long-stay travellers. Instead of dealing with airport taxi queues, ride-hailing confusion, or luggage hassles, travellers can go directly from the airport to their accommodation in Canggu.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Although the distance from Ngurah Rai Airport to Canggu is only around 16–20 km, traffic conditions can significantly affect travel time. With Bali West Transport, travellers can book private transportation directly from the airport to hotels, villas, resorts, coworking spaces, and private accommodations throughout Canggu.
+              Although the distance from Ngurah Rai Airport to Canggu is only around 16â€“20 km, traffic conditions can significantly affect travel time. With Bali West Transport, travellers can book private transportation directly from the airport to hotels, villas, resorts, coworking spaces, and private accommodations throughout Canggu.
             </p>
           </div>
           <div class="bg-white p-8">
@@ -230,7 +230,7 @@ const schemaGraph = {
                 ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
                 ['Destination', 'Canggu, Bali'],
                 ['Transport Type', 'Private Car with Driver'],
-                ['Estimated Travel Time', '45 Minutes – 2 Hours'],
+                ['Estimated Travel Time', '45 Minutes â€“ 2 Hours'],
                 ['Availability', '24 Hours'],
                 ['Vehicle', 'Private Air-Conditioned Vehicle'],
                 ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
@@ -254,15 +254,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Canggu</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS â†’ Canggu</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
-              <p class="font-serif text-2xl text-brand-dark">16–20 km</p>
+              <p class="font-serif text-2xl text-brand-dark">16â€“20 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
-              <p class="font-serif text-2xl text-brand-dark">45 min – 2 hrs</p>
+              <p class="font-serif text-2xl text-brand-dark">45 min â€“ 2 hrs</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -287,9 +287,9 @@ const schemaGraph = {
           <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Average Travel Times</p>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              'Early morning: 30–50 min',
-              'Normal traffic: 45–70 min',
-              'Peak traffic: 90–120 min',
+              'Early morning: 30â€“50 min',
+              'Normal traffic: 45â€“70 min',
+              'Peak traffic: 90â€“120 min',
               'Busy holidays: 2+ hours'
             ].map((item) => (
               <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
@@ -572,3 +572,4 @@ const schemaGraph = {
   <WhatsAppFloat />
   <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
 </Layout>
+

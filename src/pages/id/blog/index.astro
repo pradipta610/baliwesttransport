@@ -1,0 +1,157 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Panduan Wisata Bali | Tips Transportasi & Informasi Pulau — Bali West Transport';
+const pageDescription = 'Panduan wisata Bali praktis seputar transfer bandara, transportasi antar kota, cara keliling Bali, dan tips perencanaan perjalanan. Ditulis oleh tim transportasi lokal Bali West Transport.';
+const pageKeywords = 'panduan wisata bali, panduan transfer bandara bali, cara keliling bali, tips transportasi bali, panduan taksi bali, transfer pribadi bali';
+
+const posts = [
+  {
+    title: 'Transfer Bandara vs Taksi Bali: Mana yang Harus Kamu Pesan?',
+    excerpt: 'Baru mendarat di Bandara Ngurah Rai dan bingung antara pre-book transfer pribadi atau langsung cari taksi? Panduan ini menjelaskan semua pilihan transportasi di Bandara Bali — cara kerja masing-masing, cocok untuk siapa, dan kapan harus memilih yang mana.',
+    category: 'Transfer Bandara',
+    publishDate: '8 Juni 2026',
+    readTime: '7 menit baca',
+    image: '/images/nusa-penida-viewpoint.jpg',
+    imageAlt: 'Pilihan transportasi di Bandara Bali',
+    href: '/id/blog/airport-transfer-vs-taxi-bali/',
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/id/blog/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'id',
+      publisher: {
+        '@type': 'Organization',
+        '@id': 'https://baliwesttransport.com/#organization',
+        name: 'Bali West Transport',
+        url: 'https://baliwesttransport.com/',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
+        { '@type': 'ListItem', position: 2, name: 'Panduan Wisata', item: pageUrl },
+      ],
+    },
+  ],
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+
+    <!-- Hero -->
+    <section class="relative bg-brand-dark pt-40 pb-24 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/images/kelingking-beach.jpg" alt="Panduan wisata Bali" class="w-full h-full object-cover opacity-20" />
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/50 to-brand-dark"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-12">
+        <div class="mb-6">
+          <span class="inline-block bg-brand-gold/20 text-brand-gold text-xs tracking-[0.2em] uppercase px-4 py-2 border border-brand-gold/30">Panduan Wisata</span>
+        </div>
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-brand-cream mb-6 leading-tight max-w-3xl">Panduan Wisata Bali</h1>
+        <p class="text-brand-cream/60 text-xl max-w-2xl leading-relaxed">Panduan transportasi praktis untuk wisatawan yang merencanakan perjalanan ke Bali — ditulis oleh orang yang menjalankan rute ini setiap hari.</p>
+      </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <article class="bg-white group">
+              <a href={post.href} class="block">
+                <div class="overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt}
+                    class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-8">
+                  <div class="flex items-center gap-4 mb-4">
+                    <span class="text-brand-gold text-xs tracking-[0.15em] uppercase">{post.category}</span>
+                    <span class="w-px h-3 bg-brand-dark/20"></span>
+                    <span class="text-brand-dark/40 text-xs">{post.readTime}</span>
+                  </div>
+                  <h2 class="font-serif text-xl text-brand-dark mb-3 leading-snug group-hover:text-brand-gold transition-colors">{post.title}</h2>
+                  <p class="text-brand-dark/60 text-sm leading-relaxed mb-6">{post.excerpt}</p>
+                  <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-[0.15em] uppercase font-medium group-hover:text-brand-gold transition-colors">
+                    Baca Panduan
+                    <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Transfer Services CTA -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-[0.2em] uppercase mb-4">Layanan Kami</p>
+          <h2 class="font-serif text-4xl text-brand-dark">Pesan Transfer Pribadi di Bali</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Siap memesan? Bali West Transport menyediakan transfer bandara pribadi, transfer antar kota, dan tur seharian di seluruh Bali.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="/id/airport-transfer/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Hub</p>
+            <span class="text-brand-dark font-medium">Transfer Bandara Bali</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Transfer Bandara</p>
+            <span class="text-brand-dark font-medium">Bandara ke Ubud</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-canggu/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Transfer Bandara</p>
+            <span class="text-brand-dark font-medium">Bandara ke Canggu</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-seminyak/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Transfer Bandara</p>
+            <span class="text-brand-dark font-medium">Bandara ke Seminyak</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Transfer Bandara</p>
+            <span class="text-brand-dark font-medium">Bandara ke Uluwatu</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-sanur/" class="bg-brand-cream p-6 hover:bg-brand-gold/10 transition-colors">
+            <p class="text-brand-gold text-xs tracking-[0.15em] uppercase mb-2">Transfer Bandara</p>
+            <span class="text-brand-dark font-medium">Bandara ke Sanur</span>
+          </a>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="/blog/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">View this page in English</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>

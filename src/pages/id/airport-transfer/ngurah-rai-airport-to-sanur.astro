@@ -1,0 +1,497 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Sanur | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Sanur bersama Bali West Transport. Antar langsung ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur. Kendaraan ber-AC, supir profesional, tersedia 24 jam.';
+const pageKeywords = 'transfer bandara ngurah rai ke sanur, antar jemput bandara bali ke sanur, transfer bandara pribadi sanur, bandara DPS ke sanur, jemput bandara sanur bali, transfer sanur bali, bali west transport';
+
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Sanur. Mohon informasi penawaran terbaik Anda.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+const keunggulan = [
+  'Supir menunggu di area kedatangan bandara',
+  'Penawaran fleksibel tanpa biaya tersembunyi',
+  'Tanpa negosiasi harga setelah mendarat',
+  'Kendaraan pribadi eksklusif ber-AC yang nyaman',
+  'Pemantauan penerbangan untuk keterlambatan',
+  'Bantuan bagasi sudah termasuk',
+  'Cocok untuk keluarga, pasangan, dan rombongan',
+  'Praktis untuk wisatawan yang melanjutkan perjalanan ke Pelabuhan Sanur'
+];
+
+const alasanSanur = [
+  'Pantai tenang dan bersih, cocok untuk keluarga',
+  'Pemandangan matahari terbit langsung menghadap laut',
+  'Akses mudah ke Nusa Penida via speedboat',
+  'Akses mudah ke Nusa Lembongan dan Nusa Ceningan',
+  'Jalur pejalan kaki dan jalur sepeda sepanjang tepi pantai',
+  'Lalu lintas lebih tenang dibanding Canggu atau Seminyak'
+];
+
+const infoRute = [
+  ['Rute', 'Bandara Ngurah Rai (DPS) → Sanur'],
+  ['Jarak', '15–21 km'],
+  ['Estimasi Waktu', '20–45 menit'],
+  ['Jenis Layanan', 'Transfer Bandara Pribadi'],
+  ['Cocok Untuk', 'Keluarga, pasangan, wisatawan ferry'],
+  ['Kode Bandara', 'DPS'],
+  ['Area Tujuan', 'Pantai Sanur, Sindhu, Mertasari, Pelabuhan Sanur'],
+  ['Penyedia', 'Bali West Transport'],
+];
+
+const tabelRute = [
+  { kondisi: 'Larut Malam', waktu: '20–25 menit' },
+  { kondisi: 'Lalu Lintas Normal', waktu: '30–40 menit' },
+  { kondisi: 'Jam Sibuk', waktu: '45–60 menit' },
+];
+
+const pilihanTransfer = [
+  {
+    judul: 'Transfer Bandara Pribadi',
+    terbaik: 'Keluarga, pasangan, wisatawan ferry, dan rombongan',
+    detail: 'Transfer bandara pribadi adalah pilihan paling nyaman untuk penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan tanpa kerumitan setelah mendarat.'
+  },
+  {
+    judul: 'Taksi Bandara',
+    terbaik: 'Wisatawan fleksibel yang memilih transportasi on-arrival',
+    detail: 'Taksi resmi tersedia di luar area kedatangan, namun pemesanan terlebih dahulu dapat mengurangi ketidakpastian setelah perjalanan panjang.'
+  },
+  {
+    judul: 'Grab dan Gojek',
+    terbaik: 'Solo traveler dan pengguna aplikasi',
+    detail: 'Aplikasi ojol beroperasi dari area khusus di bandara, meskipun waktu tunggu, titik penjemputan, dan ketersediaan saat ramai bisa bervariasi.'
+  },
+  {
+    judul: 'Taksi Bluebird',
+    terbaik: 'Wisatawan yang sudah familiar dengan layanan taksi Bali',
+    detail: 'Bluebird Group dikenal luas di Bali dan bisa menjadi alternatif ketika tersedia di sekitar area bandara.'
+  },
+];
+
+const periodeTiba = [
+  { periode: 'Pagi Hari', waktu: '20–35 menit', catatan: 'Umumnya salah satu waktu terbaik untuk transfer bandara.' },
+  { periode: 'Siang Hari', waktu: '30–50 menit', catatan: 'Lalu lintas mulai meningkat di sekitar Denpasar dan Sanur.' },
+  { periode: 'Malam Hari', waktu: '35–60 menit', catatan: 'Biasanya salah satu periode tersibuk untuk transfer bandara.' },
+  { periode: 'Dini Hari', waktu: '20–25 menit', catatan: 'Seringkali waktu tercepat untuk perjalanan antara bandara dan Sanur.' },
+];
+
+const faq = [
+  {
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Sanur?',
+    jawaban: 'Sebagian besar perjalanan membutuhkan waktu antara 20 hingga 45 menit tergantung kondisi lalu lintas, waktu kedatangan, dan lokasi hotel, villa, atau pelabuhan Anda di Sanur.'
+  },
+  {
+    pertanyaan: 'Berapa jauh Bandara Bali dari Sanur?',
+    jawaban: 'Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung tujuan akhir Anda.'
+  },
+  {
+    pertanyaan: 'Apakah Sanur lebih dekat ke Bandara Bali dibanding Ubud?',
+    jawaban: 'Ya. Sanur jauh lebih dekat ke Bandara Bali dibanding Ubud dan umumnya membutuhkan waktu perjalanan yang lebih singkat.'
+  },
+  {
+    pertanyaan: 'Bisakah menggunakan Grab di Bandara Bali?',
+    jawaban: 'Bisa. Grab beroperasi dari area penjemputan khusus di Bandara Bali, meskipun zona penjemputan dan waktu tunggu bisa bervariasi.'
+  },
+  {
+    pertanyaan: 'Apakah Sanur cocok sebagai tempat menginap di Bali?',
+    jawaban: 'Sanur sangat populer di kalangan keluarga, pasangan, digital nomad, dan wisatawan yang akan menuju Nusa Penida karena suasananya yang tenang dan lokasinya yang strategis.'
+  },
+  {
+    pertanyaan: 'Apa pilihan transfer terbaik dari Bandara Bali ke Sanur?',
+    jawaban: 'Transfer bandara pribadi umumnya menjadi pilihan paling andal dan nyaman karena menyediakan penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan.'
+  }
+];
+
+const ruteTerkait = [
+  { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
+  { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
+  { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
+  { label: 'Semua Transfer Bali', href: '/id/transfers/' }
+];
+
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-sanur/';
+const orgId = `${pageUrl}#organization`;
+const agencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressCountry: 'ID' }
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': agencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' },
+      parentOrganization: { '@id': orgId }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Transfer Bandara Ngurah Rai ke Sanur',
+      alternateName: 'Ngurah Rai Airport to Sanur Transfer',
+      description: pageDescription,
+      serviceType: 'Transfer Bandara Pribadi',
+      provider: { '@id': agencyId },
+      availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
+      areaServed: [
+        { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
+        { '@type': 'Place', name: 'Sanur' },
+        { '@type': 'Place', name: 'Pelabuhan Sanur' },
+        { '@type': 'AdministrativeArea', name: 'Bali' }
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' }
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.pertanyaan,
+        acceptedAnswer: { '@type': 'Answer', text: item.jawaban }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
+        { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Sanur', item: pageUrl }
+      ]
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'id',
+      isPartOf: { '@id': orgId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': orgId }
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img src="/images/beach-sunset-swing.jpg" alt="Transfer pribadi dari Bandara Ngurah Rai ke Sanur Bali" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Sanur</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">
+          Antar jemput pribadi dari Bandara Bali ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Pesan Transfer Sekarang
+          </a>
+          <a href="/id/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Hub Transfer Bandara</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro + Info Cepat -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Perjalanan dari Bandara Bali ke Sanur</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Perjalanan dari Bandara Ngurah Rai Internasional ke Sanur adalah salah satu transfer bandara terpendek di Bali. Rute ini biasanya membutuhkan waktu sekitar 20 hingga 45 menit dan mencakup jarak sekitar 15 hingga 21 kilometer tergantung lokasi hotel, villa, atau pelabuhan Anda.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Sebagian besar wisatawan yang menuju Sanur memilih transfer bandara pribadi karena menawarkan bantuan bagasi, antar langsung ke tujuan, dan terhindar dari negosiasi taksi setelah mendarat.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Rute ini sangat berguna untuk keluarga, pasangan, dan wisatawan ferry yang akan melanjutkan perjalanan ke Pelabuhan Sanur menuju Nusa Penida, Nusa Lembongan, atau Nusa Ceningan.
+            </p>
+          </div>
+          <div class="bg-white p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Informasi Cepat</p>
+            <div class="space-y-4">
+              {infoRute.map(([label, value]) => (
+                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
+                  <span class="text-brand-dark/50 text-sm">{label}</span>
+                  <span class="text-brand-dark font-medium text-sm text-right">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ringkasan Rute -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+          <div class="grid grid-cols-3 gap-8 flex-1">
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Sanur</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
+              <p class="font-serif text-2xl text-brand-dark">15–21 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
+              <p class="font-serif text-2xl text-brand-dark">20–45 mnt</p>
+            </div>
+          </div>
+          <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Penawaran Terbaik</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal, jam penerbangan, dan tujuan Anda.</p>
+            </div>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">
+              Minta Penawaran Terbaik
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Sanur -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Sanur</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Menginap di Sanur?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Sanur adalah salah satu destinasi pantai paling mapan di Bali, dikenal dengan suasana santai tepi laut, pantai tenang, dan koneksi ke pulau-pulau sekitar.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {alasanSanur.map((alasan) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{alasan}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Jarak & Rute -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jarak & Rute</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Seberapa Jauh Bandara Bali dari Sanur?</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung lokasi hotel Anda. Sebagian besar rute melewati jalan keluar bandara, Jalan Tol Bali Mandara, dan Jalan Bypass Ngurah Rai.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Lalu lintas bisa lebih padat saat jam sibuk pagi, sore hari, liburan sekolah, dan musim wisata ramai.
+            </p>
+          </div>
+          <div class="bg-brand-cream p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Rata-rata Waktu Tempuh</p>
+            <div class="space-y-4">
+              {tabelRute.map((baris) => (
+                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
+                  <span class="text-brand-dark/50 text-sm">{baris.kondisi}</span>
+                  <span class="text-brand-dark font-medium text-sm text-right">{baris.waktu}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilihan Transfer -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pilihan Transportasi</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Sanur</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          {pilihanTransfer.map((pilihan) => (
+            <div class="bg-white p-6">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{pilihan.judul}</p>
+              <p class="text-brand-dark font-medium mb-3">{pilihan.terbaik}</p>
+              <p class="text-brand-dark/70 text-sm leading-relaxed">{pilihan.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Koneksi Ferry Sanur -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pelabuhan Sanur</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Bandara Bali ke Koneksi Ferry Sanur</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Salah satu alasan utama wisatawan memilih Sanur adalah koneksinya ke jaringan pulau Bali. Dari Pelabuhan Sanur, wisatawan dapat melanjutkan perjalanan ke Nusa Penida, Nusa Lembongan, dan Nusa Ceningan menggunakan speedboat.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Jika penerbangan Anda tiba pada hari yang sama dengan keberangkatan ferry, pastikan ada waktu buffer yang cukup untuk imigrasi, pengambilan bagasi, perjalanan darat, dan check-in di pelabuhan.
+            </p>
+          </div>
+          <img src="/images/nusa-penida-viewpoint.jpg" alt="Koneksi Pelabuhan Sanur ke Nusa Penida" class="w-full h-auto object-cover" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Waktu Tempuh per Periode Kedatangan -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Periode Kedatangan</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Waktu Tempuh Bandara Bali ke Sanur Berdasarkan Waktu Kedatangan</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          {periodeTiba.map((item) => (
+            <div class="bg-white p-6">
+              <p class="font-serif text-2xl text-brand-dark mb-2">{item.periode}</p>
+              <p class="text-brand-gold text-xl mb-3">{item.waktu}</p>
+              <p class="text-brand-dark/70 text-sm leading-relaxed">{item.catatan}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Pilih Kami -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Pilih Kami</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Wisatawan Memilih Bali West Transport?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport menyediakan layanan transportasi pribadi di seluruh Bali untuk transfer bandara, transfer antar hotel, supir pribadi, dan tur Bali yang disesuaikan.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {keunggulan.map((item) => (
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{item}</span>
+            </div>
+          ))}
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Hub Transfer Bandara</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bandara ke Ubud</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bandara ke Uluwatu</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+        <div class="space-y-4">
+          {faq.map((item) => (
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.pertanyaan}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Sanur</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
+          Baik Anda menginap di Pantai Sanur, Sindhu, Mertasari, atau akan menuju Pelabuhan Sanur, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dari Bandara Ngurah Rai ke Sanur.
+        </p>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pesan via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Rute Terkait -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Transfer Bandara Lainnya</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Tujuan Transfer Bandara Bali Lainnya</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {ruteTerkait.map((rute) => (
+            <a href={rute.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{rute.label}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/airport-transfer/ngurah-rai-airport-to-sanur/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+            View this page in English
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>

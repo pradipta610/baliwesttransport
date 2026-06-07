@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -17,7 +17,7 @@ const benefits = [
   'Direct transfer to hotels, villas, and resorts throughout Uluwatu',
   'Comfortable private air-conditioned vehicle',
   'Luggage assistance included',
-  'Flight monitoring — pickup adjusted if flight is delayed',
+  'Flight monitoring â€” pickup adjusted if flight is delayed',
   'Airport pickup available 24 hours',
   'Suitable for surfers, families, and large groups'
 ];
@@ -49,11 +49,11 @@ const privateTransferBenefits = [
 ];
 
 const routeTable = [
-  { route: 'Bali Airport to Uluwatu', distance: '18–25 km', time: '35–70 min' },
-  { route: 'Bali Airport to Bingin', distance: '20–24 km', time: '40–70 min' },
-  { route: 'Bali Airport to Padang Padang', distance: '21–25 km', time: '45–75 min' },
-  { route: 'Bali Airport to Suluban', distance: '22–26 km', time: '45–80 min' },
-  { route: 'Bali Airport to Balangan', distance: '16–20 km', time: '30–60 min' },
+  { route: 'Bali Airport to Uluwatu', distance: '18â€“25 km', time: '35â€“70 min' },
+  { route: 'Bali Airport to Bingin', distance: '20â€“24 km', time: '40â€“70 min' },
+  { route: 'Bali Airport to Padang Padang', distance: '21â€“25 km', time: '45â€“75 min' },
+  { route: 'Bali Airport to Suluban', distance: '22â€“26 km', time: '45â€“80 min' },
+  { route: 'Bali Airport to Balangan', distance: '16â€“20 km', time: '30â€“60 min' },
 ];
 
 const faqs = [
@@ -88,7 +88,7 @@ const relatedRoutes = [
   { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
   { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
   { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
-  { label: 'Airport to Sanur', href: '/airport-transfer/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
   { label: 'All Bali Transfers', href: '/transfers/' }
 ];
 
@@ -200,10 +200,10 @@ const schemaGraph = {
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer â€” Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Uluwatu Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Private door-to-door airport transfer from Bali Airport to Uluwatu — covering Pecatu, Bingin, Padang Padang, Suluban, and Balangan.
+          Private door-to-door airport transfer from Bali Airport to Uluwatu â€” covering Pecatu, Bingin, Padang Padang, Suluban, and Balangan.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -247,7 +247,7 @@ const schemaGraph = {
                 ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
                 ['Destination', 'Uluwatu, Bali (Bukit Peninsula)'],
                 ['Transport Type', 'Private Car with Driver'],
-                ['Estimated Travel Time', '35–70 Minutes'],
+                ['Estimated Travel Time', '35â€“70 Minutes'],
                 ['Availability', '24 Hours'],
                 ['Vehicle', 'Private Air-Conditioned Vehicle'],
                 ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
@@ -271,15 +271,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Uluwatu</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS â†’ Uluwatu</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
-              <p class="font-serif text-2xl text-brand-dark">18–25 km</p>
+              <p class="font-serif text-2xl text-brand-dark">18â€“25 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
-              <p class="font-serif text-2xl text-brand-dark">35–70 min</p>
+              <p class="font-serif text-2xl text-brand-dark">35â€“70 min</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -304,8 +304,8 @@ const schemaGraph = {
           <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimated Travel Times</p>
           <div class="grid grid-cols-3 gap-3">
             {[
-              'Early morning: 30–45 min',
-              'Normal traffic: 45–60 min',
+              'Early morning: 30â€“45 min',
+              'Normal traffic: 45â€“60 min',
               'Peak traffic: 70+ min'
             ].map((item) => (
               <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
@@ -590,3 +590,4 @@ const schemaGraph = {
   <WhatsAppFloat />
   <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
 </Layout>
+

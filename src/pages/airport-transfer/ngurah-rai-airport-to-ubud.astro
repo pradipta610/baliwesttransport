@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -22,7 +22,7 @@ const benefits = [
   'Easier travel after long international flights'
 ];
 
-const ubудAreas = [
+const ubudAreas = [
   'Central Ubud',
   'Tegallalang',
   'Campuhan',
@@ -77,11 +77,11 @@ const faqs = [
   },
   {
     question: 'How long does it take from Bali Airport to Ubud?',
-    answer: 'Average travel time is around 1.5–2.5 hours depending on traffic conditions and hotel location. During busy periods or holiday seasons, travel time may be longer.'
+    answer: 'Average travel time is around 1.5â€“2.5 hours depending on traffic conditions and hotel location. During busy periods or holiday seasons, travel time may be longer.'
   },
   {
     question: 'How far is Ubud from Ngurah Rai Airport?',
-    answer: 'The distance from Ngurah Rai Airport to Ubud is approximately 35–40 kilometres depending on your hotel location within the Ubud area.'
+    answer: 'The distance from Ngurah Rai Airport to Ubud is approximately 35â€“40 kilometres depending on your hotel location within the Ubud area.'
   },
   {
     question: 'Can I pre-book airport transfer to Ubud?',
@@ -98,7 +98,7 @@ const relatedRoutes = [
   { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
   { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
   { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
-  { label: 'Airport to Sanur', href: '/airport-transfer/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
   { label: 'Gilimanuk to Ubud Transfer', href: '/transfers/gilimanuk-to-ubud/' }
 ];
 
@@ -205,7 +205,7 @@ const schemaGraph = {
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer â€” Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Ubud Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
           Private door-to-door transfer from Bali Airport to Ubud with professional local drivers and direct hotel drop-off.
@@ -235,7 +235,7 @@ const schemaGraph = {
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Private Airport Transfer</p>
             <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Ngurah Rai Airport to Ubud</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Book a private transfer from Ngurah Rai Airport to Ubud with Bali West Transport. The journey takes approximately 1.5–2.5 hours depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via Ngurah Rai International Airport (DPS).
+              Book a private transfer from Ngurah Rai Airport to Ubud with Bali West Transport. The journey takes approximately 1.5â€“2.5 hours depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via Ngurah Rai International Airport (DPS).
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
               A private airport transfer allows travellers to avoid taxi negotiations, long waiting times, and transportation confusion after landing in Bali. Your driver will pick you up directly from the airport and take you safely to your hotel, villa, Airbnb, or resort in Ubud.
@@ -252,7 +252,7 @@ const schemaGraph = {
                 ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
                 ['Destination', 'Ubud, Bali'],
                 ['Transport Type', 'Private Car with Driver'],
-                ['Estimated Travel Time', '1.5–2.5 Hours'],
+                ['Estimated Travel Time', '1.5â€“2.5 Hours'],
                 ['Availability', '24 Hours'],
                 ['Vehicle', 'Private Air-Conditioned Car'],
                 ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
@@ -276,15 +276,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Ubud</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS â†’ Ubud</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
-              <p class="font-serif text-2xl text-brand-dark">35–40 km</p>
+              <p class="font-serif text-2xl text-brand-dark">35â€“40 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
-              <p class="font-serif text-2xl text-brand-dark">1.5–2.5 hrs</p>
+              <p class="font-serif text-2xl text-brand-dark">1.5â€“2.5 hrs</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -350,7 +350,7 @@ const schemaGraph = {
               Bali West Transport provides airport transfers to all major Ubud areas. Whether you stay at a luxury resort, jungle villa, yoga retreat, or private Airbnb, private airport pickup makes the journey smoother and more convenient.
             </p>
             <div class="grid grid-cols-2 gap-3">
-              {ubудAreas.map((area) => (
+              {ubudAreas.map((area) => (
                 <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
               ))}
             </div>
@@ -555,3 +555,5 @@ const schemaGraph = {
   <WhatsAppFloat />
   <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
 </Layout>
+
+

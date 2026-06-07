@@ -1,9 +1,36 @@
----
+﻿---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import LanguagePicker from './LanguagePicker.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const transferGroups = [
+  {
+    label: lang === 'en' ? 'Main Services' : 'Layanan Utama',
+    items: [
+      { href: lang === 'en' ? '/transfers/' : '/id/transfers/', label: lang === 'en' ? 'All Transfers' : 'Semua Transfer' },
+      { href: lang === 'en' ? '/airport-transfer/' : '/id/airport-transfer/', label: lang === 'en' ? 'Airport Transfer' : 'Transfer Bandara' },
+    ],
+  },
+  {
+    label: lang === 'en' ? 'Airport Transfers' : 'Transfer Bandara',
+    items: [
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-ubud/' : '/id/airport-transfer/ngurah-rai-airport-to-ubud/', label: lang === 'en' ? 'Airport to Ubud' : 'Bandara ke Ubud' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-canggu/' : '/id/airport-transfer/ngurah-rai-airport-to-canggu/', label: lang === 'en' ? 'Airport to Canggu' : 'Bandara ke Canggu' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-seminyak/' : '/id/airport-transfer/ngurah-rai-airport-to-seminyak/', label: lang === 'en' ? 'Airport to Seminyak' : 'Bandara ke Seminyak' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-uluwatu/' : '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/', label: lang === 'en' ? 'Airport to Uluwatu' : 'Bandara ke Uluwatu' },
+      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-sanur/' : '/id/airport-transfer/ngurah-rai-airport-to-sanur/', label: lang === 'en' ? 'Airport to Sanur' : 'Bandara ke Sanur' },
+    ],
+  },
+  {
+    label: lang === 'en' ? 'Ferry Port Transfers' : 'Transfer Pelabuhan',
+    items: [
+      { href: lang === 'en' ? '/transfers/gilimanuk-to-ubud/' : '/id/transfers/gilimanuk-to-ubud/', label: lang === 'en' ? 'Gilimanuk to Ubud' : 'Gilimanuk ke Ubud' },
+      { href: lang === 'en' ? '/transfers/gilimanuk-to-canggu/' : '/id/transfers/gilimanuk-to-canggu/', label: lang === 'en' ? 'Gilimanuk to Canggu' : 'Gilimanuk ke Canggu' },
+    ],
+  },
+];
 
 const navLinks = [
   { href: lang === 'en' ? '/' : `/${lang}`, label: t('nav.home') },
@@ -11,17 +38,9 @@ const navLinks = [
   {
     href: lang === 'en' ? '/transfers' : `/${lang}/transfers`,
     label: t('nav.transfers'),
-    children: [
-      { href: lang === 'en' ? '/transfers/' : '/id/transfers/', label: lang === 'en' ? 'All Transfers' : 'Semua Transfer' },
-      { href: lang === 'en' ? '/airport-transfer/' : '/id/airport-transfer/', label: lang === 'en' ? 'Airport Transfer' : 'Transfer Bandara' },
-      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-ubud/' : '/id/airport-transfer/ngurah-rai-airport-to-ubud/', label: lang === 'en' ? 'Airport → Ubud' : 'Bandara → Ubud' },
-      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-canggu/' : '/id/airport-transfer/ngurah-rai-airport-to-canggu/', label: lang === 'en' ? 'Airport → Canggu' : 'Bandara → Canggu' },
-      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-seminyak/' : '/id/airport-transfer/ngurah-rai-airport-to-seminyak/', label: lang === 'en' ? 'Airport → Seminyak' : 'Bandara → Seminyak' },
-      { href: lang === 'en' ? '/airport-transfer/ngurah-rai-airport-to-uluwatu/' : '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/', label: lang === 'en' ? 'Airport → Uluwatu' : 'Bandara → Uluwatu' },
-      { href: lang === 'en' ? '/transfers/gilimanuk-to-ubud/' : '/id/transfers/gilimanuk-to-ubud/', label: lang === 'en' ? 'Gilimanuk to Ubud' : 'Gilimanuk ke Ubud' },
-      { href: lang === 'en' ? '/transfers/gilimanuk-to-canggu/' : '/id/transfers/gilimanuk-to-canggu/', label: lang === 'en' ? 'Gilimanuk to Canggu' : 'Gilimanuk ke Canggu' },
-    ]
+    groups: transferGroups
   },
+  { href: lang === 'en' ? '/blog/' : `/${lang}/blog/`, label: lang === 'en' ? 'Blog' : 'Blog' },
   { href: lang === 'en' ? '/about' : `/${lang}/about`, label: t('nav.about') },
 ];
 ---
@@ -36,7 +55,7 @@ const navLinks = [
         
         <div class="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            link.children ? (
+            link.groups ? (
               <div class="relative group">
                 <a 
                   href={link.href} 
@@ -49,13 +68,25 @@ const navLinks = [
                 </a>
                 <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
                   <div class="bg-brand-cream shadow-lg py-2 min-w-[220px] border border-black/5">
-                    {link.children.map((child) => (
-                      <a 
-                        href={child.href} 
-                        class="block px-4 py-2 text-brand-dark/70 hover:text-brand-dark hover:bg-brand-gold/10 transition-colors text-sm"
-                      >
-                        {child.label}
-                      </a>
+                    {link.groups.map((group) => (
+                      <details class="nav-dropdown-group" open>
+                        <summary class="flex items-center justify-between gap-3 px-4 py-2 text-[10px] tracking-widest uppercase text-brand-gold cursor-pointer hover:bg-brand-gold/10">
+                          {group.label}
+                          <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                          </svg>
+                        </summary>
+                        <div class="pb-2">
+                          {group.items.map((child) => (
+                            <a 
+                              href={child.href} 
+                              class="block px-4 py-2 text-brand-dark/70 hover:text-brand-dark hover:bg-brand-gold/10 transition-colors text-sm"
+                            >
+                              {child.label}
+                            </a>
+                          ))}
+                        </div>
+                      </details>
                     ))}
                   </div>
                 </div>
@@ -105,22 +136,34 @@ const navLinks = [
         <LanguagePicker />
       </div>
       {navLinks.map((link) => (
-        <div class={link.children ? 'mb-1' : ''}>
+        <div class={link.groups ? 'mb-1' : ''}>
           <a 
             href={link.href} 
             class="block py-3 text-brand-dark/70 hover:text-brand-dark transition-colors text-sm tracking-widest uppercase"
           >
             {link.label}
           </a>
-          {link.children && (
+          {link.groups && (
             <div class="pl-4 border-l border-black/10 ml-2 space-y-1">
-              {link.children.map((child) => (
-                <a 
-                  href={child.href} 
-                  class="block py-2 text-brand-dark/60 hover:text-brand-dark transition-colors text-sm"
-                >
-                  {child.label}
-                </a>
+              {link.groups.map((group) => (
+                <details class="nav-dropdown-group" open>
+                  <summary class="flex items-center justify-between gap-3 py-2 text-[10px] tracking-widest uppercase text-brand-gold cursor-pointer">
+                    {group.label}
+                    <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </summary>
+                  <div class="pb-2">
+                    {group.items.map((child) => (
+                      <a 
+                        href={child.href} 
+                        class="block py-2 text-brand-dark/60 hover:text-brand-dark transition-colors text-sm"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </details>
               ))}
             </div>
           )}
@@ -213,6 +256,18 @@ const navLinks = [
   #mobile-menu :global(.lang-picker-btn:hover) {
     @apply text-brand-dark;
   }
+
+  .nav-dropdown-group > summary {
+    list-style: none;
+  }
+
+  .nav-dropdown-group > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-dropdown-group[open] > summary svg {
+    transform: rotate(180deg);
+  }
 </style>
 
 <script>
@@ -239,3 +294,4 @@ const navLinks = [
   // Initial check
   updateHeader();
 </script>
+

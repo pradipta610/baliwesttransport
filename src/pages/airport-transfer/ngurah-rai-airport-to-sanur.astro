@@ -1,0 +1,323 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Ngurah Rai Airport to Sanur Transfer | Distance, Travel Time & Private Pickup';
+const pageDescription = 'Travel from Ngurah Rai Airport to Sanur with a private airport transfer. Learn distance, estimated travel time, Sanur Harbour connections, and direct pickup options with Bali West Transport.';
+const pageKeywords = 'Ngurah Rai Airport to Sanur, Bali Airport to Sanur, Denpasar Airport to Sanur, airport transfer Bali to Sanur, Sanur airport transfer, DPS Airport to Sanur, private airport transfer Sanur, Bali West Transport';
+
+const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Sanur. Please send me your best offer.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+const quickInfo = [
+  ['Route', 'Ngurah Rai Airport (DPS) → Sanur'],
+  ['Distance', '15–21 km'],
+  ['Travel Time', '20–45 minutes'],
+  ['Service Type', 'Private Airport Transfer'],
+  ['Best For', 'Families, couples, ferry travellers'],
+  ['Airport Code', 'DPS'],
+  ['Destination Coverage', 'Sanur Beach, Sindhu, Mertasari, Sanur Harbour'],
+  ['Provider', 'Bali West Transport'],
+];
+
+const benefits = [
+  'Driver waiting at arrivals area',
+  'Flexible offer with no hidden fees',
+  'No fare negotiation after landing',
+  'Comfortable air-conditioned vehicle',
+  'Flight monitoring for delayed arrivals',
+  'Luggage assistance included',
+  'Suitable for families, couples, and groups',
+  'Convenient for Sanur Harbour ferry connections'
+];
+
+const sanurReasons = [
+  'Calm beaches suitable for families',
+  'Sunrise views over the ocean',
+  'Easy access to Nusa Penida',
+  'Easy access to Nusa Lembongan',
+  'Walking and cycling paths along the beachfront',
+  'Less traffic than Canggu and Ubud'
+];
+
+const routeTable = [
+  { condition: 'Late Night', time: '20–25 minutes' },
+  { condition: 'Normal Traffic', time: '30–40 minutes' },
+  { condition: 'Peak Hours', time: '45–60 minutes' },
+];
+
+const transferOptions = [
+  {
+    title: 'Private Airport Transfer',
+    best: 'Families, couples, ferry travellers, and groups',
+    details: 'A private airport transfer is the most convenient option for direct pickup, luggage assistance, and hotel or harbour drop-off without arrival stress.'
+  },
+  {
+    title: 'Airport Taxi',
+    best: 'Flexible travellers who prefer on-arrival transport',
+    details: 'Official airport taxis are available outside arrivals, but pre-booking can reduce uncertainty after a long flight.'
+  },
+  {
+    title: 'Grab and Gojek',
+    best: 'Solo travellers and app-based bookings',
+    details: 'Ride-hailing apps operate from designated pickup areas, although waiting times, pickup points, and busy-period availability may vary.'
+  },
+  {
+    title: 'Bluebird Taxi',
+    best: 'Travellers familiar with Bali taxi services',
+    details: 'Bluebird Group is widely known in Bali and can be an alternative when available around the airport area.'
+  },
+];
+
+const arrivalPeriods = [
+  { period: 'Morning Arrivals', time: '20–35 minutes', note: 'Generally one of the easiest periods for airport transfers.' },
+  { period: 'Afternoon Arrivals', time: '30–50 minutes', note: 'Traffic can increase around Denpasar and Sanur.' },
+  { period: 'Evening Arrivals', time: '35–60 minutes', note: 'Usually one of the busiest periods for airport transfers.' },
+  { period: 'Late-Night Arrivals', time: '20–25 minutes', note: 'Often the fastest time to travel between the airport and Sanur.' },
+];
+
+const faqs = [
+  {
+    question: 'How long does it take to get from Ngurah Rai Airport to Sanur?',
+    answer: 'Most journeys take between 20 and 45 minutes depending on traffic conditions, arrival time, and your final hotel, villa, or harbour location in Sanur.'
+  },
+  {
+    question: 'How far is Bali Airport from Sanur?',
+    answer: 'The distance from Bali Airport to Sanur is approximately 15 to 21 kilometres depending on your exact destination.'
+  },
+  {
+    question: 'Is Sanur closer to Bali Airport than Ubud?',
+    answer: 'Yes. Sanur is significantly closer to Bali Airport than Ubud and generally requires less travel time.'
+  },
+  {
+    question: 'Can I use Grab at Bali Airport?',
+    answer: 'Yes. Grab operates from designated pickup areas at Bali Airport, although pickup zones and waiting times can vary.'
+  },
+  {
+    question: 'Is Sanur a good place to stay in Bali?',
+    answer: 'Sanur is popular among families, couples, digital nomads, and travellers heading to Nusa Penida due to its relaxed atmosphere and convenient location.'
+  },
+  {
+    question: 'What is the best transfer option from Bali Airport to Sanur?',
+    answer: 'A private airport transfer is typically the most reliable and convenient option because it provides direct pickup, luggage assistance, and hotel or harbour drop-off.'
+  }
+];
+
+const relatedRoutes = [
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
+  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
+  { label: 'All Bali Transfers', href: '/transfers/' }
+];
+
+const pageUrl = 'https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-sanur/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': organizationId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png', telephone: '+6282247648944', sameAs: [] },
+    { '@type': 'TravelAgency', '@id': travelAgencyId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', telephone: '+6282247648944', areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' }, parentOrganization: { '@id': organizationId } },
+    { '@type': 'Service', '@id': serviceId, name: 'Ngurah Rai Airport to Sanur Transfer', description: pageDescription, serviceType: 'Private Airport Transfer', provider: { '@id': travelAgencyId }, areaServed: [{ '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' }, { '@type': 'Place', name: 'Sanur' }, { '@type': 'Place', name: 'Sanur Harbour' }, { '@type': 'Place', name: 'Bali Mandara Toll Road' }, { '@type': 'AdministrativeArea', name: 'Bali' }], availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl, servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' } } },
+    { '@type': 'FAQPage', '@id': faqId, mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
+    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' }, { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' }, { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Sanur Transfer', item: pageUrl }] },
+    { '@type': 'WebPage', '@id': webPageId, url: pageUrl, name: pageTitle, description: pageDescription, isPartOf: { '@id': organizationId }, about: { '@id': serviceId }, mainEntity: [{ '@id': serviceId }, { '@id': faqId }], breadcrumb: { '@id': breadcrumbId }, publisher: { '@id': organizationId } }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img src="/images/beach-sunset-swing.jpg" alt="Ngurah Rai Airport to Sanur private transfer Bali" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Sanur Transfer</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">Private airport pickup from Bali Airport to Sanur Beach, Sindhu, Mertasari, and Sanur Harbour.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">Book Your Transfer</a>
+          <a href="/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Airport Transfer Hub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Travelling from Bali Airport to Sanur</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Travelling from I Gusti Ngurah Rai International Airport to Sanur is one of the shortest airport transfers in Bali. The route usually takes around 20 to 45 minutes and covers approximately 15 to 21 kilometres depending on your exact hotel, villa, or harbour location.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Most travellers heading to Sanur choose a private airport transfer because it offers luggage assistance, direct drop-off, and avoids negotiating with airport taxis after landing.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">This route is especially useful for families, couples, and ferry travellers continuing to Sanur Harbour for Nusa Penida, Nusa Lembongan, or Nusa Ceningan.</p>
+          </div>
+          <div class="bg-white p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Quick Information</p>
+            <div class="space-y-4">
+              {quickInfo.map(([label, value]) => (
+                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
+                  <span class="text-brand-dark/50 text-sm">{label}</span>
+                  <span class="text-brand-dark font-medium text-sm text-right">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+          <div class="grid grid-cols-3 gap-8 flex-1">
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p><p class="font-serif text-2xl text-brand-dark">DPS → Sanur</p></div>
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p><p class="font-serif text-2xl text-brand-dark">15–21 km</p></div>
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p><p class="font-serif text-2xl text-brand-dark">20–45 min</p></div>
+          </div>
+          <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
+            <div><span class="font-serif text-4xl text-brand-gold">Best Offer</span><p class="text-brand-dark/50 text-sm mt-1">Tell us your date, flight time, and drop-off point.</p></div>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Ask Best Offer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Sanur</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Stay in Sanur?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Sanur is one of Bali's most established beach destinations, known for relaxed seaside stays, calm beaches, and convenient island connections.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {sanurReasons.map((reason) => (
+            <div class="flex items-start gap-4 p-6 bg-white"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{reason}</span></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Distance & Route</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">How Far Is Bali Airport from Sanur?</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">The distance from Bali Airport to Sanur is approximately 15 to 21 kilometres depending on your hotel location. Most routes travel via the airport exit road, Bali Mandara Toll Road, and Jalan Bypass Ngurah Rai.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">Traffic can be heavier during morning rush hour, evening peak periods, school holidays, and peak tourism seasons.</p>
+          </div>
+          <div class="bg-brand-cream p-8">
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Average Travel Times</p>
+            <div class="space-y-4">
+              {routeTable.map((row) => (
+                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4"><span class="text-brand-dark/50 text-sm">{row.condition}</span><span class="text-brand-dark font-medium text-sm text-right">{row.time}</span></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Transfer Options</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Ways to Get from Ngurah Rai Airport to Sanur</h2></div>
+        <div class="grid md:grid-cols-4 gap-4">
+          {transferOptions.map((option) => (
+            <div class="bg-white p-6"><p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{option.title}</p><p class="text-brand-dark font-medium mb-3">{option.best}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{option.details}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Sanur Harbour</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Bali Airport to Sanur Ferry Connection</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">A major reason travellers stay in Sanur is its connection to Bali's island network. From Sanur Harbour, travellers can continue to Nusa Penida, Nusa Lembongan, and Nusa Ceningan by fast boat.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">If your flight arrives the same day as your ferry departure, allow enough buffer time for immigration, luggage collection, road traffic, and harbour check-in.</p>
+          </div>
+          <img src="/images/nusa-penida-viewpoint.jpg" alt="Sanur Harbour connection to Nusa Penida" class="w-full h-auto object-cover" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arrival Periods</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Sanur Travel Time by Arrival Period</h2></div>
+        <div class="grid md:grid-cols-4 gap-4">
+          {arrivalPeriods.map((item) => (
+            <div class="bg-white p-6"><p class="font-serif text-2xl text-brand-dark mb-2">{item.period}</p><p class="text-brand-gold text-xl mb-3">{item.time}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{item.note}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2><p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, private drivers, and customised Bali tours.</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {benefits.map((benefit) => (
+            <div class="flex items-start gap-4 p-6 bg-brand-cream"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{benefit}</span></div>
+          ))}
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport Transfer Hub</span></a>
+          <a href="/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Ubud</span></a>
+          <a href="/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Uluwatu</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2></div>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <div class="bg-white p-8"><h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3><p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book Now</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Sanur Transfer</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Whether you are staying near Sanur Beach, Sindhu, Mertasari, or heading to Sanur Harbour, Bali West Transport provides comfortable private airport transfers from Ngurah Rai Airport.</p>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">Book Via WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p><h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedRoutes.map((route) => (
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium text-sm">{route.label}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
+
