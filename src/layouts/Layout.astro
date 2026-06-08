@@ -110,6 +110,109 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="font-sans antialiased text-brand-dark bg-brand-cream">
     <slot />
+
+    <!-- GA4 Button Tracking + Session Attribution -->
+    <script is:inline>
+      (function () {
+        // --- 1. Save UTM + referrer + landing page on first visit of session ---
+        var SESSION_KEY = 'bwt_session';
+        var stored = sessionStorage.getItem(SESSION_KEY);
+        if (!stored) {
+          var params = new URLSearchParams(window.location.search);
+          var referrer = document.referrer || '';
+          var source = params.get('utm_source') || '';
+
+          // Infer source from referrer when no UTM
+          if (!source && referrer) {
+            if (referrer.includes('google')) source = 'google_organic';
+            else if (referrer.includes('bing')) source = 'bing_organic';
+            else if (referrer.includes('facebook') || referrer.includes('fb.com')) source = 'facebook';
+            else if (referrer.includes('instagram')) source = 'instagram';
+            else if (referrer.includes('chatgpt') || referrer.includes('openai')) source = 'chatgpt';
+            else if (referrer.includes('gemini') || referrer.includes('bard')) source = 'gemini';
+            else if (referrer.includes('perplexity')) source = 'perplexity';
+            else source = referrer.split('/')[2] || 'direct';
+          }
+          if (!source) source = 'direct';
+
+          sessionStorage.setItem(SESSION_KEY, JSON.stringify({
+            source: source,
+            medium: params.get('utm_medium') || '',
+            campaign: params.get('utm_campaign') || '',
+            referrer: referrer,
+            landing_page: window.location.pathname
+          }));
+        }
+
+        // --- 2. Button tracking after DOM ready ---
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof gtag === 'undefined') return;
+
+          function getSession() {
+            try { return JSON.parse(sessionStorage.getItem(SESSION_KEY)) || {}; }
+            catch (e) { return {}; }
+          }
+
+          function getLocation(el) {
+            if (el.closest('header')) return 'header';
+            if (el.closest('footer')) return 'footer';
+            if (el.closest('.fixed')) return 'float_button';
+            var sections = Array.from(document.querySelectorAll('main section'));
+            var idx = sections.findIndex(function (s) { return s.contains(el); });
+            if (idx === 0) return 'hero';
+            if (idx === sections.length - 1 && idx > 0) return 'cta_bottom';
+            if (idx > 0) return 'section_' + (idx + 1);
+            return 'page';
+          }
+
+          // Track all WhatsApp button clicks
+          document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+              var session = getSession();
+              var eventName = el.dataset.gaEvent || 'whatsapp_click';
+              var location = el.dataset.gaLocation || getLocation(el);
+              gtag('event', eventName, {
+                event_category: 'lead',
+                button_location: location,
+                button_text: (el.textContent.trim() || 'icon').substring(0, 60),
+                page_path: window.location.pathname,
+                source: session.source || '',
+                medium: session.medium || '',
+                campaign: session.campaign || '',
+                referrer: session.referrer || '',
+                landing_page: session.landing_page || ''
+              });
+            });
+          });
+
+          // Track phone call clicks
+          document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+            el.addEventListener('click', function () {
+              var session = getSession();
+              gtag('event', 'phone_call', {
+                event_category: 'lead',
+                button_location: el.dataset.gaLocation || getLocation(el),
+                page_path: window.location.pathname,
+                source: session.source || '',
+                landing_page: session.landing_page || ''
+              });
+            });
+          });
+
+          // Track internal navigation cards/buttons with data-ga-event
+          document.querySelectorAll('[data-ga-event]').forEach(function (el) {
+            if (el.href && (el.href.includes('wa.me') || el.href.startsWith('tel:'))) return;
+            el.addEventListener('click', function () {
+              gtag('event', el.dataset.gaEvent, {
+                event_category: el.dataset.gaCategory || 'navigation',
+                event_label: el.dataset.gaLabel || '',
+                page_path: window.location.pathname
+              });
+            });
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
 
