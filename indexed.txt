@@ -1,0 +1,37 @@
+Examples
+
+URL	Last crawled
+https://baliwesttransport.com/id
+Jun 2, 2026
+https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-canggu/
+May 31, 2026
+https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-seminyak/
+May 31, 2026
+https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-ubud/
+May 31, 2026
+https://baliwesttransport.com/id/transfers/gilimanuk-to-canggu
+May 31, 2026
+https://baliwesttransport.com/id/transfers/gilimanuk-to-ubud
+May 31, 2026
+https://baliwesttransport.com/id/airport-transfer/
+May 31, 2026
+https://baliwesttransport.com/airport-transfer/
+May 31, 2026
+https://baliwesttransport.com/transfers/
+May 29, 2026
+https://baliwesttransport.com/
+May 28, 2026
+https://baliwesttransport.com/transfers/gilimanuk-to-canggu/
+May 25, 2026
+https://baliwesttransport.com/about
+May 24, 2026
+https://baliwesttransport.com/id/about
+May 24, 2026
+https://baliwesttransport.com/id/transfers
+May 24, 2026
+https://baliwesttransport.com/transfers/gilimanuk-to-ubud
+May 24, 2026
+https://baliwesttransport.com/id/tours
+May 24, 2026
+https://baliwesttransport.com/tours/
+May 24, 2026

@@ -2,5 +2,32 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "astro",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.baliwesttransport.com" }],
+      "destination": "https://baliwesttransport.com/:path*",
+      "permanent": true
+    },
+    { "source": "/about",                                              "destination": "/about/",                                              "permanent": true },
+    { "source": "/tours",                                              "destination": "/tours/",                                              "permanent": true },
+    { "source": "/transfers",                                          "destination": "/transfers/",                                          "permanent": true },
+    { "source": "/airport-transfer",                                   "destination": "/airport-transfer/",                                   "permanent": true },
+    { "source": "/transfers/gilimanuk-to-ubud",                        "destination": "/transfers/gilimanuk-to-ubud/",                        "permanent": true },
+    { "source": "/transfers/gilimanuk-to-canggu",                      "destination": "/transfers/gilimanuk-to-canggu/",                      "permanent": true },
+    { "source": "/airport-transfer/ngurah-rai-airport-to-canggu",      "destination": "/airport-transfer/ngurah-rai-airport-to-canggu/",      "permanent": true },
+    { "source": "/airport-transfer/ngurah-rai-airport-to-seminyak",    "destination": "/airport-transfer/ngurah-rai-airport-to-seminyak/",    "permanent": true },
+    { "source": "/airport-transfer/ngurah-rai-airport-to-ubud",        "destination": "/airport-transfer/ngurah-rai-airport-to-ubud/",        "permanent": true },
+    { "source": "/id",                                                 "destination": "/id/",                                                 "permanent": true },
+    { "source": "/id/about",                                           "destination": "/id/about/",                                           "permanent": true },
+    { "source": "/id/tours",                                           "destination": "/id/tours/",                                           "permanent": true },
+    { "source": "/id/transfers",                                       "destination": "/id/transfers/",                                       "permanent": true },
+    { "source": "/id/airport-transfer",                                "destination": "/id/airport-transfer/",                                "permanent": true },
+    { "source": "/id/transfers/gilimanuk-to-ubud",                     "destination": "/id/transfers/gilimanuk-to-ubud/",                     "permanent": true },
+    { "source": "/id/transfers/gilimanuk-to-canggu",                   "destination": "/id/transfers/gilimanuk-to-canggu/",                   "permanent": true },
+    { "source": "/id/airport-transfer/ngurah-rai-airport-to-canggu",   "destination": "/id/airport-transfer/ngurah-rai-airport-to-canggu/",   "permanent": true },
+    { "source": "/id/airport-transfer/ngurah-rai-airport-to-seminyak", "destination": "/id/airport-transfer/ngurah-rai-airport-to-seminyak/", "permanent": true },
+    { "source": "/id/airport-transfer/ngurah-rai-airport-to-ubud",     "destination": "/id/airport-transfer/ngurah-rai-airport-to-ubud/",     "permanent": true }
+  ]
 }

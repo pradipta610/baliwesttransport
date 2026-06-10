@@ -10,7 +10,8 @@ interface Props {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { title, description = t('meta.home.desc'), keywords = t('meta.home.keywords') } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const rawPathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonicalURL = new URL(rawPathname, Astro.site);
 ---
 
 <!doctype html>
@@ -29,9 +30,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Hreflang for multilingual SEO -->
-    <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace(/^\/id/, ''), Astro.site)} />
-    <link rel="alternate" hreflang="id" href={new URL(`/id${Astro.url.pathname.replace(/^\/id/, '') === '/' ? '' : Astro.url.pathname.replace(/^\/id/, '')}`, Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/id/, ''), Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(rawPathname.replace(/^\/id\//, '/'), Astro.site)} />
+    <link rel="alternate" hreflang="id" href={new URL(`/id${rawPathname.replace(/^\/id\//, '/') === '/' ? '/' : rawPathname.replace(/^\/id\//, '/')}`, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(rawPathname.replace(/^\/id\//, '/'), Astro.site)} />
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

@@ -1,0 +1,25 @@
+Examples
+
+URL	Last crawled
+https://baliwesttransport.com/about/
+N/A
+https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-canggu/
+N/A
+https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-seminyak/
+N/A
+https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-ubud/
+N/A
+https://baliwesttransport.com/id/
+N/A
+https://baliwesttransport.com/id/about/
+N/A
+https://baliwesttransport.com/id/tours/
+N/A
+https://baliwesttransport.com/id/transfers/
+N/A
+https://baliwesttransport.com/id/transfers/gilimanuk-to-canggu/
+N/A
+https://baliwesttransport.com/id/transfers/gilimanuk-to-ubud/
+N/A
+https://baliwesttransport.com/transfers/gilimanuk-to-ubud/
+N/A
