@@ -1,0 +1,546 @@
+# ARTIKEL + PAGE SPEC
+# Route: /how-to-get-from-gilimanuk-to-ubud/
+# Target: Bali travel traffic — naik ranking + dikutip AI engines
+
+---
+
+## 1. TARGET & INTENT ANALYSIS
+
+### Primary Search Intent
+**Navigational + Informational** — User baru keluar dari Gilimanuk Ferry Port (baru nyeberang dari Java/Banyuwangi) dan butuh tahu SEKARANG gimana caranya ke Ubud. Mereka di mode "decision urgency" — nggak mau baca panjang, mau langsung tahu opsinya dan mana yang terbaik.
+
+### User Personas
+1. **Backpacker / budget traveller** — habis hiking Kawah Ijen, mau ke Ubud, cari yang murah
+2. **Mid-range tourist** — rombongan kecil, mau nyaman, bisa bayar private transfer
+3. **First-timer ke Bali** — bingung, nggak tau ada angkutan apa dari Gilimanuk
+4. **Traveller Java → Bali** — part of overland trip, butuh end-to-end logistics
+
+### Secondary Queries (AI likely pulls these together)
+- "gilimanuk to ubud how long"
+- "gilimanuk to ubud private transfer price"
+- "gilimanuk ubud bus"
+- "gilimanuk ubud shuttle"
+- "cheapest way gilimanuk to ubud"
+- "gilimanuk ferry to ubud"
+- "how far is gilimanuk from ubud"
+
+### GEO/AEO Targets (AI engine queries)
+- "How do I get from Gilimanuk to Ubud?"
+- "What is the fastest way from Gilimanuk to Ubud?"
+- "How much does a private transfer from Gilimanuk to Ubud cost?"
+- "Is there a direct bus from Gilimanuk to Ubud?"
+
+---
+
+## 2. ARTIKEL KONTEN (READY TO PUBLISH)
+
+### Meta Tags
+
+```
+<title>How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer (2025)</title>
+<meta name="description" content="Just arrived at Gilimanuk Ferry Port? Here are 3 ways to reach Ubud — public bus from Rp 62,000, tourist shuttle, or private transfer from ~$65. Travel time: 3.5–5 hours.">
+<link rel="canonical" href="https://[yourdomain.com]/how-to-get-from-gilimanuk-to-ubud/">
+```
+
+---
+
+### H1
+# How to Get from Gilimanuk to Ubud: 3 Options Compared (2025)
+
+---
+
+### Intro / AEO Direct-Answer Block
+*(40–60 kata, langsung jawab — target featured snippet)*
+
+From Gilimanuk Ferry Port to Ubud, you have three main options: public bus (Rp 60,000–90,000, 4–5 hours with transfer at Ubung Terminal), tourist shuttle (Rp 150,000–250,000, ~3.5 hours, hotel drop-off), or private transfer (~Rp 900,000–1,200,000, 3.5–4.5 hours, door-to-door). The distance is approximately 127 km. Most travellers pick a private transfer or shuttle for the comfort and direct drop-off.
+
+---
+
+### H2: Quick Comparison
+
+*(This becomes a featured snippet table + AI-citable structured data)*
+
+| Option | Cost (approx) | Travel Time | Best For |
+|--------|--------------|-------------|----------|
+| Public Bus | Rp 60,000–90,000 | 4.5–5.5 hours | Budget solo travellers |
+| Tourist Shuttle | Rp 150,000–250,000 | 3.5–4.5 hours | Solo or pair, mid-budget |
+| Private Transfer | Rp 900,000–1,300,000 | 3.5–4.5 hours | Groups, families, comfort |
+
+> **Distance:** ~127 km by road. **Best time to travel:** Early morning (before 8 AM) or mid-afternoon to avoid traffic around Tabanan and Denpasar.
+
+---
+
+### H2: Option 1 — Public Bus (Cheapest)
+
+The public bus is the cheapest way to get from Gilimanuk to Ubud. PT Putra Sehati Transport and Po Putra Abadi run buses from Terminal Gilimanuk to Terminal Ubung (Denpasar) every few hours. From Ubung, you catch another bus or a Grab/Gojek to Ubud.
+
+**How it works:**
+1. Walk to Terminal Gilimanuk — it's about 500 metres from the ferry exit.
+2. Board a bus bound for Terminal Ubung (Denpasar). Journey: ~4 hours 26 minutes.
+3. At Ubung, catch a Trans Metro Dewata bus (free) or a Grab to central Ubud. Journey: ~45–60 minutes.
+
+**Cost breakdown:**
+- Gilimanuk → Ubung: Rp 60,000–90,000
+- Ubung → Ubud (Grab/Gojek): Rp 50,000–80,000
+- **Total: ~Rp 110,000–170,000 (~$7–11 USD)**
+
+**The catch:** Buses at Gilimanuk sometimes wait to fill seats before departing. Local minibuses ("Bis Umum") stop at every village along the route and extend your travel time significantly — avoid those if you see them. Buy a ticket for the express or VIP/Executive service specifically.
+
+**Pro tip:** Don't buy tickets from touts at the ferry exit. Walk to the terminal directly and buy at the counter.
+
+---
+
+### H2: Option 2 — Tourist Shuttle (Best Middle Ground)
+
+Shared tourist shuttles run between Gilimanuk and Ubud and are the most popular choice for solo travellers and pairs. Companies like Perama Tour, Kura Kura Bus, and various local operators run these routes, though schedules change seasonally.
+
+**What you get:**
+- Air-conditioned minivan or small bus
+- Mostly direct or one-stop route to Ubud
+- Hotel pick-up (if pre-booked in advance) or central meeting point
+- Fixed departure times — no waiting for the bus to fill
+
+**Cost:** Rp 150,000–250,000 per person (~$9–16 USD)
+
+**Travel time:** 3.5–4.5 hours depending on traffic
+
+**How to book:** Book through 12Go Asia, Bookaway, or directly through your accommodation in advance. Walk-up tickets at Gilimanuk are available but limited — especially during peak season (July–August).
+
+**One limitation:** Shuttle pick-up points can be inflexible. If your ferry is delayed, you may miss your slot. Consider booking the next departure time to give yourself a buffer.
+
+---
+
+### H2: Option 3 — Private Transfer (Fastest, Most Comfortable)
+
+A private car with driver is the fastest and most direct way from Gilimanuk to Ubud. Your driver meets you at the ferry exit, loads your bags, and takes you straight to your hotel — no transfers, no waiting.
+
+**Cost:** Rp 900,000–1,300,000 (~$56–80 USD) for the whole vehicle (up to 4–6 passengers)
+
+**Travel time:** 3.5–4.5 hours (traffic-dependent; can reach 4.5–5 hours if you leave mid-morning)
+
+**What's included (varies by operator):**
+- Air-conditioned car (usually Toyota Avanza, Innova, or equivalent)
+- English-speaking driver
+- Door-to-door service
+- Flexibility for roadside stops
+
+**Where to book:**
+- GetYourGuide, Viator, Daytrip (prepay online — reliable)
+- Directly via WhatsApp with local drivers (slightly cheaper, requires trust)
+- Your hotel can usually arrange this if you call ahead
+
+**Optional stops along the route:**
+Many private transfer operators offer sightseeing stops at no extra transport charge (entrance fees are separate):
+- **Medewi Surf Beach** — relaxed beach, local warungs, worth 30 minutes
+- **Jatiluwih Rice Terraces** — UNESCO-listed, adds ~45 minutes to the journey
+- **Tanah Lot Temple** — iconic sea temple, best at sunset, ~15 min detour off the main route
+- **Pura Luhur Batukaru** — mountain temple, peaceful, less crowded than Tanah Lot
+
+If you're not in a rush, the private transfer with two stops makes this one of the best value drives in Bali.
+
+---
+
+### H2: How Long Does It Take from Gilimanuk to Ubud?
+
+The driving distance from Gilimanuk to Ubud is approximately 127 km by the main coastal road (Jalan Raya Denpasar–Gilimanuk).
+
+| Departure Time | Expected Travel Time | Notes |
+|----------------|---------------------|-------|
+| Before 7 AM | 3.5 hours | Minimal traffic |
+| 7 AM – 10 AM | 4–4.5 hours | Building traffic around Tabanan |
+| 10 AM – 2 PM | 4.5–5.5 hours | Worst period — tourist traffic peaks |
+| After 3 PM | 4–4.5 hours | Eases slightly, but Ubud enters can slow |
+| After 6 PM | 3.5–4 hours | Fastest, but night driving less scenic |
+
+**The single biggest factor:** Traffic on the stretch between Tabanan and Mengwi. This section runs through busy market towns and tourist routes. Budget extra time if you travel mid-morning.
+
+---
+
+### H2: Where Exactly Is Gilimanuk, and Why Are You There?
+
+Gilimanuk is a small port town on the far western tip of Bali, approximately 127 km from Ubud. It's not a tourist destination itself — it's a transit point. Ferries run 24 hours a day across the Bali Strait to Ketapang (East Java), making Gilimanuk the entry point for overland travellers coming from Java.
+
+Most people arrive in Gilimanuk after:
+- Crossing from Ketapang (Banyuwangi) by ferry (~30 minutes)
+- Completing a Java trip (Kawah Ijen, Bromo, Yogyakarta) and heading to Bali
+- An overland trip from Surabaya, Malang, or Yogyakarta
+
+Once you arrive at Gilimanuk Ferry Port, you exit the terminal and immediately face a line of taxi and transport offers. This is normal — and usually fine — but prices are inflated at the exit. Walk 200–500 metres and you'll find the public bus terminal and more reasonable quotes.
+
+---
+
+### H2: Tips for Getting from Gilimanuk to Ubud Without Getting Ripped Off
+
+1. **Don't accept the first taxi price at the ferry exit.** Drivers here quote 2–3x the standard rate to arriving passengers. Walk toward the terminal.
+
+2. **Avoid "Bis Umum" (local minibuses).** These buses circle through every village and can add 2+ hours to your journey. Book an express or VIP bus specifically.
+
+3. **Use Grab or Gojek from Ubung.** If you take the public bus to Ubung Terminal (Denpasar), rideshare apps give you a fixed, fair price to Ubud. Much better than negotiating with terminal taxis.
+
+4. **Pre-book your transfer if arriving late.** Gilimanuk's ferry runs 24 hours, but driver availability at 2 AM is limited. Pre-booking via GetYourGuide or WhatsApp the day before avoids being stranded.
+
+5. **Allow for ferry delay buffer.** Bali Strait crossings are usually ~30 minutes, but loading vehicles onto the ferry (especially motorbikes and trucks) adds time. Plan to be at Gilimanuk 15–20 minutes after the ferry docks, not immediately.
+
+6. **Book the shuttle for the correct day.** Shuttle departure times in Gilimanuk are fixed. If your ferry is late, you may miss your slot. Always book the departure after your expected ferry arrival, not the same time.
+
+---
+
+### H2: Frequently Asked Questions
+
+**How far is Gilimanuk from Ubud?**
+The road distance from Gilimanuk to Ubud is approximately 127 km (79 miles), following the main coastal highway along Bali's south coast.
+
+**How long does the drive from Gilimanuk to Ubud take?**
+Expect 3.5 to 5 hours depending on departure time and traffic. Early morning departures (before 7 AM) consistently take 3.5 hours. Mid-morning departures (9 AM–noon) regularly reach 5 hours due to traffic between Tabanan and Mengwi.
+
+**Is there a direct bus from Gilimanuk to Ubud?**
+No direct bus goes from Gilimanuk straight to Ubud. The public bus route goes Gilimanuk → Terminal Ubung (Denpasar), then you transfer onward to Ubud by rideshare or a second bus. Tourist shuttles operate near-direct routes with one or no transfer stops.
+
+**What is the cheapest way to get from Gilimanuk to Ubud?**
+The public bus from Terminal Gilimanuk to Terminal Ubung costs around Rp 60,000–90,000. Add Rp 50,000–80,000 for a Grab/Gojek from Ubung to Ubud. Total budget option: ~Rp 110,000–170,000 (around $7–11 USD).
+
+**What is the fastest way to get from Gilimanuk to Ubud?**
+Private transfer is the fastest option at 3.5–4.5 hours with no waiting or transfers. Tourist shuttles are comparable in speed at 3.5–4.5 hours. The public bus route, including the Ubung transfer, typically takes 5+ hours.
+
+**Can I take a motorbike or scooter from Gilimanuk to Ubud?**
+Yes. The ride from Gilimanuk to Ubud takes 3–4 hours by motorbike on the main coastal road. It's a straightforward route. Check your rental agreement — some Bali rental operators restrict one-way or inter-island travel.
+
+**How much does a private transfer from Gilimanuk to Ubud cost?**
+Private car transfers from Gilimanuk to Ubud cost approximately Rp 900,000–1,300,000 (~$56–80 USD) for the whole vehicle. The price covers up to 4–6 passengers, making it economical for groups. Book in advance through platforms like GetYourGuide, Viator, or Daytrip.
+
+---
+
+### Closing Section / CTA
+
+Getting from Gilimanuk to Ubud is straightforward once you know your options. Choose the public bus if budget is the priority. Book a tourist shuttle if you're travelling solo or as a pair and want a confirmed seat. Go with a private transfer if you're with family or a group — the per-person cost drops to $15–20, and you get door-to-door service plus the flexibility to stop along one of Bali's most scenic coastal drives.
+
+**Planning the rest of your Bali trip?** [Internal link: related articles on Ubud, Bali transport, itineraries]
+
+---
+
+## 3. SCHEMA MARKUP (JSON-LD — paste di `<head>`)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://[yourdomain.com]/how-to-get-from-gilimanuk-to-ubud/",
+      "url": "https://[yourdomain.com]/how-to-get-from-gilimanuk-to-ubud/",
+      "name": "How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer (2025)",
+      "description": "Just arrived at Gilimanuk Ferry Port? Here are 3 ways to reach Ubud — public bus from Rp 62,000, tourist shuttle, or private transfer from ~$65. Travel time: 3.5–5 hours.",
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-01",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://[yourdomain.com]/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Bali Transport",
+            "item": "https://[yourdomain.com]/bali-transport/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Gilimanuk to Ubud",
+            "item": "https://[yourdomain.com]/how-to-get-from-gilimanuk-to-ubud/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Get from Gilimanuk to Ubud by Public Bus",
+      "description": "Step-by-step guide to taking the public bus from Gilimanuk Ferry Port to Ubud, Bali.",
+      "totalTime": "PT5H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "IDR",
+        "value": "110000-170000"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Walk to Terminal Gilimanuk",
+          "text": "After exiting the ferry port, walk approximately 500 metres to Terminal Gilimanuk. Do not accept taxi offers at the exit — walk directly to the terminal."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Board the bus to Terminal Ubung, Denpasar",
+          "text": "Buy a ticket for the express bus to Terminal Ubung. Cost: Rp 60,000–90,000. Journey time: approximately 4 hours 26 minutes. Avoid Bis Umum (local minibuses) as they stop at every village."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Transfer to Ubud from Terminal Ubung",
+          "text": "At Terminal Ubung in Denpasar, take a Grab or Gojek rideshare to Ubud. Cost: Rp 50,000–80,000. Journey time: approximately 45–60 minutes."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How far is Gilimanuk from Ubud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The road distance from Gilimanuk to Ubud is approximately 127 km (79 miles), following the main coastal highway along Bali's south coast."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the drive from Gilimanuk to Ubud take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Expect 3.5 to 5 hours depending on departure time and traffic. Early morning departures before 7 AM consistently take 3.5 hours. Mid-morning departures between 9 AM and noon regularly take 5 hours due to traffic between Tabanan and Mengwi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a direct bus from Gilimanuk to Ubud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No direct bus goes from Gilimanuk straight to Ubud. The public bus route goes Gilimanuk to Terminal Ubung in Denpasar, then you transfer onward to Ubud by rideshare or a second bus. Tourist shuttles operate near-direct routes with one or no transfer stops."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cheapest way to get from Gilimanuk to Ubud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The public bus from Terminal Gilimanuk to Terminal Ubung costs around Rp 60,000–90,000. Add Rp 50,000–80,000 for a Grab or Gojek from Ubung to Ubud. Total budget option: approximately Rp 110,000–170,000, which is around 7–11 USD."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a private transfer from Gilimanuk to Ubud cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private car transfers from Gilimanuk to Ubud cost approximately Rp 900,000–1,300,000, which is around 56–80 USD for the whole vehicle. The price covers up to 4–6 passengers, making it economical for groups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fastest way to get from Gilimanuk to Ubud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private transfer is the fastest option at 3.5–4.5 hours with no waiting or transfers. Tourist shuttles are comparable in speed. The public bus route, including the Ubung transfer, typically takes 5 or more hours total."
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 4. PAGE SPEC UNTUK CLAUDE CODE
+
+### 4.1 URL & Routing
+```
+Path: /how-to-get-from-gilimanuk-to-ubud/
+Trailing slash: yes (consistent dengan URL lain di site)
+Canonical: self-referencing
+```
+
+### 4.2 HTML Structure (Semantic SEO)
+
+```html
+<!-- Breadcrumb nav (visible + schema) -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/bali-transport/">Bali Transport</a></li>
+    <li aria-current="page">Gilimanuk to Ubud</li>
+  </ol>
+</nav>
+
+<!-- Article wrapper -->
+<article itemscope itemtype="https://schema.org/Article">
+  
+  <!-- H1 — exact-match primary keyword -->
+  <h1>How to Get from Gilimanuk to Ubud: 3 Options Compared (2025)</h1>
+
+  <!-- AEO Direct Answer Block — styled visibly, 40-60 words -->
+  <div class="direct-answer-block" role="note" aria-label="Quick answer">
+    <!-- The direct answer paragraph goes here -->
+    <!-- Style: light background (e.g. #f0f7ff), left border accent, slightly inset -->
+  </div>
+
+  <!-- Quick Comparison Table — first content after intro -->
+  <section id="comparison">
+    <h2>Quick Comparison</h2>
+    <div class="table-responsive">
+      <table> ... </table>
+    </div>
+    <!-- Travel time tip in <p> after table -->
+  </section>
+
+  <!-- Option sections — each as <section> with id for anchor links -->
+  <section id="public-bus">
+    <h2>Option 1 — Public Bus (Cheapest)</h2>
+    <!-- HowTo steps as <ol> for eligibility -->
+    <ol class="how-to-steps"> ... </ol>
+  </section>
+
+  <section id="tourist-shuttle">
+    <h2>Option 2 — Tourist Shuttle (Best Middle Ground)</h2>
+  </section>
+
+  <section id="private-transfer">
+    <h2>Option 3 — Private Transfer (Fastest, Most Comfortable)</h2>
+    <!-- Optional stops as <ul> for list snippet eligibility -->
+  </section>
+
+  <section id="travel-time">
+    <h2>How Long Does It Take from Gilimanuk to Ubud?</h2>
+    <!-- Travel time table by departure time -->
+  </section>
+
+  <section id="about-gilimanuk">
+    <h2>Where Exactly Is Gilimanuk, and Why Are You There?</h2>
+  </section>
+
+  <section id="tips">
+    <h2>Tips for Getting from Gilimanuk to Ubud Without Getting Ripped Off</h2>
+    <!-- Numbered tips as <ol> -->
+  </section>
+
+  <!-- FAQ Section — triggers FAQ rich result -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <!-- Each Q&A as details/summary OR as div with h3 + p -->
+      <!-- Prefer <details><summary>Q</summary><p>A</p></details> for UX -->
+    </div>
+  </section>
+
+</article>
+
+<!-- JSON-LD in <head> or before </body> -->
+<script type="application/ld+json"> ... </script>
+```
+
+### 4.3 On-Page SEO Checklist untuk Claude Code
+
+| Element | Value |
+|---------|-------|
+| `<title>` | `How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer (2025)` |
+| `<meta name="description">` | See meta tags section above |
+| `<link rel="canonical">` | Self-referencing full URL |
+| `<meta property="og:title">` | Same as `<title>` |
+| `<meta property="og:description">` | Same as meta description |
+| `<meta property="og:type">` | `article` |
+| `<meta property="og:image">` | Transport route image (hero image) |
+| H1 | `How to Get from Gilimanuk to Ubud: 3 Options Compared (2025)` |
+| H2s | Match exactly as written in article above |
+| Alt text (hero image) | `Map showing transport routes from Gilimanuk Ferry Port to Ubud, Bali` |
+| Internal links | Add 3–5 links to related articles (other Bali transport pages, Ubud guide, Java to Bali guide) |
+| `datePublished` / `dateModified` | In JSON-LD and visible in article (e.g., "Last updated: October 2025") |
+
+### 4.4 Content Blocks / Components
+
+**A. Direct Answer Block**
+- Component: `<DirectAnswerBlock>` atau div dengan class `.quick-answer`
+- Style: Soft blue/teal background (`#EFF8FF`), left border `3px solid #2563EB`, padding `16px 20px`
+- Konten: Paragraph 40–60 kata dari intro
+- Label: Small caps / eyebrow text: "QUICK ANSWER"
+- Ini adalah blok paling penting untuk AEO/Featured Snippet
+
+**B. Comparison Table**
+- Responsive table (horizontal scroll on mobile)
+- 4 kolom: Option | Cost | Time | Best For
+- Row highlight untuk recommended option (private transfer atau shuttle)
+- Sticky header on scroll (optional tapi nice)
+
+**C. Transport Option Sections**
+- Masing-masing section: heading + short description + cost callout box + ordered list (steps/features)
+- Cost callout: `<div class="price-tag">` — visually distinct, bold price, secondary text for range
+
+**D. Travel Time Table by Departure Hour**
+- Table dengan: Departure Time | Expected Duration | Notes
+- Color coding: green (fast), amber (moderate), red (slow traffic)
+
+**E. FAQ Accordion**
+- `<details>/<summary>` native HTML (no JS needed, accessible, indexable)
+- Question dalam `<summary>`, jawaban dalam `<p>` inside `<details>`
+- Tiap Q&A match exactly dengan JSON-LD FAQ schema
+
+**F. Breadcrumb**
+- Visible breadcrumb nav di atas H1
+- Match persis dengan BreadcrumbList schema
+
+### 4.5 GEO / AI Citation Optimisation — Notes untuk Claude Code
+
+**Factual density yang perlu preserve:**
+- 127 km road distance (angka spesifik, bisa dikutip AI)
+- Rp 60,000–90,000 public bus price
+- Rp 900,000–1,300,000 private transfer price
+- 4h 26m bus journey time ke Terminal Ubung
+- "No direct bus from Gilimanuk to Ubud" — clear negative answer
+- Traffic timing table (departure hours vs duration)
+
+**Entity clarity (penting untuk AI engine graph):**
+- Selalu sebut lengkap: "Gilimanuk Ferry Port", "Terminal Ubung", "Bali Strait", "Ketapang Ferry Terminal"
+- Jangan disingkat atau diasumsikan — AI engines butuh entity names yang konsisten
+
+**Framing kalimat untuk AI citation:**
+- Setiap klaim penting framing-nya bisa berdiri sendiri sebagai kutipan
+- Contoh yang benar: "The road distance from Gilimanuk to Ubud is approximately 127 km."
+- Contoh yang lemah: "It's about a 127 km drive."
+
+**Speakable content (voice search):**
+- Direct Answer Block wajib ada dan ringkas
+- FAQ answers < 2 kalimat tiap-tiap pertanyaan untuk voice search eligibility
+- Tambahkan `<meta name="speakable">` atau SpeakableSpecification di schema jika platform mendukung
+
+### 4.6 Performance & Technical
+
+- **Above-the-fold priority:** Direct Answer Block dan Comparison Table harus visible tanpa scroll di desktop
+- **Image optimisation:** Hero image (peta rute atau foto transport) harus `loading="eager"` dan `fetchpriority="high"`, gambar lain `loading="lazy"`
+- **No JavaScript required** untuk core content — content harus readable tanpa JS (penting untuk Googlebot dan AI crawlers)
+- **Mobile-first:** Table harus horizontal-scrollable on mobile, bukan collapse ke vertical stacking yang merusak readability
+- **Word count target:** 1,800–2,400 kata (cukup untuk topical authority, nggak berlebihan)
+
+### 4.7 Internal Linking Suggestions
+
+Tambahkan internal links ke:
+1. `[anchor: Java to Bali overland guide]` → /java-to-bali-overland/ (atau artikel serupa)
+2. `[anchor: things to do in Ubud]` → /things-to-do-ubud/
+3. `[anchor: Bali transport guide]` → /bali-transport/
+4. `[anchor: Ketapang to Gilimanuk ferry]` → /ketapang-gilimanuk-ferry/
+5. `[anchor: Kawah Ijen to Bali]` → /kawah-ijen-to-bali/ (high-intent companion query)
+
+Anchor texts harus descriptive dan natural — bukan "click here".
+
+---
+
+## 5. RINGKASAN DELIVERABLE
+
+| Item | Status |
+|------|--------|
+| Full article copy (EN) | ✅ Done — siap paste |
+| Meta title + description | ✅ Done |
+| H1/H2 structure | ✅ Done |
+| Direct Answer / AEO block | ✅ Done |
+| Comparison table | ✅ Done |
+| FAQ section (6 Q&As) | ✅ Done |
+| JSON-LD WebPage schema | ✅ Done |
+| JSON-LD HowTo schema | ✅ Done |
+| JSON-LD FAQPage schema | ✅ Done |
+| Page spec for Claude Code | ✅ Done |
+| Internal link suggestions | ✅ Done |
+| GEO entity + factual notes | ✅ Done |

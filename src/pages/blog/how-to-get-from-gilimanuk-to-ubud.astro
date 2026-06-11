@@ -1,0 +1,352 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const pageTitle = 'How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer (2026)';
+const pageDescription = 'Just arrived at Gilimanuk Ferry Port? Here are 3 ways to reach Ubud — public bus, tourist shuttle, or private transfer. Travel time: 3.5–5 hours. Distance: 127 km.';
+const pageKeywords = 'how to get from gilimanuk to ubud, gilimanuk to ubud bus, gilimanuk ubud shuttle, gilimanuk ubud private transfer, gilimanuk to ubud travel time, gilimanuk ubud distance';
+
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent('Hi, I would like to book a private transfer from Gilimanuk to Ubud. Please send me your best offer.')}`;
+
+const relatedServices = [
+  { label: 'Gilimanuk to Ubud Transfer', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Bali Private Tours', href: '/tours/' },
+];
+
+const faqs = [
+  {
+    question: 'How far is Gilimanuk from Ubud?',
+    answer: 'The road distance from Gilimanuk to Ubud is approximately 127 km (79 miles), following the main coastal highway along Bali\'s south coast.',
+  },
+  {
+    question: 'How long does the drive from Gilimanuk to Ubud take?',
+    answer: 'Expect 3.5 to 5 hours depending on departure time and traffic. Early morning departures before 7 AM consistently take 3.5 hours. Mid-morning departures between 9 AM and noon regularly take 5 hours due to traffic between Tabanan and Mengwi.',
+  },
+  {
+    question: 'Is there a direct bus from Gilimanuk to Ubud?',
+    answer: 'No direct bus goes from Gilimanuk straight to Ubud. The public bus route goes Gilimanuk to Terminal Ubung in Denpasar, then you transfer onward to Ubud by rideshare or a second bus. Tourist shuttles operate near-direct routes with one or no transfer stops.',
+  },
+  {
+    question: 'What is the cheapest way to get from Gilimanuk to Ubud?',
+    answer: 'The public bus from Terminal Gilimanuk to Terminal Ubung costs around Rp 60,000–90,000. Add Rp 50,000–80,000 for a Grab or Gojek from Ubung to Ubud. Total budget option: approximately Rp 110,000–170,000.',
+  },
+  {
+    question: 'What is the fastest way to get from Gilimanuk to Ubud?',
+    answer: 'Private transfer is the fastest option at 3.5–4.5 hours with no waiting or transfers. Tourist shuttles are comparable in speed. The public bus route, including the Ubung transfer, typically takes 5 or more hours total.',
+  },
+  {
+    question: 'Can I take a motorbike or scooter from Gilimanuk to Ubud?',
+    answer: 'Yes. The ride from Gilimanuk to Ubud takes 3–4 hours by motorbike on the main coastal road. It is a straightforward route. Check your rental agreement — some Bali rental operators restrict one-way or inter-island travel.',
+  },
+  {
+    question: 'How do I book a private transfer from Gilimanuk to Ubud?',
+    answer: 'Contact Bali West Transport via WhatsApp to get a best offer for your group size and travel date. Provide your ferry arrival time and hotel address in Ubud, and your driver will meet you at the Gilimanuk Ferry Port exit.',
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/blog/how-to-get-from-gilimanuk-to-ubud/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'en',
+      isPartOf: { '@id': 'https://baliwesttransport.com/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Travel Guides', item: 'https://baliwesttransport.com/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'How to Get from Gilimanuk to Ubud' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: pageTitle,
+      description: pageDescription,
+      datePublished: '2026-06-12',
+      dateModified: '2026-06-12',
+      author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bali West Transport',
+        logo: { '@type': 'ImageObject', url: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+      },
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    },
+    {
+      '@type': 'HowTo',
+      '@id': `${pageUrl}#howto`,
+      name: 'How to Get from Gilimanuk to Ubud by Public Bus',
+      description: 'Step-by-step guide to taking the public bus from Gilimanuk Ferry Port to Ubud, Bali.',
+      totalTime: 'PT5H',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Walk to Terminal Gilimanuk',
+          text: 'After exiting the ferry port, walk approximately 500 metres to Terminal Gilimanuk. Do not accept taxi offers at the exit — walk directly to the terminal.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Board the express bus to Terminal Ubung, Denpasar',
+          text: 'Buy a ticket for the express bus to Terminal Ubung. Journey time: approximately 4 hours 26 minutes. Avoid Bis Umum (local minibuses) as they stop at every village.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Transfer to Ubud from Terminal Ubung',
+          text: 'At Terminal Ubung in Denpasar, take a Grab or Gojek rideshare to Ubud. Journey time: approximately 45–60 minutes.',
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  ],
+};
+---
+
+<BlogPost
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  heroImage="/images/beach-sunset-swing.jpg"
+  heroAlt="Road through Bali on the journey from Gilimanuk Ferry Port to Ubud"
+  category="Gilimanuk Transfer"
+  publishDate="12 June 2026"
+  readTime="9 min read"
+  articleTitle="How to Get from Gilimanuk to Ubud: 3 Options Compared (2026)"
+  articleSubtitle="Public bus, tourist shuttle, and private transfer — travel times, costs, and what to expect after the Ketapang ferry."
+  relatedServices={relatedServices}
+  schemaGraph={schemaGraph}
+>
+
+  <div class="quick-answer">
+    <p><strong>Quick answer:</strong> From Gilimanuk Ferry Port to Ubud, you have three main options — public bus (Rp 60,000–90,000, 4–5 hours, transfer at Ubung Terminal), tourist shuttle (Rp 150,000–250,000, ~3.5 hours, hotel drop-off), or private transfer (3.5–4.5 hours, door-to-door). The distance is approximately 127 km. Most travellers pick a private transfer or shuttle for the direct drop-off and comfort.</p>
+  </div>
+
+  <h2>Quick Comparison</h2>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Option</th>
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Cost (approx)</th>
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Travel Time</th>
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark font-medium">Public Bus</td>
+          <td class="p-4 text-brand-dark">Rp 60,000–90,000</td>
+          <td class="p-4 text-brand-dark">4.5–5.5 hours</td>
+          <td class="p-4 text-brand-dark">Budget solo travellers</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark font-medium">Tourist Shuttle</td>
+          <td class="p-4 text-brand-dark">Rp 150,000–250,000</td>
+          <td class="p-4 text-brand-dark">3.5–4.5 hours</td>
+          <td class="p-4 text-brand-dark">Solo or pair, mid-budget</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark font-medium">Private Transfer</td>
+          <td class="p-4 text-brand-dark">Best offer on request</td>
+          <td class="p-4 text-brand-dark">3.5–4.5 hours</td>
+          <td class="p-4 text-brand-dark">Groups, families, comfort</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Distance:</strong> ~127 km by road. <strong>Best time to travel:</strong> Early morning (before 8 AM) or mid-afternoon to avoid traffic around Tabanan and Denpasar.</p>
+
+  <h2>Option 1 — Public Bus (Cheapest)</h2>
+
+  <p>The public bus is the cheapest way to get from Gilimanuk to Ubud. Operators including PT Putra Sehati Transport and Po Putra Abadi run buses from Terminal Gilimanuk to Terminal Ubung (Denpasar) several times daily. From Ubung, you catch a Grab or Gojek to Ubud.</p>
+
+  <p><strong>How it works:</strong></p>
+  <ol>
+    <li>Walk to Terminal Gilimanuk — about 500 metres from the ferry exit.</li>
+    <li>Board an express bus bound for Terminal Ubung (Denpasar). Journey: ~4 hours 26 minutes.</li>
+    <li>At Ubung, take a Grab or Gojek to central Ubud. Journey: ~45–60 minutes.</li>
+  </ol>
+
+  <p><strong>Cost breakdown:</strong></p>
+  <ul>
+    <li>Gilimanuk → Terminal Ubung: Rp 60,000–90,000</li>
+    <li>Terminal Ubung → Ubud (Grab/Gojek): Rp 50,000–80,000</li>
+  </ul>
+
+  <div class="tip-box">
+    <p><strong>The catch:</strong> Buses at Gilimanuk sometimes wait to fill seats before departing. Local minibuses ("Bis Umum") stop at every village along the route and add significant travel time — avoid these if you see them. Ask specifically for the express or executive service at the counter.</p>
+  </div>
+
+  <p><strong>Pro tip:</strong> Don't buy tickets from touts at the ferry exit. Walk directly to the terminal and buy at the counter.</p>
+
+  <h2>Option 2 — Tourist Shuttle (Best Middle Ground)</h2>
+
+  <p>Shared tourist shuttles between Gilimanuk and Ubud are the most popular choice for solo travellers and pairs. Companies like Perama Tour, Kura Kura Bus, and various local operators run these routes, though schedules change seasonally.</p>
+
+  <p><strong>What you get:</strong></p>
+  <ul>
+    <li>Air-conditioned minivan or small bus</li>
+    <li>Mostly direct or one-stop route to Ubud</li>
+    <li>Hotel pick-up (if pre-booked in advance) or central meeting point</li>
+    <li>Fixed departure times — no waiting for the vehicle to fill</li>
+  </ul>
+
+  <p><strong>Cost:</strong> Rp 150,000–250,000 per person. <strong>Travel time:</strong> 3.5–4.5 hours depending on traffic.</p>
+
+  <p><strong>How to book:</strong> Book through 12Go Asia, Bookaway, or directly through your accommodation in advance. Walk-up tickets at Gilimanuk are available but limited — especially during peak season (July–August).</p>
+
+  <div class="tip-box">
+    <p><strong>One limitation:</strong> Shuttle pick-up times are fixed. If your Ketapang–Gilimanuk ferry is delayed, you may miss your slot. Book the departure after your expected ferry arrival, not at the same time — build in a buffer.</p>
+  </div>
+
+  <h2>Option 3 — Private Transfer (Fastest, Most Comfortable)</h2>
+
+  <p>A <a href="/transfers/gilimanuk-to-ubud/">private Gilimanuk to Ubud transfer</a> is the fastest and most direct option. Your driver meets you at the ferry exit, loads your bags, and takes you straight to your hotel — no transfers, no waiting.</p>
+
+  <p><strong>Travel time:</strong> 3.5–4.5 hours (traffic-dependent; allow 4.5–5 hours if departing mid-morning).</p>
+
+  <p><strong>What's typically included:</strong></p>
+  <ul>
+    <li>Air-conditioned vehicle (Toyota Avanza, Innova, or equivalent)</li>
+    <li>English-speaking local driver</li>
+    <li>Door-to-door service, Gilimanuk Ferry Port to your Ubud accommodation</li>
+    <li>Flexibility for roadside stops along the route</li>
+  </ul>
+
+  <p><strong>Optional stops along the route:</strong> Many private transfer operators offer sightseeing stops at no extra transport charge (entrance fees are separate):</p>
+  <ul>
+    <li><strong>Medewi Surf Beach</strong> — relaxed beach with local warungs, worth 30 minutes</li>
+    <li><strong>Jatiluwih Rice Terraces</strong> — UNESCO-listed, adds ~45 minutes to the journey</li>
+    <li><strong>Tanah Lot Temple</strong> — iconic sea temple, best at sunset, ~15 min detour off the main route</li>
+    <li><strong>Pura Luhur Batukaru</strong> — mountain temple, peaceful, far less crowded than Tanah Lot</li>
+  </ul>
+
+  <p>If you're not in a rush, the private transfer with two stops makes this one of the best-value drives in Bali. <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contact Bali West Transport via WhatsApp</a> for a flexible offer based on your group size and travel date.</p>
+
+  <h2>How Long Does It Take from Gilimanuk to Ubud?</h2>
+
+  <p>The driving distance from Gilimanuk to Ubud is approximately 127 km by the main coastal road (Jalan Raya Denpasar–Gilimanuk). Travel time varies significantly by departure time.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Departure Time</th>
+          <th class="text-left p-4 font-medium tracking-wide whitespace-nowrap">Expected Travel Time</th>
+          <th class="text-left p-4 font-medium tracking-wide">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark font-medium">Before 7 AM</td>
+          <td class="p-4 text-brand-dark">3.5 hours</td>
+          <td class="p-4 text-brand-dark">Minimal traffic — fastest window</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark font-medium">7 AM – 10 AM</td>
+          <td class="p-4 text-brand-dark">4–4.5 hours</td>
+          <td class="p-4 text-brand-dark">Building traffic around Tabanan</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark font-medium">10 AM – 2 PM</td>
+          <td class="p-4 text-brand-dark">4.5–5.5 hours</td>
+          <td class="p-4 text-brand-dark">Worst period — tourist traffic peaks</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark font-medium">After 3 PM</td>
+          <td class="p-4 text-brand-dark">4–4.5 hours</td>
+          <td class="p-4 text-brand-dark">Eases slightly; Ubud entry roads can slow</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark font-medium">After 6 PM</td>
+          <td class="p-4 text-brand-dark">3.5–4 hours</td>
+          <td class="p-4 text-brand-dark">Fastest, but night driving is less scenic</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>The single biggest factor:</strong> Traffic on the stretch between Tabanan and Mengwi. This section runs through busy market towns and popular tourist routes. Budget extra time if you travel mid-morning.</p>
+
+  <h2>Where Exactly Is Gilimanuk, and Why Are You There?</h2>
+
+  <p>Gilimanuk is a small port town on the far western tip of Bali, approximately 127 km from Ubud. It is not a tourist destination itself — it is a transit point. Ferries run 24 hours a day across the Bali Strait to Ketapang Ferry Terminal (East Java), making Gilimanuk the primary entry point for overland travellers arriving from Java.</p>
+
+  <p>Most people arrive in Gilimanuk after:</p>
+  <ul>
+    <li>Crossing from Ketapang (Banyuwangi) by ferry — approximately 30 minutes</li>
+    <li>Completing a Java trip (Kawah Ijen, Bromo, Yogyakarta) and heading to Bali</li>
+    <li>An overland journey from Surabaya, Malang, or Yogyakarta</li>
+  </ul>
+
+  <p>Once you arrive at Gilimanuk Ferry Port, you exit the terminal and immediately face a line of taxi and transport offers. This is normal — and usually fine — but prices are inflated at the exit. Walk 200–500 metres and you will find the public bus terminal and more reasonable options.</p>
+
+  <h2>Tips for Getting from Gilimanuk to Ubud Without Getting Ripped Off</h2>
+
+  <ol>
+    <li><strong>Don't accept the first taxi price at the ferry exit.</strong> Drivers here quote two to three times the standard rate to arriving passengers. Walk toward the terminal before negotiating.</li>
+    <li><strong>Avoid "Bis Umum" (local minibuses).</strong> These buses circle through every village and can add 2+ hours to your journey. Ask specifically for the express bus to Terminal Ubung.</li>
+    <li><strong>Use Grab or Gojek from Ubung.</strong> If you take the public bus to Terminal Ubung in Denpasar, rideshare apps give you a fixed, fair price to Ubud — much better than negotiating with terminal taxis.</li>
+    <li><strong>Pre-book your transfer if arriving late.</strong> Gilimanuk's ferry runs 24 hours, but driver availability at 2 AM is limited. Pre-booking via WhatsApp the day before avoids being stranded.</li>
+    <li><strong>Allow for ferry delay buffer.</strong> Bali Strait crossings take approximately 30 minutes, but loading vehicles onto the ferry adds time. Plan to be at Gilimanuk 15–20 minutes after the ferry docks.</li>
+    <li><strong>Book the shuttle for the correct departure time.</strong> Shuttle times at Gilimanuk are fixed. If your ferry is late, you may miss your slot. Always book the departure after your expected ferry arrival, not at the same time.</li>
+  </ol>
+
+  <h2>Booking a Private Transfer from Gilimanuk to Ubud</h2>
+
+  <p>Bali West Transport provides <a href="/transfers/gilimanuk-to-ubud/">private door-to-door transfers from Gilimanuk Ferry Port to Ubud</a> with professional local drivers and air-conditioned vehicles. Your driver meets you at the ferry exit, handles your luggage, and takes you directly to your Ubud accommodation.</p>
+
+  <p>We also cover other routes from Gilimanuk, including <a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu</a> and other Bali destinations. For <a href="/airport-transfer/">airport transfers from Ngurah Rai International Airport</a>, see our dedicated airport transfer service.</p>
+
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="cta-inline">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Book a Private Gilimanuk to Ubud Transfer — WhatsApp
+  </a>
+
+  <h2>Frequently Asked Questions</h2>
+
+  {faqs.map((faq) => (
+    <div class="tip-box">
+      <h3>{faq.question}</h3>
+      <p>{faq.answer}</p>
+    </div>
+  ))}
+
+  <h2>Keep Exploring Bali</h2>
+
+  <p>This article is part of the Bali West Transport Travel Guide series:</p>
+  <ul>
+    <li><a href="/blog/airport-transfer-vs-taxi-bali/">Airport Transfer vs Taxi in Bali</a> — Every transport option at Ngurah Rai Airport explained, with real prices and honest advice.</li>
+    <li><a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud Transfer</a> — Book a private door-to-door transfer from Gilimanuk Ferry Port to Ubud.</li>
+    <li><a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu Transfer</a> — Private transfer from Gilimanuk to Canggu.</li>
+    <li><a href="/airport-transfer/">Bali Airport Transfer Hub</a> — All private airport transfer routes from Ngurah Rai International Airport.</li>
+  </ul>
+
+</BlogPost>
