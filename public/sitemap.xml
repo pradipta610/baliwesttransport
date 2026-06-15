@@ -160,9 +160,15 @@
   <!-- Blog / Travel Guides (EN) -->
   <url>
     <loc>https://baliwesttransport.com/blog/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baliwesttransport.com/blog/gilimanuk-ferry-port-guide/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://baliwesttransport.com/blog/how-to-get-from-gilimanuk-to-ubud/</loc>
@@ -180,9 +186,15 @@
   <!-- Blog / Panduan Wisata (ID) -->
   <url>
     <loc>https://baliwesttransport.com/id/blog/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baliwesttransport.com/id/blog/gilimanuk-ferry-port-guide/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baliwesttransport.com/id/blog/how-to-get-from-gilimanuk-to-ubud/</loc>

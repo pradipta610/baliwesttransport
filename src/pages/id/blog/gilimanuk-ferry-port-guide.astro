@@ -1,0 +1,423 @@
+---
+import BlogPost from '../../../layouts/BlogPost.astro';
+
+const pageTitle = 'Panduan Pelabuhan Gilimanuk: Jadwal, Tiket & Transfer (2026)';
+const pageDescription = 'Semua yang perlu kamu tahu tentang Pelabuhan Gilimanuk — jadwal feri, harga tiket, cara pesan di Ferizy, dan cara ke Ubud, Canggu, atau Seminyak dari pelabuhan.';
+const pageKeywords = 'panduan pelabuhan gilimanuk, gilimanuk pelabuhan bali, feri gilimanuk ketapang, jadwal feri gilimanuk, harga tiket feri gilimanuk, transfer pelabuhan gilimanuk, feri bali jawa';
+
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent('Halo, saya ingin memesan transfer pribadi dari Pelabuhan Gilimanuk. Mohon informasi penawaran terbaik Anda.')}`;
+
+const relatedServices = [
+  { label: 'Transfer Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
+  { label: 'Transfer Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
+  { label: 'Semua Transfer Bali', href: '/id/transfers/' },
+  { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
+  { label: 'Tur Pribadi Bali', href: '/id/tours/' },
+];
+
+const faqs = [
+  {
+    question: 'Jam berapa Pelabuhan Gilimanuk beroperasi?',
+    answer: 'Pelabuhan Gilimanuk beroperasi 24 jam sehari, 7 hari seminggu. Feri ke Ketapang (Jawa) berangkat setiap 15–30 menit sepanjang hari. Satu-satunya pengecualian adalah Nyepi (Hari Raya Nyepi Bali), saat pelabuhan tutup selama 24 jam penuh.',
+  },
+  {
+    question: 'Berapa harga tiket feri Gilimanuk ke Ketapang?',
+    answer: 'Tiket penumpang pejalan kaki dewasa mulai dari Rp 10.600. Motor di bawah 500cc sekitar Rp 24.000–52.000 per kendaraan. Mobil sekitar Rp 182.400–250.000. Tarif ditetapkan oleh operator pemerintah ASDP Indonesia Ferry.',
+  },
+  {
+    question: 'Bagaimana cara memesan tiket feri Gilimanuk secara online?',
+    answer: 'Pesan melalui Ferizy.com atau aplikasi Ferizy (tersedia di Play Store dan App Store). Pilih Gilimanuk sebagai pelabuhan asal atau Ketapang sebagai tujuan, pilih jenis kendaraan dan jadwal keberangkatan, lalu bayar secara online. E-tiket dikirim ke email dan tersimpan di aplikasi.',
+  },
+  {
+    question: 'Berapa jauh Gilimanuk dari Ubud?',
+    answer: 'Gilimanuk berjarak sekitar 130 km dari Ubud melalui jalan darat. Waktu tempuh 3,5 hingga 4,5 jam tergantung lalu lintas. Transfer mobil pribadi adalah pilihan tercepat dan paling nyaman.',
+  },
+  {
+    question: 'Berapa jauh Gilimanuk dari Canggu?',
+    answer: 'Gilimanuk berjarak sekitar 113 km dari Canggu. Waktu tempuh sekitar 2,5 hingga 3 jam dengan mobil pribadi.',
+  },
+  {
+    question: 'Apakah ada transfer pribadi dari Pelabuhan Gilimanuk ke Bali?',
+    answer: 'Ada. Transfer mobil pribadi dari Pelabuhan Gilimanuk ke Ubud, Canggu, Seminyak, Kuta, Sanur, dan Uluwatu tersedia. Bali West Transport menawarkan layanan door-to-door dari pelabuhan dengan pengemudi profesional.',
+  },
+  {
+    question: 'Apakah feri Gilimanuk beroperasi saat Nyepi?',
+    answer: 'Tidak. Pelabuhan feri Gilimanuk tutup total selama 24 jam saat Nyepi, Hari Raya Nyepi Bali. Rencanakan penyeberangan setidaknya satu hari sebelum atau setelah Nyepi.',
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/id/blog/gilimanuk-ferry-port-guide/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'id',
+      isPartOf: { '@id': 'https://baliwesttransport.com/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
+        { '@type': 'ListItem', position: 2, name: 'Panduan Wisata', item: 'https://baliwesttransport.com/id/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Panduan Pelabuhan Gilimanuk' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: 'Panduan Pelabuhan Gilimanuk: Jadwal, Tiket & Transfer (2026)',
+      description: pageDescription,
+      datePublished: '2026-06-16',
+      dateModified: '2026-06-16',
+      author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bali West Transport',
+        logo: { '@type': 'ImageObject', url: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+      },
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+      inLanguage: 'id',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  ],
+};
+---
+
+<BlogPost
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  heroImage="/images/beach-sunset-swing.jpg"
+  heroAlt="Matahari terbenam di Selat Bali dekat Pelabuhan Gilimanuk"
+  category="Transfer Gilimanuk"
+  publishDate="16 Juni 2026"
+  readTime="12 menit baca"
+  articleTitle="Panduan Pelabuhan Gilimanuk: Jadwal, Tiket & Transfer (2026)"
+  articleSubtitle="Jam operasional, harga tiket, cara pesan di Ferizy, tips di pelabuhan, dan cara dari Gilimanuk ke mana saja di Bali."
+  relatedServices={relatedServices}
+  schemaGraph={schemaGraph}
+>
+
+  <div class="quick-answer">
+    <p><strong>Fakta singkat:</strong> Pelabuhan Gilimanuk buka 24 jam. Feri ke Ketapang (Jawa) berangkat setiap 15–30 menit. Waktu penyeberangan: 30–45 menit. Tiket pejalan kaki dewasa mulai Rp 10.600. Tiket wajib dipesan online melalui Ferizy. Waktu tempuh ke Ubud: 3,5–4,5 jam. Hanya tutup saat Nyepi.</p>
+  </div>
+
+  <p>Gilimanuk adalah satu-satunya penyeberangan feri resmi antara Bali dan Jawa. Jika kamu tiba dari Jawa Timur — atau akan menuju ke sana — pelabuhan ini adalah pintu masuk dan keluar kamu. Panduan ini mencakup segalanya: jam feri, harga tiket, cara pesan online, apa yang perlu disiapkan di pelabuhan, dan cara dari Gilimanuk ke mana pun kamu menginap di Bali.</p>
+
+  <h2>Di Mana Gilimanuk?</h2>
+
+  <p>Gilimanuk terletak di ujung paling barat Bali, di Kabupaten Jembrana. Kota ini berhadapan dengan Pelabuhan Ketapang di Banyuwangi, Jawa Timur, di seberang Selat Bali — titik tersempit antara kedua pulau, sekitar 3 km perairan terbuka.</p>
+
+  <p>Pelabuhan ini berjarak 130 km dari Ubud dan sekitar 134 km dari Denpasar. Jika kamu berangkat dari Bali selatan, bersiaplah untuk perjalanan darat yang cukup panjang sebelum naik kapal.</p>
+
+  <div class="tip-box">
+    <p><strong>Penting:</strong> Feri tidak berangkat dari kota Banyuwangi. Keberangkatan dari Pelabuhan Ketapang, sekitar 10 km di utara kota Banyuwangi. Jangan pesan transportasi ke terminal yang salah.</p>
+  </div>
+
+  <h2>Jadwal dan Jam Operasional Feri Gilimanuk</h2>
+
+  <p>Pelabuhan Gilimanuk buka 24 jam sehari, setiap hari — dengan satu pengecualian besar.</p>
+
+  <p>Feri berangkat kira-kira setiap 15–30 menit sepanjang hari. Pada malam hari, frekuensi turun menjadi sekitar setiap 30 menit, namun penyeberangan tetap berlangsung hingga dini hari.</p>
+
+  <p>Selama hari libur nasional Indonesia — terutama Idul Fitri, Natal, dan Tahun Baru (dikenal sebagai Nataru) — jumlah penumpang dan kendaraan melonjak drastis. Antrean bisa memanjang hingga beberapa jam. Jika perjalananmu bertepatan dengan hari libur, datanglah lebih awal atau pesan transfer pribadi yang sudah ada kepastian penjemputan.</p>
+
+  <div class="info-box">
+    <h3>Peringatan Nyepi</h3>
+    <p>Saat Hari Raya Nyepi (Hari Raya Nyepi Bali), Pelabuhan Gilimanuk tutup total selama 24 jam. Tidak ada penyeberangan yang beroperasi. Rencanakan rute Jawa-Bali minimal satu hari penuh sebelum atau sesudah Nyepi. Cek kalender Hindu Bali untuk tanggal pasti setiap tahun — tanggalnya berubah setiap tahun.</p>
+  </div>
+
+  <p><strong>Durasi penyeberangan:</strong> Feri memakan waktu sekitar 30–45 menit di atas air. Tambahkan waktu bongkar-muat, dan siapkan total 45–90 menit dari naik hingga turun di seberang. Saat puncak keramaian, kamu mungkin harus menunggu di lepas pantai untuk mendapat giliran sandar, yang bisa menambah satu jam lagi.</p>
+
+  <h2>Harga Tiket Feri Gilimanuk (2026)</h2>
+
+  <p>Tarif ditetapkan oleh operator pemerintah PT ASDP Indonesia Ferry (Persero) dan berlaku sama untuk kedua arah.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Jenis Penumpang / Kendaraan</th>
+          <th class="text-left p-4 font-medium tracking-wide">Perkiraan Tarif (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Penumpang dewasa (pejalan kaki)</td>
+          <td class="p-4 text-brand-dark">Mulai 10.600</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Penumpang anak-anak (pejalan kaki)</td>
+          <td class="p-4 text-brand-dark">Mulai 4.500</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Motor di bawah 500cc + pengemudi</td>
+          <td class="p-4 text-brand-dark">~24.000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Motor di atas 500cc</td>
+          <td class="p-4 text-brand-dark">Tarif lebih tinggi</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Mobil (standar, panjang hingga 5m)</td>
+          <td class="p-4 text-brand-dark">~182.400–250.000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Kendaraan besar / truk</td>
+          <td class="p-4 text-brand-dark">Tarif berjenjang di atas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Harga di atas adalah perkiraan. Selalu cek tarif terkini di ferizy.com sebelum berangkat, karena ASDP menyesuaikan tarif secara berkala.</p>
+
+  <h2>Cara Pesan Tiket Feri: Ferizy</h2>
+
+  <p>Gilimanuk adalah salah satu dari empat pelabuhan feri besar Indonesia (bersama Merak, Bakauheni, dan Ketapang) yang tidak lagi menjual tiket langsung di pelabuhan. Kamu wajib membeli tiket terlebih dahulu melalui platform resmi Ferizy.</p>
+
+  <p><strong>Cara memesan:</strong></p>
+  <ol>
+    <li>Unduh <strong>aplikasi Ferizy</strong> dari Play Store (Android) atau App Store (iOS), atau kunjungi ferizy.com</li>
+    <li>Daftar akun dengan email, akun Google, atau Facebook</li>
+    <li>Pilih pelabuhan asal (Gilimanuk atau Ketapang), tujuan, jenis kendaraan, jadwal keberangkatan, dan jumlah penumpang</li>
+    <li>Jika membawa kendaraan, masukkan nomor polisi kendaraan sesuai STNK</li>
+    <li>Selesaikan pembayaran — e-tiket dikirim ke email dan tersimpan di aplikasi</li>
+  </ol>
+
+  <p>Bawa e-tiket ke pelabuhan. Sistem menggunakan geofencing, sehingga tiket hanya aktif saat kamu berada dalam radius tertentu dari pelabuhan.</p>
+
+  <div class="tip-box">
+    <p><strong>Untuk wisatawan asing tanpa NIK:</strong> Sistem Ferizy utamanya ditujukan untuk warga negara Indonesia yang memiliki KTP. Wisatawan mancanegara tetap bisa membeli tiket pejalan kaki di loket tiket pinggir jalan di dekat jalan masuk pelabuhan. Waspadai calo di sepanjang jalan ini — beberapa mematok harga lebih tinggi. Bila ragu, gunakan aplikasi Ferizy atau beli di loket resmi ASDP di dalam area pelabuhan.</p>
+  </div>
+
+  <h2>Yang Perlu Disiapkan di Pelabuhan</h2>
+
+  <p>Gilimanuk adalah pelabuhan kerja, bukan terminal wisata. Bersiaplah dengan suasana yang sibuk dan fungsional dengan minimnya petunjuk berbahasa Inggris.</p>
+
+  <p><strong>Pemeriksaan keamanan:</strong> Sejak 2002, pemeriksaan keamanan di Gilimanuk cukup ketat. Semua penumpang melewati pos pemeriksaan. Untuk warga negara Indonesia yang bepergian dari Jawa ke Bali, petugas akan memeriksa KTP dan mungkin menanyakan tujuan kunjungan. Siapkan diri untuk antre — terutama saat jam sibuk. Selalu bawa paspor (untuk WNA) atau KTP (untuk WNI).</p>
+
+  <p><strong>Jalur kendaraan:</strong> Mobil menggunakan jalur tersendiri. Motor menggunakan jalur khusus di sisi berbeda dari arus kendaraan utama — mudah terlewat jika baru pertama kali menyeberang. Ikuti arahan petugas pelabuhan dan perhatikan rambu di persimpangan jalur.</p>
+
+  <p><strong>Di atas feri:</strong> Setelah naik feri, amankan kendaraanmu, bawa barang berharga, dan naik ke dek penumpang di lantai atas. Kebanyakan feri memiliki kantin kecil yang menjual kopi, camilan, mie instan, dan minuman dingin. Pemandangan Selat Bali layak untuk dinikmati dari luar dek.</p>
+
+  <p><strong>Fasilitas di pelabuhan:</strong> Ruang tunggu dasar, toilet umum, warung makan, dan ATM tersedia di kedua sisi penyeberangan. Jangan mengandalkan money changer; bawa Rupiah sebelum tiba.</p>
+
+  <h2>Cara ke Gilimanuk dari Bali</h2>
+
+  <h3>Dengan mobil pribadi</h3>
+
+  <p>Pilihan terbaik untuk wisatawan. Kamu bisa memesan <a href="/id/transfers/">transfer pribadi dari penginapan langsung ke Pelabuhan Gilimanuk</a>, sehingga tiba tanpa stres dan tidak perlu khawatir soal koper atau jadwal koneksi.</p>
+
+  <p>Waktu tempuh dari destinasi utama Bali:</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Dari</th>
+          <th class="text-left p-4 font-medium tracking-wide">Perkiraan Waktu Tempuh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Ubud</td>
+          <td class="p-4 text-brand-dark">3,5–4,5 jam</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Canggu</td>
+          <td class="p-4 text-brand-dark">2,5–3 jam</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Seminyak</td>
+          <td class="p-4 text-brand-dark">3 jam</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Kuta</td>
+          <td class="p-4 text-brand-dark">3,5–4 jam</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Sanur</td>
+          <td class="p-4 text-brand-dark">4 jam</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Denpasar</td>
+          <td class="p-4 text-brand-dark">3,5–4 jam</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Singaraja / Lovina</td>
+          <td class="p-4 text-brand-dark">~2 jam</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Lalu lintas di jalan raya Denpasar–Gilimanuk umumnya lebih lancar dibanding Bali selatan. Rutenya pemandangan indah, melewati sawah, kota pesisir, dan sebagian kawasan Taman Nasional Bali Barat.</p>
+
+  <h3>Dengan bus umum (Elf minibus)</h3>
+
+  <p>Minibus umum (biasa disebut Elf) melayani rute dari Terminal Ubung di Denpasar menuju Gilimanuk. Waktu tempuh 3–4 jam dengan biaya sekitar Rp 60.000–70.000 per orang. Jadwal tidak tentu dan bus tidak beroperasi malam hari. Ini pilihan yang masuk akal untuk traveler budget, tapi tidak disarankan jika kamu mengejar jadwal feri tertentu atau membawa banyak barang bawaan.</p>
+
+  <p>Dari Ubud: Naik bus Trans Metro Dewata (TMD) Koridor 4 ke Stadion Ngurah Rai, pindah ke Koridor 2 menuju Terminal Ubung, lalu naik Elf ke Gilimanuk. Total biaya sekitar Rp 64.400 (TMD: Rp 4.400 + Elf: Rp 60.000).</p>
+
+  <p>Dari Kuta atau bandara: Naik TMD Koridor 1 atau 2 ke Terminal Ubung, lalu lanjut Elf ke Gilimanuk.</p>
+
+  <p>Pengemudi Grab dan Gojek jarang melayani perjalanan sejauh Gilimanuk, dan tarif aplikasi rideshare untuk rute ini bisa tidak menentu.</p>
+
+  <h2>Cara dari Pelabuhan Gilimanuk ke Tujuan di Bali</h2>
+
+  <p>Sebagian besar wisatawan yang tiba dari Jawa ingin langsung menuju Ubud, Canggu, Seminyak, Kuta, atau destinasi Bali selatan lainnya. Berikut pilihannya.</p>
+
+  <h3>Transfer pribadi (disarankan)</h3>
+
+  <p>Mobil pribadi yang sudah dipesan sebelumnya adalah pilihan paling andal. Kamu turun dari feri dan pengemudi sudah menunggumu di pintu keluar pelabuhan. Tidak perlu tawar-menawar, tidak perlu menunggu shuttle, tidak ada kendala bahasa.</p>
+
+  <p>Bali West Transport melayani semua rute dari Pelabuhan Gilimanuk:</p>
+
+  <ul>
+    <li><a href="/id/transfers/gilimanuk-to-ubud/">Transfer pribadi Gilimanuk ke Ubud</a></li>
+    <li><a href="/id/transfers/gilimanuk-to-canggu/">Transfer pribadi Gilimanuk ke Canggu</a></li>
+    <li>Transfer pribadi Gilimanuk ke Seminyak</li>
+    <li>Transfer pribadi Gilimanuk ke Kuta</li>
+    <li>Transfer pribadi Gilimanuk ke Sanur</li>
+    <li>Transfer pribadi Gilimanuk ke Uluwatu</li>
+    <li>Transfer pribadi Gilimanuk ke Nusa Dua</li>
+  </ul>
+
+  <p>Pesan terlebih dahulu. Pengemudi di pelabuhan tanpa pemesanan sebelumnya bisa jauh lebih mahal dan mungkin tidak berbahasa Inggris. <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Hubungi kami via WhatsApp</a> untuk penawaran terbaik sesuai rute kamu.</p>
+
+  <h3>Bus umum</h3>
+
+  <p>Bus umum berangkat dari Terminal Gilimanuk, tepat di sebelah timur pelabuhan feri. Rute mencakup sebagian besar hub transportasi utama Bali:</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Rute</th>
+          <th class="text-left p-4 font-medium tracking-wide">Kisaran Tarif Pemerintah (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Gilimanuk → Denpasar (Ubung)</td>
+          <td class="p-4 text-brand-dark">24.000–35.500</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Gilimanuk → Denpasar → Padang Bai</td>
+          <td class="p-4 text-brand-dark">41.000–61.000</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Gilimanuk → Singaraja (via Pemuteran, Lovina)</td>
+          <td class="p-4 text-brand-dark">23.500–35.000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Gilimanuk → Singaraja → Amlapura</td>
+          <td class="p-4 text-brand-dark">40.500–60.500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Tarif tersebut adalah batas bawah dan atas yang ditetapkan pemerintah. Bus beroperasi pada siang hari. Layanan berkurang drastis setelah sore hari — jika kamu tiba dengan feri malam, transfer pribadi adalah satu-satunya pilihan praktis.</p>
+
+  <div class="tip-box">
+    <p><strong>Dari Terminal Ubung (Denpasar):</strong> Kamu perlu pindah ke bemo lokal atau mengatur transportasi lanjutan ke Ubud, Canggu, Seminyak, atau Kuta. Tambahkan 1–2 jam ke total perjalanan.</p>
+  </div>
+
+  <h2>Gilimanuk ke Ubud: Berapa Lama?</h2>
+
+  <p>Jarak Gilimanuk ke Ubud sekitar 130 km melalui jalan darat. Rute paling langsung mengikuti jalan raya Denpasar–Gilimanuk ke timur sebelum belok masuk ke pedalaman.</p>
+
+  <p>Dengan mobil pribadi, perkirakan 3,5–4,5 jam tergantung lalu lintas. Kemacetan di Ubud — terutama di dalam dan sekitar pusat kota Ubud — bisa menambah 30–60 menit saat jam sibuk (pagi drop-off dan sore hari antara pukul 17.00–20.00).</p>
+
+  <p>Untuk panduan lengkap rute ini, baca artikel kami: <a href="/id/blog/how-to-get-from-gilimanuk-to-ubud/">Cara ke Ubud dari Gilimanuk</a>.</p>
+
+  <a href="/id/transfers/gilimanuk-to-ubud/" class="cta-inline">
+    Pesan Transfer Pribadi Gilimanuk ke Ubud →
+  </a>
+
+  <h2>Apa yang Ada di Sekitar Pelabuhan Gilimanuk?</h2>
+
+  <p>Jika kamu punya waktu sebelum atau setelah feri, beberapa tempat ini bisa dicapai dengan mudah:</p>
+
+  <p><strong>Museum Arkeologi Gilimanuk:</strong> Museum kecil yang menyimpan bukti tertua kehidupan manusia di Bali — rangka kuno dan artefak yang berumur ribuan tahun. Tiket masuk murah dan museum terletak langsung di dalam kota Gilimanuk. Cocok untuk singgah 30–60 menit sambil menunggu jadwal keberangkatan.</p>
+
+  <p><strong>Taman Nasional Bali Barat:</strong> Kawasan taman nasional dimulai tepat di sebelah timur Gilimanuk. Hutan mangrove, keanekaragaman burung, dan rusa Jawa liar menjadi daya tarik utama. Jika kamu berkendara dengan mobil pribadi, minta pengemudi untuk melewati ruas jalan dalam kawasan taman nasional — pemandangannya sangat berbeda dari wilayah Bali lainnya.</p>
+
+  <p><strong>Pulau Menjangan:</strong> Salah satu spot selam terbaik di Bali, bisa dicapai dengan perahu dari Labuan Lalang di dalam taman nasional. Jika tidak terburu-buru, ini bisa jadi persinggahan semalam yang sangat worth it sebelum melanjutkan ke Bali selatan.</p>
+
+  <p><strong>Pemuteran:</strong> Desa pantai yang tenang sekitar 45 menit di sebelah timur Gilimanuk, dikenal dengan lautan yang tenang dan proyek restorasi terumbu karang. Pilihan bagus untuk memecah perjalanan panjang ke selatan.</p>
+
+  <p><strong>Ayam Betutu:</strong> Gilimanuk terkenal secara lokal dengan hidangan ini — ayam berbumbu yang dimasak lambat dengan cara diasapi, khas masakan Bali Barat. Cicipi di salah satu warung pinggir jalan dekat terminal bus sebelum atau sesudah penyeberangan.</p>
+
+  <h2>Tips Agar Penyeberangan Lancar</h2>
+
+  <ul>
+    <li><strong>Pesan tiket Ferizy lebih awal</strong> saat libur sekolah, Idul Fitri, dan Natal/Tahun Baru. Ketersediaan tiket untuk slot waktu tertentu bisa habis.</li>
+    <li><strong>Usahakan penyeberangan di siang hari.</strong> Pemandangan lebih bagus dan navigasi di pelabuhan lebih mudah dalam kondisi terang. Malam hari, jalur boarding dan jalur kendaraan lebih sulit dibaca.</li>
+    <li><strong>Datang lebih awal.</strong> Meski sudah punya tiket Ferizy, kemacetan pelabuhan saat puncak keramaian bisa membuat antrean masuk jalur kendaraan panjang. Tiba minimal 45 menit sebelum jadwal keberangkatan jika membawa kendaraan.</li>
+    <li><strong>Bawa barang berharga dari kendaraan</strong> sebelum boarding. Jangan tinggalkan apa pun yang terlihat di dalam mobil atau di atas motor — dek feri terbuka dan kendaraanmu tidak dijaga saat kamu di dek penumpang.</li>
+    <li><strong>Cek tanggal Nyepi</strong> sebelum memesan penyeberangan Jawa-Bali di bulan Februari atau Maret. Tanggalnya berubah setiap tahun. Terjebak di salah satu sisi selat selama 24 jam bisa dihindari jika kamu mengecek lebih awal.</li>
+    <li><strong>Bawa uang tunai Rupiah.</strong> Warung makan di pelabuhan dan sebagian penjual tiket tidak menerima kartu atau pembayaran digital. Bawa pecahan kecil.</li>
+  </ul>
+
+  <h2>Pertanyaan yang Sering Ditanyakan</h2>
+
+  {faqs.map((faq) => (
+    <div class="tip-box">
+      <h3>{faq.question}</h3>
+      <p>{faq.answer}</p>
+    </div>
+  ))}
+
+  <h2>Pesan Transfer dari Gilimanuk</h2>
+
+  <p>Penyeberangan sudah beres. Sekarang pesan transfermu sebelum tiba — pengemudi cepat penuh saat hari feri ramai.</p>
+
+  <p>Lihat semua <a href="/id/transfers/">rute transfer dari Gilimanuk</a>, atau langsung pilih tujuan:</p>
+
+  <ul>
+    <li><a href="/id/transfers/gilimanuk-to-ubud/">Transfer Gilimanuk ke Ubud</a></li>
+    <li><a href="/id/transfers/gilimanuk-to-canggu/">Transfer Gilimanuk ke Canggu</a></li>
+    <li>Gilimanuk ke Seminyak — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">minta penawaran via WhatsApp</a></li>
+    <li>Gilimanuk ke Kuta — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">minta penawaran via WhatsApp</a></li>
+    <li>Gilimanuk ke Sanur — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">minta penawaran via WhatsApp</a></li>
+    <li>Gilimanuk ke Uluwatu — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">minta penawaran via WhatsApp</a></li>
+  </ul>
+
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="cta-inline">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Pesan Transfer via WhatsApp
+  </a>
+
+  <h2>Panduan Bali Lainnya</h2>
+
+  <p>Panduan perjalanan lainnya dari Bali West Transport:</p>
+  <ul>
+    <li><a href="/id/blog/how-to-get-from-gilimanuk-to-ubud/">Cara ke Ubud dari Gilimanuk</a> — Bus, shuttle, dan transfer pribadi dibandingkan dengan waktu tempuh dan biaya nyata.</li>
+    <li><a href="/id/blog/airport-transfer-vs-taxi-bali/">Transfer Bandara vs Taksi di Bali</a> — Semua pilihan transportasi di Bandara Ngurah Rai dijelaskan dengan jujur.</li>
+    <li><a href="/id/transfers/gilimanuk-to-ubud/">Transfer Gilimanuk ke Ubud</a> — Pesan transfer pribadi door-to-door dari Pelabuhan Gilimanuk ke Ubud.</li>
+    <li><a href="/id/transfers/gilimanuk-to-canggu/">Transfer Gilimanuk ke Canggu</a> — Transfer pribadi dari Gilimanuk ke Canggu.</li>
+    <li><a href="/id/airport-transfer/">Hub Transfer Bandara Bali</a> — Semua rute transfer pribadi dari Bandara Internasional Ngurah Rai.</li>
+  </ul>
+
+</BlogPost>

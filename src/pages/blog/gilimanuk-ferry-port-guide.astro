@@ -1,0 +1,422 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const pageTitle = 'Gilimanuk Ferry Port Guide: Hours, Tickets & Transfers (2026)';
+const pageDescription = 'Everything you need to know about Gilimanuk Ferry Port — ferry schedule, ticket prices, how to book on Ferizy, and how to get from the port to Ubud, Canggu, or Seminyak.';
+const pageKeywords = 'Gilimanuk ferry port guide, Gilimanuk port Bali, Gilimanuk to Ketapang ferry, Gilimanuk ferry schedule, Gilimanuk ferry ticket price, Gilimanuk port transfer, Bali ferry Java';
+
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent('Hi, I would like to book a private transfer from Gilimanuk Ferry Port. Please send me your best offer.')}`;
+
+const relatedServices = [
+  { label: 'Gilimanuk to Ubud Transfer', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'All Bali Transfers', href: '/transfers/' },
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Bali Private Tours', href: '/tours/' },
+];
+
+const faqs = [
+  {
+    question: "What are Gilimanuk Ferry Port's operating hours?",
+    answer: "Gilimanuk Ferry Port operates 24 hours a day, 7 days a week. Ferries to Ketapang (Java) depart every 15–30 minutes around the clock. The only exception is Nyepi (Bali Day of Silence), when the port closes for 24 hours.",
+  },
+  {
+    question: 'How much does the Gilimanuk to Ketapang ferry cost?',
+    answer: 'Adult foot passenger tickets start from IDR 10,600. Motorbikes (under 500cc) cost around IDR 24,000–52,000 per vehicle. Cars cost approximately IDR 182,400–250,000. Prices are set by the government operator ASDP Indonesia Ferry.',
+  },
+  {
+    question: 'How do I book a Gilimanuk ferry ticket online?',
+    answer: 'Book through Ferizy.com or the Ferizy app (available on Play Store and App Store). Select Gilimanuk as your origin port or Ketapang as destination, choose your vehicle type and departure time, then pay online. Your e-ticket is sent by email and stored in the app.',
+  },
+  {
+    question: 'How far is Gilimanuk from Ubud?',
+    answer: 'Gilimanuk is approximately 130 km from Ubud by road. The drive takes 3.5 to 4.5 hours depending on traffic. A private car transfer is the fastest and most comfortable option.',
+  },
+  {
+    question: 'How far is Gilimanuk from Canggu?',
+    answer: 'Gilimanuk is approximately 113 km from Canggu. The drive takes around 2.5 to 3 hours by private car.',
+  },
+  {
+    question: 'Is there a private transfer from Gilimanuk port to Bali?',
+    answer: 'Yes. Private car transfers from Gilimanuk port to Ubud, Canggu, Seminyak, Kuta, Sanur, and Uluwatu are available. Bali West Transport offers door-to-door service from the port with professional drivers.',
+  },
+  {
+    question: 'Does the Gilimanuk Ferry run during Nyepi?',
+    answer: "No. The Gilimanuk ferry port closes completely for 24 hours during Nyepi, Bali's Day of Silence. Plan your crossing at least one day before or after Nyepi.",
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/blog/gilimanuk-ferry-port-guide/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'en',
+      isPartOf: { '@id': 'https://baliwesttransport.com/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Travel Guides', item: 'https://baliwesttransport.com/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Gilimanuk Ferry Port Guide' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: 'Gilimanuk Ferry Port: Complete Guide for Travellers (2026)',
+      description: pageDescription,
+      datePublished: '2026-06-15',
+      dateModified: '2026-06-15',
+      author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bali West Transport',
+        logo: { '@type': 'ImageObject', url: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+      },
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  ],
+};
+---
+
+<BlogPost
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  heroImage="/images/beach-sunset-swing.jpg"
+  heroAlt="Sunset over the Bali Strait near Gilimanuk Ferry Port"
+  category="Gilimanuk Transfer"
+  publishDate="15 June 2026"
+  readTime="12 min read"
+  articleTitle="Gilimanuk Ferry Port: Complete Guide for Travellers (2026)"
+  articleSubtitle="Ferry hours, ticket prices, Ferizy booking, port tips, and how to get from Gilimanuk to anywhere in Bali."
+  relatedServices={relatedServices}
+  schemaGraph={schemaGraph}
+>
+
+  <div class="quick-answer">
+    <p><strong>Quick facts:</strong> Gilimanuk Ferry Port runs 24/7. Ferries to Ketapang (Java) depart every 15–30 minutes. Crossing time: 30–45 minutes. Adult foot passenger fare: from IDR 10,600. Book tickets online via Ferizy. Drive time to Ubud: 3.5–4.5 hours. Port closes on Nyepi only.</p>
+  </div>
+
+  <p>Gilimanuk is the only official ferry crossing between Bali and Java. If you're arriving from East Java — or heading there — this port is your entry and exit point. This guide covers everything: ferry hours, ticket prices, how to book online, what to expect at the port, and how to get from Gilimanuk to wherever you're staying in Bali.</p>
+
+  <h2>Where Is Gilimanuk?</h2>
+
+  <p>Gilimanuk sits on the far western tip of Bali, in Jembrana Regency. The town faces Ketapang Port in Banyuwangi, East Java, across the Bali Strait — the narrowest point between the two islands, roughly 3 km of open water.</p>
+
+  <p>The port is 130 km west of Ubud and about 134 km from Denpasar. If you're coming from southern Bali, expect a long drive before you even get on the boat.</p>
+
+  <div class="tip-box">
+    <p><strong>Important:</strong> The ferry does not depart from Banyuwangi city. It leaves from Ketapang Port, approximately 10 km north of Banyuwangi town. Don't book a ride to the wrong terminal.</p>
+  </div>
+
+  <h2>Gilimanuk Ferry Schedule and Operating Hours</h2>
+
+  <p>Gilimanuk Ferry Port is open 24 hours a day, every day of the year — with one major exception.</p>
+
+  <p>Ferries depart approximately every 15–30 minutes throughout the day. At night, frequency drops to roughly every 30 minutes, but crossings continue through the early hours.</p>
+
+  <p>During Indonesian national holidays — particularly Idul Fitri, Christmas, and New Year (locally called Nataru) — passenger and vehicle volumes surge significantly. Queues can extend for several hours at these times. If your trip overlaps with any public holiday, arrive early or book a private transfer that picks you up at a set time.</p>
+
+  <div class="info-box">
+    <h3>Nyepi Warning</h3>
+    <p>On Bali's Day of Silence, Gilimanuk Ferry Port closes completely for 24 hours. No crossings operate. Plan your Java-Bali route at least one full day before or after Nyepi. Check the Balinese Hindu calendar for the exact date each year — it shifts annually.</p>
+  </div>
+
+  <p><strong>Crossing duration:</strong> The ferry takes approximately 30–45 minutes on the water. Add loading and unloading time, and allow a total of 45–90 minutes from boarding to walking off the other side. During peak periods, you may wait offshore for an available berth, which can add another hour.</p>
+
+  <h2>Gilimanuk Ferry Ticket Prices (2026)</h2>
+
+  <p>Fares are set by the government operator PT ASDP Indonesia Ferry (Persero) and apply equally in both directions.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Passenger / Vehicle Type</th>
+          <th class="text-left p-4 font-medium tracking-wide">Approximate Fare (IDR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Adult foot passenger</td>
+          <td class="p-4 text-brand-dark">From 10,600</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Child foot passenger</td>
+          <td class="p-4 text-brand-dark">From 4,500</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Motorbike under 500cc + rider</td>
+          <td class="p-4 text-brand-dark">~24,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Motorbike over 500cc</td>
+          <td class="p-4 text-brand-dark">Higher rate</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Car (standard, up to 5m)</td>
+          <td class="p-4 text-brand-dark">~182,400–250,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Large vehicle / truck</td>
+          <td class="p-4 text-brand-dark">Tiered rates above</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Prices shown are approximate. Always verify current fares on ferizy.com before travel, as ASDP adjusts rates periodically.</p>
+
+  <h2>How to Book Ferry Tickets: Ferizy</h2>
+
+  <p>Gilimanuk is one of Indonesia's four major ferry ports (alongside Merak, Bakauheni, and Ketapang) where you can no longer buy tickets inside the port itself. You must buy your ticket in advance via the official Ferizy platform.</p>
+
+  <p><strong>How to book:</strong></p>
+  <ol>
+    <li>Download the <strong>Ferizy app</strong> from the Play Store (Android) or App Store (iOS), or visit ferizy.com</li>
+    <li>Register an account using your email, Google account, or Facebook</li>
+    <li>Select your origin port (Gilimanuk or Ketapang), destination, vehicle type, departure schedule, and number of passengers</li>
+    <li>If travelling with a vehicle, enter your vehicle registration number exactly as shown on your STNK (vehicle registration document)</li>
+    <li>Complete payment — your e-ticket is sent to your email and stored in the app</li>
+  </ol>
+
+  <p>Bring your e-ticket to the port. The system uses geofencing, so your ticket becomes active only when you're within a defined radius of the port.</p>
+
+  <div class="tip-box">
+    <p><strong>For tourists without an Indonesian ID (NIK):</strong> The Ferizy system primarily targets Indonesian residents. International travellers can still buy foot passenger tickets at roadside ticket booths near the port approach road. Watch for touts along this road — some inflate prices. If in doubt, use the Ferizy app or buy at the official ASDP counter inside the port perimeter.</p>
+  </div>
+
+  <h2>What to Expect at the Port</h2>
+
+  <p>Gilimanuk is a working port, not a tourist terminal. Expect a busy, functional environment with limited English signage.</p>
+
+  <p><strong>Security checks:</strong> Since 2002, security at Gilimanuk has been thorough. All passengers go through a security check. For Indonesian nationals travelling from Java to Bali, security officers check ID and may ask the purpose of your visit. Prepare for queues — particularly during peak hours. Carry your passport (for foreigners) or KTP (for Indonesian nationals) at all times.</p>
+
+  <p><strong>Vehicle lanes:</strong> Cars drive through their own lane. Motorbikes use a dedicated scooter lane off to the side of the main vehicle flow — easy to miss if you've never crossed before. Follow port staff directions and look for signs at the lane split.</p>
+
+  <p><strong>On board the ferry:</strong> Once on the ferry, secure your vehicle, take your valuables, and head upstairs to the passenger deck. Most ferries have a small canteen selling coffee, snacks, instant noodles, and cold drinks. The views of the Bali Strait are worth stepping outside for.</p>
+
+  <p><strong>Facilities at the port:</strong> Basic waiting areas, public toilets, food stalls, and ATMs are available on both sides of the crossing. Don't rely on finding currency exchange; bring Indonesian Rupiah before you arrive.</p>
+
+  <h2>Getting to Gilimanuk from Bali</h2>
+
+  <h3>By private car</h3>
+
+  <p>The best option for tourists. You can book a <a href="/transfers/">private transfer from your accommodation to Gilimanuk port</a> directly, so you arrive without stress and don't need to worry about luggage or connection times.</p>
+
+  <p>Drive times from major Bali destinations:</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">From</th>
+          <th class="text-left p-4 font-medium tracking-wide">Approximate Drive Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Ubud</td>
+          <td class="p-4 text-brand-dark">3.5–4.5 hours</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Canggu</td>
+          <td class="p-4 text-brand-dark">2.5–3 hours</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Seminyak</td>
+          <td class="p-4 text-brand-dark">3 hours</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Kuta</td>
+          <td class="p-4 text-brand-dark">3.5–4 hours</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Sanur</td>
+          <td class="p-4 text-brand-dark">4 hours</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Denpasar</td>
+          <td class="p-4 text-brand-dark">3.5–4 hours</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Singaraja / Lovina</td>
+          <td class="p-4 text-brand-dark">~2 hours</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Traffic on the Denpasar–Gilimanuk highway is generally light compared to southern Bali. The route is scenic, passing rice fields, coastal towns, and sections of the West Bali National Park.</p>
+
+  <h3>By public bus (Elf minibus)</h3>
+
+  <p>Public minibuses (locally called Elf) run from Ubung bus terminal in Denpasar to Gilimanuk. The journey takes 3–4 hours and costs around IDR 60,000–70,000 per person. Schedules are irregular and buses don't run at night. This is viable for budget travellers, not recommended if you're catching a specific ferry time or have significant luggage.</p>
+
+  <p>From Ubud: Take Trans Metro Dewata (TMD) bus Corridor 4 to Ngurah Rai Stadium, switch to Corridor 2 to Ubung terminal, then board an Elf to Gilimanuk. Total cost approximately IDR 64,400 (TMD: IDR 4,400 + Elf: IDR 60,000).</p>
+
+  <p>From Kuta or the airport: Take TMD Corridor 1 or 2 to Ubung terminal, then an Elf to Gilimanuk.</p>
+
+  <p>Grab and Gojek drivers rarely go as far as Gilimanuk, and fares for ride-hailing apps can be unpredictable on this route.</p>
+
+  <h2>Getting from Gilimanuk Port to Your Bali Destination</h2>
+
+  <p>Most travellers arriving from Java want to get directly to Ubud, Canggu, Seminyak, Kuta, or another southern Bali destination. Here's how.</p>
+
+  <h3>Private transfer (recommended)</h3>
+
+  <p>A pre-booked private car with driver is the most reliable option. You step off the ferry and your driver meets you at the port exit. No negotiating, no waiting for a shared shuttle, no language barrier.</p>
+
+  <p>Bali West Transport covers all routes from Gilimanuk port:</p>
+
+  <ul>
+    <li><a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud private transfer</a></li>
+    <li><a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu private transfer</a></li>
+    <li>Gilimanuk to Seminyak private transfer</li>
+    <li>Gilimanuk to Kuta private transfer</li>
+    <li>Gilimanuk to Sanur private transfer</li>
+    <li>Gilimanuk to Uluwatu private transfer</li>
+    <li>Gilimanuk to Nusa Dua private transfer</li>
+  </ul>
+
+  <p>Book in advance. Drivers at the port without a pre-booking can be significantly more expensive and may not speak English. <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contact us via WhatsApp</a> for a best offer on your route.</p>
+
+  <h3>Public bus</h3>
+
+  <p>Public buses depart from Gilimanuk bus terminal, directly east of the ferry port. Routes cover most major Bali transport hubs:</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Route</th>
+          <th class="text-left p-4 font-medium tracking-wide">Government Fare Range (IDR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Gilimanuk → Denpasar (Ubung)</td>
+          <td class="p-4 text-brand-dark">24,000–35,500</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Gilimanuk → Denpasar → Padang Bai</td>
+          <td class="p-4 text-brand-dark">41,000–61,000</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Gilimanuk → Singaraja (via Pemuteran, Lovina)</td>
+          <td class="p-4 text-brand-dark">23,500–35,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Gilimanuk → Singaraja → Amlapura</td>
+          <td class="p-4 text-brand-dark">40,500–60,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>These fares are government-set minimums and maximums. Buses run during the day. Services thin out from late afternoon — if you arrive on an evening ferry, a private transfer is your only practical option.</p>
+
+  <div class="tip-box">
+    <p><strong>From Ubung (Denpasar):</strong> You'll need to change to a local bemo or arrange onward transport to Ubud, Canggu, Seminyak, or Kuta. Add 1–2 hours to your total journey.</p>
+  </div>
+
+  <h2>Gilimanuk to Ubud: How Long Does It Take?</h2>
+
+  <p>Gilimanuk to Ubud is approximately 130 km by road. The most direct route follows the Denpasar–Gilimanuk highway east before turning inland.</p>
+
+  <p>By private car, expect 3.5–4.5 hours depending on traffic. Ubud traffic — particularly in and around central Ubud — can add 30–60 minutes during peak hours (morning drop-offs and evening rush from 5–8 pm).</p>
+
+  <p>For a detailed breakdown of the route, read our full guide: <a href="/blog/how-to-get-from-gilimanuk-to-ubud/">How to Get from Gilimanuk to Ubud</a>.</p>
+
+  <a href="/transfers/gilimanuk-to-ubud/" class="cta-inline">
+    Book Gilimanuk to Ubud Private Transfer →
+  </a>
+
+  <h2>What's Near Gilimanuk Port?</h2>
+
+  <p>If you have time before or after your ferry, these spots are within easy reach:</p>
+
+  <p><strong>Gilimanuk Archaeological Museum:</strong> A small museum holding the earliest evidence of human habitation in Bali — ancient skeletal remains and artefacts dating back thousands of years. Entry is inexpensive and the museum is directly in Gilimanuk town. Useful for a 30–60 minute stop while waiting for a departure.</p>
+
+  <p><strong>West Bali National Park:</strong> The national park begins just east of Gilimanuk. Mangrove forests, diverse birdlife, and wild Javan deer are among the draws. If you're travelling by private car, ask your driver to pass through the park section of the highway — the scenery is noticeably different from the rest of Bali.</p>
+
+  <p><strong>Menjangan Island:</strong> One of Bali's best dive sites, accessible by boat from Labuan Lalang within the national park. If you're in no rush, this makes an excellent overnight stop before continuing to southern Bali.</p>
+
+  <p><strong>Pemuteran:</strong> A quiet beach village about 45 minutes east of Gilimanuk, known for calm seas and coral restoration projects. A solid option if you want to break the journey south.</p>
+
+  <p><strong>Ayam Betutu:</strong> Gilimanuk is locally famous for this dish — smoked, slow-cooked spiced chicken that's a specialty of West Bali. Try it at one of the roadside warungs near the bus terminal before or after your crossing.</p>
+
+  <h2>Tips for a Smooth Crossing</h2>
+
+  <ul>
+    <li><strong>Book your Ferizy ticket early</strong> during school holidays, Idul Fitri, and Christmas/New Year. Ticket availability can run out for specific time slots.</li>
+    <li><strong>Try for a daytime crossing.</strong> Views are better and the port is easier to navigate in daylight. At night, boarding and vehicle lanes are harder to read.</li>
+    <li><strong>Arrive early.</strong> Even with a Ferizy ticket, port congestion during peak periods can mean queuing to enter the vehicle lanes. Arrive at least 45 minutes before your chosen departure time if you're bringing a vehicle.</li>
+    <li><strong>Take your valuables off the vehicle</strong> before boarding. Leave nothing visible in your car or on your motorbike — ferry decks are open and your vehicle is unattended while you're on the passenger deck.</li>
+    <li><strong>Check the Nyepi date</strong> before booking any Java-Bali crossing in February or March. The date shifts each year. Getting stranded on either side of the strait for 24 hours is avoidable if you check early.</li>
+    <li><strong>Have cash in IDR.</strong> Port food stalls, warung, and some ticket sellers don't accept cards or digital payment. Carry small denominations.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  {faqs.map((faq) => (
+    <div class="tip-box">
+      <h3>{faq.question}</h3>
+      <p>{faq.answer}</p>
+    </div>
+  ))}
+
+  <h2>Book Your Transfer from Gilimanuk</h2>
+
+  <p>You've got the crossing sorted. Now book your transfer before you arrive — drivers fill up fast on busy ferry days.</p>
+
+  <p>Browse all <a href="/transfers/">Gilimanuk transfer routes</a>, or go straight to your destination:</p>
+
+  <ul>
+    <li><a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud Transfer</a></li>
+    <li><a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu Transfer</a></li>
+    <li>Gilimanuk to Seminyak — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">request a quote via WhatsApp</a></li>
+    <li>Gilimanuk to Kuta — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">request a quote via WhatsApp</a></li>
+    <li>Gilimanuk to Sanur — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">request a quote via WhatsApp</a></li>
+    <li>Gilimanuk to Uluwatu — <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">request a quote via WhatsApp</a></li>
+  </ul>
+
+  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="cta-inline">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Book Your Transfer via WhatsApp
+  </a>
+
+  <h2>Keep Exploring Bali</h2>
+
+  <p>More guides from Bali West Transport:</p>
+  <ul>
+    <li><a href="/blog/how-to-get-from-gilimanuk-to-ubud/">How to Get from Gilimanuk to Ubud</a> — Bus, shuttle, and private transfer compared with real travel times and costs.</li>
+    <li><a href="/blog/airport-transfer-vs-taxi-bali/">Airport Transfer vs Taxi in Bali</a> — Every transport option at Ngurah Rai Airport explained, with honest advice.</li>
+    <li><a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud Transfer</a> — Book a private door-to-door transfer from Gilimanuk Ferry Port to Ubud.</li>
+    <li><a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu Transfer</a> — Private transfer from Gilimanuk to Canggu.</li>
+    <li><a href="/airport-transfer/">Bali Airport Transfer Hub</a> — All private airport transfer routes from Ngurah Rai International Airport.</li>
+  </ul>
+
+</BlogPost>
