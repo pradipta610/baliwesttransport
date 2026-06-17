@@ -160,9 +160,15 @@
   <!-- Blog / Travel Guides (EN) -->
   <url>
     <loc>https://baliwesttransport.com/blog/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baliwesttransport.com/blog/bali-private-driver-guide/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://baliwesttransport.com/blog/gilimanuk-ferry-port-guide/</loc>
@@ -186,9 +192,15 @@
   <!-- Blog / Panduan Wisata (ID) -->
   <url>
     <loc>https://baliwesttransport.com/id/blog/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baliwesttransport.com/id/blog/bali-private-driver-guide/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baliwesttransport.com/id/blog/gilimanuk-ferry-port-guide/</loc>

@@ -1,0 +1,298 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const pageTitle = 'Bali Private Driver Guide: Cost, Safety & How to Book (2026)';
+const pageDescription = 'Hiring a private driver in Bali? Get 2026 pricing, vehicle options, safety tips, and a step-by-step booking guide from a local West Bali transport team.';
+const pageKeywords = 'bali private driver, private driver bali cost, hire private driver bali, bali private driver guide, bali transport, west bali driver, gilimanuk private driver';
+
+const relatedServices = [
+  { label: 'Gilimanuk to Ubud Transfer', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'All Bali Transfers', href: '/transfers/' },
+  { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
+  { label: 'Bali Private Tours', href: '/tours/' },
+];
+
+const faqs = [
+  {
+    question: 'What is a private driver in Bali?',
+    answer:
+      'A private driver in Bali is a licensed local driver who takes you anywhere you choose in a private vehicle, on a half-day, full-day, or multi-day basis, for one fixed price that includes the car and fuel.',
+  },
+  {
+    question: 'How much does a private driver cost in Bali in 2026?',
+    answer:
+      'Most full-day bookings (8–10 hours) cost IDR 500,000–900,000 (about USD 32–58), depending on vehicle type and distance. Half-day bookings typically run IDR 300,000–500,000.',
+  },
+  {
+    question: "What's the difference between a private driver and a point-to-point transfer?",
+    answer:
+      'A private driver charters the car and driver for several hours so you can visit multiple stops on your own schedule. A transfer takes you directly from one fixed point to another — such as Gilimanuk to Ubud — at a lower, fixed price because the route and time are set in advance.',
+  },
+  {
+    question: 'Is it safe to hire a private driver in Bali?',
+    answer:
+      'Yes. A licensed private driver is one of the safest ways to get around the island, far safer than self-driving a scooter in Bali traffic. Confirm the driver is licensed and the vehicle has working seatbelts and insurance before the day starts.',
+  },
+  {
+    question: 'Do I need a private driver for my entire trip?',
+    answer:
+      'Most travellers only need one for excursion days — multi-stop sightseeing or longer cross-island routes. For days spent inside a single area like Canggu or Seminyak, walking or a ride-hailing app is usually enough.',
+  },
+  {
+    question: "What's included in the price?",
+    answer:
+      "The vehicle, fuel, and the driver's time. Parking, entrance tickets, and the driver's meal are usually separate, and overnight accommodation is added for multi-day trips if the driver stays with you.",
+  },
+  {
+    question: 'How much should I tip a private driver in Bali?',
+    answer:
+      'Tipping is not mandatory but is appreciated. IDR 50,000–100,000 per day is standard for good service on a full-day booking.',
+  },
+  {
+    question: 'Can a private driver pick me up directly from the Gilimanuk ferry port?',
+    answer:
+      'Yes. Drivers familiar with the crossing can meet you at the harbour as you disembark and take you straight to your accommodation.',
+  },
+  {
+    question: "What's the difference between a driver and a tour guide in Bali?",
+    answer:
+      'A driver focuses on getting you safely and efficiently between destinations. A guide adds spoken commentary on history, culture, and ceremonies. Many Bali drivers do both informally, but a dedicated guide is worth booking for in-depth cultural tours.',
+  },
+];
+
+const pageUrl = 'https://baliwesttransport.com/blog/bali-private-driver-guide/';
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'en',
+      isPartOf: { '@id': 'https://baliwesttransport.com/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Travel Guides', item: 'https://baliwesttransport.com/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Bali Private Driver Guide' },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: 'Bali Private Driver Guide: What You Need to Know Before You Book (2026)',
+      description: pageDescription,
+      datePublished: '2026-06-17',
+      dateModified: '2026-06-17',
+      author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bali West Transport',
+        logo: { '@type': 'ImageObject', url: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+      },
+      mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  ],
+};
+---
+
+<BlogPost
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  heroImage="/images/nusa-penida-viewpoint.jpg"
+  heroAlt="Scenic road in Bali driven by a private driver"
+  category="Bali Transport"
+  publishDate="17 June 2026"
+  readTime="8 min read"
+  articleTitle="Bali Private Driver Guide: What You Need to Know Before You Book (2026)"
+  articleSubtitle="Cost, vehicle types, safety tips, and how to book a reliable private driver anywhere in Bali."
+  relatedServices={relatedServices}
+  schemaGraph={schemaGraph}
+>
+
+  <div class="quick-answer">
+    <p><strong>Quick answer:</strong> A private driver in Bali is a licensed local driver who takes you anywhere you want for a half-day, full-day, or multi-day charter, with the vehicle and fuel included in one fixed price. A full-day booking (8–10 hours) typically costs IDR 500,000–900,000 (about USD 32–58), depending on the vehicle and distance.</p>
+  </div>
+
+  <p>Bali has no train, no functioning meter-taxi network outside Denpasar, and ride-hailing apps that drop signal the moment you leave the south. If you want to see more than your hotel pool, you need a plan for getting around — and for most visitors, that plan is a private driver.</p>
+
+  <p>This guide breaks down what a private driver actually does, what one costs in 2026, how the service differs from a point-to-point transfer, and how to book one without overpaying or ending up with an unreliable car.</p>
+
+  <h2>What Is a Private Driver in Bali?</h2>
+
+  <p>A private driver is a licensed local driver paired with a private vehicle, reserved only for you or your group, for a set block of time rather than a single trip. Unlike a taxi or a ride-hailing app, the driver waits with you between stops, follows whichever route you choose, and stays on call for the whole booking — half a day, a full day, or several days in a row.</p>
+
+  <p>Most private drivers in Bali also act as informal guides. They know the back road that avoids the worst of the Canggu and Uluwatu traffic, the warung that serves better food than the tourist-priced restaurant next door, and when a temple ceremony is about to close a road you had planned to take.</p>
+
+  <h2>How Much Does a Private Driver Cost in Bali in 2026?</h2>
+
+  <p>Three things set the price: how many hours you book, the vehicle size, and how far you travel.</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Booking Type</th>
+          <th class="text-left p-4 font-medium tracking-wide">Typical Hours</th>
+          <th class="text-left p-4 font-medium tracking-wide">Price (IDR)</th>
+          <th class="text-left p-4 font-medium tracking-wide">Price (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Half-day</td>
+          <td class="p-4 text-brand-dark">4–5 hours</td>
+          <td class="p-4 text-brand-dark">300,000–500,000</td>
+          <td class="p-4 text-brand-dark">$19–32</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Full-day</td>
+          <td class="p-4 text-brand-dark">8–10 hours</td>
+          <td class="p-4 text-brand-dark">500,000–900,000</td>
+          <td class="p-4 text-brand-dark">$32–58</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Multi-day (per day)</td>
+          <td class="p-4 text-brand-dark">8–10 hrs/day</td>
+          <td class="p-4 text-brand-dark">450,000–800,000</td>
+          <td class="p-4 text-brand-dark">$29–51</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Long-distance / cross-island</td>
+          <td class="p-4 text-brand-dark">10–12 hours</td>
+          <td class="p-4 text-brand-dark">700,000–1,000,000</td>
+          <td class="p-4 text-brand-dark">$45–64</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Vehicle type moves the price too:</p>
+
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-brand-dark text-brand-cream">
+          <th class="text-left p-4 font-medium tracking-wide">Vehicle</th>
+          <th class="text-left p-4 font-medium tracking-wide">Seats</th>
+          <th class="text-left p-4 font-medium tracking-wide">Best For</th>
+          <th class="text-left p-4 font-medium tracking-wide">Typical Daily Rate (IDR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Toyota Avanza / Suzuki APV</td>
+          <td class="p-4 text-brand-dark">4–5 + luggage</td>
+          <td class="p-4 text-brand-dark">Solo travellers, couples</td>
+          <td class="p-4 text-brand-dark">500,000–650,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Toyota Innova</td>
+          <td class="p-4 text-brand-dark">5–6 + luggage</td>
+          <td class="p-4 text-brand-dark">Families, small groups</td>
+          <td class="p-4 text-brand-dark">600,000–800,000</td>
+        </tr>
+        <tr class="bg-brand-cream">
+          <td class="p-4 text-brand-dark">Toyota HiAce</td>
+          <td class="p-4 text-brand-dark">10–14 + luggage</td>
+          <td class="p-4 text-brand-dark">Large groups, weddings</td>
+          <td class="p-4 text-brand-dark">1,000,000–1,500,000</td>
+        </tr>
+        <tr class="bg-white">
+          <td class="p-4 text-brand-dark">Toyota Alphard / Vellfire</td>
+          <td class="p-4 text-brand-dark">4–6 + luggage</td>
+          <td class="p-4 text-brand-dark">Honeymoons, VIP travel</td>
+          <td class="p-4 text-brand-dark">1,200,000–1,800,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>These figures cover the vehicle, fuel, and the driver's time. They don't cover temple entrance tickets, parking (usually IDR 2,000–5,000 per stop), or the driver's meal — most travellers cover the meal as a courtesy, not an obligation.</p>
+
+  <h2>Private Driver vs. Other Ways to Get Around Bali</h2>
+
+  <p>Not every trip needs a full-day charter. Here's how the main options actually compare.</p>
+
+  <p><strong>Scooter rental</strong> (IDR 50,000–100,000/day) is the cheapest option and gives total freedom, but Bali's traffic is genuinely dangerous for inexperienced riders — and exploring the island this way means hours behind the handlebars instead of in front of the view.</p>
+
+  <p><strong>Ride-hailing apps</strong> (Grab, Gojek) work fine for short hops inside one tourist area. They get unreliable fast outside it: many drivers cancel trips to Ubud's outskirts or anywhere past Canggu, and pickup zones near several attractions are restricted.</p>
+
+  <p><strong>A point-to-point transfer</strong> is the right call when you already know exactly where you're going — airport to hotel, or one town to another — and don't need stops along the way. It's a fixed, lower price for a fixed route. If that's your situation, see our <a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud transfer</a> and <a href="/airport-transfer/">airport transfer hub</a> for exact routes, or read our full breakdown of <a href="/blog/airport-transfer-vs-taxi-bali/">airport transfer vs. taxi in Bali</a>.</p>
+
+  <p><strong>A private driver / full-day charter</strong> is the right call when you want to see multiple places in one day, set your own pace, and have the car wait for you at each stop. This is the option the rest of this guide covers.</p>
+
+  <h2>What's Included (and What's Not)</h2>
+
+  <p>A standard private driver booking includes the vehicle, fuel, the driver's time for the agreed hours, and — with a reputable operator — insurance.</p>
+
+  <p>It usually doesn't include temple or attraction entrance fees, parking tickets, the driver's meal, or overtime if you run past the agreed hours. For multi-day bookings where the driver stays overnight near you, simple guesthouse accommodation (IDR 150,000–250,000) is typically added to the cost.</p>
+
+  <div class="tip-box">
+    <p><strong>Confirm inclusions before the day starts.</strong> It's the single biggest source of disputes between travellers and drivers. Agree on hours, route, fuel, parking, and tolls over WhatsApp before you travel — not verbally at the kerb.</p>
+  </div>
+
+  <h2>How to Book a Reliable Private Driver in Bali</h2>
+
+  <ol>
+    <li><strong>Decide your hours and stops first.</strong> Even a rough plan ("Ubud temples plus one waterfall") lets the driver quote accurately and map the route.</li>
+    <li><strong>Check the vehicle and licence.</strong> A legitimate operator can show a valid driving licence and a roadworthy, insured vehicle — air conditioning and seatbelts that actually work, not just exist.</li>
+    <li><strong>Get the price in writing before you travel.</strong> Confirm hours, route, and inclusions (fuel, parking, tolls) over WhatsApp or email, not verbally at the kerb.</li>
+    <li><strong>Be wary of "too good to be true" rates.</strong> A price far below the IDR 500,000–900,000 full-day range usually signals an uninsured vehicle, an inexperienced driver, or a plan to steer you toward commission shops along the way.</li>
+    <li><strong>Book through a known operator, your accommodation, or a direct referral</strong>, rather than a random offer in the airport arrivals hall — airport touts are the most common source of overpriced, unlicensed rides.</li>
+    <li><strong>Confirm pickup details the night before:</strong> exact time, exact location (hotel lobby vs. street), and a phone number that works on WhatsApp.</li>
+  </ol>
+
+  <h2>Private Driver Etiquette: Tips for a Smoother Day</h2>
+
+  <p>A few habits make the day better for both sides. Tell your driver your pace early — six quick-photo stops and two long, lingering ones are very different days to plan for. Agree on the rough route the night before so the driver can map it in advance. Stay flexible if the driver suggests a detour; a road closed for a ceremony or an unusually quiet beach can be the best part of the trip, not an inconvenience. Tip fairly: IDR 50,000–100,000 per day is the standard range for good service, more for an exceptional one.</p>
+
+  <h2>Arriving via the Gilimanuk Ferry? Here's Where a Driver Fits In</h2>
+
+  <p>Travellers crossing from Java by ferry land at Gilimanuk, on Bali's far western tip — usually several hours by road from Ubud, Canggu, or the south coast. A driver who knows this specific crossing can meet you at the harbour as you disembark and take you straight to your hotel, removing the need to arrange separate transport once you're already off the boat.</p>
+
+  <p>This is a different booking than a general island-wide charter — it's a single, fixed-route transfer rather than an open-ended day of sightseeing, which is why it's priced and booked separately. If you're making this crossing, our <a href="/blog/gilimanuk-ferry-port-guide/">Gilimanuk ferry port guide</a> covers what to expect at the harbour itself, and our <a href="/transfers/">Gilimanuk transfer routes</a> list fixed-rate services to Ubud, Canggu, Seminyak, Kuta, Sanur, and Uluwatu.</p>
+
+  <a href="/transfers/" class="cta-inline">View All Gilimanuk Transfer Routes →</a>
+
+  <h2>Frequently Asked Questions</h2>
+
+  {faqs.map((faq) => (
+    <div class="tip-box">
+      <h3>{faq.question}</h3>
+      <p>{faq.answer}</p>
+    </div>
+  ))}
+
+  <h2>Plan Your Next Move</h2>
+
+  <p>Already know your route? Check fixed-rate transfers from <a href="/transfers/">Gilimanuk</a> and <a href="/airport-transfer/">Ngurah Rai Airport</a>. Want a full day of sightseeing built around one region? Browse our <a href="/tours/">Bali private tours</a>.</p>
+
+  <ul>
+    <li><a href="/transfers/gilimanuk-to-ubud/">Gilimanuk to Ubud Transfer</a> — Private door-to-door from Gilimanuk Ferry Port to Ubud.</li>
+    <li><a href="/transfers/gilimanuk-to-canggu/">Gilimanuk to Canggu Transfer</a> — Private transfer from Gilimanuk to Canggu.</li>
+    <li><a href="/airport-transfer/">Bali Airport Transfer Hub</a> — All private transfer routes from Ngurah Rai International Airport.</li>
+    <li><a href="/blog/gilimanuk-ferry-port-guide/">Gilimanuk Ferry Port Guide</a> — Ferry hours, ticket prices, and port tips.</li>
+    <li><a href="/blog/how-to-get-from-gilimanuk-to-ubud/">How to Get from Gilimanuk to Ubud</a> — All transport options compared.</li>
+    <li><a href="/blog/airport-transfer-vs-taxi-bali/">Airport Transfer vs Taxi in Bali</a> — Every option at Ngurah Rai Airport explained.</li>
+  </ul>
+
+</BlogPost>
