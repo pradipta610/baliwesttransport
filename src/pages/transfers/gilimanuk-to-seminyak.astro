@@ -1,0 +1,572 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+
+const pageTitle = 'Gilimanuk to Seminyak Transfer — Private Door-to-Door | Bali West Transport';
+const pageDescription = 'Book a private transfer from Gilimanuk Ferry Port to Seminyak. Door-to-door service, 130–135 km, 3.5–4.5 hours. Driver meets you at the harbour. WhatsApp booking available.';
+const pageKeywords = 'gilimanuk to seminyak transfer, gilimanuk seminyak private transfer, gilimanuk ferry port to seminyak, transfer from gilimanuk to seminyak bali';
+
+const whatsappText = 'Hi, I would like to book a private Gilimanuk to Seminyak transfer. Please send me your best offer.';
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+
+const pickupLocations = [
+  'Gilimanuk Ferry Port (Pelabuhan Gilimanuk)',
+  'Hotels and guesthouses in Gilimanuk town',
+  'Ketapang Port area on the Java side (for pre-arranged, cross-strait itineraries)'
+];
+
+const dropoffAreas = [
+  'Jl. Raya Seminyak and Jl. Kayu Jati hotel corridor',
+  'Petitenget (W Bali, Katamama, Potato Head area)',
+  'Oberoi Street and surrounds',
+  'Batu Belig area',
+  'Kerobokan (including villas and properties along Jl. Raya Kerobokan)',
+  'Legian (on request, same zone)'
+];
+
+const userTypes = [
+  {
+    title: 'Travellers Crossing from Java',
+    description: 'Arriving via the Ketapang–Gilimanuk ferry from Banyuwangi, Surabaya, or Ijen. Private transfer is the most direct onward option from the harbour.'
+  },
+  {
+    title: 'Families with Luggage',
+    description: "Seminyak's hotel and villa market skews toward families and couples. A private vehicle handles multiple suitcases without the weight restrictions of shared shuttles."
+  },
+  {
+    title: 'Couples on a Resort Stay',
+    description: "Seminyak's Petitenget and Oberoi areas are Bali's honeymoon and boutique-hotel strip. Most guests here expect a seamless arrival, not a 45-minute wait at Ubung bus terminal."
+  },
+  {
+    title: 'Surf Travellers',
+    description: 'Seminyak, Batu Belig, and Kerobokan are five minutes from Berawa and Batu Bolong beaches. Surfboard transport is accommodated in larger vehicles — confirm board size when booking.'
+  },
+  {
+    title: 'Tour Groups Completing a Java–Bali Overland Itinerary',
+    description: 'If your group crossed from East Java and Seminyak is the first stop, a private vehicle with confirmed capacity is more reliable than coordinating multiple shared rides.'
+  }
+];
+
+const benefits = [
+  {
+    title: 'No Connections',
+    description: 'Shared transport from Gilimanuk to Seminyak requires at least one change at Ubung terminal in Denpasar. Private transfer is point-to-point with no intermediate stops unless you request them.'
+  },
+  {
+    title: 'Your Schedule, Not the Bus Schedule',
+    description: 'Depart as soon as you step off the ferry — no waiting for a shared vehicle to fill.'
+  },
+  {
+    title: 'Door-to-Door to Your Villa',
+    description: "Seminyak's villa-heavy accommodation market means many guests are staying on unmarked lanes. Your driver delivers you to the entrance, not to a drop-off point nearby."
+  },
+  {
+    title: 'Luggage Flexibility',
+    description: 'Families and long-stay travellers routinely travel with more than the shuttle weight allowance allows. A private vehicle carries what your group brings.'
+  },
+  {
+    title: 'WhatsApp-First Booking and Contact',
+    description: 'Confirm your journey, share your ferry arrival time, and track your driver — all via WhatsApp before and during the trip.'
+  }
+];
+
+const faqs = [
+  {
+    question: 'How long does the transfer from Gilimanuk to Seminyak take?',
+    answer: 'Approximately 3.5 to 4.5 hours by private vehicle. The drive itself is around 3 hours in clear conditions, but traffic on the Kerobokan–Petitenget approach adds 30 to 60 minutes, particularly between 14:00 and 19:00. Morning ferry arrivals typically have the fastest journey times.'
+  },
+  {
+    question: 'How far is Gilimanuk from Seminyak?',
+    answer: 'Approximately 130–135 km by road, following the main western corridor through Negara and Tabanan before reaching Greater Denpasar and Seminyak.'
+  },
+  {
+    question: 'Where does the driver meet me at Gilimanuk?',
+    answer: 'At Gilimanuk Ferry Port (Pelabuhan Gilimanuk), on the western side of the harbour as you disembark from the Ketapang crossing. Send us your ferry reference and estimated arrival time when booking — we track the crossing and adjust if it runs late.'
+  },
+  {
+    question: 'Is there a direct bus from Gilimanuk to Seminyak?',
+    answer: 'There is no direct bus. Public bus from Gilimanuk goes to Ubung terminal in Denpasar, where you need a second connection to Seminyak. Total travel time including waiting and transfers typically exceeds 5–6 hours. A private transfer is faster and door-to-door.'
+  },
+  {
+    question: 'Can you transport a surfboard from Gilimanuk to Seminyak?',
+    answer: "Yes. Confirm the number and length of boards when booking so we assign a vehicle with adequate space. Standard MPV fits boards up to around 6'8\" with the rear seat folded; longer boards may need a larger vehicle."
+  },
+  {
+    question: 'Do you offer early morning pickups from the ferry port?',
+    answer: 'Yes. We operate around the Ketapang–Gilimanuk ferry schedule, including the earliest morning crossings. Confirm your ferry departure time when booking and we will have your driver ready on arrival.'
+  },
+  {
+    question: 'What is the route from Gilimanuk to Seminyak?',
+    answer: "Gilimanuk Ferry Port → Jl. Raya Gilimanuk south-east → Negara → Tabanan → Kerobokan → Seminyak. The route stays on Bali's main western highway for most of the journey before entering the Greater Denpasar network."
+  },
+  {
+    question: 'Can I make a stop at Tanah Lot on the way to Seminyak?',
+    answer: 'Yes, on request. Tanah Lot is approximately 45 minutes before Seminyak and sits close to the main route. A planned stop adds to the total journey time — confirm with us when booking so your driver can adjust the schedule.'
+  }
+];
+
+const relatedRoutes = [
+  { label: 'Gilimanuk to Ubud Transfer', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'Gilimanuk to Kuta Transfer', href: '/transfers/' },
+  { label: 'All Gilimanuk Transfers', href: '/transfers/' },
+  { label: 'Seminyak Transfer Hub', href: '/transfers/' },
+  { label: 'All Transfer Routes', href: '/transfers/' }
+];
+
+const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-seminyak/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const webPageId = `${pageUrl}#webpage`;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://baliwesttransport.com/logo.png'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Service',
+        availableLanguage: ['English', 'Indonesian'],
+        url: 'https://wa.me/6282247648944'
+      },
+      areaServed: {
+        '@type': 'Place',
+        name: 'Bali, Indonesia'
+      }
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': travelAgencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      parentOrganization: {
+        '@id': organizationId
+      },
+      areaServed: {
+        '@type': 'Place',
+        name: 'Bali, Indonesia'
+      }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Gilimanuk to Seminyak Private Transfer',
+      description: 'Private door-to-door transfer from Gilimanuk Ferry Port to Seminyak, Bali. Driver meets you at the harbour. Journey approximately 130–135 km, 3.5–4.5 hours depending on traffic.',
+      provider: {
+        '@id': travelAgencyId
+      },
+      serviceType: 'Private Transfer',
+      areaServed: [
+        {
+          '@type': 'Place',
+          name: 'Gilimanuk, Jembrana, Bali, Indonesia'
+        },
+        {
+          '@type': 'Place',
+          name: 'Seminyak, Badung, Bali, Indonesia'
+        }
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: 'https://wa.me/6282247648944',
+        servicePhone: '+6282247648944',
+        availableLanguage: ['English', 'Indonesian']
+      },
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'IDR',
+        availability: 'https://schema.org/InStock',
+        seller: {
+          '@id': travelAgencyId
+        }
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://baliwesttransport.com/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Bali Transfers',
+          item: 'https://baliwesttransport.com/transfers/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Gilimanuk to Seminyak Transfer',
+          item: pageUrl
+        }
+      ]
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: 'en',
+      about: {
+        '@id': serviceId
+      },
+      mainEntity: [
+        { '@id': serviceId },
+        { '@id': faqId }
+      ],
+      breadcrumb: {
+        '@id': breadcrumbId
+      },
+      publisher: {
+        '@id': organizationId
+      },
+      datePublished: '2026-06-25',
+      dateModified: '2026-06-25'
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img
+          src="/images/kelingking-beach.jpg"
+          alt="Private transfer from Gilimanuk to Seminyak Bali"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Transfer — Bali West Transport</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Private Transfer Gilimanuk to Seminyak</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          Door-to-Door from the Ferry Port
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book Your Transfer
+          </a>
+          <a href="/transfers/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">View All Transfers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Answer Block -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Seminyak</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Book a private transfer from Gilimanuk to Seminyak with Bali West Transport. Your driver meets you directly at Gilimanuk Ferry Port when you step off the crossing from Java. The journey covers approximately 130–135 km and takes 3.5 to 4.5 hours by private vehicle, depending on traffic approaching Seminyak. Door-to-door service to any hotel, villa, or address in Seminyak.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <img src="/images/nusa-penida-viewpoint.jpg" alt="Scenic Bali landscape on the way to Seminyak" class="w-full h-auto" loading="lazy" />
+            <div class="grid grid-cols-2 gap-4">
+              <img src="/images/beach-sunset-swing.jpg" alt="Bali beach sunset" class="w-full h-48 object-cover" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Bali rice terraces" class="w-full h-48 object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Route Overview Card -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+          <div class="grid grid-cols-3 gap-8 flex-1">
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk to Seminyak</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
+              <p class="font-serif text-2xl text-brand-dark">130–135 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
+              <p class="font-serif text-2xl text-brand-dark">3.5–4.5 hrs</p>
+            </div>
+          </div>
+          <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
+            </div>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Ask Best Offer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose This Transfer -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose This Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Why a Private Transfer from Gilimanuk to Seminyak?</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Arriving at Gilimanuk after the Ketapang–Gilimanuk ferry crossing leaves you at the far western tip of Bali, with no direct public transport to Seminyak. Shared shuttles require connections at Ubung bus terminal in Denpasar, adding transfers, waiting time, and uncertainty to an already long journey.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              A private transfer removes every one of those variables. Your driver is at the port when you arrive, your luggage goes straight into the vehicle, and you travel directly to your accommodation without stops or route changes.
+            </p>
+          </div>
+          <div>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Seminyak sits roughly 130–135 km southeast of Gilimanuk on Bali's south coast. The drive follows the island's main western corridor through Negara and Tabanan before reaching the congested southern belt around Kerobokan.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Traffic on the final approach — particularly along Sunset Road and through the Kerobokan–Petitenget stretch — can add 30 to 60 minutes during afternoon peak hours. A local driver who knows the side-street alternatives makes a measurable difference on that last leg.
+            </p>
+            <div class="bg-brand-cream p-6 mt-4">
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Traffic Risk</p>
+              <p class="text-brand-dark/70 text-sm">High: Sunset Road and Petitenget approach, especially 14:00–19:00</p>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2 mt-4">Best Departure</p>
+              <p class="text-brand-dark/70 text-sm">Morning arrivals (06:00–10:00) reach Seminyak before peak congestion builds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pickup & Drop-off -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pickup</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Pickup at Gilimanuk Ferry Port</h2>
+            <p class="text-brand-dark/70 mb-6">Your driver meets you at <strong>Gilimanuk Ferry Port (Pelabuhan Gilimanuk)</strong>, on the western side of the harbour as you disembark. Send us your estimated arrival time and ferry booking reference when you book — we monitor the crossing and adjust for delays so you're never left waiting.</p>
+            <p class="text-brand-dark/70 mb-6">Additional pickup is available from:</p>
+            <div class="space-y-3 mb-6">
+              {pickupLocations.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span class="text-brand-dark/70">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations in Seminyak</h2>
+            <p class="text-brand-dark/70 mb-6">Door-to-door delivery to any address in Seminyak, including:</p>
+            <div class="space-y-3 mb-8">
+              {dropoffAreas.map((item) => (
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span class="text-brand-dark/70">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p class="text-brand-dark/50 text-sm">If your drop-off is in a narrow lane or private villa complex, confirm the exact address when booking — our drivers are familiar with Seminyak's one-way road network and will find the right entrance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Uses This Transfer -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Who Uses This Transfer</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Popular with Families, Couples, Surfers, and Tour Groups</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          {userTypes.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Overview -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Journey Overview</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">The Route from Gilimanuk to Seminyak</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              The drive from Gilimanuk to Seminyak follows Bali's main west-coast highway for most of its length. After leaving the harbour, the route heads south-east through the flat rice-field plains of Jembrana Regency, passing through Negara — the regional capital and a natural rest stop — before continuing into Tabanan Regency.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              From Tabanan the road joins the Greater Denpasar network. Traffic densifies progressively as you approach Kerobokan, and the final kilometres into Seminyak — particularly around the Sunset Road intersection and along Jl. Petitenget — are the busiest stretch of the entire journey.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Your driver will use local route knowledge on the Kerobokan approach to manage the final section. If you need a comfort stop, Negara is the best point — approximately halfway, with reliable rest stop options and fuel available.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop"
+              alt="Scenic Bali landscape along the Gilimanuk to Seminyak route"
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits of Private Transfer -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Private Transfer Benefits</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose a Private Transfer?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          {benefits.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-brand-dark p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl text-brand-cream mb-2">Ready to book? Send us your ferry details on WhatsApp.</h3>
+            <p class="text-brand-cream/60">Include your arrival date, estimated time at Gilimanuk, and number of passengers. We'll confirm your driver and vehicle within minutes.</p>
+          </div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Gilimanuk Transfers -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Other Gilimanuk Transfer Routes</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Travelling to a Different Part of Bali?</h2>
+          <p class="text-brand-dark/60 mt-4">View all available routes from the ferry port.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedRoutes.map((route) => (
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{route.label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore More -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Explore More</p>
+          <h2 class="font-serif text-3xl text-brand-dark">More from Bali West Transport</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          <a href="/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Home</span>
+          </a>
+          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Airport Transfer</span>
+          </a>
+          <a href="/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Private Tours</span>
+          </a>
+          <a href="/about/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">About Us</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
