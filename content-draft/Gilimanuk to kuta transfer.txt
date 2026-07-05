@@ -1,0 +1,327 @@
+# Gilimanuk to Kuta Transfer — Content Draft v2
+### (rebuilt to match your live page structure — see gilimanuk-to-seminyak as reference)
+
+> **What changed vs v1 and why:** v1 was written as a generic blog-style article. Your actual
+> site doesn't use that pattern — `gilimanuk-to-seminyak/` uses a hero → quick-answer → facts-strip →
+> persona-blocks → route → benefits → FAQ → cross-link structure with a WhatsApp CTA repeated 4 times.
+> That structure is *why* it converts: every scroll depth has a click-to-book option, not just the
+> bottom. I rebuilt this page section-by-section against that pattern, added a comparison table
+> (as requested), and tightened every passage to be self-contained and fact-first for AI citation.
+> Sections below are labelled with their component/eyebrow name so you can drop them straight into
+> the same Astro components used on the Seminyak page.
+
+---
+
+## HERO
+
+**Eyebrow:** Private Transfer — Bali West Transport
+**H1:** Private Transfer Gilimanuk to Kuta
+**Subhead:** Door-to-Door from the Ferry Port
+
+**CTA 1 (primary button):** Book Your Transfer
+→ `https://wa.me/6282247648944?text=Hi%2C%20I%20would%20like%20to%20book%20a%20private%20Gilimanuk%20to%20Kuta%20transfer.%20Please%20send%20me%20your%20best%20offer.`
+
+**CTA 2 (secondary button):** View All Transfers
+→ `https://baliwesttransport.com/transfers/`
+
+---
+
+## QUICK ANSWER
+
+**Eyebrow:** Quick Answer
+**H2:** Private Transfer from Gilimanuk to Kuta
+
+Book a private transfer from Gilimanuk to Kuta with Bali West Transport. Your driver meets you directly at Gilimanuk Ferry Port when you step off the crossing from Java. The journey covers approximately 120–130 km and takes 3 to 4 hours by private vehicle, depending on traffic approaching Kuta. Door-to-door service to any hotel, guesthouse, or villa in Kuta — and Kuta is Bali's closest tourist area to Ngurah Rai Airport, so this is also the transfer of choice if you're flying out shortly after arriving.
+
+*(This paragraph is the single most important block on the page — 44% of AI citations pull from the first 30% of a page. Distance/city name/duration/brand all sit in sentence one on purpose.)*
+
+---
+
+## FACTS STRIP
+
+| Route | Distance | Est. Time | Offer |
+|---|---|---|---|
+| Gilimanuk → Kuta | 120–130 km | 3–4 hrs | Flexible — tell us your date & group size |
+
+**CTA (in facts strip box):** Ask Best Offer
+→ same WhatsApp link as hero
+
+---
+
+## WHY CHOOSE THIS TRANSFER
+
+**Eyebrow:** Why Choose This Transfer
+**H2:** Why a Private Transfer from Gilimanuk to Kuta?
+
+Arriving at Gilimanuk after the Ketapang–Gilimanuk ferry crossing leaves you at the far western tip of Bali, with no direct public transport into Kuta. Shared shuttles require a connection at Ubung or Mengwi terminal in Denpasar, and from there you still need a separate taxi or ride-share to reach your hotel — adding cost, waiting time, and a second round of negotiation to an already long day.
+
+A private transfer removes all three problems at once. Your driver is waiting at the port when you step off the ferry, your luggage goes straight into the vehicle, and you go directly to your accommodation — or straight to the airport, if Kuta is a same-day stopover before a flight.
+
+Kuta sits roughly 120–130 km south-east of Gilimanuk on Bali's south coast, slightly closer than Seminyak since the route doesn't continue further up the coast. The drive follows the island's main western corridor through Negara and Tabanan before joining the Mengwi bypass into the Kuta/airport area.
+
+Traffic on the final approach — particularly along Jl. Raya Kuta and Jl. Legian near sunset, and around the airport roundabout during flight peaks — can add 20–45 minutes. A driver who knows Kuta's one-way beach-road network makes a real difference on that last stretch.
+
+**Callout box — Traffic Risk:** High: Jl. Legian and the Kuta beach-road corridor, especially 16:00–19:30
+**Callout box — Best Departure:** Morning ferry arrivals (06:00–10:00) reach Kuta before afternoon congestion builds
+
+---
+
+## COMPARISON TABLE (new — for conversion + AEO)
+
+**Eyebrow:** Compare Your Options
+**H2:** Private Transfer vs. Public Bus vs. On-Arrival Taxi
+
+This table is built to be lifted whole by AI Overviews / Perplexity as a direct comparison answer, and it's built to nudge the reader toward booking before they even reach the FAQ — seeing "unpredictable" and "no" next to the alternatives, right beside "fixed" and "yes" next to your service, is the table doing the sales pitch for you.
+
+| | Private Transfer (Bali West Transport) | Public Bus via Denpasar | On-Arrival Taxi/Ride-share |
+|---|---|---|---|
+| **Total time, Gilimanuk → Kuta** | 3–4 hrs, direct | 5–6+ hrs, with terminal transfer | Unpredictable — no fixed pickup at port |
+| **Driver waiting at the ferry port** | Yes, tracked to your crossing | No | No — you queue and negotiate on arrival |
+| **Price known before you travel** | Yes, fixed offer confirmed on WhatsApp | Ticket price only; taxi leg still unknown | No — negotiated on the spot |
+| **Drop-off point** | Your exact hotel/villa door | Denpasar terminal, then a second ride | Depends on driver, often not door-to-door |
+| **Luggage handling** | Unlimited within vehicle capacity, confirmed at booking | Shuttle weight limits apply | Variable, driver's discretion |
+| **Booking method** | WhatsApp, confirmed within minutes | Buy ticket at terminal | None — arrange after you land |
+
+---
+
+## PICKUP
+
+**Eyebrow:** Pickup
+**H2:** Pickup at Gilimanuk Ferry Port
+
+Your driver meets you at **Gilimanuk Ferry Port (Pelabuhan Gilimanuk)**, on the western side of the harbour as you disembark. Send us your estimated arrival time and ferry booking reference when you book — we track the crossing and adjust for delays so you're never left waiting.
+
+Additional pickup is available from:
+- Gilimanuk Ferry Port (Pelabuhan Gilimanuk)
+- Hotels and guesthouses in Gilimanuk town
+- Ketapang Port area on the Java side (for pre-arranged, cross-strait itineraries)
+
+---
+
+## DROP-OFF
+
+**Eyebrow:** Drop-off
+**H2:** Drop-off Locations in Kuta
+
+Door-to-door delivery to any address in Kuta, including:
+- Jl. Legian and the Poppies Lane I & II corridor
+- Kuta Beach and Jl. Pantai Kuta hotel strip
+- Kuta Square, Beachwalk, and Discovery Mall area
+- Tuban (southern Kuta, closest to Ngurah Rai Airport)
+- Kuta Art Market and surrounding guesthouses
+
+If your drop-off is on a narrow gang (lane) behind the main beach road, confirm the exact address when booking — our drivers know Kuta's back-lane network and will find the right entrance.
+
+---
+
+## WHO USES THIS TRANSFER
+
+**Eyebrow:** Who Uses This Transfer
+**H2:** Popular with First-Timers, Surfers, Families, and Same-Day Flyers
+
+### Travellers Crossing from Java
+Arriving via the Ketapang–Gilimanuk ferry from Banyuwangi, Surabaya, or Ijen. A private transfer is the most direct onward option from the harbour, and Kuta is the natural first stop if your next move is a flight out.
+
+### First-Time Bali Visitors
+Kuta is Bali's original tourist strip — familiar, walkable, and close to everything. Most first-time arrivals want a driver they can message directly rather than working out a bus-then-taxi chain on day one.
+
+### Same-Day and Next-Day Flyers
+Kuta sits minutes from Ngurah Rai Airport. If your Java–Bali overland trip ends with a flight home or onward, this is the shortest possible gap between ferry and airport, with one driver handling both legs if needed.
+
+### Surf Travellers
+Kuta Beach is Bali's classic beginner surf break. Board transport is accommodated in larger vehicles — confirm board size and count when booking.
+
+### Families and Groups on a Budget
+Kuta's accommodation market is broader and more budget-friendly than Seminyak's villa strip. A private vehicle handles multiple suitcases without the weight restrictions of a shared shuttle, at a price confirmed before you travel.
+
+---
+
+## JOURNEY OVERVIEW
+
+**Eyebrow:** Journey Overview
+**H2:** The Route from Gilimanuk to Kuta
+
+The drive from Gilimanuk to Kuta follows Bali's main west-coast highway for most of its length. After leaving the harbour, the route heads south-east through the flat rice-field plains of Jembrana Regency, passing through Negara — the regional capital and a natural rest stop — before continuing into Tabanan Regency.
+
+From Tabanan the road joins the Mengwi bypass, which feeds directly into the Kuta/airport corridor without needing to continue further up the coast toward Seminyak. Traffic builds progressively from Mengwi onward, and the final kilometres along Jl. Raya Kuta and into the Legian/beach-road grid are the busiest stretch of the journey, especially close to sunset.
+
+Your driver will use local route knowledge on the final approach to manage traffic. If you need a comfort stop, Negara is the best point — approximately halfway, with reliable rest-stop options and fuel available.
+
+---
+
+## PRIVATE TRANSFER BENEFITS
+
+**Eyebrow:** Private Transfer Benefits
+**H2:** Why Choose a Private Transfer?
+
+### No Connections
+Shared transport from Gilimanuk to Kuta requires at least one change at a Denpasar terminal. Private transfer is point-to-point with no intermediate stops unless you request them.
+
+### Your Schedule, Not the Bus Schedule
+Depart as soon as you step off the ferry — no waiting for a shared vehicle to fill, and no risk of missing a same-day flight because a shuttle ran late.
+
+### Door-to-Door to Your Hotel or the Airport
+Whether Kuta is your final stop or a stopover before Ngurah Rai, your driver delivers you exactly where you need to be.
+
+### Luggage Flexibility
+Families and long-stay travellers routinely bring more than a shuttle's weight allowance permits. A private vehicle carries what your group brings.
+
+### WhatsApp-First Booking and Contact
+Confirm your journey, share your ferry arrival time, and track your driver — all via WhatsApp before and during the trip. No app to install, no account to create.
+
+---
+
+## FAQ
+
+**Eyebrow:** FAQ
+**H2:** Frequently Asked Questions
+
+### How long does the transfer from Gilimanuk to Kuta take?
+Approximately 3 to 4 hours by private vehicle. The drive itself is around 2.5 to 3 hours in clear conditions, but traffic on the Jl. Legian and beach-road approach adds 20–45 minutes, particularly between 16:00 and 19:30. Morning ferry arrivals typically have the fastest journey times.
+
+### How far is Gilimanuk from Kuta?
+Approximately 120–130 km by road, following the main western corridor through Negara and Tabanan before joining the Mengwi bypass into Kuta.
+
+### Where does the driver meet me at Gilimanuk?
+At Gilimanuk Ferry Port (Pelabuhan Gilimanuk), on the western side of the harbour as you disembark from the Ketapang crossing. Send us your ferry reference and estimated arrival time when booking — we track the crossing and adjust if it runs late.
+
+### Is there a direct bus from Gilimanuk to Kuta?
+There is no direct bus. Public buses from Gilimanuk go to a Denpasar terminal (Ubung or Mengwi), where you need a second connection into Kuta. Total travel time including waiting and transfers typically exceeds 5–6 hours. A private transfer is faster and door-to-door.
+
+### Is Kuta close to Ngurah Rai Airport?
+Yes. Kuta and its southern district, Tuban, border Ngurah Rai Airport directly — typically 10–15 minutes by road. This makes a Gilimanuk-to-Kuta transfer the practical choice if you're connecting from Java to an onward flight.
+
+### Can you transport a surfboard from Gilimanuk to Kuta?
+Yes. Confirm the number and length of boards when booking so we assign a vehicle with adequate space. Standard MPV fits boards up to around 6'8" with the rear seat folded; longer boards may need a larger vehicle.
+
+### Do you offer early morning pickups from the ferry port?
+Yes. We operate around the Ketapang–Gilimanuk ferry schedule, including the earliest morning crossings. Confirm your ferry departure time when booking and we will have your driver ready on arrival.
+
+### What is the route from Gilimanuk to Kuta?
+Gilimanuk Ferry Port → Jl. Raya Gilimanuk south-east → Negara → Tabanan → Mengwi bypass → Kuta. The route stays on Bali's main western highway for most of the journey before entering the Kuta/airport corridor.
+
+### Can I make a stop at Tanah Lot on the way to Kuta?
+Yes, on request. Tanah Lot sits close to the main route, roughly 40–50 minutes before Kuta. A planned stop adds to the total journey time — confirm with us when booking so your driver can adjust the schedule.
+
+---
+
+## FINAL CTA
+
+**H2 / lead-in text:** Ready to book? Send us your ferry details on WhatsApp.
+Include your arrival date, estimated time at Gilimanuk, and number of passengers. We'll confirm your driver and vehicle within minutes.
+
+**CTA button:** Book on WhatsApp
+→ same WhatsApp link as hero
+
+---
+
+## CROSS-LINK BLOCK
+
+**Eyebrow:** Other Gilimanuk Transfer Routes
+**H2:** Travelling to a Different Part of Bali?
+
+- Gilimanuk to Ubud Transfer → `/transfers/gilimanuk-to-ubud/`
+- Gilimanuk to Canggu Transfer → `/transfers/gilimanuk-to-canggu/`
+- Gilimanuk to Seminyak Transfer → `/transfers/gilimanuk-to-seminyak/`
+- All Gilimanuk Transfers → `/transfers/`
+
+*(Once this page is live, also add "Gilimanuk to Kuta Transfer" as a real link on the Seminyak,
+Ubud, and Canggu pages' cross-link blocks — right now those pages point the Kuta link at
+`/transfers/` as a placeholder, since the page didn't exist yet.)*
+
+---
+
+## META BLOCK
+
+```
+TITLE TAG: Gilimanuk to Kuta Transfer — Private Door-to-Door | Bali West Transport
+META DESCRIPTION: Book a private transfer from Gilimanuk Ferry Port to Kuta. Door-to-door service, 120–130 km, 3–4 hours. Close to Ngurah Rai Airport. WhatsApp booking available.
+SLUG: /transfers/gilimanuk-to-kuta/
+SCHEMA TYPE: @graph — WebPage + Service (TaxiService context) + FAQPage + BreadcrumbList
+WORD COUNT: ~1,150
+CITABILITY SCORE ESTIMATE:
+  - Quick Answer block: 9/10 — direct answer, named distance/time/brand in sentence one
+  - Comparison table: 9/10 — structurally the most liftable block on the page for AI Overviews
+    and Perplexity; each row is a self-contained fact pair
+  - FAQ answers: 9/10 average — all direct-answer-first, all under 60 words, all self-contained
+  - Route section: 8/10 — named towns (Negara, Tabanan, Mengwi), one minor soft sentence at the end
+  - Overall: distance (120–130 km) and time (3–4 hrs) are DIRECTIONAL estimates, reconciled against
+    your own published Seminyak figures (130–135 km / 3.5–4.5 hrs) since Kuta sits slightly closer
+    on the same corridor. VERIFY against actual driver trip logs before publishing — this is the
+    most fact-checkable claim on the page and the one most likely to get quoted verbatim.
+INTERNAL LINKS SUGGESTED:
+  → /transfers/gilimanuk-to-seminyak/: "same corridor as the Seminyak transfer"
+  → /transfers/gilimanuk-to-ubud/, /transfers/gilimanuk-to-canggu/: cross-link block
+  → /airport-transfer/: anchor on "onward flight" / "same-day flyers" persona section
+```
+
+## JSON-LD SCHEMA
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/#webpage",
+      "url": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/",
+      "name": "Gilimanuk to Kuta Transfer — Private Door-to-Door | Bali West Transport",
+      "isPartOf": { "@id": "https://baliwesttransport.com/#website" },
+      "about": { "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/#service" },
+      "datePublished": "2026-07-05T09:00:00+08:00",
+      "dateModified": "2026-07-05T09:00:00+08:00",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/#service",
+      "name": "Gilimanuk to Kuta Private Transfer",
+      "serviceType": "Private ferry port transfer",
+      "provider": { "@id": "https://baliwesttransport.com/#organization" },
+      "areaServed": [
+        { "@type": "Place", "name": "Gilimanuk" },
+        { "@type": "Place", "name": "Kuta, Bali" }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Travelers arriving via Ketapang-Gilimanuk ferry, connecting to Kuta or Ngurah Rai Airport"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://baliwesttransport.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Transfers", "item": "https://baliwesttransport.com/transfers/" },
+        { "@type": "ListItem", "position": 3, "name": "Gilimanuk to Kuta", "item": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-kuta/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "How long does the transfer from Gilimanuk to Kuta take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Approximately 3 to 4 hours by private vehicle. The drive itself is around 2.5 to 3 hours in clear conditions, but traffic on the Jl. Legian and beach-road approach adds 20-45 minutes, particularly between 16:00 and 19:30." } },
+        { "@type": "Question", "name": "How far is Gilimanuk from Kuta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Approximately 120-130 km by road, following the main western corridor through Negara and Tabanan before joining the Mengwi bypass into Kuta." } },
+        { "@type": "Question", "name": "Where does the driver meet me at Gilimanuk?",
+          "acceptedAnswer": { "@type": "Answer", "text": "At Gilimanuk Ferry Port (Pelabuhan Gilimanuk), on the western side of the harbour as you disembark from the Ketapang crossing." } },
+        { "@type": "Question", "name": "Is there a direct bus from Gilimanuk to Kuta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no direct bus. Public buses go to a Denpasar terminal, where you need a second connection into Kuta, typically exceeding 5-6 hours total." } },
+        { "@type": "Question", "name": "Is Kuta close to Ngurah Rai Airport?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kuta and its southern district, Tuban, border Ngurah Rai Airport directly, typically 10-15 minutes by road." } },
+        { "@type": "Question", "name": "Can you transport a surfboard from Gilimanuk to Kuta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Confirm the number and length of boards when booking so a vehicle with adequate space is assigned." } },
+        { "@type": "Question", "name": "Do you offer early morning pickups from the ferry port?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, pickups operate around the Ketapang-Gilimanuk ferry schedule, including the earliest morning crossings." } },
+        { "@type": "Question", "name": "What is the route from Gilimanuk to Kuta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Gilimanuk Ferry Port to Negara to Tabanan to the Mengwi bypass into Kuta, staying on Bali's main western highway for most of the journey." } },
+        { "@type": "Question", "name": "Can I make a stop at Tanah Lot on the way to Kuta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, on request. Tanah Lot sits close to the main route, roughly 40-50 minutes before Kuta." } }
+      ]
+    }
+  ]
+}
+</script>
+```

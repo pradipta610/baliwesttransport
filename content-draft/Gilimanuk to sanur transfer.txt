@@ -1,0 +1,334 @@
+# Gilimanuk to Sanur Transfer — Content Draft
+### (same structural pattern as gilimanuk-to-kuta / gilimanuk-to-seminyak)
+
+> **Sanur's unique angle vs your other transfer pages:** Kuta's differentiator is the airport.
+> Sanur's is **Sanur Harbour** — Bali's main fast-boat terminal for Nusa Penida, Nusa Lembongan,
+> and the Gili Islands. A large share of people searching "Gilimanuk to Sanur" aren't staying in
+> Sanur at all — they're crossing from Java and continuing straight on to an island by boat the
+> same day or the next morning. That's the persona this draft is built around, and it's also the
+> most genuinely useful, most citable content block on the page (boat schedule facts, verified
+> across four independent harbour-operator sources).
+
+---
+
+## HERO
+
+**Eyebrow:** Private Transfer — Bali West Transport
+**H1:** Private Transfer Gilimanuk to Sanur
+**Subhead:** Door-to-Door from the Ferry Port — Timed for Your Onward Boat if You Need It
+
+**CTA 1 (primary button):** Book Your Transfer
+→ `https://wa.me/6282247648944?text=Hi%2C%20I%20would%20like%20to%20book%20a%20private%20Gilimanuk%20to%20Sanur%20transfer.%20Please%20send%20me%20your%20best%20offer.`
+
+**CTA 2 (secondary button):** View All Transfers
+→ `https://baliwesttransport.com/transfers/`
+
+---
+
+## QUICK ANSWER
+
+**Eyebrow:** Quick Answer
+**H2:** Private Transfer from Gilimanuk to Sanur
+
+Book a private transfer from Gilimanuk to Sanur with Bali West Transport. Your driver meets you at Gilimanuk Ferry Port as you disembark the Ketapang crossing from Java. The journey covers approximately 130–140 km and takes 4 to 4.5 hours by private vehicle, following the route through Negara, Tabanan, and Mengwi before continuing along Denpasar's outer ring toward the east coast. Door-to-door delivery to any hotel or villa in Sanur — and if you're continuing on to Nusa Penida, Nusa Lembongan, or the Gili Islands, we time your pickup so you reach Sanur Harbour with room to check in before your fast boat departs.
+
+*(Distance, duration, brand, and the harbour-connection hook all sit in the first 70 words — this is the block AI engines are most likely to lift for "how do I get from Gilimanuk to Sanur.")*
+
+---
+
+## FACTS STRIP
+
+| Route | Distance | Est. Time | Offer |
+|---|---|---|---|
+| Gilimanuk → Sanur | 130–140 km | 4–4.5 hrs | Flexible — tell us your date, group size & onward boat time |
+
+**CTA (in facts strip box):** Ask Best Offer
+→ same WhatsApp link as hero
+
+---
+
+## WHY CHOOSE THIS TRANSFER
+
+**Eyebrow:** Why Choose This Transfer
+**H2:** Why a Private Transfer from Gilimanuk to Sanur?
+
+Gilimanuk sits at Bali's far western tip, and Sanur sits on the east coast — this is the longest of our standard Gilimanuk routes, with no direct public transport connecting the two. Buses from Gilimanuk terminate at a Denpasar terminal (Ubung or Mengwi), and Sanur is still a separate taxi ride beyond that, on top of an unpredictable wait for the bus itself to depart.
+
+A private transfer solves the distance problem and the timing problem at once. Your driver is waiting at the port when your ferry docks, and if you're heading onward by fast boat, we build your pickup time around your boat's departure window rather than a generic arrival estimate — which matters, because Sanur Harbour's fast boats run on a fixed schedule that won't wait for a delayed bus connection.
+
+The route runs through Negara and Tabanan on Bali's main west-coast highway, then joins the Mengwi bypass before skirting Denpasar's southern ring toward Sanur — the same corridor used for Kuta and Seminyak transfers, extended further east.
+
+Traffic tends to build around Denpasar's Sanur-bound arterials (Jl. Bypass Ngurah Rai, Jl. Hang Tuah) during afternoon peak, and again near Sanur's harbour-front roads when a fast boat has just docked. A driver who knows to avoid the harbour car park at boat-arrival peaks saves real time on the final approach.
+
+**Callout box — Traffic Risk:** High: Denpasar's Sanur-bound arterials and the harbour-front road, especially when a fast boat has just arrived (roughly on the hour, mid-morning to mid-afternoon)
+**Callout box — Best Departure:** Morning ferry arrivals (06:00–09:00) give the most buffer if you're catching a same-day fast boat — Sanur Harbour's last Nusa Penida/Lembongan departure is around 17:00
+
+---
+
+## COMPARISON TABLE
+
+**Eyebrow:** Compare Your Options
+**H2:** Private Transfer vs. Public Bus vs. On-Arrival Taxi
+
+| | Private Transfer (Bali West Transport) | Public Bus via Denpasar | On-Arrival Taxi/Ride-share |
+|---|---|---|---|
+| **Total time, Gilimanuk → Sanur** | 4–4.5 hrs, direct | 6+ hrs, with terminal transfer | Unpredictable — no fixed pickup at port |
+| **Timed to your fast boat departure** | Yes — pickup built around your boat schedule | No — bus schedule is fixed, boat isn't | No — you negotiate on arrival |
+| **Driver waiting at the ferry port** | Yes, tracked to your crossing | No | No — you queue and negotiate on arrival |
+| **Price known before you travel** | Yes, fixed offer confirmed on WhatsApp | Ticket price only; taxi leg still unknown | No — negotiated on the spot |
+| **Drop-off point** | Sanur Harbour, or your exact hotel/villa door | Denpasar terminal, then a second ride | Depends on driver, often not door-to-door |
+| **Booking method** | WhatsApp, confirmed within minutes | Buy ticket at terminal | None — arrange after you land |
+
+---
+
+## SANUR HARBOUR: WHAT YOU NEED TO KNOW
+
+**Eyebrow:** Onward Travel
+**H2:** Connecting to Nusa Penida, Lembongan, or the Gili Islands from Sanur
+
+Sanur Harbour is Bali's main fast-boat terminal for the southeastern islands, and it runs on a fixed daily schedule — this is the one part of your trip a delayed transfer can genuinely wreck, so it's worth planning around.
+
+| Sanur Harbour fact | Detail |
+|---|---|
+| Operating hours | 06:00–18:00 daily (closed on Nyepi) |
+| Crossing time to Nusa Penida / Lembongan | Approx. 30–45 minutes |
+| Crossing time to Gili Islands | Approx. 3 hours |
+| Earliest departure | Around 06:30 |
+| Last departure (Nusa Penida / Lembongan) | Around 17:00 |
+| Recommended check-in | 45–60 minutes before departure |
+
+Boat tickets are booked separately from your land transfer — we don't sell fast boat tickets, but we do build your Gilimanuk pickup time around whichever departure you've already booked, so you land in Sanur with buffer, not a sprint to the dock.
+
+---
+
+## PICKUP
+
+**Eyebrow:** Pickup
+**H2:** Pickup at Gilimanuk Ferry Port
+
+Your driver meets you at **Gilimanuk Ferry Port (Pelabuhan Gilimanuk)** on the western side of the harbour as you disembark. Send your ferry booking reference and estimated arrival time when you book, along with your onward fast boat time if relevant — we track both and adjust your departure accordingly.
+
+Additional pickup is available from:
+- Gilimanuk Ferry Port (Pelabuhan Gilimanuk)
+- Hotels and guesthouses in Gilimanuk town
+- Ketapang Port area on the Java side (for pre-arranged, cross-strait itineraries)
+
+---
+
+## DROP-OFF
+
+**Eyebrow:** Drop-off
+**H2:** Drop-off Locations in Sanur
+
+Door-to-door delivery to any address in Sanur, including:
+- Sanur Beach and the Jl. Danau Tamblingan hotel strip
+- Sanur Harbour (fast boat terminal for Nusa Penida, Lembongan, and the Gili Islands)
+- Mertasari Beach and Segara Ayu Beach
+- Renon (Denpasar's government/residential district, popular with longer-stay visitors)
+
+If your accommodation is on a small gang off the main beach walk, confirm the exact address when booking so your driver can plan the final approach.
+
+---
+
+## WHO USES THIS TRANSFER
+
+**Eyebrow:** Who Uses This Transfer
+**H2:** Popular with Island-Hoppers, Families, and Java Overlanders
+
+### Nusa Penida, Lembongan & Gili-Bound Travellers
+The largest group on this route. Crossing from Java, through Gilimanuk, straight to Sanur Harbour for a same-day or next-morning fast boat — tell us your boat time and we build the pickup around it.
+
+### Travellers Crossing from Java
+Arriving via the Ketapang–Gilimanuk ferry from Banyuwangi, Surabaya, or Ijen, with Sanur as either a final base or a stepping stone to the islands.
+
+### Families and Long-Stay Visitors
+Sanur is quieter than Kuta or Seminyak, with a walkable beachfront promenade and a more residential feel — a common choice for families and travellers staying several weeks.
+
+### Retirees and Repeat Visitors
+Sanur has long been popular with longer-term and older travellers who want a relaxed base without nightlife noise. A private transfer with no terminal changes and no queueing matters more for this group, not less.
+
+---
+
+## JOURNEY OVERVIEW
+
+**Eyebrow:** Journey Overview
+**H2:** The Route from Gilimanuk to Sanur
+
+The drive follows Bali's main west-coast highway from Gilimanuk through the rice-field plains of Jembrana Regency, passing Negara — the regional capital and a natural halfway rest stop — before continuing into Tabanan Regency.
+
+From Tabanan the road joins the Mengwi bypass and continues past Denpasar's outer arterials rather than into the airport corridor used for Kuta and Seminyak transfers. This is the longest of the three routes, and the final stretch through Denpasar's southern ring toward Sanur is where most of the journey's traffic variability sits — particularly around midday and late afternoon.
+
+If you'd like a stop, Negara is the best halfway point for food or a break. Some travellers on this route also ask about a short detour to Tanah Lot, which sits close to the corridor before Mengwi — this can be arranged on request and adds to total journey time.
+
+---
+
+## PRIVATE TRANSFER BENEFITS
+
+**Eyebrow:** Private Transfer Benefits
+**H2:** Why Choose a Private Transfer?
+
+### No Connections
+Public transport from Gilimanuk to Sanur requires at least one change at a Denpasar terminal, plus a further taxi leg. Private transfer is point-to-point.
+
+### Timed Around Your Boat, Not the Other Way Around
+If you're catching a fast boat from Sanur Harbour, your pickup time is built around that departure — not the reverse.
+
+### Door-to-Door to Your Hotel or the Harbour
+Whether Sanur is your destination or a stepping stone to the islands, your driver delivers you exactly where you need to be.
+
+### Luggage Flexibility
+Long-stay and island-hopping travellers routinely carry more than a shared shuttle's weight allowance. A private vehicle carries what your group brings.
+
+### WhatsApp-First Booking and Contact
+Confirm your ferry details, share your fast boat time, and track your driver — all via WhatsApp, no app or account required.
+
+---
+
+## FAQ
+
+**Eyebrow:** FAQ
+**H2:** Frequently Asked Questions
+
+### How long does the transfer from Gilimanuk to Sanur take?
+Approximately 4 to 4.5 hours by private vehicle. This is the longest of our standard Gilimanuk routes, since Sanur sits on Bali's east coast, on the far side of Denpasar from the ferry port.
+
+### How far is Gilimanuk from Sanur?
+Approximately 130–140 km by road, following the main western corridor through Negara and Tabanan before continuing past Denpasar toward the east coast.
+
+### Can you time my pickup around a fast boat departure from Sanur Harbour?
+Yes. Tell us your fast boat time and operator when booking, and we build your Gilimanuk pickup time backward from that departure, with buffer for the recommended 45–60 minute check-in.
+
+### What time does Sanur Harbour operate?
+Sanur Harbour runs from 06:00 to 18:00 daily, closed on Nyepi. The last fast boat departure to Nusa Penida and Lembongan is typically around 17:00.
+
+### Is there a direct bus from Gilimanuk to Sanur?
+No direct bus exists. Public buses go to a Denpasar terminal, where a further taxi or ride-share is needed to reach Sanur — typically exceeding 6 hours total.
+
+### Do I need to book my fast boat ticket separately?
+Yes. We handle your land transfer from Gilimanuk to Sanur Harbour; fast boat tickets to Nusa Penida, Lembongan, or the Gili Islands are booked separately through a boat operator.
+
+### Where does the driver meet me at Gilimanuk?
+At Gilimanuk Ferry Port (Pelabuhan Gilimanuk), on the western side of the harbour as you disembark from the Ketapang crossing.
+
+### Can I make a stop at Tanah Lot on the way to Sanur?
+Yes, on request. Tanah Lot sits close to the route before Mengwi. A planned stop adds to total journey time — confirm when booking.
+
+---
+
+## FINAL CTA
+
+**H2 / lead-in text:** Ready to book? Send us your ferry details — and your fast boat time if you're island-hopping — on WhatsApp.
+We'll confirm your driver, vehicle, and pickup time within minutes.
+
+**CTA button:** Book on WhatsApp
+→ same WhatsApp link as hero
+
+---
+
+## CROSS-LINK BLOCK
+
+**Eyebrow:** Other Gilimanuk Transfer Routes
+**H2:** Travelling to a Different Part of Bali?
+
+- Gilimanuk to Kuta Transfer → `/transfers/gilimanuk-to-kuta/`
+- Gilimanuk to Seminyak Transfer → `/transfers/gilimanuk-to-seminyak/`
+- Gilimanuk to Ubud Transfer → `/transfers/gilimanuk-to-ubud/`
+- Gilimanuk to Canggu Transfer → `/transfers/gilimanuk-to-canggu/`
+- All Gilimanuk Transfers → `/transfers/`
+
+---
+
+## META BLOCK
+
+```
+TITLE TAG: Gilimanuk to Sanur Transfer — Private Door-to-Door | Bali West Transport
+META DESCRIPTION: Private transfer from Gilimanuk Ferry Port to Sanur. Door-to-door, 130–140 km, 4–4.5 hours. Timed for your Nusa Penida/Lembongan fast boat. Book on WhatsApp.
+SLUG: /transfers/gilimanuk-to-sanur/
+SCHEMA TYPE: @graph — WebPage + Service (TaxiService context) + FAQPage + BreadcrumbList
+WORD COUNT: ~1,250
+CITABILITY SCORE ESTIMATE:
+  - Quick Answer block: 9/10 — direct answer with distance/time/brand/harbour-hook in sentence one
+  - Sanur Harbour facts table: 10/10 — multi-source verified (sanurharbour.com, penidaharbour.com,
+    gilitickets.com, baliferries.com all agree on 06:00–18:00 hours and ~30–45 min crossing times).
+    This is the strongest citability block on the page — Established tier, not directional.
+  - Comparison table: 9/10 — self-contained rows, liftable whole by AI Overviews/Perplexity
+  - FAQ answers: 9/10 average — direct-answer-first, self-contained, under 60 words each
+  - Overall: distance (130–140 km) and time (4–4.5 hrs) are DIRECTIONAL — reconciled against your
+    published Kuta (120–130 km / 3–4 hrs) and Seminyak (130–135 km / 3.5–4.5 hrs) figures, extended
+    for Sanur's position on the far side of Denpasar. VERIFY against actual driver trip logs before
+    publishing. The harbour operating-hours/crossing-time facts are cross-source verified and safe
+    to publish as-is.
+INTERNAL LINKS SUGGESTED:
+  → /transfers/gilimanuk-to-kuta/, /transfers/gilimanuk-to-seminyak/: cross-link block
+  → /transfers/gilimanuk-to-ubud/, /transfers/gilimanuk-to-canggu/: cross-link block
+  → Gilimanuk ferry port guide article: anchor on "Ketapang–Gilimanuk ferry" mention
+```
+
+## JSON-LD SCHEMA
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/#webpage",
+      "url": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/",
+      "name": "Gilimanuk to Sanur Transfer — Private Door-to-Door | Bali West Transport",
+      "isPartOf": { "@id": "https://baliwesttransport.com/#website" },
+      "about": { "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/#service" },
+      "datePublished": "2026-07-05T09:00:00+08:00",
+      "dateModified": "2026-07-05T09:00:00+08:00",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/#service",
+      "name": "Gilimanuk to Sanur Private Transfer",
+      "serviceType": "Private ferry port transfer",
+      "provider": { "@id": "https://baliwesttransport.com/#organization" },
+      "areaServed": [
+        { "@type": "Place", "name": "Gilimanuk" },
+        { "@type": "Place", "name": "Sanur, Bali" }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Travelers arriving via Ketapang-Gilimanuk ferry, connecting to Sanur or onward fast boats to Nusa Penida, Lembongan and the Gili Islands"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://baliwesttransport.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Transfers", "item": "https://baliwesttransport.com/transfers/" },
+        { "@type": "ListItem", "position": 3, "name": "Gilimanuk to Sanur", "item": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://baliwesttransport.com/transfers/gilimanuk-to-sanur/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "How long does the transfer from Gilimanuk to Sanur take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Approximately 4 to 4.5 hours by private vehicle. This is the longest of the standard Gilimanuk routes, since Sanur sits on Bali's east coast, on the far side of Denpasar from the ferry port." } },
+        { "@type": "Question", "name": "How far is Gilimanuk from Sanur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Approximately 130-140 km by road, following the main western corridor through Negara and Tabanan before continuing past Denpasar toward the east coast." } },
+        { "@type": "Question", "name": "Can you time my pickup around a fast boat departure from Sanur Harbour?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Provide the fast boat time and operator when booking, and the Gilimanuk pickup time is set backward from that departure, with buffer for the recommended 45-60 minute check-in." } },
+        { "@type": "Question", "name": "What time does Sanur Harbour operate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sanur Harbour runs from 06:00 to 18:00 daily, closed on Nyepi. The last fast boat departure to Nusa Penida and Lembongan is typically around 17:00." } },
+        { "@type": "Question", "name": "Is there a direct bus from Gilimanuk to Sanur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No direct bus exists. Public buses go to a Denpasar terminal, where a further taxi or ride-share is needed to reach Sanur, typically exceeding 6 hours total." } },
+        { "@type": "Question", "name": "Do I need to book my fast boat ticket separately?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The land transfer from Gilimanuk to Sanur Harbour is separate from fast boat tickets to Nusa Penida, Lembongan, or the Gili Islands, which are booked through a boat operator." } },
+        { "@type": "Question", "name": "Where does the driver meet me at Gilimanuk?",
+          "acceptedAnswer": { "@type": "Answer", "text": "At Gilimanuk Ferry Port (Pelabuhan Gilimanuk), on the western side of the harbour as you disembark from the Ketapang crossing." } },
+        { "@type": "Question", "name": "Can I make a stop at Tanah Lot on the way to Sanur?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, on request. Tanah Lot sits close to the route before Mengwi. A planned stop adds to total journey time." } }
+      ]
+    }
+  ]
+}
+</script>
+```

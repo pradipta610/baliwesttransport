@@ -4,11 +4,11 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Gilimanuk ke Seminyak — Antar Jemput Pribadi Door-to-Door | Bali West Transport';
-const pageDescription = 'Pesan transfer pribadi dari Pelabuhan Gilimanuk ke Seminyak Bali. Layanan door-to-door, 130–135 km, 3,5–4,5 jam. Sopir menjemput di pelabuhan. Booking via WhatsApp.';
-const pageKeywords = 'transfer gilimanuk ke seminyak, antar jemput gilimanuk seminyak, transfer pribadi gilimanuk seminyak, pelabuhan gilimanuk ke seminyak, mobil sewa gilimanuk seminyak bali';
+const pageTitle = 'Transfer Gilimanuk ke Sanur — Antar Jemput Pribadi Door-to-Door | Bali West Transport';
+const pageDescription = 'Transfer pribadi dari Pelabuhan Gilimanuk ke Sanur Bali. Door-to-door, 130–140 km, 4–4,5 jam. Disesuaikan dengan jadwal fast boat Nusa Penida/Lembongan. Booking via WhatsApp.';
+const pageKeywords = 'transfer gilimanuk ke sanur, antar jemput gilimanuk sanur, transfer pribadi gilimanuk sanur, pelabuhan gilimanuk ke sanur, gilimanuk sanur pelabuhan, sanur fast boat nusa penida';
 
-const whatsappText = 'Halo, saya ingin memesan transfer pribadi Gilimanuk ke Seminyak. Mohon kirimkan penawaran terbaik.';
+const whatsappText = 'Halo, saya ingin memesan transfer pribadi Gilimanuk ke Sanur. Mohon kirimkan penawaran terbaik.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const pickupLocations = [
@@ -18,106 +18,109 @@ const pickupLocations = [
 ];
 
 const dropoffAreas = [
-  'Jl. Raya Seminyak dan koridor hotel Jl. Kayu Jati',
-  'Petitenget (area W Bali, Katamama, Potato Head)',
-  'Oberoi Street dan sekitarnya',
-  'Area Batu Belig',
-  'Kerobokan (termasuk villa dan properti sepanjang Jl. Raya Kerobokan)',
-  'Legian (atas permintaan, zona yang sama)'
+  'Pantai Sanur dan jalur hotel Jl. Danau Tamblingan',
+  'Pelabuhan Sanur (terminal fast boat ke Nusa Penida, Lembongan, dan Kepulauan Gili)',
+  'Pantai Mertasari dan Pantai Segara Ayu',
+  'Renon (kawasan pemerintahan/residensial Denpasar, populer untuk wisatawan jangka panjang)'
+];
+
+const harbourFacts = [
+  { fact: 'Jam operasional', detail: '06:00–18:00 setiap hari (tutup saat Nyepi)' },
+  { fact: 'Waktu tempuh ke Nusa Penida / Lembongan', detail: 'Sekitar 30–45 menit' },
+  { fact: 'Waktu tempuh ke Kepulauan Gili', detail: 'Sekitar 3 jam' },
+  { fact: 'Keberangkatan paling awal', detail: 'Sekitar 06:30' },
+  { fact: 'Keberangkatan terakhir (Nusa Penida / Lembongan)', detail: 'Sekitar 17:00' },
+  { fact: 'Check-in yang disarankan', detail: '45–60 menit sebelum keberangkatan' }
 ];
 
 const userTypes = [
   {
+    title: 'Wisatawan Menuju Nusa Penida, Lembongan & Gili',
+    description: 'Kelompok terbesar di rute ini. Menyeberang dari Jawa, melewati Gilimanuk, langsung ke Pelabuhan Sanur untuk fast boat di hari yang sama atau pagi berikutnya — beritahu kami jadwal boat Anda dan kami atur penjemputan sesuai.'
+  },
+  {
     title: 'Wisatawan dari Jawa',
-    description: 'Tiba melalui feri Ketapang–Gilimanuk dari Banyuwangi, Surabaya, atau Ijen. Transfer pribadi adalah pilihan paling langsung dari pelabuhan ke Seminyak.'
+    description: 'Tiba melalui feri Ketapang–Gilimanuk dari Banyuwangi, Surabaya, atau Ijen, dengan Sanur sebagai tujuan akhir atau batu loncatan ke pulau-pulau.'
   },
   {
-    title: 'Keluarga dengan Banyak Bagasi',
-    description: 'Pasar hotel dan villa Seminyak banyak diminati keluarga dan pasangan. Kendaraan pribadi menampung beberapa koper tanpa batasan berat seperti shuttle bersama.'
+    title: 'Keluarga dan Wisatawan Jangka Panjang',
+    description: 'Sanur lebih tenang dari Kuta atau Seminyak, dengan promenade pantai yang mudah dijalan kaki dan suasana lebih residensial — pilihan umum untuk keluarga dan wisatawan yang tinggal beberapa minggu.'
   },
   {
-    title: 'Pasangan yang Menginap di Resort',
-    description: 'Area Petitenget dan Oberoi Seminyak adalah kawasan bulan madu dan hotel butik terbaik di Bali. Tamu di sini mengharapkan kedatangan yang mulus, bukan menunggu 45 menit di Terminal Ubung.'
-  },
-  {
-    title: 'Wisatawan Surf',
-    description: 'Seminyak, Batu Belig, dan Kerobokan berjarak lima menit dari pantai Berawa dan Batu Bolong. Pengangkutan papan selancar tersedia di kendaraan yang lebih besar — konfirmasi ukuran papan saat booking.'
-  },
-  {
-    title: 'Rombongan Tur Perjalanan Darat Jawa–Bali',
-    description: 'Jika rombongan Anda menyeberang dari Jawa Timur dan Seminyak adalah tujuan pertama, kendaraan pribadi dengan kapasitas terkonfirmasi lebih andal daripada mengatur beberapa kendaraan bersama.'
+    title: 'Pensiunan dan Wisatawan Berulang',
+    description: 'Sanur sudah lama populer di kalangan wisatawan jangka panjang dan yang lebih tua yang menginginkan tempat santai tanpa kebisingan kehidupan malam. Transfer pribadi tanpa pergantian terminal dan tanpa mengantri semakin penting untuk kelompok ini.'
   }
 ];
 
 const benefits = [
   {
     title: 'Tanpa Pindah Kendaraan',
-    description: 'Transportasi bersama dari Gilimanuk ke Seminyak memerlukan minimal satu kali pindah di Terminal Ubung Denpasar. Transfer pribadi langsung tanpa berhenti kecuali Anda yang meminta.'
+    description: 'Transportasi umum dari Gilimanuk ke Sanur memerlukan minimal satu kali pindah di terminal Denpasar, ditambah taksi lanjutan. Transfer pribadi langsung tanpa perantara.'
   },
   {
-    title: 'Jadwal Anda, Bukan Jadwal Bus',
-    description: 'Berangkat segera setelah turun dari feri — tidak perlu menunggu kendaraan bersama penuh terisi.'
+    title: 'Disesuaikan dengan Jadwal Boat Anda',
+    description: 'Jika Anda mengejar fast boat dari Pelabuhan Sanur, waktu penjemputan dibangun berdasarkan jadwal keberangkatan boat Anda — bukan sebaliknya.'
   },
   {
-    title: 'Door-to-Door ke Villa Anda',
-    description: 'Banyak akomodasi di Seminyak berupa villa di gang-gang kecil. Sopir kami mengantar tepat ke pintu masuk, bukan ke titik turun terdekat.'
+    title: 'Door-to-Door ke Hotel atau Pelabuhan',
+    description: 'Baik Sanur adalah tujuan akhir atau batu loncatan ke pulau-pulau, sopir mengantar tepat ke tempat yang Anda tuju.'
   },
   {
     title: 'Fleksibilitas Bagasi',
-    description: 'Keluarga dan wisatawan long-stay sering membawa lebih dari batas berat shuttle. Kendaraan pribadi membawa semua barang bawaan rombongan Anda.'
+    description: 'Wisatawan jangka panjang dan island-hopping sering membawa lebih dari batas berat shuttle. Kendaraan pribadi membawa semua barang bawaan rombongan Anda.'
   },
   {
     title: 'Booking dan Kontak via WhatsApp',
-    description: 'Konfirmasi perjalanan, bagikan waktu kedatangan feri, dan hubungi sopir — semua melalui WhatsApp sebelum dan selama perjalanan.'
+    description: 'Konfirmasi detail feri, bagikan jadwal fast boat, dan hubungi sopir — semua melalui WhatsApp, tanpa perlu install aplikasi atau buat akun.'
   }
 ];
 
 const faqs = [
   {
-    question: 'Berapa lama transfer dari Gilimanuk ke Seminyak?',
-    answer: 'Sekitar 3,5 hingga 4,5 jam dengan kendaraan pribadi. Perjalanan sendiri sekitar 3 jam dalam kondisi lancar, tetapi lalu lintas di area Kerobokan–Petitenget menambah 30 hingga 60 menit, terutama antara pukul 14:00 dan 19:00. Kedatangan feri pagi biasanya memiliki waktu tempuh tercepat.'
+    question: 'Berapa lama transfer dari Gilimanuk ke Sanur?',
+    answer: 'Sekitar 4 hingga 4,5 jam dengan kendaraan pribadi. Ini adalah rute Gilimanuk standar terpanjang kami, karena Sanur terletak di pantai timur Bali, di sisi jauh Denpasar dari pelabuhan feri.'
   },
   {
-    question: 'Berapa jarak Gilimanuk ke Seminyak?',
-    answer: 'Sekitar 130–135 km melalui jalan darat, melewati jalur barat utama melalui Negara dan Tabanan sebelum mencapai Denpasar Raya dan Seminyak.'
+    question: 'Berapa jarak Gilimanuk ke Sanur?',
+    answer: 'Sekitar 130–140 km melalui jalan darat, melewati koridor barat utama melalui Negara dan Tabanan sebelum melanjutkan melewati Denpasar menuju pantai timur.'
+  },
+  {
+    question: 'Bisakah penjemputan disesuaikan dengan jadwal fast boat dari Pelabuhan Sanur?',
+    answer: 'Bisa. Beritahu kami jadwal fast boat dan operator saat booking, dan kami mengatur waktu penjemputan di Gilimanuk mundur dari jadwal keberangkatan tersebut, dengan buffer untuk check-in 45–60 menit yang disarankan.'
+  },
+  {
+    question: 'Jam berapa Pelabuhan Sanur beroperasi?',
+    answer: 'Pelabuhan Sanur beroperasi dari 06:00 hingga 18:00 setiap hari, tutup saat Nyepi. Keberangkatan fast boat terakhir ke Nusa Penida dan Lembongan biasanya sekitar pukul 17:00.'
+  },
+  {
+    question: 'Apakah ada bus langsung dari Gilimanuk ke Sanur?',
+    answer: 'Tidak ada bus langsung. Bus umum menuju terminal Denpasar, di mana taksi atau ride-share lanjutan diperlukan untuk mencapai Sanur — biasanya melebihi 6 jam total.'
+  },
+  {
+    question: 'Apakah tiket fast boat perlu dipesan terpisah?',
+    answer: 'Ya. Kami menangani transfer darat dari Gilimanuk ke Pelabuhan Sanur; tiket fast boat ke Nusa Penida, Lembongan, atau Kepulauan Gili dipesan terpisah melalui operator boat.'
   },
   {
     question: 'Di mana sopir menjemput saya di Gilimanuk?',
-    answer: 'Di Pelabuhan Gilimanuk (Pelabuhan Penyeberangan), di sisi barat pelabuhan saat Anda turun dari penyeberangan Ketapang. Kirimkan referensi feri dan perkiraan waktu tiba saat booking — kami melacak penyeberangan dan menyesuaikan jika terlambat.'
+    answer: 'Di Pelabuhan Gilimanuk (Pelabuhan Penyeberangan), di sisi barat pelabuhan saat Anda turun dari penyeberangan Ketapang.'
   },
   {
-    question: 'Apakah ada bus langsung dari Gilimanuk ke Seminyak?',
-    answer: 'Tidak ada bus langsung. Bus umum dari Gilimanuk menuju Terminal Ubung di Denpasar, di mana Anda perlu koneksi kedua ke Seminyak. Total waktu perjalanan termasuk menunggu dan transit biasanya melebihi 5–6 jam. Transfer pribadi lebih cepat dan door-to-door.'
-  },
-  {
-    question: 'Bisakah membawa papan selancar dari Gilimanuk ke Seminyak?',
-    answer: 'Bisa. Konfirmasi jumlah dan panjang papan saat booking agar kami menyiapkan kendaraan dengan ruang yang memadai. MPV standar memuat papan hingga sekitar 6\'8" dengan kursi belakang dilipat; papan yang lebih panjang mungkin memerlukan kendaraan lebih besar.'
-  },
-  {
-    question: 'Apakah tersedia penjemputan pagi-pagi dari pelabuhan?',
-    answer: 'Ya. Kami beroperasi mengikuti jadwal feri Ketapang–Gilimanuk, termasuk penyeberangan paling pagi. Konfirmasi waktu keberangkatan feri Anda saat booking dan sopir kami akan siap saat Anda tiba.'
-  },
-  {
-    question: 'Apa rute dari Gilimanuk ke Seminyak?',
-    answer: 'Pelabuhan Gilimanuk → Jl. Raya Gilimanuk ke tenggara → Negara → Tabanan → Kerobokan → Seminyak. Rute ini mengikuti jalan raya utama barat Bali untuk sebagian besar perjalanan sebelum memasuki jaringan Denpasar Raya.'
-  },
-  {
-    question: 'Bisakah saya berhenti di Tanah Lot dalam perjalanan ke Seminyak?',
-    answer: 'Bisa, atas permintaan. Tanah Lot berjarak sekitar 45 menit sebelum Seminyak dan terletak dekat rute utama. Pemberhentian yang direncanakan menambah total waktu perjalanan — konfirmasi dengan kami saat booking agar sopir dapat menyesuaikan jadwal.'
+    question: 'Bisakah saya berhenti di Tanah Lot dalam perjalanan ke Sanur?',
+    answer: 'Bisa, atas permintaan. Tanah Lot terletak dekat rute sebelum Mengwi. Pemberhentian yang direncanakan menambah total waktu perjalanan — konfirmasi saat booking.'
   }
 ];
 
 const relatedRoutes = [
+  { label: 'Transfer Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
+  { label: 'Transfer Gilimanuk ke Seminyak', href: '/id/transfers/gilimanuk-to-seminyak/' },
   { label: 'Transfer Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
   { label: 'Transfer Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
-  { label: 'Transfer Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
   { label: 'Semua Transfer Gilimanuk', href: '/id/transfers/' },
-  { label: 'Transfer ke Seminyak', href: '/id/transfers/' },
   { label: 'Semua Rute Transfer', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/transfers/gilimanuk-to-seminyak/';
-const canonicalEn = 'https://baliwesttransport.com/transfers/gilimanuk-to-seminyak/';
+const pageUrl = 'https://baliwesttransport.com/id/transfers/gilimanuk-to-sanur/';
+const canonicalEn = 'https://baliwesttransport.com/transfers/gilimanuk-to-sanur/';
 const organizationId = `${pageUrl}#organization`;
 const travelAgencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -164,8 +167,8 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Pribadi Gilimanuk ke Seminyak',
-      description: 'Layanan transfer pribadi door-to-door dari Pelabuhan Gilimanuk ke Seminyak, Bali. Sopir menjemput di pelabuhan. Jarak sekitar 130–135 km, 3,5–4,5 jam tergantung lalu lintas.',
+      name: 'Transfer Pribadi Gilimanuk ke Sanur',
+      description: 'Layanan transfer pribadi door-to-door dari Pelabuhan Gilimanuk ke Sanur, Bali. Sopir menjemput di pelabuhan. Jarak sekitar 130–140 km, 4–4,5 jam. Disesuaikan dengan jadwal fast boat ke Nusa Penida, Lembongan, dan Kepulauan Gili.',
       provider: {
         '@id': travelAgencyId
       },
@@ -177,9 +180,13 @@ const schemaGraph = {
         },
         {
           '@type': 'Place',
-          name: 'Seminyak, Badung, Bali, Indonesia'
+          name: 'Sanur, Denpasar, Bali, Indonesia'
         }
       ],
+      audience: {
+        '@type': 'Audience',
+        audienceType: 'Wisatawan yang tiba via feri Ketapang-Gilimanuk, menuju Sanur atau fast boat lanjutan ke Nusa Penida, Lembongan dan Kepulauan Gili'
+      },
       availableChannel: {
         '@type': 'ServiceChannel',
         serviceUrl: 'https://wa.me/6282247648944',
@@ -226,7 +233,7 @@ const schemaGraph = {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Transfer Gilimanuk ke Seminyak',
+          name: 'Transfer Gilimanuk ke Sanur',
           item: pageUrl
         }
       ]
@@ -251,8 +258,8 @@ const schemaGraph = {
       publisher: {
         '@id': organizationId
       },
-      datePublished: '2026-06-25',
-      dateModified: '2026-06-25'
+      datePublished: '2026-07-05',
+      dateModified: '2026-07-05'
     }
   ]
 };
@@ -267,16 +274,16 @@ const schemaGraph = {
       <div class="absolute inset-0">
         <img
           src="/images/kelingking-beach.jpg"
-          alt="Transfer pribadi dari Gilimanuk ke Seminyak Bali"
+          alt="Transfer pribadi dari Gilimanuk ke Sanur Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Transfer Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Pribadi Gilimanuk ke Seminyak</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Pribadi Gilimanuk ke Sanur</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Door-to-Door dari Pelabuhan Penyeberangan
+          Door-to-Door dari Pelabuhan Penyeberangan — Disesuaikan dengan Jadwal Boat Anda
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -301,13 +308,13 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Seminyak</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Sanur</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Pesan transfer pribadi dari Gilimanuk ke Seminyak bersama Bali West Transport. Sopir menjemput Anda langsung di Pelabuhan Gilimanuk saat turun dari penyeberangan dari Jawa. Perjalanan menempuh sekitar 130–135 km dan memakan waktu 3,5 hingga 4,5 jam dengan kendaraan pribadi, tergantung lalu lintas menuju Seminyak. Layanan door-to-door ke hotel, villa, atau alamat mana pun di Seminyak.
+              Pesan transfer pribadi dari Gilimanuk ke Sanur bersama Bali West Transport. Sopir menjemput Anda di Pelabuhan Gilimanuk saat turun dari penyeberangan Ketapang dari Jawa. Perjalanan menempuh sekitar 130–140 km dan memakan waktu 4 hingga 4,5 jam dengan kendaraan pribadi, mengikuti rute melalui Negara, Tabanan, dan Mengwi sebelum melanjutkan sepanjang ring luar Denpasar menuju pantai timur. Layanan door-to-door ke hotel atau villa mana pun di Sanur — dan jika Anda melanjutkan ke Nusa Penida, Nusa Lembongan, atau Kepulauan Gili, kami mengatur waktu penjemputan agar Anda tiba di Pelabuhan Sanur dengan waktu untuk check-in sebelum fast boat berangkat.
             </p>
           </div>
           <div class="space-y-4">
-            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali menuju Seminyak" class="w-full h-auto" loading="lazy" />
+            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali menuju Sanur" class="w-full h-auto" loading="lazy" />
             <div class="grid grid-cols-2 gap-4">
               <img src="/images/beach-sunset-swing.jpg" alt="Sunset pantai Bali" class="w-full h-48 object-cover" loading="lazy" />
               <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Sawah terasering Bali" class="w-full h-48 object-cover" loading="lazy" />
@@ -324,21 +331,21 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">Gilimanuk ke Seminyak</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk ke Sanur</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">130–135 km</p>
+              <p class="font-serif text-2xl text-brand-dark">130–140 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Waktu Tempuh</p>
-              <p class="font-serif text-2xl text-brand-dark">3,5–4,5 jam</p>
+              <p class="font-serif text-2xl text-brand-dark">4–4,5 jam</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
               <span class="font-serif text-4xl text-brand-gold">Penawaran Fleksibel</span>
-              <p class="text-brand-dark/50 text-sm mt-1">Beritahu kami tanggal & jumlah rombongan.</p>
+              <p class="text-brand-dark/50 text-sm mt-1">Beritahu kami tanggal, jumlah rombongan & jadwal boat Anda.</p>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Minta Penawaran Terbaik</a>
           </div>
@@ -352,26 +359,117 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Memilih Transfer Ini</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mengapa Transfer Pribadi dari Gilimanuk ke Seminyak?</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mengapa Transfer Pribadi dari Gilimanuk ke Sanur?</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Tiba di Gilimanuk setelah penyeberangan feri Ketapang–Gilimanuk menempatkan Anda di ujung barat Bali, tanpa transportasi umum langsung ke Seminyak. Shuttle bersama memerlukan pergantian di Terminal Bus Ubung Denpasar, menambah transit, waktu tunggu, dan ketidakpastian pada perjalanan yang sudah panjang.
+              Gilimanuk terletak di ujung barat Bali, dan Sanur terletak di pantai timur — ini adalah rute Gilimanuk standar terpanjang kami, tanpa transportasi umum langsung yang menghubungkan keduanya. Bus dari Gilimanuk berhenti di terminal Denpasar (Ubung atau Mengwi), dan Sanur masih memerlukan perjalanan taksi terpisah setelahnya, di atas waktu tunggu yang tidak bisa diprediksi untuk bus itu sendiri.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Transfer pribadi menghilangkan semua variabel tersebut. Sopir sudah ada di pelabuhan saat Anda tiba, bagasi langsung masuk ke kendaraan, dan Anda langsung menuju akomodasi tanpa berhenti atau berganti rute.
+              Transfer pribadi menyelesaikan masalah jarak dan masalah waktu sekaligus. Sopir sudah menunggu di pelabuhan saat feri Anda merapat, dan jika Anda melanjutkan dengan fast boat, kami mengatur waktu penjemputan berdasarkan jadwal keberangkatan boat Anda — bukan perkiraan kedatangan umum — yang penting, karena fast boat Pelabuhan Sanur beroperasi dengan jadwal tetap yang tidak menunggu koneksi bus yang terlambat.
             </p>
           </div>
           <div>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Seminyak terletak sekitar 130–135 km di tenggara Gilimanuk di pantai selatan Bali. Rute mengikuti koridor barat utama pulau melewati Negara dan Tabanan sebelum mencapai kawasan selatan yang padat di sekitar Kerobokan.
+              Rute melewati Negara dan Tabanan di jalan raya pantai barat utama Bali, kemudian bergabung dengan bypass Mengwi sebelum melewati ring selatan Denpasar menuju Sanur — koridor yang sama untuk transfer Kuta dan Seminyak, diperpanjang lebih jauh ke timur.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Lalu lintas di pendekatan akhir — terutama di Sunset Road dan sepanjang Kerobokan–Petitenget — dapat menambah 30 hingga 60 menit selama jam sibuk sore. Sopir lokal yang mengetahui jalan alternatif membuat perbedaan signifikan di segmen terakhir ini.
+              Lalu lintas cenderung padat di arterial Denpasar menuju Sanur (Jl. Bypass Ngurah Rai, Jl. Hang Tuah) saat jam sibuk sore, dan lagi di jalan depan pelabuhan Sanur saat fast boat baru merapat. Sopir yang tahu cara menghindari parkir pelabuhan saat puncak kedatangan boat menghemat waktu nyata di pendekatan akhir.
             </p>
             <div class="bg-brand-cream p-6 mt-4">
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Risiko Lalu Lintas</p>
-              <p class="text-brand-dark/70 text-sm">Tinggi: Sunset Road dan pendekatan Petitenget, terutama pukul 14:00–19:00</p>
+              <p class="text-brand-dark/70 text-sm">Tinggi: Arterial Denpasar menuju Sanur dan jalan depan pelabuhan, terutama saat fast boat baru tiba (sekitar setiap jam, pagi hingga siang)</p>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2 mt-4">Waktu Keberangkatan Terbaik</p>
-              <p class="text-brand-dark/70 text-sm">Kedatangan pagi (06:00–10:00) tiba di Seminyak sebelum kemacetan puncak</p>
+              <p class="text-brand-dark/70 text-sm">Kedatangan feri pagi (06:00–09:00) memberikan buffer paling banyak jika mengejar fast boat hari yang sama — keberangkatan terakhir Nusa Penida/Lembongan dari Pelabuhan Sanur sekitar pukul 17:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bandingkan Pilihan Anda -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Bandingkan Pilihan Anda</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Transfer Pribadi vs. Bus Umum vs. Taksi di Lokasi</h2>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white border border-brand-dark/10">
+            <thead>
+              <tr class="border-b border-brand-dark/10">
+                <th class="p-4 text-left text-brand-dark/40 text-xs uppercase tracking-widest"></th>
+                <th class="p-4 text-left text-brand-dark font-serif text-lg">Transfer Pribadi<br/><span class="text-brand-gold text-xs uppercase tracking-widest font-sans">Bali West Transport</span></th>
+                <th class="p-4 text-left text-brand-dark/70 font-serif text-lg">Bus Umum via Denpasar</th>
+                <th class="p-4 text-left text-brand-dark/70 font-serif text-lg">Taksi / Ride-share di Lokasi</th>
+              </tr>
+            </thead>
+            <tbody class="text-brand-dark/70">
+              <tr class="border-b border-brand-dark/5">
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Total waktu</td>
+                <td class="p-4 font-medium text-brand-dark">4–4,5 jam, langsung</td>
+                <td class="p-4">6+ jam, dengan transit terminal</td>
+                <td class="p-4">Tidak bisa diprediksi — tidak ada penjemputan tetap di pelabuhan</td>
+              </tr>
+              <tr class="border-b border-brand-dark/5">
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Sesuai jadwal fast boat</td>
+                <td class="p-4 font-medium text-brand-dark">Ya — penjemputan diatur berdasarkan jadwal boat</td>
+                <td class="p-4">Tidak — jadwal bus tetap, boat tidak menunggu</td>
+                <td class="p-4">Tidak — Anda negosiasi saat tiba</td>
+              </tr>
+              <tr class="border-b border-brand-dark/5">
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Sopir di pelabuhan feri</td>
+                <td class="p-4 font-medium text-brand-dark">Ya, dilacak sesuai penyeberangan Anda</td>
+                <td class="p-4">Tidak</td>
+                <td class="p-4">Tidak — Anda mengantri dan negosiasi saat tiba</td>
+              </tr>
+              <tr class="border-b border-brand-dark/5">
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Harga diketahui sebelum berangkat</td>
+                <td class="p-4 font-medium text-brand-dark">Ya, penawaran tetap dikonfirmasi via WhatsApp</td>
+                <td class="p-4">Hanya harga tiket; biaya taksi belum diketahui</td>
+                <td class="p-4">Tidak — dinegosiasi di tempat</td>
+              </tr>
+              <tr class="border-b border-brand-dark/5">
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Titik pengantaran</td>
+                <td class="p-4 font-medium text-brand-dark">Pelabuhan Sanur, atau tepat di pintu hotel/villa</td>
+                <td class="p-4">Terminal Denpasar, lalu kendaraan kedua</td>
+                <td class="p-4">Tergantung sopir, sering tidak door-to-door</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-brand-dark/40 text-xs uppercase tracking-widest font-medium">Metode booking</td>
+                <td class="p-4 font-medium text-brand-dark">WhatsApp, dikonfirmasi dalam hitungan menit</td>
+                <td class="p-4">Beli tiket di terminal</td>
+                <td class="p-4">Tidak ada — diatur setelah Anda tiba</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Pelabuhan Sanur -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Perjalanan Lanjutan</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Koneksi ke Nusa Penida, Lembongan, atau Kepulauan Gili dari Sanur</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Pelabuhan Sanur adalah terminal fast boat utama Bali untuk pulau-pulau tenggara, dan beroperasi dengan jadwal harian tetap — ini adalah satu bagian dari perjalanan Anda yang benar-benar bisa kacau jika transfer terlambat, jadi layak direncanakan dengan matang.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Tiket boat dipesan terpisah dari transfer darat — kami tidak menjual tiket fast boat, tapi kami mengatur waktu penjemputan di Gilimanuk berdasarkan jadwal keberangkatan yang sudah Anda pesan, sehingga Anda tiba di Sanur dengan buffer, bukan berlari ke dermaga.
+            </p>
+          </div>
+          <div>
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-6">Fakta Pelabuhan Sanur</h3>
+              <div class="space-y-4">
+                {harbourFacts.map((item) => (
+                  <div class="flex justify-between items-start gap-4 border-b border-brand-dark/10 pb-4">
+                    <span class="text-brand-dark/40 text-xs uppercase tracking-widest font-medium">{item.fact}</span>
+                    <span class="text-brand-dark font-medium text-right">{item.detail}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -385,7 +483,7 @@ const schemaGraph = {
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Penjemputan</p>
             <h2 class="font-serif text-3xl text-brand-dark mb-6">Penjemputan di Pelabuhan Gilimanuk</h2>
-            <p class="text-brand-dark/70 mb-6">Sopir menjemput Anda di <strong>Pelabuhan Gilimanuk (Pelabuhan Penyeberangan)</strong>, di sisi barat pelabuhan saat Anda turun. Kirimkan perkiraan waktu tiba dan referensi booking feri saat memesan — kami memantau penyeberangan dan menyesuaikan jika ada keterlambatan agar Anda tidak perlu menunggu.</p>
+            <p class="text-brand-dark/70 mb-6">Sopir menjemput Anda di <strong>Pelabuhan Gilimanuk (Pelabuhan Penyeberangan)</strong> di sisi barat pelabuhan saat Anda turun. Kirimkan referensi booking feri dan perkiraan waktu tiba saat memesan, beserta jadwal fast boat jika relevan — kami memantau keduanya dan menyesuaikan keberangkatan Anda.</p>
             <p class="text-brand-dark/70 mb-6">Penjemputan tambahan tersedia dari:</p>
             <div class="space-y-3 mb-6">
               {pickupLocations.map((item) => (
@@ -400,8 +498,8 @@ const schemaGraph = {
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pengantaran</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Seminyak</h2>
-            <p class="text-brand-dark/70 mb-6">Pengantaran door-to-door ke alamat mana pun di Seminyak, termasuk:</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Sanur</h2>
+            <p class="text-brand-dark/70 mb-6">Pengantaran door-to-door ke alamat mana pun di Sanur, termasuk:</p>
             <div class="space-y-3 mb-8">
               {dropoffAreas.map((item) => (
                 <div class="flex items-center gap-3">
@@ -412,7 +510,7 @@ const schemaGraph = {
                 </div>
               ))}
             </div>
-            <p class="text-brand-dark/50 text-sm">Jika pengantaran di gang sempit atau kompleks villa pribadi, konfirmasi alamat lengkap saat booking — sopir kami sudah familiar dengan jaringan jalan satu arah di Seminyak dan akan menemukan pintu masuk yang tepat.</p>
+            <p class="text-brand-dark/50 text-sm">Jika akomodasi Anda di gang kecil dari jalan utama pantai, konfirmasi alamat lengkap saat booking agar sopir dapat merencanakan pendekatan akhir.</p>
           </div>
         </div>
       </div>
@@ -423,7 +521,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Siapa yang Menggunakan Transfer Ini</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Populer untuk Keluarga, Pasangan, Peselancar, dan Rombongan Tur</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Populer untuk Island-Hopper, Keluarga, dan Overlander Jawa</h2>
         </div>
         <div class="grid md:grid-cols-2 gap-4">
           {userTypes.map((item) => (
@@ -442,21 +540,21 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Gambaran Perjalanan</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Rute dari Gilimanuk ke Seminyak</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Rute dari Gilimanuk ke Sanur</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Perjalanan dari Gilimanuk ke Seminyak mengikuti jalan raya pantai barat utama Bali untuk sebagian besar rutenya. Setelah meninggalkan pelabuhan, rute menuju tenggara melewati dataran sawah Kabupaten Jembrana, melewati Negara — ibu kota kabupaten dan tempat istirahat alami — sebelum melanjutkan ke Kabupaten Tabanan.
+              Perjalanan mengikuti jalan raya pantai barat utama Bali dari Gilimanuk melewati dataran sawah Kabupaten Jembrana, melewati Negara — ibu kota kabupaten dan tempat istirahat alami di tengah perjalanan — sebelum melanjutkan ke Kabupaten Tabanan.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Dari Tabanan jalan bergabung dengan jaringan Denpasar Raya. Lalu lintas semakin padat saat mendekati Kerobokan, dan kilometer terakhir menuju Seminyak — terutama di sekitar persimpangan Sunset Road dan sepanjang Jl. Petitenget — adalah segmen tersibuk dari seluruh perjalanan.
+              Dari Tabanan jalan bergabung dengan bypass Mengwi dan melanjutkan melewati arterial luar Denpasar, bukan ke koridor bandara yang digunakan untuk transfer Kuta dan Seminyak. Ini adalah rute terpanjang dari ketiga rute tersebut, dan segmen akhir melalui ring selatan Denpasar menuju Sanur adalah tempat variabilitas lalu lintas perjalanan paling tinggi — terutama sekitar siang dan sore.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Sopir akan menggunakan pengetahuan rute lokal di pendekatan Kerobokan untuk mengelola segmen akhir. Jika Anda memerlukan istirahat, Negara adalah titik terbaik — kira-kira di tengah perjalanan, dengan opsi rest area yang andal dan bahan bakar tersedia.
+              Jika Anda ingin berhenti, Negara adalah titik tengah terbaik untuk makan atau istirahat. Beberapa wisatawan di rute ini juga bertanya tentang mampir singkat ke Tanah Lot, yang terletak dekat koridor sebelum Mengwi — ini dapat diatur atas permintaan dan menambah total waktu perjalanan.
             </p>
           </div>
           <div>
             <img
               src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop"
-              alt="Pemandangan Bali sepanjang rute Gilimanuk ke Seminyak"
+              alt="Pemandangan Bali sepanjang rute Gilimanuk ke Sanur"
               class="w-full h-auto"
               loading="lazy"
             />
@@ -506,8 +604,8 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-brand-dark p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 class="font-serif text-2xl text-brand-cream mb-2">Siap booking? Kirim detail feri Anda via WhatsApp.</h3>
-            <p class="text-brand-cream/60">Sertakan tanggal kedatangan, perkiraan waktu di Gilimanuk, dan jumlah penumpang. Kami akan mengkonfirmasi sopir dan kendaraan dalam hitungan menit.</p>
+            <h3 class="font-serif text-2xl text-brand-cream mb-2">Siap booking? Kirim detail feri Anda — dan jadwal fast boat jika island-hopping — via WhatsApp.</h3>
+            <p class="text-brand-cream/60">Kami akan mengkonfirmasi sopir, kendaraan, dan waktu penjemputan dalam hitungan menit.</p>
           </div>
           <a
             href={whatsappUrl}
