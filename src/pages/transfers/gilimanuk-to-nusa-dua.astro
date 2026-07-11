@@ -4,98 +4,95 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Gilimanuk to Ubud Transfer | Private Transfer from Gilimanuk Ferry Port';
-const pageDescription = 'Book a private Gilimanuk to Ubud transfer with Bali West Transport. Door-to-door service, professional local drivers, air-conditioned vehicles, flexible pickup times, and safe travel from Gilimanuk Ferry Port to Ubud.';
-const pageKeywords = 'Gilimanuk to Ubud transfer, private transfer Gilimanuk to Ubud, Gilimanuk Ferry Port to Ubud, Bali private driver, Bali West Transport, Gilimanuk transfer, Ubud transfer, Ketapang Gilimanuk ferry transfer';
+const pageTitle = 'Gilimanuk to Nusa Dua Private Transfer | Bali West Transport';
+const pageDescription = 'Book a private transfer from Gilimanuk Ferry Port to Nusa Dua. Comfortable door-to-door service, ~4.5–5.5 hour journey to Bali\'s luxury resort enclave. WhatsApp booking, best offer available.';
+const pageKeywords = 'gilimanuk to nusa dua transfer, gilimanuk to nusa dua taxi, private transfer gilimanuk nusa dua, ferry port to nusa dua transport';
 
-const whatsappText = 'Hi, I would like to book a private Gilimanuk to Ubud transfer. Please send me your best offer.';
+const whatsappText = 'Hi, I would like to book a private Gilimanuk to Nusa Dua transfer. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const benefits = [
-  'Private vehicle exclusively for you and your group',
-  'Direct transfer from Gilimanuk Ferry Port to your accommodation in Ubud',
-  'Professional local drivers with extensive Bali route knowledge',
-  'Comfortable air-conditioned vehicles',
-  'Flexible departure schedules',
-  'Suitable for solo travellers, couples, families, and groups',
-  'Safe and reliable transportation service',
-  'Transparent pricing with no hidden fees'
+  'No transfers between ferry, bus, and taxi — one direct ride',
+  'Air-conditioned comfort for one of Bali\'s longest domestic transfer routes',
+  'Direct drop-off at your resort\'s gated entrance — no need to arrange a separate onward taxi',
+  'Optional stops (GWK Cultural Park, Tanah Lot, Medewi Surf Beach) available on request',
+  'English-speaking drivers familiar with the Gilimanuk–Nusa Dua route',
+  'Fixed door-to-door service — no haggling on arrival'
 ];
 
 const pickupLocations = [
-  'Gilimanuk Ferry Port',
-  'Hotels in Gilimanuk',
-  'Nearby accommodations',
-  'Custom pickup locations around West Bali'
+  'Gilimanuk Ferry Port (Pelabuhan Gilimanuk)',
+  'Gilimanuk town and surrounding hotels',
+  'Karangsewu Beach area',
+  'Custom pickup points along the Java–Bali ferry crossing on request'
 ];
 
 const dropoffLocations = [
-  'Hotels and resorts',
-  'Private villas',
-  'Guesthouses',
-  'Airbnb properties',
-  'Tourist attractions in Ubud',
-  'Custom destinations throughout the Ubud area'
+  'Nusa Dua Beach (Pantai Mengiat) and international resort hotels',
+  'Geger Beach',
+  'Tanjung Benoa',
+  'Bali Collection shopping and dining complex',
+  'Bali Nusa Dua Convention Centre (BNDCC)',
+  'Pandawa Beach area (nearby, available on request)',
+  'All major Nusa Dua resorts (St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, Westin and more)'
 ];
 
 const popularDestinations = [
-  'Ubud Centre',
-  'Monkey Forest Area',
-  'Campuhan Ridge Walk',
-  'Tegallalang',
-  'Penestanan',
-  'Sayan',
-  'Kedewatan',
-  'Mas Village'
+  'Nusa Dua Beach',
+  'Geger Beach',
+  'Tanjung Benoa',
+  'Bali Collection',
+  'BNDCC',
+  'Pandawa Beach',
+  'St. Regis / Ritz-Carlton',
+  'Sofitel / Mulia'
 ];
 
 const journeyHighlights = [
-  'West Bali countryside',
-  'Traditional Balinese villages',
-  'Rice fields and plantations',
-  'Mountain views',
-  'Local markets and cultural areas'
+  'Negara and Tabanan countryside',
+  'Denpasar bypass',
+  'Jimbaran coastline',
+  'Bukit Peninsula resort enclave',
+  'GWK Cultural Park (optional stop)'
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to get from Gilimanuk to Ubud?',
-    answer: 'The journey typically takes between 3.5 and 4.5 hours depending on traffic and your exact destination in Ubud.'
+    question: 'How long does the Gilimanuk to Nusa Dua transfer take?',
+    answer: 'The journey takes approximately 4.5 to 5.5 hours by private car, depending on traffic through Denpasar and into the Bukit Peninsula.'
   },
   {
-    question: 'Is this a private transfer?',
-    answer: 'Yes. All transfers are private, meaning the vehicle is reserved exclusively for you and your group.'
+    question: 'How far is Nusa Dua from Gilimanuk?',
+    answer: 'Nusa Dua is approximately 148 km from Gilimanuk Ferry Port, making it one of Bali West Transport\'s longest transfer routes.'
   },
   {
-    question: 'Can I be picked up directly at Gilimanuk Ferry Port?',
-    answer: 'Yes. We provide direct pickup from Gilimanuk Ferry Port and can coordinate with your ferry arrival time.'
+    question: 'Can I stop along the way?',
+    answer: 'Yes. Popular stops include GWK Cultural Park, Tanah Lot Temple, and Medewi Surf Beach. Let us know your preferred stops when booking.'
   },
   {
-    question: 'Can I book a transfer for a group?',
-    answer: 'Yes. We offer vehicle options suitable for individuals, couples, families, and larger groups.'
+    question: 'Which Nusa Dua hotels do you serve?',
+    answer: 'We provide direct drop-off at all major Nusa Dua resorts, including St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, and Westin, as well as Tanjung Benoa and Geger Beach hotels.'
   },
   {
-    question: 'Are there stops along the way?',
-    answer: 'Yes. Upon request, reasonable stops for meals, refreshments, or sightseeing can be arranged during the journey.'
+    question: 'How do I book this transfer?',
+    answer: 'Contact us directly via WhatsApp with your ferry arrival time, passenger count, and resort name in Nusa Dua to receive your best offer.'
   },
   {
-    question: 'Can I book a same-day transfer?',
-    answer: 'Subject to availability, same-day bookings may be possible. We recommend booking in advance whenever possible.'
+    question: 'Is Nusa Dua a gated resort area?',
+    answer: 'Yes, Nusa Dua is a landscaped, secured resort zone. Our drivers are familiar with the entry procedures and will take you directly to your hotel\'s gate.'
   }
 ];
 
 const relatedRoutes = [
-  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
-  { label: 'Ubud to Gilimanuk', href: '/transfers/' },
-  { label: 'Gilimanuk to Canggu', href: '/transfers/gilimanuk-to-canggu/' },
-  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
-  { label: 'Gilimanuk to Seminyak', href: '/transfers/gilimanuk-to-seminyak/' },
   { label: 'Gilimanuk to Uluwatu', href: '/transfers/gilimanuk-to-uluwatu/' },
+  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
   { label: 'Gilimanuk to Sanur', href: '/transfers/gilimanuk-to-sanur/' },
-  { label: 'Airport to Ubud Transfer', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' }
+  { label: 'Gilimanuk to Seminyak', href: '/transfers/gilimanuk-to-seminyak/' },
+  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
+  { label: 'Gilimanuk to Canggu', href: '/transfers/gilimanuk-to-canggu/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-ubud/';
+const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-nusa-dua/';
 const organizationId = `${pageUrl}#organization`;
 const travelAgencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -132,8 +129,8 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Gilimanuk to Ubud Transfer',
-      description: pageDescription,
+      name: 'Gilimanuk to Nusa Dua Private Transfer',
+      description: 'Book a private transfer from Gilimanuk to Nusa Dua with Bali West Transport. The journey covers approximately 148 km and takes around 4.5 to 5.5 hours depending on traffic, crossing Bali from the western ferry port to the island\'s premier resort enclave. Travel by comfortable private car door-to-door straight to your hotel in Nusa Dua — ideal for travellers arriving from Java via ferry and heading to South Bali\'s luxury resorts.',
       serviceType: 'Private transfer',
       provider: {
         '@id': travelAgencyId
@@ -145,7 +142,11 @@ const schemaGraph = {
         },
         {
           '@type': 'Place',
-          name: 'Ubud'
+          name: 'Nusa Dua'
+        },
+        {
+          '@type': 'Place',
+          name: 'Bukit Peninsula'
         },
         {
           '@type': 'AdministrativeArea',
@@ -193,7 +194,7 @@ const schemaGraph = {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Gilimanuk to Ubud Transfer',
+          name: 'Gilimanuk to Nusa Dua Transfer',
           item: pageUrl
         }
       ]
@@ -237,17 +238,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/kelingking-beach.jpg"
-          alt="Private transfer from Gilimanuk to Ubud Bali"
+          src="/images/beach-sunset-swing.jpg"
+          alt="Private transfer from Gilimanuk to Nusa Dua Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Transfer — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Gilimanuk to Ubud Transfer</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Gilimanuk to Nusa Dua Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Door-to-door private transfer from Gilimanuk Ferry Port to Ubud with professional local drivers.
+          Door-to-door private transfer from Gilimanuk Ferry Port to Nusa Dua's luxury resort enclave with professional local drivers.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -272,31 +273,31 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Ubud</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Nusa Dua</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              The fastest and most convenient way to travel from Gilimanuk to Ubud is by private transfer. The journey takes approximately 3 hours depending on traffic and provides direct door-to-door transportation from Gilimanuk Ferry Port to your accommodation in Ubud.
+              Book a private transfer from Gilimanuk to Nusa Dua with Bali West Transport. The journey covers approximately 148 km and takes around 4.5 to 5.5 hours depending on traffic, crossing Bali from the western ferry port to the island's premier resort enclave.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              This service is ideal for travellers arriving from Java via the Ketapang–Gilimanuk Ferry who want a hassle-free journey to Bali's cultural heart, without the inconvenience of waiting for public transport or sharing vehicles with other passengers.
+              Travel by comfortable private car door-to-door straight to your hotel in Nusa Dua — ideal for travellers arriving from Java via ferry and heading to South Bali's luxury resorts.
             </p>
           </div>
           <div class="space-y-4">
             <img
               src="/images/nusa-penida-viewpoint.jpg"
-              alt="Scenic Bali landscape on the way to Ubud"
+              alt="Scenic Bali landscape on the way to Nusa Dua"
               class="w-full h-auto"
               loading="lazy"
             />
             <div class="grid grid-cols-2 gap-4">
               <img
-                src="/images/beach-sunset-swing.jpg"
-                alt="Bali sunset"
+                src="/images/kelingking-beach.jpg"
+                alt="Bali coastline near South Bali resorts"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
               <img
-                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop"
-                alt="Bali rice terraces Tegallalang"
+                src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&h=300&fit=crop"
+                alt="Nusa Dua resort beach Bali"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
@@ -313,20 +314,20 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
-              <p class="font-serif text-2xl text-brand-dark">Gilimanuk to Ubud</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk to Nusa Dua</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
-              <p class="font-serif text-2xl text-brand-dark">125–140 km</p>
+              <p class="font-serif text-2xl text-brand-dark">~148 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
-              <p class="font-serif text-2xl text-brand-dark">3.5–4.5 hrs</p>
+              <p class="font-serif text-2xl text-brand-dark">4.5–5.5 hrs</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
-              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <span class="font-serif text-4xl text-brand-gold">Best Offer</span>
               <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
             </div>
             <a
@@ -350,8 +351,11 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Our Gilimanuk to Ubud Transfer?</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Our Gilimanuk to Nusa Dua Transfer?</h2>
         </div>
+        <p class="text-brand-dark/70 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
+          Nusa Dua is a master-planned resort district on the southeastern tip of the Bukit Peninsula, home to some of Bali's most prestigious international hotel brands. It's a long, cross-island drive from Gilimanuk — far more comfortable in a private, air-conditioned vehicle than switching between buses and taxis. Our drivers know the route through Negara, Tabanan, and the Denpasar bypass well, and are familiar with Nusa Dua's gated resort access points.
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {benefits.map((benefit) => (
             <div class="flex items-start gap-4 p-6 bg-brand-cream">
@@ -391,7 +395,7 @@ const schemaGraph = {
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations in Ubud</h2>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations in Nusa Dua</h2>
             <p class="text-brand-dark/70 mb-6">We provide direct drop-off to:</p>
             <div class="space-y-3 mb-8">
               {dropoffLocations.map((item) => (
@@ -406,7 +410,7 @@ const schemaGraph = {
               ))}
             </div>
             <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Popular Areas in Ubud</p>
+              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Popular Areas in Nusa Dua</p>
               <div class="grid grid-cols-2 gap-3">
                 {popularDestinations.map((destination) => (
                   <div class="bg-white p-3 text-brand-dark/60 text-sm">{destination}</div>
@@ -418,21 +422,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Arriving from Java -->
+    <!-- Who Uses This Transfer -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arriving from Java</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal for Travellers Arriving from Java</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Many travellers cross from Banyuwangi to Bali via the Ketapang-Gilimanuk Ferry before continuing their journey to Ubud.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
-              Instead of arranging multiple transportation options, a private transfer allows you to travel directly from Gilimanuk to Ubud in one comfortable journey. This is particularly convenient for travellers carrying luggage, families with children, and visitors arriving after long ferry crossings.
-            </p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Who Uses This Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal for Resort Guests, Honeymooners & Event Attendees</h2>
+            <ul class="space-y-3 text-brand-dark/70 text-lg leading-relaxed mb-8">
+              <li>Travellers arriving via the Gilimanuk–Ketapang ferry from Java heading directly to a Nusa Dua resort</li>
+              <li>Couples and honeymooners booking Nusa Dua's luxury beachfront hotels</li>
+              <li>Families wanting a calm, gated resort area with white sand beaches and calm swimming water</li>
+              <li>Conference and event attendees heading to the Bali Nusa Dua Convention Centre</li>
+            </ul>
             <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Along the Route You May See</p>
+              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Along the Route</p>
               <div class="grid grid-cols-2 gap-3">
                 {journeyHighlights.map((item) => (
                   <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
@@ -452,8 +456,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Journey Overview -->
     <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Journey Overview</p>
+          <h2 class="font-serif text-4xl text-brand-dark mb-6">From Gilimanuk to Bali's Resort Enclave</h2>
+          <p class="text-brand-dark/70 text-lg leading-relaxed">
+            From Gilimanuk, the route heads east along Bali's main cross-island road through Negara and Tabanan, skirting rice terraces and small towns before joining the Denpasar bypass. From there, it continues south through Jimbaran and into the Bukit Peninsula, arriving at Nusa Dua's landscaped resort enclave — a striking contrast to the rural roads crossed earlier in the journey. Given the distance, we recommend an early departure to avoid Denpasar's afternoon traffic and arrive at your resort in good time to enjoy the rest of the day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
@@ -461,7 +478,7 @@ const schemaGraph = {
         </div>
         <div class="space-y-4">
           {faqs.map((faq) => (
-            <div class="bg-white p-8">
+            <div class="bg-brand-cream p-8">
               <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
               <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
             </div>
@@ -475,8 +492,8 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">Book Your Gilimanuk to Ubud Transfer</h3>
-            <p class="text-brand-dark/60">Avoid the stress of public transport. Travel directly with an experienced local driver.</p>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">Book Your Gilimanuk to Nusa Dua Transfer</h3>
+            <p class="text-brand-dark/60">WhatsApp us now for a best offer and secure, comfortable transport across Bali.</p>
           </div>
           <a
             href={whatsappUrl}
@@ -494,7 +511,7 @@ const schemaGraph = {
     </section>
 
     <!-- Related Routes -->
-    <section class="py-16 bg-brand-cream">
+    <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">More Routes</p>
@@ -502,34 +519,10 @@ const schemaGraph = {
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
-            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <a href={route.href} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
               <span class="text-brand-dark font-medium text-sm">{route.label}</span>
             </a>
           ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Travel Guide -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Travel Guide</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Planning Your Journey from Gilimanuk?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Read our full guide covering all transport options from Gilimanuk Ferry Port to Ubud — bus, shuttle, and private transfer compared.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <a href="/blog/how-to-get-from-gilimanuk-to-ubud/" class="block bg-brand-cream p-8 hover:bg-brand-gold/10 transition-colors group">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Travel Guide</p>
-            <h3 class="font-serif text-2xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer</h3>
-            <p class="text-brand-dark/60 text-sm leading-relaxed mb-4">Travel times, costs, step-by-step instructions, and tips for arriving travellers — all transport options compared in one guide.</p>
-            <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-widest uppercase font-medium group-hover:text-brand-gold transition-colors">
-              Read the Guide
-              <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </span>
-          </a>
         </div>
       </div>
     </section>
@@ -545,8 +538,8 @@ const schemaGraph = {
           <a href="/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Home</span>
           </a>
-          <a href="/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Airport Transfer</span>
+          <a href="/transfers/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">All Transfers</span>
           </a>
           <a href="/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Private Tours</span>

@@ -4,98 +4,81 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Gilimanuk to Ubud Transfer | Private Transfer from Gilimanuk Ferry Port';
-const pageDescription = 'Book a private Gilimanuk to Ubud transfer with Bali West Transport. Door-to-door service, professional local drivers, air-conditioned vehicles, flexible pickup times, and safe travel from Gilimanuk Ferry Port to Ubud.';
-const pageKeywords = 'Gilimanuk to Ubud transfer, private transfer Gilimanuk to Ubud, Gilimanuk Ferry Port to Ubud, Bali private driver, Bali West Transport, Gilimanuk transfer, Ubud transfer, Ketapang Gilimanuk ferry transfer';
+const pageTitle = 'Gilimanuk to Tanah Lot Private Transfer | Bali West Transport';
+const pageDescription = 'Book a private transfer from Gilimanuk Ferry Port to Tanah Lot Temple. Bali West Transport\'s shortest route — approximately 110 km, 2.5–3.5 hours. WhatsApp booking, best offer available.';
+const pageKeywords = 'gilimanuk to tanah lot transfer, gilimanuk to tanah lot taxi, private transfer gilimanuk tanah lot, ferry port to tanah lot temple transport';
 
-const whatsappText = 'Hi, I would like to book a private Gilimanuk to Ubud transfer. Please send me your best offer.';
+const whatsappText = 'Hi, I would like to book a private Gilimanuk to Tanah Lot transfer. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const benefits = [
-  'Private vehicle exclusively for you and your group',
-  'Direct transfer from Gilimanuk Ferry Port to your accommodation in Ubud',
-  'Professional local drivers with extensive Bali route knowledge',
-  'Comfortable air-conditioned vehicles',
-  'Flexible departure schedules',
-  'Suitable for solo travellers, couples, families, and groups',
-  'Safe and reliable transportation service',
-  'Transparent pricing with no hidden fees'
+  'Shortest and fastest transfer route in the Gilimanuk network',
+  'No transfers between ferry, bus, and taxi — one direct ride',
+  'Flexible timing lets you plan around Tanah Lot\'s sunset and tide schedule',
+  'Direct drop-off at the temple entrance, golf resort, or nearby villas',
+  'English-speaking drivers familiar with the Gilimanuk–Tanah Lot route',
+  'Fixed door-to-door service — no haggling on arrival'
 ];
 
 const pickupLocations = [
-  'Gilimanuk Ferry Port',
-  'Hotels in Gilimanuk',
-  'Nearby accommodations',
-  'Custom pickup locations around West Bali'
+  'Gilimanuk Ferry Port (Pelabuhan Gilimanuk)',
+  'Gilimanuk town and surrounding hotels',
+  'Karangsewu Beach area',
+  'Custom pickup points along the Java–Bali ferry crossing on request'
 ];
 
 const dropoffLocations = [
-  'Hotels and resorts',
-  'Private villas',
-  'Guesthouses',
-  'Airbnb properties',
-  'Tourist attractions in Ubud',
-  'Custom destinations throughout the Ubud area'
-];
-
-const popularDestinations = [
-  'Ubud Centre',
-  'Monkey Forest Area',
-  'Campuhan Ridge Walk',
-  'Tegallalang',
-  'Penestanan',
-  'Sayan',
-  'Kedewatan',
-  'Mas Village'
+  'Tanah Lot Temple main entrance and car park',
+  'Nirwana Bali Golf Club area (adjacent to Tanah Lot)',
+  'Villas and accommodation in Beraban and Kediri, Tabanan Regency',
+  'Onward drop-off toward Canggu or Seminyak available on request if continuing your journey after sunset'
 ];
 
 const journeyHighlights = [
-  'West Bali countryside',
-  'Traditional Balinese villages',
-  'Rice fields and plantations',
-  'Mountain views',
-  'Local markets and cultural areas'
+  'Negara coastal highway',
+  'Jembrana rice terraces',
+  'Tabanan Regency countryside',
+  'Tanah Lot coastline',
+  'Nirwana Bali Golf Club (adjacent landmark)'
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to get from Gilimanuk to Ubud?',
-    answer: 'The journey typically takes between 3.5 and 4.5 hours depending on traffic and your exact destination in Ubud.'
+    question: 'How long does the Gilimanuk to Tanah Lot transfer take?',
+    answer: 'The journey takes approximately 2.5 to 3.5 hours by private car — Bali West Transport\'s shortest Gilimanuk route, since it avoids Denpasar traffic and the Bukit Peninsula\'s narrower roads.'
   },
   {
-    question: 'Is this a private transfer?',
-    answer: 'Yes. All transfers are private, meaning the vehicle is reserved exclusively for you and your group.'
+    question: 'How far is Tanah Lot from Gilimanuk?',
+    answer: 'Tanah Lot is approximately 110 km from Gilimanuk Ferry Port, making it the shortest of Bali West Transport\'s transfer routes.'
   },
   {
-    question: 'Can I be picked up directly at Gilimanuk Ferry Port?',
-    answer: 'Yes. We provide direct pickup from Gilimanuk Ferry Port and can coordinate with your ferry arrival time.'
+    question: 'What are Tanah Lot\'s opening hours and entrance fee?',
+    answer: 'Tanah Lot Temple is open daily from 07:00 to 19:00. As of 2026, the entrance fee for foreign visitors is IDR 75,000 for adults and IDR 40,000 for children, paid in cash at the gate. Parking is a separate IDR 5,000 for cars. Fees are reviewed periodically, so it\'s worth confirming at the gate.'
   },
   {
-    question: 'Can I book a transfer for a group?',
-    answer: 'Yes. We offer vehicle options suitable for individuals, couples, families, and larger groups.'
+    question: 'What time should I arrive for sunset?',
+    answer: 'Sunset at Tanah Lot is typically between 6:15 and 6:45 PM year-round, with some seasonal variation. We recommend arriving by around 4:00 PM to secure a good viewing spot on the cliffs before the crowds build.'
   },
   {
-    question: 'Are there stops along the way?',
-    answer: 'Yes. Upon request, reasonable stops for meals, refreshments, or sightseeing can be arranged during the journey.'
+    question: 'Can I get dropped off somewhere other than the temple itself?',
+    answer: 'Yes. We also serve villas and the golf resort area near Tanah Lot, and can continue your journey on to Canggu or Seminyak afterward if needed — just let us know when booking.'
   },
   {
-    question: 'Can I book a same-day transfer?',
-    answer: 'Subject to availability, same-day bookings may be possible. We recommend booking in advance whenever possible.'
+    question: 'How do I book this transfer?',
+    answer: 'Contact us directly via WhatsApp with your ferry arrival time and passenger count to receive your best offer.'
   }
 ];
 
 const relatedRoutes = [
-  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
-  { label: 'Ubud to Gilimanuk', href: '/transfers/' },
   { label: 'Gilimanuk to Canggu', href: '/transfers/gilimanuk-to-canggu/' },
-  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
   { label: 'Gilimanuk to Seminyak', href: '/transfers/gilimanuk-to-seminyak/' },
+  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
   { label: 'Gilimanuk to Uluwatu', href: '/transfers/gilimanuk-to-uluwatu/' },
-  { label: 'Gilimanuk to Sanur', href: '/transfers/gilimanuk-to-sanur/' },
-  { label: 'Airport to Ubud Transfer', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' }
+  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
+  { label: 'Gilimanuk to Sanur', href: '/transfers/gilimanuk-to-sanur/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-ubud/';
+const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-tanah-lot/';
 const organizationId = `${pageUrl}#organization`;
 const travelAgencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -132,8 +115,8 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Gilimanuk to Ubud Transfer',
-      description: pageDescription,
+      name: 'Gilimanuk to Tanah Lot Private Transfer',
+      description: 'Book a private transfer from Gilimanuk to Tanah Lot with Bali West Transport. The journey covers approximately 110 km and takes around 2.5 to 3.5 hours — our shortest and fastest Gilimanuk route, since Tanah Lot sits directly along Bali\'s main cross-island highway. Travel by comfortable private car door-to-door from Gilimanuk Ferry Port straight to Tanah Lot Temple, ideal for catching Bali\'s most famous sunset on your arrival day.',
       serviceType: 'Private transfer',
       provider: {
         '@id': travelAgencyId
@@ -145,7 +128,11 @@ const schemaGraph = {
         },
         {
           '@type': 'Place',
-          name: 'Ubud'
+          name: 'Tanah Lot'
+        },
+        {
+          '@type': 'Place',
+          name: 'Tabanan Regency'
         },
         {
           '@type': 'AdministrativeArea',
@@ -193,7 +180,7 @@ const schemaGraph = {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Gilimanuk to Ubud Transfer',
+          name: 'Gilimanuk to Tanah Lot Transfer',
           item: pageUrl
         }
       ]
@@ -237,17 +224,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/kelingking-beach.jpg"
-          alt="Private transfer from Gilimanuk to Ubud Bali"
+          src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920&h=1080&fit=crop"
+          alt="Private transfer from Gilimanuk to Tanah Lot Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Transfer — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Gilimanuk to Ubud Transfer</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Gilimanuk to Tanah Lot Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Door-to-door private transfer from Gilimanuk Ferry Port to Ubud with professional local drivers.
+          Door-to-door private transfer from Gilimanuk Ferry Port to Tanah Lot Temple — our shortest, fastest Gilimanuk route.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -272,31 +259,31 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Ubud</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Tanah Lot</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              The fastest and most convenient way to travel from Gilimanuk to Ubud is by private transfer. The journey takes approximately 3 hours depending on traffic and provides direct door-to-door transportation from Gilimanuk Ferry Port to your accommodation in Ubud.
+              Book a private transfer from Gilimanuk to Tanah Lot with Bali West Transport. The journey covers approximately 110 km and takes around 2.5 to 3.5 hours — our shortest and fastest Gilimanuk route, since Tanah Lot sits directly along Bali's main cross-island highway.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              This service is ideal for travellers arriving from Java via the Ketapang–Gilimanuk Ferry who want a hassle-free journey to Bali's cultural heart, without the inconvenience of waiting for public transport or sharing vehicles with other passengers.
+              Travel by comfortable private car door-to-door from Gilimanuk Ferry Port straight to Tanah Lot Temple, ideal for catching Bali's most famous sunset on your arrival day.
             </p>
           </div>
           <div class="space-y-4">
             <img
               src="/images/nusa-penida-viewpoint.jpg"
-              alt="Scenic Bali landscape on the way to Ubud"
+              alt="Scenic Bali landscape on the way to Tanah Lot"
               class="w-full h-auto"
               loading="lazy"
             />
             <div class="grid grid-cols-2 gap-4">
               <img
-                src="/images/beach-sunset-swing.jpg"
-                alt="Bali sunset"
+                src="/images/kelingking-beach.jpg"
+                alt="Bali coastline near Tabanan Regency"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop"
-                alt="Bali rice terraces Tegallalang"
+                alt="Bali rice terraces near Tabanan"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
@@ -313,20 +300,21 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
-              <p class="font-serif text-2xl text-brand-dark">Gilimanuk to Ubud</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk to Tanah Lot</p>
+              <span class="inline-block mt-2 bg-brand-gold/20 text-brand-gold text-[10px] tracking-widest uppercase px-2 py-1">Shortest Route</span>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
-              <p class="font-serif text-2xl text-brand-dark">125–140 km</p>
+              <p class="font-serif text-2xl text-brand-dark">~110 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
-              <p class="font-serif text-2xl text-brand-dark">3.5–4.5 hrs</p>
+              <p class="font-serif text-2xl text-brand-dark">2.5–3.5 hrs</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
-              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <span class="font-serif text-4xl text-brand-gold">Best Offer</span>
               <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
             </div>
             <a
@@ -350,8 +338,11 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Our Gilimanuk to Ubud Transfer?</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Our Gilimanuk to Tanah Lot Transfer?</h2>
         </div>
+        <p class="text-brand-dark/70 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
+          Tanah Lot is one of Bali's most iconic landmarks, and unlike most of our other Gilimanuk routes, it sits directly along the main Denpasar–Gilimanuk highway corridor — no detour into Denpasar traffic, no climb into the Bukit Peninsula. That makes it Bali West Transport's shortest and most straightforward ferry-to-destination transfer. A private car means you can time your arrival precisely for Tanah Lot's famous sunset, rather than being tied to a bus schedule.
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {benefits.map((benefit) => (
             <div class="flex items-start gap-4 p-6 bg-brand-cream">
@@ -391,7 +382,7 @@ const schemaGraph = {
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations in Ubud</h2>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations at Tanah Lot</h2>
             <p class="text-brand-dark/70 mb-6">We provide direct drop-off to:</p>
             <div class="space-y-3 mb-8">
               {dropoffLocations.map((item) => (
@@ -405,34 +396,27 @@ const schemaGraph = {
                 </div>
               ))}
             </div>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Popular Areas in Ubud</p>
-              <div class="grid grid-cols-2 gap-3">
-                {popularDestinations.map((destination) => (
-                  <div class="bg-white p-3 text-brand-dark/60 text-sm">{destination}</div>
-                ))}
-              </div>
-            </div>
+            <p class="text-brand-dark/50 text-sm">Tanah Lot Temple is open daily from 07:00 to 19:00. Entrance fee (2026): IDR 75,000 adults / IDR 40,000 children, cash only at the gate.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Arriving from Java -->
+    <!-- Who Uses This Transfer -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arriving from Java</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal for Travellers Arriving from Java</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Many travellers cross from Banyuwangi to Bali via the Ketapang-Gilimanuk Ferry before continuing their journey to Ubud.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
-              Instead of arranging multiple transportation options, a private transfer allows you to travel directly from Gilimanuk to Ubud in one comfortable journey. This is particularly convenient for travellers carrying luggage, families with children, and visitors arriving after long ferry crossings.
-            </p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Who Uses This Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal for Sunset Arrivals & Direct Ferry Connections</h2>
+            <ul class="space-y-3 text-brand-dark/70 text-lg leading-relaxed mb-8">
+              <li>Travellers arriving via the Gilimanuk–Ketapang ferry from Java who want to catch Tanah Lot's sunset on arrival day before continuing to nearby accommodation</li>
+              <li>Guests staying at villas or the golf resort near Tanah Lot itself</li>
+              <li>Day-trippers wanting the shortest, most direct ferry-to-destination transfer available on this route network</li>
+              <li>Anyone timing their ferry crossing specifically around Tanah Lot's sunset hours</li>
+            </ul>
             <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Along the Route You May See</p>
+              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Along the Route</p>
               <div class="grid grid-cols-2 gap-3">
                 {journeyHighlights.map((item) => (
                   <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
@@ -452,8 +436,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Journey Overview -->
     <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Journey Overview</p>
+          <h2 class="font-serif text-4xl text-brand-dark mb-6">From Gilimanuk to Bali's Most Iconic Sea Temple</h2>
+          <p class="text-brand-dark/70 text-lg leading-relaxed">
+            From Gilimanuk, the route follows the main coastal highway east through Negara, passing rice terraces and small Jembrana towns, before reaching Tabanan Regency. From here it's a short final stretch to Tanah Lot on the coast. Because this route avoids Denpasar's city traffic and the narrow roads of the Bukit Peninsula, it's a noticeably smoother and shorter drive than our other Gilimanuk transfers. Time your departure so you arrive with enough daylight to explore before sunset — we recommend leaving enough buffer to arrive by mid-afternoon.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
@@ -461,7 +458,7 @@ const schemaGraph = {
         </div>
         <div class="space-y-4">
           {faqs.map((faq) => (
-            <div class="bg-white p-8">
+            <div class="bg-brand-cream p-8">
               <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
               <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
             </div>
@@ -475,8 +472,8 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">Book Your Gilimanuk to Ubud Transfer</h3>
-            <p class="text-brand-dark/60">Avoid the stress of public transport. Travel directly with an experienced local driver.</p>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">Book Your Gilimanuk to Tanah Lot Transfer</h3>
+            <p class="text-brand-dark/60">WhatsApp us now for a best offer and Bali West Transport's fastest, most direct route across the island.</p>
           </div>
           <a
             href={whatsappUrl}
@@ -494,7 +491,7 @@ const schemaGraph = {
     </section>
 
     <!-- Related Routes -->
-    <section class="py-16 bg-brand-cream">
+    <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">More Routes</p>
@@ -502,34 +499,10 @@ const schemaGraph = {
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
-            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <a href={route.href} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
               <span class="text-brand-dark font-medium text-sm">{route.label}</span>
             </a>
           ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Travel Guide -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Travel Guide</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Planning Your Journey from Gilimanuk?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Read our full guide covering all transport options from Gilimanuk Ferry Port to Ubud — bus, shuttle, and private transfer compared.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <a href="/blog/how-to-get-from-gilimanuk-to-ubud/" class="block bg-brand-cream p-8 hover:bg-brand-gold/10 transition-colors group">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Travel Guide</p>
-            <h3 class="font-serif text-2xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer</h3>
-            <p class="text-brand-dark/60 text-sm leading-relaxed mb-4">Travel times, costs, step-by-step instructions, and tips for arriving travellers — all transport options compared in one guide.</p>
-            <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-widest uppercase font-medium group-hover:text-brand-gold transition-colors">
-              Read the Guide
-              <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </span>
-          </a>
         </div>
       </div>
     </section>
@@ -545,8 +518,8 @@ const schemaGraph = {
           <a href="/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Home</span>
           </a>
-          <a href="/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Airport Transfer</span>
+          <a href="/transfers/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">All Transfers</span>
           </a>
           <a href="/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Private Tours</span>

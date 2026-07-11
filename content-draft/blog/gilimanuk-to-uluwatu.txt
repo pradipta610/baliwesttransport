@@ -1,0 +1,258 @@
+# Content Brief: /transfers/gilimanuk-to-uluwatu/
+
+Handoff brief for Claude Code. Follows Claude.md rules exactly — design pattern, JSON-LD schema, i18n, sitemap, internal linking, pricing policy (no prices).
+
+**Files to create:**
+- `src/pages/transfers/gilimanuk-to-uluwatu.astro` (EN)
+- `src/pages/id/transfers/gilimanuk-to-uluwatu.astro` (ID)
+
+**Reference for feel/proportions:** `src/pages/transfers/gilimanuk-to-ubud.astro` (existing sibling route — copy its component structure, Tailwind classes, and JSON-LD pattern exactly, just swap content).
+
+**Fact base used for this page** (verified via web search, use consistently across EN/ID):
+- Distance: **145 km** (most direct route)
+- Drive time: **4.5–5.5 hours**, depending on traffic — this is BWT's longest transfer route (Uluwatu sits at the southern tip of the Bukit Peninsula)
+- Route passes through: Negara, Tabanan, Mengwi/Denpasar bypass, Jimbaran, into the Bukit Peninsula
+- Key Uluwatu-area drop-off points: Uluwatu Temple (Pura Luhur Uluwatu), Padang Padang Beach, Bingin Beach, Suluban/Blue Point, Balangan, Melasti, Green Bowl, GWK Cultural Park, Jimbaran
+
+---
+
+## 1. Meta Tags (Layout props)
+
+**EN**
+- `title`: Gilimanuk to Uluwatu Private Transfer | Bali West Transport
+- `description`: Book a private transfer from Gilimanuk Ferry Port to Uluwatu. Comfortable door-to-door service, ~4.5–5.5 hour journey across Bali. WhatsApp booking, best offer available.
+- `keywords`: gilimanuk to uluwatu transfer, gilimanuk to uluwatu taxi, private transfer gilimanuk uluwatu, ferry port to uluwatu transport
+
+**ID**
+- `title`: Transfer Pribadi Gilimanuk ke Uluwatu | Bali West Transport
+- `description`: Pesan transfer pribadi dari Pelabuhan Gilimanuk ke Uluwatu. Layanan door-to-door nyaman, perjalanan sekitar 4,5–5,5 jam melintasi Bali. Booking via WhatsApp, penawaran terbaik tersedia.
+- `keywords`: transfer gilimanuk ke uluwatu, taksi gilimanuk uluwatu, transfer pribadi gilimanuk uluwatu, transportasi pelabuhan ke uluwatu
+
+---
+
+## 2. Page Copy — EN Version
+
+### H1
+Gilimanuk to Uluwatu Private Transfer
+
+### Quick Answer (AI citation block — 40–80 words, place directly under H1)
+Book a private transfer from Gilimanuk to Uluwatu with Bali West Transport. The journey covers approximately 145 km and takes around 4.5 to 5.5 hours depending on traffic, making it the longest route in our network. Travel by comfortable private car door-to-door from Gilimanuk Ferry Port straight to your hotel, villa, or beach club in Uluwatu — ideal for travellers arriving from Java via ferry.
+
+### Why Choose This Transfer
+Uluwatu is Bali's furthest-south destination, on the tip of the Bukit Peninsula — a long, multi-region drive that's far more comfortable in a private, air-conditioned vehicle than by public bus with multiple transfers. Our drivers know the route through Negara, Tabanan, and the Denpasar bypass well, including the best rest stops along the way. Door-to-door service means no juggling luggage between ferry, bus terminal, and taxi — one booking, one driver, straight to Uluwatu.
+
+### Distance and Travel Time (AI citation block)
+The distance between Gilimanuk and Uluwatu is approximately 145 km by road, with a private car journey taking around 4.5 to 5.5 hours depending on traffic conditions and time of day. This is Bali West Transport's longest transfer route, crossing the island from the western ferry port to the southern Bukit Peninsula. Afternoon departures through Denpasar and into the Bukit can add extra time due to local traffic congestion.
+
+### Pickup Locations
+- Gilimanuk Ferry Port (Pelabuhan Gilimanuk)
+- Gilimanuk town and surrounding hotels
+- Karangsewu Beach area
+- Custom pickup points along the Java–Bali ferry crossing on request
+
+### Drop-off Locations
+- Uluwatu Temple (Pura Luhur Uluwatu) area
+- Padang Padang Beach
+- Bingin Beach
+- Suluban Beach (Blue Point)
+- Balangan Beach
+- Melasti Beach
+- Green Bowl Beach
+- Pecatu and surrounding villas/hotels
+- GWK Cultural Park (en route stop available)
+
+### Who Uses This Transfer
+- Travellers arriving via the Gilimanuk–Ketapang ferry from Java heading straight to Uluwatu's beaches and resorts
+- Surfers heading to Uluwatu, Padang Padang, Bingin, or Suluban's world-class breaks
+- Couples and honeymooners booking clifftop villas in Pecatu and the Bukit Peninsula
+- Groups relocating from West Bali (Menjangan, West Bali National Park) to South Bali's beach clubs
+- Anyone wanting a single, stress-free door-to-door ride instead of multiple bus/ferry connections
+
+### Journey Overview
+From Gilimanuk, the route heads east along Bali's main cross-island road through Negara and Tabanan, skirting rice terraces and small towns before joining the Denpasar bypass. From there, it continues south through Jimbaran and onto the Bukit Peninsula, where the roads narrow and climb toward Uluwatu's clifftop terrain. Given the distance, we recommend an early departure to avoid Denpasar's afternoon traffic and arrive in Uluwatu in good time for sunset.
+
+### Benefits of Private Transfer
+- No transfers between ferry, bus, and taxi — one direct ride
+- Air-conditioned comfort for Bali's longest domestic transfer route
+- Flexible pickup and drop-off points, including remote Bukit clifftop villas
+- Optional stops (GWK Cultural Park, Tanah Lot, Medewi Surf Beach) available on request
+- English-speaking drivers familiar with the Gilimanuk–Uluwatu route
+- Fixed door-to-door service — no haggling on arrival
+
+### Frequently Asked Questions (FAQPage schema source)
+**How long does the Gilimanuk to Uluwatu transfer take?**
+The journey takes approximately 4.5 to 5.5 hours by private car, depending on traffic through Denpasar and into the Bukit Peninsula.
+
+**How far is Uluwatu from Gilimanuk?**
+Uluwatu is approximately 145 km from Gilimanuk Ferry Port, making it Bali West Transport's longest single transfer route.
+
+**Can I stop along the way?**
+Yes. Popular stops include GWK Cultural Park, Tanah Lot Temple, and Medewi Surf Beach. Let us know your preferred stops when booking.
+
+**Where in Uluwatu can I be dropped off?**
+We serve all main areas including Uluwatu Temple, Padang Padang, Bingin, Suluban, Balangan, Melasti, and Pecatu villas and hotels.
+
+**How do I book this transfer?**
+Contact us directly via WhatsApp with your ferry arrival time, passenger count, and drop-off address in Uluwatu to receive your best offer.
+
+**Is this transfer suitable for surfboards or extra luggage?**
+Yes, let us know in advance if you're travelling with surfboards or extra luggage so we can arrange a suitable vehicle.
+
+### Call To Action
+Book Your Gilimanuk to Uluwatu Transfer — WhatsApp us now for a best offer and secure, comfortable transport across Bali.
+
+---
+
+## 3. Page Copy — ID Version (Bahasa Indonesia)
+
+### H1
+Transfer Pribadi Gilimanuk ke Uluwatu
+
+### Quick Answer
+Pesan transfer pribadi dari Gilimanuk ke Uluwatu bersama Bali West Transport. Perjalanan menempuh sekitar 145 km dan memakan waktu 4,5 hingga 5,5 jam tergantung kondisi lalu lintas, menjadikannya rute terpanjang dalam jaringan kami. Nikmati perjalanan door-to-door dengan mobil pribadi yang nyaman langsung dari Pelabuhan Gilimanuk menuju hotel, vila, atau beach club Anda di Uluwatu — cocok untuk wisatawan yang tiba dari Jawa via ferry.
+
+### Mengapa Memilih Transfer Ini
+Uluwatu adalah destinasi paling selatan di Bali, berada di ujung Semenanjung Bukit — perjalanan panjang lintas wilayah yang jauh lebih nyaman dengan mobil pribadi ber-AC dibandingkan bus umum dengan banyak perpindahan. Pengemudi kami menguasai rute melalui Negara, Tabanan, dan jalan lingkar Denpasar dengan baik, termasuk titik istirahat terbaik di sepanjang jalan. Layanan door-to-door berarti tidak perlu repot memindahkan barang antara ferry, terminal bus, dan taksi — satu kali pemesanan, satu pengemudi, langsung menuju Uluwatu.
+
+### Jarak dan Waktu Tempuh
+Jarak antara Gilimanuk dan Uluwatu sekitar 145 km melalui jalan darat, dengan waktu tempuh mobil pribadi sekitar 4,5 hingga 5,5 jam tergantung kondisi lalu lintas dan waktu keberangkatan. Ini adalah rute transfer terpanjang Bali West Transport, melintasi pulau dari pelabuhan ferry di barat hingga Semenanjung Bukit di selatan. Keberangkatan siang hari melalui Denpasar dan menuju Bukit bisa menambah waktu tempuh karena kepadatan lalu lintas setempat.
+
+### Titik Penjemputan
+- Pelabuhan Gilimanuk
+- Kota Gilimanuk dan hotel-hotel sekitarnya
+- Area Pantai Karangsewu
+- Titik penjemputan khusus di sepanjang jalur ferry Jawa–Bali atas permintaan
+
+### Titik Pengantaran
+- Area Pura Luhur Uluwatu
+- Pantai Padang Padang
+- Pantai Bingin
+- Pantai Suluban (Blue Point)
+- Pantai Balangan
+- Pantai Melasti
+- Pantai Green Bowl
+- Pecatu dan vila/hotel sekitarnya
+- Taman Budaya GWK (dapat singgah dalam perjalanan)
+
+### Siapa yang Menggunakan Transfer Ini
+- Wisatawan yang tiba melalui ferry Gilimanuk–Ketapang dari Jawa menuju pantai dan resor Uluwatu
+- Peselancar menuju ombak kelas dunia di Uluwatu, Padang Padang, Bingin, atau Suluban
+- Pasangan dan pengantin baru yang memesan vila tebing di Pecatu dan Semenanjung Bukit
+- Rombongan yang berpindah dari Bali Barat (Menjangan, Taman Nasional Bali Barat) menuju beach club Bali Selatan
+- Siapa pun yang menginginkan perjalanan door-to-door tanpa repot berpindah bus/ferry
+
+### Gambaran Perjalanan
+Dari Gilimanuk, rute menuju timur melalui jalan utama lintas pulau melewati Negara dan Tabanan, melintasi sawah dan kota-kota kecil sebelum menyambung ke jalan lingkar Denpasar. Dari sana, perjalanan berlanjut ke selatan melalui Jimbaran menuju Semenanjung Bukit, di mana jalan menyempit dan menanjak menuju medan tebing Uluwatu. Mengingat jaraknya, kami menyarankan keberangkatan pagi untuk menghindari kemacetan sore di Denpasar dan tiba di Uluwatu tepat waktu untuk menikmati matahari terbenam.
+
+### Manfaat Transfer Pribadi
+- Tanpa perpindahan antara ferry, bus, dan taksi — satu perjalanan langsung
+- Kenyamanan ber-AC untuk rute transfer domestik terpanjang di Bali
+- Titik jemput dan antar fleksibel, termasuk vila tebing terpencil di Bukit
+- Opsi singgah (Taman Budaya GWK, Tanah Lot, Pantai Selancar Medewi) tersedia atas permintaan
+- Pengemudi berbahasa Inggris yang menguasai rute Gilimanuk–Uluwatu
+- Layanan door-to-door dengan harga pasti — tanpa tawar-menawar saat tiba
+
+### Pertanyaan yang Sering Diajukan
+**Berapa lama transfer Gilimanuk ke Uluwatu?**
+Perjalanan memakan waktu sekitar 4,5 hingga 5,5 jam dengan mobil pribadi, tergantung lalu lintas melalui Denpasar dan menuju Semenanjung Bukit.
+
+**Berapa jauh Uluwatu dari Gilimanuk?**
+Uluwatu berjarak sekitar 145 km dari Pelabuhan Gilimanuk, menjadikannya rute transfer tunggal terpanjang Bali West Transport.
+
+**Bisakah saya singgah di tengah perjalanan?**
+Bisa. Titik singgah populer termasuk Taman Budaya GWK, Pura Tanah Lot, dan Pantai Selancar Medewi. Beri tahu kami preferensi Anda saat memesan.
+
+**Di mana saja saya bisa diantar di Uluwatu?**
+Kami melayani semua area utama termasuk Pura Luhur Uluwatu, Padang Padang, Bingin, Suluban, Balangan, Melasti, serta vila dan hotel di Pecatu.
+
+**Bagaimana cara memesan transfer ini?**
+Hubungi kami langsung via WhatsApp dengan waktu kedatangan ferry, jumlah penumpang, dan alamat tujuan di Uluwatu untuk mendapatkan penawaran terbaik.
+
+**Apakah transfer ini cocok untuk papan selancar atau bagasi tambahan?**
+Ya, beri tahu kami sebelumnya jika Anda membawa papan selancar atau bagasi tambahan agar kami dapat menyiapkan kendaraan yang sesuai.
+
+### Ajakan Bertindak
+Pesan Transfer Gilimanuk ke Uluwatu Anda — Hubungi kami via WhatsApp sekarang untuk penawaran terbaik dan transportasi yang aman serta nyaman melintasi Bali.
+
+---
+
+## 4. JSON-LD Schema (`@graph`) — data to populate the reference pattern
+
+```js
+const pageUrl        = 'https://baliwesttransport.com/transfers/gilimanuk-to-uluwatu/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId      = `${pageUrl}#service`;
+const faqId          = `${pageUrl}#faq`;
+const breadcrumbId   = `${pageUrl}#breadcrumb`;
+const webPageId       = `${pageUrl}#webpage`;
+```
+
+- `Service.name`: "Gilimanuk to Uluwatu Private Transfer"
+- `Service.description`: Use the Quick Answer copy above (EN)
+- `Service.areaServed`: Gilimanuk, Uluwatu, Bukit Peninsula, Bali
+- `FAQPage.mainEntity`: pull the 6 Q&A pairs above verbatim (EN page) / ID equivalents (ID page)
+- `BreadcrumbList`: Home → Transfers → Gilimanuk to Uluwatu Transfer
+- Follow the exact node relations already defined in Claude.md (`TravelAgency.parentOrganization`, `Service.provider`, `WebPage.about/mainEntity/breadcrumb/publisher`)
+- Do NOT use Article/BlogPosting/NewsArticle — Organization, TravelAgency, Service, FAQPage, BreadcrumbList, WebPage only
+- Script tag: `<script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />` placed after `<WhatsAppFloat />`, before `</Layout>`
+
+---
+
+## 5. Internal Linking Requirements
+
+**Must link to:**
+- Parent hub: `/gilimanuk-transfer/` (add this route to its list of linked routes if not already present)
+- Destination hub: `/uluwatu-transfer/` — **note: this hub page doesn't exist yet** per the site silo structure. Link to it anyway now (forward-reference) so it's ready when the hub is built, OR flag to the user that `/uluwatu-transfer/` should be prioritised next.
+- 3–5 related transfer routes: `/transfers/gilimanuk-to-kuta/`, `/transfers/gilimanuk-to-sanur/`, `/transfers/gilimanuk-to-seminyak/`, `/transfers/gilimanuk-to-canggu/` (Uluwatu is close to Kuta/Jimbaran, so these make sense as "nearby route" cross-links)
+
+**Must also update:**
+- `/gilimanuk-transfer/` hub page — add "Gilimanuk to Uluwatu" to its route summary table (it's already listed as a planned link target in Claude.md's silo structure)
+- `public/sitemap.xml` — add entry per rules below
+
+Minimum 5 internal links in, 5 out — confirm this is satisfied once built.
+
+---
+
+## 6. Sitemap Entry
+
+Add to `public/sitemap.xml`, grouped under the Gilimanuk/Transfers silo comment block:
+
+```xml
+<!-- Bali West Transport — Transfer Routes (EN) -->
+<url>
+  <loc>https://baliwesttransport.com/transfers/gilimanuk-to-uluwatu/</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+```
+
+```xml
+<!-- Bali West Transport — Transfer Routes (ID) -->
+<url>
+  <loc>https://baliwesttransport.com/id/transfers/gilimanuk-to-uluwatu/</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+```
+
+---
+
+## 7. Design/Layout Notes (apply Claude.md rules)
+
+- Hero: `min-h-screen`, local image if available (check `/images/` — none of the three named local images (kelingking-beach, nusa-penida-viewpoint, beach-sunset-swing) are Uluwatu-specific, so either source an Uluwatu clifftop/temple image for `/images/` or use an Unsplash background per the fallback rule)
+- Split "Journey Overview + Distance/Time" and "Route card" into 2 separate sections if combined content exceeds one viewport, per Section Length rule
+- Alternate `bg-brand-cream` / `bg-white` strictly — do not repeat consecutively
+- Horizontal route overview card: distance/time on left, WhatsApp CTA on right, separated by border
+- All CTA buttons use WhatsApp URL: `https://wa.me/6282247648944` (no price in the message text — use "Best Offer" / "Penawaran Terbaik" phrasing per Pricing Policy)
+- Text in cards: `text-brand-dark` / `text-brand-dark/70`, never default blue
+
+---
+
+## 8. Anti-Cannibalization Check (per Claude.md checklist)
+
+- Primary keyword: **"gilimanuk to uluwatu transfer"** — not currently owned by any other page in the silo. Clear.
+- This is a Service Page (fixed point-to-point transfer), not a Tour or Private Driver page — correctly scoped.
+- No existing blog post targets this exact route+intent combination. Clear to publish.

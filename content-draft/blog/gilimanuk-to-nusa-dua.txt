@@ -1,0 +1,260 @@
+# Content Brief: /transfers/gilimanuk-to-nusa-dua/
+
+Handoff brief for Claude Code. Follows Claude.md rules exactly — design pattern, JSON-LD schema, i18n, sitemap, internal linking, pricing policy (no prices).
+
+**Files to create:**
+- `src/pages/transfers/gilimanuk-to-nusa-dua.astro` (EN)
+- `src/pages/id/transfers/gilimanuk-to-nusa-dua.astro` (ID)
+
+**Reference for feel/proportions:** `src/pages/transfers/gilimanuk-to-ubud.astro` (existing sibling route — copy its component structure, Tailwind classes, and JSON-LD pattern exactly, just swap content).
+
+**Fact base used for this page** (verified via web search, use consistently across EN/ID):
+- Distance: **~148 km** (most direct route)
+- Drive time: **4.5–5.5 hours**, depending on traffic — similar length to Gilimanuk–Uluwatu, as Nusa Dua sits on the opposite (southeastern) tip of the Bukit Peninsula
+- Route passes through: Negara, Tabanan, Denpasar bypass, Jimbaran, into the ITDC resort enclave of Nusa Dua
+- Nusa Dua is a gated, master-planned luxury resort zone (developed by ITDC since the 1970s) — home to international hotel brands (St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, Westin, Apurva Kempinski)
+- Key drop-off points: Nusa Dua Beach (Pantai Mengiat), Geger Beach, Tanjung Benoa, Bali Collection shopping/dining complex, Water Blow, Pandawa Beach area, Bali Nusa Dua Convention Centre (BNDCC)
+- Commercial signal: multiple international booking platforms (Rome2Rio, Kiwitaxi, Intui.travel, balitaxi.com) run dedicated Gilimanuk–Nusa Dua route pages, including hotel-specific transfer pages (e.g. to Sofitel Bali Nusa Dua) — indicating real, recurring demand from resort guests
+
+---
+
+## 1. Meta Tags (Layout props)
+
+**EN**
+- `title`: Gilimanuk to Nusa Dua Private Transfer | Bali West Transport
+- `description`: Book a private transfer from Gilimanuk Ferry Port to Nusa Dua. Comfortable door-to-door service, ~4.5–5.5 hour journey to Bali's luxury resort enclave. WhatsApp booking, best offer available.
+- `keywords`: gilimanuk to nusa dua transfer, gilimanuk to nusa dua taxi, private transfer gilimanuk nusa dua, ferry port to nusa dua transport
+
+**ID**
+- `title`: Transfer Pribadi Gilimanuk ke Nusa Dua | Bali West Transport
+- `description`: Pesan transfer pribadi dari Pelabuhan Gilimanuk ke Nusa Dua. Layanan door-to-door nyaman, perjalanan sekitar 4,5–5,5 jam menuju kawasan resor mewah Bali. Booking via WhatsApp, penawaran terbaik tersedia.
+- `keywords`: transfer gilimanuk ke nusa dua, taksi gilimanuk nusa dua, transfer pribadi gilimanuk nusa dua, transportasi pelabuhan ke nusa dua
+
+---
+
+## 2. Page Copy — EN Version
+
+### H1
+Gilimanuk to Nusa Dua Private Transfer
+
+### Quick Answer (AI citation block — 40–80 words, place directly under H1)
+Book a private transfer from Gilimanuk to Nusa Dua with Bali West Transport. The journey covers approximately 148 km and takes around 4.5 to 5.5 hours depending on traffic, crossing Bali from the western ferry port to the island's premier resort enclave. Travel by comfortable private car door-to-door straight to your hotel in Nusa Dua — ideal for travellers arriving from Java via ferry and heading to South Bali's luxury resorts.
+
+### Why Choose This Transfer
+Nusa Dua is a master-planned resort district on the southeastern tip of the Bukit Peninsula, home to some of Bali's most prestigious international hotel brands. It's a long, cross-island drive from Gilimanuk — far more comfortable in a private, air-conditioned vehicle than switching between buses and taxis. Our drivers know the route through Negara, Tabanan, and the Denpasar bypass well, and are familiar with Nusa Dua's gated resort access points. Door-to-door service means no juggling luggage between ferry, bus terminal, and taxi — one booking, one driver, straight to your Nusa Dua resort.
+
+### Distance and Travel Time (AI citation block)
+The distance between Gilimanuk and Nusa Dua is approximately 148 km by road, with a private car journey taking around 4.5 to 5.5 hours depending on traffic conditions and time of day. This is one of Bali West Transport's longest transfer routes, crossing the island from the western ferry port to the southeastern Bukit Peninsula. Afternoon departures through Denpasar can add extra time due to local traffic congestion.
+
+### Pickup Locations
+- Gilimanuk Ferry Port (Pelabuhan Gilimanuk)
+- Gilimanuk town and surrounding hotels
+- Karangsewu Beach area
+- Custom pickup points along the Java–Bali ferry crossing on request
+
+### Drop-off Locations
+- Nusa Dua Beach (Pantai Mengiat) and international resort hotels
+- Geger Beach
+- Tanjung Benoa
+- Bali Collection shopping and dining complex
+- Bali Nusa Dua Convention Centre (BNDCC)
+- Pandawa Beach area (nearby, available on request)
+- All major Nusa Dua resorts (St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, Westin and more)
+
+### Who Uses This Transfer
+- Travellers arriving via the Gilimanuk–Ketapang ferry from Java heading directly to a Nusa Dua resort
+- Couples and honeymooners booking Nusa Dua's luxury beachfront hotels
+- Families wanting a calm, gated resort area with white sand beaches and calm swimming water
+- Conference and event attendees heading to the Bali Nusa Dua Convention Centre
+- Groups relocating from West Bali (Menjangan, West Bali National Park) to South Bali's resort strip
+- Anyone wanting a single, stress-free door-to-door ride instead of multiple bus/ferry connections
+
+### Journey Overview
+From Gilimanuk, the route heads east along Bali's main cross-island road through Negara and Tabanan, skirting rice terraces and small towns before joining the Denpasar bypass. From there, it continues south through Jimbaran and into the Bukit Peninsula, arriving at Nusa Dua's landscaped resort enclave — a striking contrast to the rural roads crossed earlier in the journey. Given the distance, we recommend an early departure to avoid Denpasar's afternoon traffic and arrive at your resort in good time to enjoy the rest of the day.
+
+### Benefits of Private Transfer
+- No transfers between ferry, bus, and taxi — one direct ride
+- Air-conditioned comfort for one of Bali's longest domestic transfer routes
+- Direct drop-off at your resort's gated entrance — no need to arrange a separate onward taxi
+- Optional stops (GWK Cultural Park, Tanah Lot, Medewi Surf Beach) available on request
+- English-speaking drivers familiar with the Gilimanuk–Nusa Dua route
+- Fixed door-to-door service — no haggling on arrival
+
+### Frequently Asked Questions (FAQPage schema source)
+**How long does the Gilimanuk to Nusa Dua transfer take?**
+The journey takes approximately 4.5 to 5.5 hours by private car, depending on traffic through Denpasar and into the Bukit Peninsula.
+
+**How far is Nusa Dua from Gilimanuk?**
+Nusa Dua is approximately 148 km from Gilimanuk Ferry Port, making it one of Bali West Transport's longest transfer routes.
+
+**Can I stop along the way?**
+Yes. Popular stops include GWK Cultural Park, Tanah Lot Temple, and Medewi Surf Beach. Let us know your preferred stops when booking.
+
+**Which Nusa Dua hotels do you serve?**
+We provide direct drop-off at all major Nusa Dua resorts, including St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, and Westin, as well as Tanjung Benoa and Geger Beach hotels.
+
+**How do I book this transfer?**
+Contact us directly via WhatsApp with your ferry arrival time, passenger count, and resort name in Nusa Dua to receive your best offer.
+
+**Is Nusa Dua a gated resort area?**
+Yes, Nusa Dua is a landscaped, secured resort zone. Our drivers are familiar with the entry procedures and will take you directly to your hotel's gate.
+
+### Call To Action
+Book Your Gilimanuk to Nusa Dua Transfer — WhatsApp us now for a best offer and secure, comfortable transport across Bali.
+
+---
+
+## 3. Page Copy — ID Version (Bahasa Indonesia)
+
+### H1
+Transfer Pribadi Gilimanuk ke Nusa Dua
+
+### Quick Answer
+Pesan transfer pribadi dari Gilimanuk ke Nusa Dua bersama Bali West Transport. Perjalanan menempuh sekitar 148 km dan memakan waktu 4,5 hingga 5,5 jam tergantung kondisi lalu lintas, melintasi Bali dari pelabuhan ferry di barat menuju kawasan resor utama pulau ini. Nikmati perjalanan door-to-door dengan mobil pribadi yang nyaman langsung menuju hotel Anda di Nusa Dua — cocok untuk wisatawan yang tiba dari Jawa via ferry dan menuju resor mewah di Bali Selatan.
+
+### Mengapa Memilih Transfer Ini
+Nusa Dua adalah kawasan resor terencana di ujung tenggara Semenanjung Bukit, rumah bagi beberapa merek hotel internasional paling bergengsi di Bali. Ini adalah perjalanan lintas pulau yang panjang dari Gilimanuk — jauh lebih nyaman dengan mobil pribadi ber-AC dibandingkan berpindah antara bus dan taksi. Pengemudi kami menguasai rute melalui Negara, Tabanan, dan jalan lingkar Denpasar dengan baik, serta familiar dengan titik akses kawasan resor Nusa Dua yang berpagar. Layanan door-to-door berarti tidak perlu repot memindahkan barang antara ferry, terminal bus, dan taksi — satu kali pemesanan, satu pengemudi, langsung menuju resor Nusa Dua Anda.
+
+### Jarak dan Waktu Tempuh
+Jarak antara Gilimanuk dan Nusa Dua sekitar 148 km melalui jalan darat, dengan waktu tempuh mobil pribadi sekitar 4,5 hingga 5,5 jam tergantung kondisi lalu lintas dan waktu keberangkatan. Ini adalah salah satu rute transfer terpanjang Bali West Transport, melintasi pulau dari pelabuhan ferry di barat hingga Semenanjung Bukit di tenggara. Keberangkatan siang hari melalui Denpasar bisa menambah waktu tempuh karena kepadatan lalu lintas setempat.
+
+### Titik Penjemputan
+- Pelabuhan Gilimanuk
+- Kota Gilimanuk dan hotel-hotel sekitarnya
+- Area Pantai Karangsewu
+- Titik penjemputan khusus di sepanjang jalur ferry Jawa–Bali atas permintaan
+
+### Titik Pengantaran
+- Pantai Nusa Dua (Pantai Mengiat) dan hotel-hotel resor internasional
+- Pantai Geger
+- Tanjung Benoa
+- Kompleks belanja dan kuliner Bali Collection
+- Bali Nusa Dua Convention Centre (BNDCC)
+- Area Pantai Pandawa (dekat, atas permintaan)
+- Semua resor utama Nusa Dua (St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, Westin, dan lainnya)
+
+### Siapa yang Menggunakan Transfer Ini
+- Wisatawan yang tiba melalui ferry Gilimanuk–Ketapang dari Jawa menuju resor Nusa Dua
+- Pasangan dan pengantin baru yang memesan hotel mewah tepi pantai di Nusa Dua
+- Keluarga yang menginginkan kawasan resor tenang berpagar dengan pantai berpasir putih dan air yang tenang
+- Peserta konferensi dan acara yang menuju Bali Nusa Dua Convention Centre
+- Rombongan yang berpindah dari Bali Barat (Menjangan, Taman Nasional Bali Barat) menuju kawasan resor Bali Selatan
+- Siapa pun yang menginginkan perjalanan door-to-door tanpa repot berpindah bus/ferry
+
+### Gambaran Perjalanan
+Dari Gilimanuk, rute menuju timur melalui jalan utama lintas pulau melewati Negara dan Tabanan, melintasi sawah dan kota-kota kecil sebelum menyambung ke jalan lingkar Denpasar. Dari sana, perjalanan berlanjut ke selatan melalui Jimbaran menuju Semenanjung Bukit, tiba di kawasan resor Nusa Dua yang tertata rapi — kontras mencolok dengan jalan pedesaan yang dilalui sebelumnya. Mengingat jaraknya, kami menyarankan keberangkatan pagi untuk menghindari kemacetan sore di Denpasar dan tiba di resor Anda tepat waktu untuk menikmati sisa hari.
+
+### Manfaat Transfer Pribadi
+- Tanpa perpindahan antara ferry, bus, dan taksi — satu perjalanan langsung
+- Kenyamanan ber-AC untuk salah satu rute transfer domestik terpanjang di Bali
+- Antar langsung ke gerbang resor Anda — tanpa perlu mengatur taksi lanjutan
+- Opsi singgah (Taman Budaya GWK, Tanah Lot, Pantai Selancar Medewi) tersedia atas permintaan
+- Pengemudi berbahasa Inggris yang menguasai rute Gilimanuk–Nusa Dua
+- Layanan door-to-door dengan harga pasti — tanpa tawar-menawar saat tiba
+
+### Pertanyaan yang Sering Diajukan
+**Berapa lama transfer Gilimanuk ke Nusa Dua?**
+Perjalanan memakan waktu sekitar 4,5 hingga 5,5 jam dengan mobil pribadi, tergantung lalu lintas melalui Denpasar dan menuju Semenanjung Bukit.
+
+**Berapa jauh Nusa Dua dari Gilimanuk?**
+Nusa Dua berjarak sekitar 148 km dari Pelabuhan Gilimanuk, menjadikannya salah satu rute transfer terpanjang Bali West Transport.
+
+**Bisakah saya singgah di tengah perjalanan?**
+Bisa. Titik singgah populer termasuk Taman Budaya GWK, Pura Tanah Lot, dan Pantai Selancar Medewi. Beri tahu kami preferensi Anda saat memesan.
+
+**Hotel Nusa Dua mana saja yang Anda layani?**
+Kami mengantar langsung ke semua resor utama Nusa Dua, termasuk St. Regis, Ritz-Carlton, Conrad, Kempinski, Grand Hyatt, Sofitel, Mulia, dan Westin, serta hotel di Tanjung Benoa dan Pantai Geger.
+
+**Bagaimana cara memesan transfer ini?**
+Hubungi kami langsung via WhatsApp dengan waktu kedatangan ferry, jumlah penumpang, dan nama resor di Nusa Dua untuk mendapatkan penawaran terbaik.
+
+**Apakah Nusa Dua kawasan resor berpagar?**
+Ya, Nusa Dua adalah kawasan resor tertata dan aman. Pengemudi kami familiar dengan prosedur masuk dan akan mengantar Anda langsung ke gerbang hotel.
+
+### Ajakan Bertindak
+Pesan Transfer Gilimanuk ke Nusa Dua Anda — Hubungi kami via WhatsApp sekarang untuk penawaran terbaik dan transportasi yang aman serta nyaman melintasi Bali.
+
+---
+
+## 4. JSON-LD Schema (`@graph`) — data to populate the reference pattern
+
+```js
+const pageUrl        = 'https://baliwesttransport.com/transfers/gilimanuk-to-nusa-dua/';
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId      = `${pageUrl}#service`;
+const faqId          = `${pageUrl}#faq`;
+const breadcrumbId   = `${pageUrl}#breadcrumb`;
+const webPageId       = `${pageUrl}#webpage`;
+```
+
+- `Service.name`: "Gilimanuk to Nusa Dua Private Transfer"
+- `Service.description`: Use the Quick Answer copy above (EN)
+- `Service.areaServed`: Gilimanuk, Nusa Dua, Bukit Peninsula, Bali
+- `FAQPage.mainEntity`: pull the 6 Q&A pairs above verbatim (EN page) / ID equivalents (ID page)
+- `BreadcrumbList`: Home → Transfers → Gilimanuk to Nusa Dua Transfer
+- Follow the exact node relations already defined in Claude.md (`TravelAgency.parentOrganization`, `Service.provider`, `WebPage.about/mainEntity/breadcrumb/publisher`)
+- Do NOT use Article/BlogPosting/NewsArticle — Organization, TravelAgency, Service, FAQPage, BreadcrumbList, WebPage only
+- Script tag: `<script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />` placed after `<WhatsAppFloat />`, before `</Layout>`
+
+---
+
+## 5. Internal Linking Requirements
+
+**Must link to:**
+- Parent hub: `/gilimanuk-transfer/` (add this route to its list of linked routes if not already present)
+- Destination hub: `/nusa-dua-transfer/` — **note: this hub page doesn't exist yet.** Link to it anyway now (forward-reference), and prioritise building it alongside `/uluwatu-transfer/`
+- 3–5 related transfer routes: `/transfers/gilimanuk-to-uluwatu/`, `/transfers/gilimanuk-to-kuta/`, `/transfers/gilimanuk-to-sanur/`, `/transfers/gilimanuk-to-seminyak/` (all South Bali / Bukit Peninsula routes, natural cross-links)
+
+**Must also update:**
+- `/gilimanuk-transfer/` hub page — add "Gilimanuk to Nusa Dua" to its route summary table
+- `public/sitemap.xml` — add entry per rules below
+
+Minimum 5 internal links in, 5 out — confirm this is satisfied once built.
+
+---
+
+## 6. Sitemap Entry
+
+Add to `public/sitemap.xml`, grouped under the Gilimanuk/Transfers silo comment block:
+
+```xml
+<!-- Bali West Transport — Transfer Routes (EN) -->
+<url>
+  <loc>https://baliwesttransport.com/transfers/gilimanuk-to-nusa-dua/</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+```
+
+```xml
+<!-- Bali West Transport — Transfer Routes (ID) -->
+<url>
+  <loc>https://baliwesttransport.com/id/transfers/gilimanuk-to-nusa-dua/</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+```
+
+---
+
+## 7. Design/Layout Notes (apply Claude.md rules)
+
+- Hero: `min-h-screen`, local image if available (none of the three named local images are Nusa Dua-specific — source a Nusa Dua beach/resort image for `/images/` or use Unsplash per the fallback rule)
+- Split "Journey Overview + Distance/Time" and "Route card" into 2 separate sections if combined content exceeds one viewport, per Section Length rule
+- Alternate `bg-brand-cream` / `bg-white` strictly — do not repeat consecutively
+- Horizontal route overview card: distance/time on left, WhatsApp CTA on right, separated by border
+- All CTA buttons use WhatsApp URL: `https://wa.me/6282247648944` (no price in the message text — use "Best Offer" / "Penawaran Terbaik" phrasing per Pricing Policy)
+- Text in cards: `text-brand-dark` / `text-brand-dark/70`, never default blue
+- Tone note: Nusa Dua's positioning is upscale/resort-oriented — copy leans slightly more toward "luxury, calm, gated resort" language than the Uluwatu page's "surf, clifftop, adventure" tone
+
+---
+
+## 8. Anti-Cannibalization Check (per Claude.md checklist)
+
+- Primary keyword: **"gilimanuk to nusa dua transfer"** — not currently owned by any other page in the silo. Clear.
+- This is a Service Page (fixed point-to-point transfer), not a Tour or Private Driver page — correctly scoped.
+- Commercial validation: multiple third-party booking platforms (Rome2Rio, Kiwitaxi, Intui.travel, balitaxi.com) already run dedicated pages for this exact route, including hotel-specific variants — real recurring demand from resort guests, not a speculative keyword.
+- No existing blog post targets this exact route+intent combination. Clear to publish.

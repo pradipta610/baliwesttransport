@@ -10,12 +10,14 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const privateTransfers = [
-  { from: "Pelabuhan Gilimanuk", to: "Ubud", time: "~3 jam" },
-  { from: "Pelabuhan Gilimanuk", to: "Canggu", time: "~2.5 jam" },
-  { from: "Pelabuhan Gilimanuk", to: "Kuta", time: "~3 jam" },
-  { from: "Pelabuhan Gilimanuk", to: "Uluwatu", time: "~3.5 jam" },
-  { from: "Pelabuhan Gilimanuk", to: "Lovina", time: "~2 jam" },
-  { from: "Pelabuhan Gilimanuk", to: "Amed", time: "~4 jam" },
+  { from: "Pelabuhan Gilimanuk", to: "Ubud", time: "~3 jam", slug: "gilimanuk-to-ubud" },
+  { from: "Pelabuhan Gilimanuk", to: "Canggu", time: "~2.5 jam", slug: "gilimanuk-to-canggu" },
+  { from: "Pelabuhan Gilimanuk", to: "Seminyak", time: "~2.5 jam", slug: "gilimanuk-to-seminyak" },
+  { from: "Pelabuhan Gilimanuk", to: "Kuta", time: "~3 jam", slug: "gilimanuk-to-kuta" },
+  { from: "Pelabuhan Gilimanuk", to: "Sanur", time: "~3 jam", slug: "gilimanuk-to-sanur" },
+  { from: "Pelabuhan Gilimanuk", to: "Uluwatu", time: "~4,5-5,5 jam", slug: "gilimanuk-to-uluwatu" },
+  { from: "Pelabuhan Gilimanuk", to: "Nusa Dua", time: "~4,5-5,5 jam", slug: "gilimanuk-to-nusa-dua" },
+  { from: "Pelabuhan Gilimanuk", to: "Tanah Lot", time: "~2,5-3,5 jam", slug: "gilimanuk-to-tanah-lot" },
 ];
 
 const minibusInfo = {
@@ -86,7 +88,7 @@ const features = [
               <div class="flex justify-between items-start mb-6">
                 <div>
                   <p class="text-brand-dark/50 text-sm mb-1">{lang === 'en' ? "To" : "Ke"}</p>
-                  <h3 class="font-serif text-2xl text-brand-dark">{transfer.to}</h3>
+                  <h3 class="font-serif text-2xl"><a href={`/id/transfers/${transfer.slug}/`} class="text-brand-dark hover:text-brand-gold transition-colors">{transfer.to}</a></h3>
                 </div>
                 <div class="text-right">
                   <p class="font-serif text-2xl text-brand-gold">{lang === 'en' ? "Best Offer" : "Penawaran Terbaik"}</p>
@@ -212,6 +214,15 @@ const features = [
           </a>
           <a href={lang === 'en' ? '/transfers/gilimanuk-to-sanur/' : '/id/transfers/gilimanuk-to-sanur/'} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Sanur" : "Gilimanuk ke Sanur"}</span>
+          </a>
+          <a href={lang === 'en' ? '/transfers/gilimanuk-to-uluwatu/' : '/id/transfers/gilimanuk-to-uluwatu/'} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Uluwatu" : "Gilimanuk ke Uluwatu"}</span>
+          </a>
+          <a href={lang === 'en' ? '/transfers/gilimanuk-to-nusa-dua/' : '/id/transfers/gilimanuk-to-nusa-dua/'} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Nusa Dua" : "Gilimanuk ke Nusa Dua"}</span>
+          </a>
+          <a href={lang === 'en' ? '/transfers/gilimanuk-to-tanah-lot/' : '/id/transfers/gilimanuk-to-tanah-lot/'} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">{lang === 'en' ? "Gilimanuk to Tanah Lot" : "Gilimanuk ke Tanah Lot"}</span>
           </a>
         </div>
       </div>

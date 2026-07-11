@@ -4,105 +4,81 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Gilimanuk ke Ubud | Antar Jemput Pribadi dari Pelabuhan Gilimanuk';
-const pageDescription = 'Pesan transfer pribadi Gilimanuk ke Ubud bersama Bali West Transport. Layanan door-to-door, supir lokal profesional, kendaraan ber-AC, jadwal fleksibel, dan perjalanan aman dari Pelabuhan Gilimanuk ke Ubud Bali.';
-const pageKeywords = 'transfer gilimanuk ke ubud, antar jemput gilimanuk ubud, transfer pribadi gilimanuk ubud, pelabuhan gilimanuk ke ubud, supir pribadi bali, bali west transport, transfer gilimanuk, ketapang gilimanuk ferry transfer, mobil sewa gilimanuk ubud';
+const pageTitle = 'Transfer Pribadi Gilimanuk ke Tanah Lot | Bali West Transport';
+const pageDescription = 'Pesan transfer pribadi dari Pelabuhan Gilimanuk ke Pura Tanah Lot. Rute tersingkat Bali West Transport — sekitar 110 km, 2,5–3,5 jam. Booking via WhatsApp, penawaran terbaik tersedia.';
+const pageKeywords = 'transfer gilimanuk ke tanah lot, taksi gilimanuk tanah lot, transfer pribadi gilimanuk tanah lot, transportasi pelabuhan ke pura tanah lot';
 
-const whatsappText = 'Halo, saya ingin memesan transfer pribadi dari Gilimanuk ke Ubud. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer pribadi dari Gilimanuk ke Tanah Lot. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
-// SEO: Benefit list as direct answers (AEO)
 const keunggulan = [
-  'Kendaraan pribadi eksklusif untuk Anda dan rombongan',
-  'Transfer langsung dari Pelabuhan Gilimanuk ke akomodasi Anda di Ubud',
-  'Supir lokal profesional dengan pengetahuan rute Bali yang mendalam',
-  'Kendaraan ber-AC yang nyaman',
-  'Jadwal keberangkatan yang fleksibel',
-  'Cocok untuk solo traveler, pasangan, keluarga, dan rombongan',
-  'Layanan transportasi yang aman dan terpercaya',
-  'Harga transparan tanpa biaya tersembunyi',
+  'Rute transfer tersingkat dan tercepat di jaringan Gilimanuk',
+  'Tanpa perpindahan antara ferry, bus, dan taksi — satu perjalanan langsung',
+  'Waktu fleksibel memungkinkan Anda merencanakan sesuai jadwal matahari terbenam dan pasang surut di Tanah Lot',
+  'Antar langsung ke pintu masuk temple, resor golf, atau vila terdekat',
+  'Pengemudi berbahasa Inggris yang menguasai rute Gilimanuk–Tanah Lot',
+  'Layanan door-to-door dengan harga pasti — tanpa tawar-menawar saat tiba'
 ];
 
 const lokasiJemput = [
   'Pelabuhan Gilimanuk',
-  'Hotel di Gilimanuk',
-  'Penginapan sekitarnya',
-  'Lokasi penjemputan khusus di sekitar Bali Barat',
+  'Kota Gilimanuk dan hotel-hotel sekitarnya',
+  'Area Pantai Karangsewu',
+  'Titik penjemputan khusus di sepanjang jalur ferry Jawa–Bali atas permintaan'
 ];
 
 const lokasiAntar = [
-  'Hotel dan resort',
-  'Villa pribadi',
-  'Guest house',
-  'Properti Airbnb',
-  'Objek wisata di Ubud',
-  'Tujuan khusus di seluruh area Ubud',
-];
-
-const areaTujuan = [
-  'Pusat Ubud',
-  'Area Monkey Forest',
-  'Campuhan Ridge Walk',
-  'Tegallalang',
-  'Penestanan',
-  'Sayan',
-  'Kedewatan',
-  'Desa Mas',
+  'Pintu masuk utama dan area parkir Pura Tanah Lot',
+  'Area Nirwana Bali Golf Club (bersebelahan dengan Tanah Lot)',
+  'Vila dan akomodasi di Beraban dan Kediri, Kabupaten Tabanan',
+  'Lanjutan pengantaran menuju Canggu atau Seminyak tersedia atas permintaan jika ingin melanjutkan perjalanan setelah matahari terbenam'
 ];
 
 const pemandanganRute = [
-  'Pedesaan Bali Barat',
-  'Desa-desa Bali tradisional',
-  'Sawah dan perkebunan',
-  'Panorama pegunungan',
-  'Pasar lokal dan area budaya',
+  'Jalan raya pesisir Negara',
+  'Sawah terasering Jembrana',
+  'Pedesaan Kabupaten Tabanan',
+  'Garis pantai Tanah Lot',
+  'Nirwana Bali Golf Club (landmark bersebelahan)'
 ];
 
-// AEO: FAQ with natural Indonesian questions
 const faq = [
   {
-    pertanyaan: 'Berapa lama perjalanan dari Gilimanuk ke Ubud?',
-    jawaban: 'Perjalanan dari Gilimanuk ke Ubud biasanya memakan waktu antara 3,5 hingga 4,5 jam tergantung kondisi lalu lintas dan lokasi tujuan Anda di Ubud.',
+    pertanyaan: 'Berapa lama transfer Gilimanuk ke Tanah Lot?',
+    jawaban: 'Perjalanan memakan waktu sekitar 2,5 hingga 3,5 jam dengan mobil pribadi — rute Gilimanuk tersingkat dari Bali West Transport, karena menghindari lalu lintas Denpasar dan jalan sempit Semenanjung Bukit.'
   },
   {
-    pertanyaan: 'Apakah ini transfer pribadi atau berbagi dengan penumpang lain?',
-    jawaban: 'Ini adalah transfer pribadi. Kendaraan dipesan secara eksklusif untuk Anda dan rombongan, tidak berbagi dengan penumpang lain.',
+    pertanyaan: 'Berapa jauh Tanah Lot dari Gilimanuk?',
+    jawaban: 'Tanah Lot berjarak sekitar 110 km dari Pelabuhan Gilimanuk, menjadikannya rute transfer tersingkat Bali West Transport.'
   },
   {
-    pertanyaan: 'Apakah bisa dijemput langsung di Pelabuhan Gilimanuk?',
-    jawaban: 'Ya. Kami menyediakan penjemputan langsung di Pelabuhan Gilimanuk dan dapat menyesuaikan waktu dengan jadwal kedatangan feri Anda.',
+    pertanyaan: 'Berapa jam buka dan tiket masuk Pura Tanah Lot?',
+    jawaban: 'Pura Tanah Lot buka setiap hari dari jam 07:00 hingga 19:00. Per tahun 2026, tiket masuk untuk wisatawan asing adalah IDR 75.000 untuk dewasa dan IDR 40.000 untuk anak-anak, dibayar tunai di gerbang. Parkir terpisah sebesar IDR 5.000 untuk mobil. Tarif dapat berubah sewaktu-waktu, sebaiknya konfirmasi langsung di gerbang.'
   },
   {
-    pertanyaan: 'Apakah tersedia untuk rombongan?',
-    jawaban: 'Ya. Kami menyediakan pilihan kendaraan yang sesuai untuk perorangan, pasangan, keluarga, maupun rombongan besar.',
+    pertanyaan: 'Jam berapa sebaiknya saya tiba untuk menyaksikan matahari terbenam?',
+    jawaban: 'Matahari terbenam di Tanah Lot biasanya antara jam 18:15 dan 18:45 sepanjang tahun, dengan sedikit variasi musiman. Kami sarankan tiba sekitar jam 16:00 untuk mendapatkan tempat menyaksikan yang baik di tebing sebelum keramaian.'
   },
   {
-    pertanyaan: 'Apakah bisa berhenti di tengah perjalanan?',
-    jawaban: 'Ya. Atas permintaan, pemberhentian singkat untuk makan, istirahat, atau melihat pemandangan dapat diatur selama perjalanan.',
+    pertanyaan: 'Bisakah saya diantar ke tempat lain selain temple itu sendiri?',
+    jawaban: 'Bisa. Kami juga melayani vila dan area resor golf dekat Tanah Lot, dan dapat melanjutkan perjalanan Anda menuju Canggu atau Seminyak setelahnya jika diperlukan — cukup beri tahu kami saat memesan.'
   },
   {
-    pertanyaan: 'Bisakah memesan transfer di hari yang sama?',
-    jawaban: 'Tergantung ketersediaan, pemesanan di hari yang sama mungkin bisa dilakukan. Namun kami sangat menyarankan untuk memesan jauh hari sebelumnya.',
-  },
-  {
-    pertanyaan: 'Berapa harga transfer Gilimanuk ke Ubud?',
-    jawaban: 'Harga bervariasi tergantung jenis kendaraan dan jumlah penumpang. Hubungi kami via WhatsApp untuk mendapatkan penawaran terbaik.',
-  },
+    pertanyaan: 'Bagaimana cara memesan transfer ini?',
+    jawaban: 'Hubungi kami langsung via WhatsApp dengan waktu kedatangan ferry dan jumlah penumpang untuk mendapatkan penawaran terbaik.'
+  }
 ];
 
 const ruteTerkait = [
-  { label: 'Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
   { label: 'Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
-  { label: 'Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
   { label: 'Gilimanuk ke Seminyak', href: '/id/transfers/gilimanuk-to-seminyak/' },
+  { label: 'Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
   { label: 'Gilimanuk ke Uluwatu', href: '/id/transfers/gilimanuk-to-uluwatu/' },
-  { label: 'Gilimanuk ke Sanur', href: '/id/transfers/gilimanuk-to-sanur/' },
-  { label: 'Gilimanuk ke Lovina', href: '/id/transfers/' },
-  { label: 'Gilimanuk ke Amed', href: '/id/transfers/' },
+  { label: 'Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
+  { label: 'Gilimanuk ke Sanur', href: '/id/transfers/gilimanuk-to-sanur/' }
 ];
 
-// Schema
-const pageUrl = 'https://baliwesttransport.com/id/transfers/gilimanuk-to-ubud/';
+const pageUrl = 'https://baliwesttransport.com/id/transfers/gilimanuk-to-tanah-lot/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -138,8 +114,8 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Gilimanuk ke Ubud',
-      alternateName: 'Gilimanuk to Ubud Transfer',
+      name: 'Transfer Gilimanuk ke Tanah Lot',
+      alternateName: 'Gilimanuk to Tanah Lot Transfer',
       description: pageDescription,
       serviceType: 'Transfer pribadi',
       provider: { '@id': agencyId },
@@ -149,7 +125,8 @@ const schemaGraph = {
       ],
       areaServed: [
         { '@type': 'Place', name: 'Gilimanuk' },
-        { '@type': 'Place', name: 'Ubud' },
+        { '@type': 'Place', name: 'Tanah Lot' },
+        { '@type': 'Place', name: 'Kabupaten Tabanan' },
         { '@type': 'AdministrativeArea', name: 'Bali' },
         { '@type': 'Country', name: 'Indonesia' },
       ],
@@ -179,7 +156,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer', item: 'https://baliwesttransport.com/id/transfers/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Gilimanuk ke Ubud', item: pageUrl },
+        { '@type': 'ListItem', position: 3, name: 'Transfer Gilimanuk ke Tanah Lot', item: pageUrl },
       ],
     },
     {
@@ -207,17 +184,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/kelingking-beach.jpg"
-          alt="Transfer pribadi dari Gilimanuk ke Ubud Bali"
+          src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920&h=1080&fit=crop"
+          alt="Transfer pribadi dari Gilimanuk ke Tanah Lot Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Transfer Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Gilimanuk ke Ubud</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Gilimanuk ke Tanah Lot</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Layanan antar jemput door-to-door dari Pelabuhan Gilimanuk ke Ubud dengan supir lokal profesional.
+          Layanan antar jemput door-to-door dari Pelabuhan Gilimanuk ke Pura Tanah Lot — rute Gilimanuk tersingkat dan tercepat kami.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -242,19 +219,19 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Ubud</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Tanah Lot</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Cara tercepat dan paling praktis untuk perjalanan dari Gilimanuk ke Ubud adalah dengan transfer pribadi. Perjalanan membutuhkan waktu sekitar 3 jam tergantung lalu lintas, dengan layanan door-to-door langsung dari Pelabuhan Gilimanuk ke akomodasi Anda di Ubud.
+              Pesan transfer pribadi dari Gilimanuk ke Tanah Lot bersama Bali West Transport. Perjalanan menempuh sekitar 110 km dan memakan waktu 2,5 hingga 3,5 jam — rute Gilimanuk tersingkat dan tercepat kami, karena Tanah Lot berada tepat di jalur utama lintas pulau Bali.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Layanan ini ideal untuk wisatawan yang tiba dari Jawa via Feri Ketapang–Gilimanuk dan ingin perjalanan bebas kerumitan menuju jantung budaya Bali, tanpa harus menunggu transportasi umum atau berbagi kendaraan dengan penumpang lain.
+              Nikmati perjalanan door-to-door dengan mobil pribadi yang nyaman langsung dari Pelabuhan Gilimanuk menuju Pura Tanah Lot, cocok untuk menyaksikan matahari terbenam paling terkenal di Bali pada hari kedatangan Anda.
             </p>
           </div>
           <div class="space-y-4">
-            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali di rute Gilimanuk ke Ubud" class="w-full h-auto" loading="lazy" />
+            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali di rute Gilimanuk ke Tanah Lot" class="w-full h-auto" loading="lazy" />
             <div class="grid grid-cols-2 gap-4">
-              <img src="/images/beach-sunset-swing.jpg" alt="Sunset Bali" class="w-full h-48 object-cover" loading="lazy" />
-              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Sawah terasering Tegallalang Bali" class="w-full h-48 object-cover" loading="lazy" />
+              <img src="/images/kelingking-beach.jpg" alt="Garis pantai Bali dekat Kabupaten Tabanan" class="w-full h-48 object-cover" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Sawah terasering dekat Tabanan Bali" class="w-full h-48 object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -268,20 +245,21 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">Gilimanuk ke Ubud</p>
+              <p class="font-serif text-2xl text-brand-dark">Gilimanuk ke Tanah Lot</p>
+              <span class="inline-block mt-2 bg-brand-gold/20 text-brand-gold text-[10px] tracking-widest uppercase px-2 py-1">Rute Tersingkat</span>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">125–140 km</p>
+              <p class="font-serif text-2xl text-brand-dark">~110 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">3,5–4,5 jam</p>
+              <p class="font-serif text-2xl text-brand-dark">2,5–3,5 jam</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
-              <span class="font-serif text-4xl text-brand-gold">Penawaran Fleksibel</span>
+              <span class="font-serif text-4xl text-brand-gold">Penawaran Terbaik</span>
               <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal & jumlah penumpang.</p>
             </div>
             <a
@@ -302,8 +280,11 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Memilih Kami</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Keunggulan Transfer Gilimanuk ke Ubud Kami</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Keunggulan Transfer Gilimanuk ke Tanah Lot Kami</h2>
         </div>
+        <p class="text-brand-dark/70 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
+          Tanah Lot adalah salah satu landmark paling ikonik di Bali, dan berbeda dari sebagian besar rute Gilimanuk lainnya, lokasinya berada tepat di jalur utama Denpasar–Gilimanuk — tanpa perlu memutar lewat kemacetan Denpasar, tanpa perlu mendaki ke Semenanjung Bukit. Ini menjadikannya rute transfer ferry-ke-tujuan tersingkat dan paling langsung dari Bali West Transport.
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {keunggulan.map((item) => (
             <div class="flex items-start gap-4 p-6 bg-brand-cream">
@@ -343,7 +324,7 @@ const schemaGraph = {
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pengantaran</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Ubud</h2>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Tanah Lot</h2>
             <p class="text-brand-dark/70 mb-6">Kami mengantarkan langsung ke:</p>
             <div class="space-y-3 mb-8">
               {lokasiAntar.map((item) => (
@@ -357,34 +338,27 @@ const schemaGraph = {
                 </div>
               ))}
             </div>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Area Populer di Ubud</p>
-              <div class="grid grid-cols-2 gap-3">
-                {areaTujuan.map((area) => (
-                  <div class="bg-white p-3 text-brand-dark/60 text-sm">{area}</div>
-                ))}
-              </div>
-            </div>
+            <p class="text-brand-dark/50 text-sm">Pura Tanah Lot buka setiap hari dari jam 07:00 hingga 19:00. Tiket masuk (2026): IDR 75.000 dewasa / IDR 40.000 anak-anak, tunai di gerbang.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Dari Jawa -->
+    <!-- Siapa yang Menggunakan -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Tiba dari Jawa</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal untuk Wisatawan yang Tiba dari Jawa</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Banyak wisatawan menyeberang dari Banyuwangi ke Bali via Feri Ketapang–Gilimanuk sebelum melanjutkan perjalanan ke Ubud.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
-              Daripada mengatur beberapa moda transportasi, transfer pribadi memungkinkan Anda langsung melanjutkan perjalanan dari Gilimanuk ke Ubud dalam satu perjalanan yang nyaman, tanpa ganti kendaraan.
-            </p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Siapa yang Menggunakan Transfer Ini</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal untuk Kedatangan Sore & Koneksi Ferry Langsung</h2>
+            <ul class="space-y-3 text-brand-dark/70 text-lg leading-relaxed mb-8">
+              <li>Wisatawan yang tiba melalui ferry Gilimanuk–Ketapang dari Jawa yang ingin menyaksikan matahari terbenam di Tanah Lot pada hari kedatangan sebelum melanjutkan ke akomodasi terdekat</li>
+              <li>Tamu yang menginap di vila atau resor golf dekat Tanah Lot</li>
+              <li>Wisatawan harian yang menginginkan transfer ferry-ke-tujuan paling singkat dan langsung yang tersedia di jaringan rute ini</li>
+              <li>Siapa pun yang mengatur waktu penyeberangan ferry secara khusus di sekitar jam matahari terbenam di Tanah Lot</li>
+            </ul>
             <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pemandangan Sepanjang Rute</p>
+              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Sepanjang Rute</p>
               <div class="grid grid-cols-2 gap-3">
                 {pemandanganRute.map((item) => (
                   <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
@@ -404,8 +378,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- FAQ – AEO -->
+    <!-- Gambaran Perjalanan -->
     <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Gambaran Perjalanan</p>
+          <h2 class="font-serif text-4xl text-brand-dark mb-6">Dari Gilimanuk Menuju Pura Laut Paling Ikonik di Bali</h2>
+          <p class="text-brand-dark/70 text-lg leading-relaxed">
+            Dari Gilimanuk, rute mengikuti jalan raya pesisir utama ke timur melewati Negara, melintasi sawah dan kota-kota kecil di Jembrana, sebelum mencapai Kabupaten Tabanan. Dari sini, tinggal jarak pendek terakhir menuju Tanah Lot di tepi pantai. Karena rute ini menghindari kemacetan kota Denpasar dan jalan sempit Semenanjung Bukit, perjalanan ini terasa jauh lebih lancar dan singkat dibandingkan transfer Gilimanuk lainnya. Atur waktu keberangkatan Anda agar tiba dengan cukup waktu siang untuk menjelajah sebelum matahari terbenam — kami sarankan memberi waktu cadangan untuk tiba pada sore hari.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
@@ -413,7 +400,7 @@ const schemaGraph = {
         </div>
         <div class="space-y-4">
           {faq.map((item) => (
-            <div class="bg-white p-8">
+            <div class="bg-brand-cream p-8">
               <h3 class="font-serif text-xl text-brand-dark mb-3">{item.pertanyaan}</h3>
               <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
             </div>
@@ -427,8 +414,8 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">Pesan Transfer Gilimanuk ke Ubud</h3>
-            <p class="text-brand-dark/60">Hindari kerumitan transportasi umum. Perjalanan langsung bersama supir lokal berpengalaman.</p>
+            <h3 class="font-serif text-2xl text-brand-dark mb-2">Pesan Transfer Gilimanuk ke Tanah Lot Anda</h3>
+            <p class="text-brand-dark/60">Hubungi kami via WhatsApp sekarang untuk penawaran terbaik dan rute tercepat serta paling langsung dari Bali West Transport.</p>
           </div>
           <a
             href={whatsappUrl}
@@ -452,36 +439,12 @@ const schemaGraph = {
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Transfer Lainnya</p>
           <h2 class="font-serif text-3xl text-brand-dark">Rute Transfer dari Gilimanuk</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {ruteTerkait.map((rute) => (
             <a href={rute.href} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
               <span class="text-brand-dark font-medium text-sm">{rute.label}</span>
             </a>
           ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Panduan Perjalanan -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Panduan Perjalanan</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Merencanakan Perjalanan dari Gilimanuk?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Baca panduan lengkap kami yang membahas semua pilihan transportasi dari Pelabuhan Gilimanuk ke Ubud — bus, shuttle, dan transfer pribadi dalam satu perbandingan.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <a href="/id/blog/how-to-get-from-gilimanuk-to-ubud/" class="block bg-brand-cream p-8 hover:bg-brand-gold/10 transition-colors group">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Panduan Wisata</p>
-            <h3 class="font-serif text-2xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">Cara ke Ubud dari Gilimanuk: Bus, Shuttle & Transfer Pribadi</h3>
-            <p class="text-brand-dark/60 text-sm leading-relaxed mb-4">Waktu tempuh, biaya, langkah demi langkah, dan tips bagi pelancong yang baru tiba — semua pilihan transportasi dibandingkan dalam satu panduan.</p>
-            <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-widest uppercase font-medium group-hover:text-brand-gold transition-colors">
-              Baca Panduan
-              <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </span>
-          </a>
         </div>
       </div>
     </section>
@@ -497,8 +460,8 @@ const schemaGraph = {
           <a href="/id/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Beranda</span>
           </a>
-          <a href="/id/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Transfer Bandara</span>
+          <a href="/id/transfers/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Semua Transfer</span>
           </a>
           <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
@@ -508,7 +471,7 @@ const schemaGraph = {
           </a>
         </div>
         <div class="mt-6 text-center">
-          <a href="/transfers/gilimanuk-to-ubud/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/transfers/gilimanuk-to-tanah-lot/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>
