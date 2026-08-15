@@ -202,6 +202,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-kuta/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- Airport Transfer Pages (ID) -->
   <url>
@@ -236,6 +242,12 @@
   </url>
   <url>
     <loc>https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-kuta/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

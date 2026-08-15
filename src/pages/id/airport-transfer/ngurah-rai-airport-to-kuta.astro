@@ -4,82 +4,87 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Bandara Ngurah Rai ke Seminyak | Antar Jemput Bandara Pribadi Bali';
-const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Seminyak bersama Bali West Transport. Supir lokal profesional, kendaraan ber-AC, antar langsung ke hotel atau villa. Tersedia 24 jam.';
-const pageKeywords = 'transfer bandara ngurah rai ke seminyak, antar jemput bandara bali ke seminyak, transfer bandara pribadi seminyak, bandara DPS ke seminyak, jemput bandara seminyak bali, bali west transport';
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Kuta | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Kuta — salah satu rute bandara terpendek di Bali, dengan supir yang menunggu di kedatangan dan antar langsung ke hotel atau villa Anda.';
+const pageKeywords = 'transfer bandara ngurah rai ke kuta, bandara bali ke kuta, antar jemput bandara kuta, transfer bandara pribadi kuta, bandara DPS ke kuta, jemput bandara kuta bali, bali west transport';
 
-const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Seminyak. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Kuta. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const keunggulan = [
-  'Supir menunggu di area kedatangan bandara',
-  'Harga tetap tanpa biaya tersembunyi',
-  'Antar langsung ke hotel atau villa di seluruh Seminyak',
-  'Kendaraan pribadi yang nyaman',
-  'Penanganan bagasi yang lebih mudah',
-  'Lebih tenang setelah penerbangan panjang',
+  'Supir menunggu di area kedatangan dengan papan nama',
+  'Salah satu transfer bandara terpendek di Bali',
+  'Antar langsung ke hotel, villa, dan resort di seluruh Kuta',
+  'Kendaraan pribadi ber-AC yang nyaman',
+  'Bantuan pengangkatan bagasi termasuk',
+  'Pemantauan penerbangan — penjemputan disesuaikan jika penerbangan terlambat',
   'Penjemputan bandara tersedia 24 jam',
-  'Nyaman untuk wisatawan pertama kali ke Bali'
+  'Tanpa antri taksi atau tawar-menawar harga setelah penerbangan panjang'
 ];
 
-const areaSeminyak = [
-  'Petitenget',
-  'Oberoi',
-  'Kayu Aya',
-  'Batu Belig',
-  'Area Double Six',
-  'Area Sunset Road'
+const areaKuta = [
+  'Pantai Kuta',
+  'Jalan Legian',
+  'Kuta Square',
+  'Tuban',
+  'Double Six Beach',
+  'Pasar Seni Kuta'
 ];
 
-const pantaiSeminyak = [
-  'Pantai Seminyak',
-  'Pantai Petitenget',
-  'Pantai Double Six',
-  'Eat Street (Kayu Aya)'
+const atraksiKuta = [
+  'Sunset Pantai Kuta',
+  'Waterbom Bali',
+  'Beachwalk Shopping Centre',
+  'Pasar Seni Kuta',
+  'Pantai Legian',
+  'Kuta Theatre'
 ];
 
-const keunggulanTransferPribadi = [
-  'Jemput bandara termasuk',
-  'Harga tetap',
-  'Kendaraan pribadi',
-  'Transfer langsung',
-  'Kedatangan lebih tenang'
+const tabelRute = [
+  { rute: 'Bandara Bali ke Pantai Kuta', jarak: '4–7 km', waktu: '10–20 mnt' },
+  { rute: 'Bandara Bali ke Jalan Legian', jarak: '5–8 km', waktu: '12–22 mnt' },
+  { rute: 'Bandara Bali ke Tuban', jarak: '2–4 km', waktu: '8–15 mnt' },
+  { rute: 'Bandara Bali ke Kuta Square', jarak: '5–7 km', waktu: '12–20 mnt' },
+  { rute: 'Bandara Bali ke Double Six Beach', jarak: '6–9 km', waktu: '15–25 mnt' },
 ];
 
 const faq = [
   {
-    pertanyaan: 'Apa cara terbaik dari Bandara Bali ke Seminyak?',
-    jawaban: 'Untuk kebanyakan wisatawan, transfer bandara pribadi adalah pilihan paling nyaman karena menyediakan penjemputan langsung dan layanan antar ke hotel tanpa perlu antrian taksi atau negosiasi tarif.'
+    pertanyaan: 'Berapa jauh Kuta dari Bandara Bali?',
+    jawaban: 'Kuta berjarak sekitar 4 hingga 8 kilometer dari Bandara Internasional I Gusti Ngurah Rai, menjadikannya salah satu kawasan wisata terdekat dari bandara.'
   },
   {
-    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Seminyak?',
-    jawaban: 'Waktu tempuh biasanya sekitar 30–60 menit tergantung kondisi lalu lintas. Saat jam sibuk atau momen sunset, kemacetan bisa memperpanjang perjalanan.'
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Bali ke Kuta?',
+    jawaban: 'Perjalanan biasanya memakan waktu 10 hingga 20 menit dalam kondisi lalu lintas normal. Pada jam sibuk — terutama sore hari di sekitar Jalan Legian dan jalur pantai — bisa memakan waktu 30 hingga 40 menit.'
   },
   {
-    pertanyaan: 'Apakah Seminyak dekat dengan Bandara Bali?',
-    jawaban: 'Ya. Seminyak adalah salah satu kawasan wisata utama yang paling dekat dari Bandara Ngurah Rai, berjarak sekitar 10–13 kilometer tergantung lokasi hotel Anda.'
+    pertanyaan: 'Apakah tetap worth it memesan transfer pribadi untuk rute sedekat ini?',
+    jawaban: 'Banyak wisatawan tetap memilih transfer yang sudah dipesan sebelumnya untuk Kuta karena menghindari antrian taksi dan tawar-menawar harga tepat setelah mendarat. Supir Anda sudah menunggu di area kedatangan dengan papan nama, siap berangkat — tanpa perlu mencari kendaraan setelah penerbangan panjang, dan tanpa perlu jalan ke titik penjemputan ride-hailing tertentu sambil membawa bagasi.'
   },
   {
-    pertanyaan: 'Bisakah memesan transfer bandara ke Seminyak sebelum tiba?',
-    jawaban: 'Ya. Pemesanan transportasi bandara jauh hari sangat direkomendasikan, terutama saat periode perjalanan padat, untuk memastikan supir sudah siap dan terkonfirmasi saat Anda mendarat.'
+    pertanyaan: 'Apa cara terbaik dari Bandara Ngurah Rai ke Kuta?',
+    jawaban: 'Transfer bandara pribadi adalah salah satu pilihan paling nyaman karena menyediakan supir yang menunggu di area kedatangan, bantuan bagasi, dan antar langsung ke hotel atau villa tanpa perlu antri taksi atau tawar-menawar harga.'
   },
   {
-    pertanyaan: 'Apakah penjemputan bandara tersedia larut malam?',
-    jawaban: 'Ya. Bali West Transport menyediakan layanan penjemputan bandara sesuai jadwal kedatangan penerbangan Anda, termasuk penerbangan malam dan dini hari.'
+    pertanyaan: 'Apakah tersedia transfer ke Tuban dan Legian?',
+    jawaban: 'Ya. Transfer bandara tersedia ke seluruh kawasan Kuta termasuk Tuban, Jalan Legian, Kuta Square, dan Double Six Beach.'
+  },
+  {
+    pertanyaan: 'Bisakah memesan transfer bandara sebelum tiba di Bali?',
+    jawaban: 'Ya. Pemesanan lebih awal sangat dianjurkan, terutama pada periode liburan padat, untuk memastikan supir sudah siap dan terkonfirmasi saat Anda mendarat.'
   }
 ];
 
 const ruteTerkait = [
   { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
-  { label: 'Bandara ke Kuta', href: '/id/airport-transfer/ngurah-rai-airport-to-kuta/' },
+  { label: 'Bandara ke Nusa Dua', href: '/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/' },
+  { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
   { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
-  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
-  { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
-  { label: 'Bandara ke Sanur', href: '/id/airport-transfer/ngurah-rai-airport-to-sanur/' },
+  { label: 'Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
   { label: 'Semua Transfer Bali', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-seminyak/';
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-kuta/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -111,15 +116,17 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Bandara Ngurah Rai ke Seminyak',
-      alternateName: 'Ngurah Rai Airport to Seminyak Transfer',
+      name: 'Transfer Bandara Ngurah Rai ke Kuta',
+      alternateName: 'Ngurah Rai Airport to Kuta Transfer',
       description: pageDescription,
       serviceType: 'Transfer Bandara Pribadi',
       provider: { '@id': agencyId },
       availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
       areaServed: [
         { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
-        { '@type': 'Place', name: 'Seminyak' },
+        { '@type': 'Place', name: 'Kuta' },
+        { '@type': 'Place', name: 'Tuban' },
+        { '@type': 'Place', name: 'Legian' },
         { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
@@ -143,7 +150,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Seminyak', item: pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Kuta', item: pageUrl }
       ]
     },
     {
@@ -171,17 +178,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/kelingking-beach.jpg"
-          alt="Transfer pribadi dari Bandara Ngurah Rai ke Seminyak Bali"
+          src="/images/beach-sunset-swing.jpg"
+          alt="Transfer pribadi dari Bandara Ngurah Rai ke Kuta Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Seminyak</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Kuta</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Antar jemput door-to-door dari Bandara Bali ke Seminyak dengan supir lokal profesional dan layanan antar langsung ke hotel atau villa.
+          Antar jemput door-to-door dari Bandara Bali ke Kuta — melayani Pantai Kuta, Jalan Legian, Tuban, dan Kuta Square.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -206,26 +213,26 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Antar Jemput Bandara Pribadi</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Seminyak</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Kuta</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Pesan transfer dari Bandara Ngurah Rai ke Seminyak bersama Bali West Transport. Perjalanan memakan waktu sekitar 30–60 menit tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Ngurah Rai Internasional (DPS).
+              Pesan transfer dari Bandara Ngurah Rai ke Kuta bersama Bali West Transport. Perjalanan memakan waktu sekitar 10 hingga 20 menit tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Internasional I Gusti Ngurah Rai (DPS).
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Seminyak adalah salah satu destinasi wisata paling populer di Bali, dikenal dengan resort mewah, restoran, kafe, beach club, dan kehidupan malam yang semarak. Karena Seminyak relatif dekat dari Bandara Ngurah Rai, banyak wisatawan lebih memilih transfer bandara pribadi untuk transportasi cepat dan bebas stres langsung ke akomodasi mereka.
+              Kuta adalah salah satu kawasan wisata terdekat dari bandara, dikenal dengan pantai sunset yang panjang, ombak surfing, kehidupan belanja dan malam di Jalan Legian, serta akses mudah ke Waterbom Bali. Karena rutenya pendek, sebagian wisatawan mengira transfer tidak diperlukan — tapi supir yang sudah dipesan sebelumnya tetap berarti tanpa antrian taksi, tanpa tawar-menawar harga, dan tanpa perlu jalan ke titik penjemputan ride-hailing tertentu setelah penerbangan panjang.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Untuk wisatawan yang mengunjungi Seminyak untuk beach club, villa mewah, belanja, kehidupan malam, atau liburan santai di Bali, memesan transfer bandara pribadi adalah salah satu cara termudah dan ternyaman memulai perjalanan.
+              Baik Anda tiba larut malam, bepergian bersama keluarga, atau hanya ingin memulai liburan dengan mudah, memesan transfer bandara pribadi adalah salah satu cara termudah untuk langsung menuju Kuta dari Bandara Bali.
             </p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Informasi Cepat</p>
             <div class="space-y-4">
               {[
-                ['Layanan', 'Transfer Bandara Bali ke Seminyak'],
+                ['Layanan', 'Transfer Bandara Bali ke Kuta'],
                 ['Lokasi Jemput', 'Bandara Ngurah Rai Internasional (DPS)'],
-                ['Tujuan', 'Seminyak, Bali'],
+                ['Tujuan', 'Kuta, Bali'],
                 ['Jenis Kendaraan', 'Mobil Pribadi dengan Supir'],
-                ['Estimasi Waktu Tempuh', '30–60 Menit'],
+                ['Estimasi Waktu Tempuh', '10–20 Menit'],
                 ['Ketersediaan', '24 Jam'],
                 ['Armada', 'Kendaraan Pribadi Ber-AC'],
                 ['Jenis Layanan', 'Jemput Bandara & Antar ke Hotel'],
@@ -249,15 +256,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Seminyak</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Kuta</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">10–13 km</p>
+              <p class="font-serif text-2xl text-brand-dark">4–8 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">30–60 mnt</p>
+              <p class="font-serif text-2xl text-brand-dark">10–20 mnt</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -279,14 +286,14 @@ const schemaGraph = {
           <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimasi Waktu Tempuh</p>
           <div class="grid grid-cols-3 gap-3">
             {[
-              'Dini hari: 20–35 mnt',
-              'Lalu lintas normal: 30–50 mnt',
-              'Jam sibuk: 60+ mnt'
+              'Dini hari: 8–12 mnt',
+              'Lalu lintas normal: 15–20 mnt',
+              'Jam sibuk: 30–40 mnt'
             ].map((item) => (
               <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
             ))}
           </div>
-          <p class="text-brand-dark/50 text-sm mt-4">Kondisi lalu lintas di Bali dapat sangat mempengaruhi waktu tempuh, terutama saat jam sunset dan periode liburan padat.</p>
+          <p class="text-brand-dark/50 text-sm mt-4">Kuta adalah salah satu rute bandara terpendek di Bali. Titik perlambatan utama adalah Jalan Legian dan jalur pantai saat sore hari, yang bisa menambah 15–20 menit ke perjalanan.</p>
         </div>
       </div>
     </section>
@@ -295,9 +302,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Seminyak</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Seminyak</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bagi kebanyakan wisatawan, transfer bandara pribadi adalah pilihan paling nyaman karena menyediakan penjemputan langsung, harga tetap, dan layanan antar ke hotel.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Kuta</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Pilih Transfer Bandara Pribadi ke Kuta</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Meski rutenya pendek, transfer bandara pribadi tetap berarti tanpa antrian taksi, tanpa tawar-menawar harga, dan supir yang sudah menunggu langsung di area kedatangan.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {keunggulan.map((item) => (
@@ -314,39 +321,39 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Area Seminyak -->
+    <!-- Area Kuta yang Dilayani -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jangkauan Pengantaran</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Seminyak</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Kuta</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Bali West Transport menyediakan transfer bandara ke seluruh area Seminyak. Baik Anda menginap di villa mewah, hotel butik, resort tepi pantai, maupun Airbnb pribadi, transportasi bandara pribadi membuat kedatangan lebih mudah dan nyaman.
+              Bali West Transport menyediakan transfer bandara ke seluruh kawasan Kuta dan Tuban di sekitarnya. Baik Anda menginap dekat pantai, di Jalan Legian, maupun dekat Kuta Square, kami melayani semua area utama.
             </p>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Area Seminyak yang Dilayani</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Area Kuta yang Dilayani</p>
             <div class="grid grid-cols-2 gap-3 mb-6">
-              {areaSeminyak.map((area) => (
+              {areaKuta.map((area) => (
                 <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
               ))}
             </div>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Pantai Populer di Sekitar</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Atraksi Populer di Sekitar</p>
             <div class="grid grid-cols-2 gap-3">
-              {pantaiSeminyak.map((pantai) => (
-                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{pantai}</div>
+              {atraksiKuta.map((atraksi) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{atraksi}</div>
               ))}
             </div>
           </div>
           <div class="space-y-4">
             <img
               src="/images/nusa-penida-viewpoint.jpg"
-              alt="Pemandangan pesisir Bali dekat Seminyak"
+              alt="Transfer bandara ke Kuta Bali kawasan pantai"
               class="w-full h-64 object-cover"
               loading="lazy"
             />
             <img
-              src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=400&fit=crop"
-              alt="Beach club Seminyak Bali"
+              src="/images/kelingking-beach.jpg"
+              alt="Pantai Kuta dan Jalan Legian Bali"
               class="w-full h-48 object-cover"
               loading="lazy"
             />
@@ -355,103 +362,104 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Transfer Pribadi vs Grab/Gojek/Taksi -->
+    <!-- Perbandingan Pilihan Transportasi -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Perbandingan</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Transfer Pribadi vs Grab, Gojek, dan Taksi</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Pertanyaan yang sering muncul: lebih baik pakai Grab, Gojek, taksi, atau transfer pribadi dari Bandara Bali ke Seminyak?</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara dari Bandara Bali ke Kuta</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Tersedia beberapa pilihan transportasi dari Bandara Ngurah Rai ke Kuta. Berikut perbandingannya untuk membantu Anda memilih.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-8">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-4">Transfer Bandara Pribadi</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Terbaik untuk</p>
-            <div class="space-y-2 mb-6">
-              {['Keluarga', 'Pasangan', 'Wisatawan bulan madu', 'Wisatawan pertama kali ke Bali', 'Wisatawan dengan banyak bagasi', 'Kedatangan malam hari'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70 text-sm">{item}</span>
+        <div class="grid md:grid-cols-4 gap-4 mb-12">
+          {[
+            { jenis: 'Transfer Bandara Pribadi', cocok: 'Keluarga, kedatangan malam, rombongan', bagasi: 'Ya', langsung: 'Ya' },
+            { jenis: 'Taksi Bandara', cocok: 'Perjalanan fleksibel', bagasi: 'Ya', langsung: 'Ya' },
+            { jenis: 'Ride-Hailing (Grab/Gojek)', cocok: 'Wisatawan hemat', bagasi: 'Terbatas', langsung: 'Ya' },
+            { jenis: 'Jalan Kaki', cocok: 'Bagasi sangat ringan, hotel dekat Tuban', bagasi: 'Terbatas', langsung: 'Ya' },
+          ].map((opt) => (
+            <div class="bg-white p-6">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{opt.jenis}</p>
+              <div class="space-y-3 text-sm">
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Cocok Untuk</span>
+                  <span class="text-brand-dark/70">{opt.cocok}</span>
                 </div>
-              ))}
-            </div>
-            <p class="font-serif text-lg text-brand-dark mb-3">Keunggulan</p>
-            <div class="space-y-2">
-              {keunggulanTransferPribadi.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70 text-sm">{item}</span>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Ramah Bagasi</span>
+                  <span class="text-brand-dark/70">{opt.bagasi}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div class="bg-white p-8">
-            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Grab atau Gojek</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Populer di kalangan wisatawan hemat</p>
-            <p class="text-brand-dark/50 text-sm mb-4">Kemungkinan kendala:</p>
-            <div class="space-y-2">
-              {['Kebingungan titik jemput di bandara', 'Surge pricing', 'Pembatalan driver', 'Menunggu saat periode ramai', 'Keterbatasan bagasi'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/60 text-sm">{item}</span>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Transfer Langsung</span>
+                  <span class="text-brand-dark/70">{opt.langsung}</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-          <div class="bg-white p-8">
-            <p class="text-brand-dark/40 text-xs tracking-widest uppercase mb-4">Taksi Bandara</p>
-            <p class="font-serif text-xl text-brand-dark mb-4">Tersedia di Bandara Ngurah Rai</p>
-            <p class="text-brand-dark/50 text-sm mb-4">Kemungkinan kekurangan:</p>
-            <div class="space-y-2">
-              {['Antrian', 'Harga bervariasi', 'Pengalaman kurang dapat diprediksi saat ramai'].map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-5 h-5 bg-brand-dark/10 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-3 h-3 text-brand-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/60 text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
+        <p class="text-brand-dark/60 text-sm text-center">Karena Kuta sangat dekat dengan bandara, sebagian wisatawan memilih jalan kaki atau ride-hailing — namun keluarga, kedatangan malam hari, dan wisatawan dengan bagasi umumnya tetap lebih memilih transfer pribadi yang sudah dipesan untuk kepastian supir yang menunggu di kedatangan.</p>
       </div>
     </section>
 
-    <!-- Tentang Seminyak -->
+    <!-- Tabel Ringkasan Perjalanan -->
     <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Ikhtisar Rute</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Ringkasan Perjalanan Bandara Bali ke Kuta</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Jarak dan estimasi waktu tempuh dari Bandara Ngurah Rai ke masing-masing tujuan di kawasan Kuta.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-brand-dark text-brand-cream">
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Rute</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Jarak</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Estimasi Waktu Tempuh</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tabelRute.map((baris, i) => (
+                <tr class={i % 2 === 0 ? 'bg-brand-cream' : 'bg-white'}>
+                  <td class="px-6 py-4 text-brand-dark font-medium">{baris.rute}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{baris.jarak}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{baris.waktu}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-brand-dark/50 text-sm mt-4">Waktu tempuh merupakan estimasi dan dapat bervariasi tergantung kondisi lalu lintas dan waktu perjalanan.</p>
+      </div>
+    </section>
+
+    <!-- Penjemputan di Bandara -->
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Tentang Seminyak</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mengapa Wisatawan Memilih Seminyak</h2>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jemput di Bandara</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Penjemputan di Bandara Bali</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Seminyak tetap menjadi salah satu destinasi paling banyak dikunjungi di Bali berkat perpaduan kemewahan, pantai, dan kehidupan sosial yang semarak. Banyak wisatawan memilih Seminyak karena akses mudah ke pantai, restoran, kehidupan malam, dan kawasan wisata terdekat.
+              Setibanya di Bandara Ngurah Rai, supir Anda akan menunggu di area setelah pengambilan bagasi dengan papan nama. Supir akan membantu membawa bagasi dan mengantar Anda ke kendaraan sebelum memulai perjalanan singkat ke Kuta.
             </p>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Yang Ditawarkan Seminyak</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Layanan Ini Sangat Berguna Untuk</p>
             <div class="grid grid-cols-2 gap-3">
-              {['Villa mewah', 'Beach club', 'Kehidupan malam', 'Restoran', 'Pusat perbelanjaan', 'Spa dan wellness', 'Pantai sunset', 'Kuliner yang beragam'].map((item) => (
-                <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
+              {[
+                'Wisatawan pertama kali ke Bali',
+                'Keluarga dengan anak-anak',
+                'Kedatangan malam hari',
+                'Penerbangan dini hari',
+                'Rombongan dengan banyak koper',
+                'Wisatawan yang tidak ingin antri'
+              ].map((item) => (
+                <div class="bg-white p-4 text-brand-dark/70 text-sm">{item}</div>
               ))}
             </div>
           </div>
           <div>
             <img
               src="/images/beach-sunset-swing.jpg"
-              alt="Sunset pantai Seminyak Bali"
+              alt="Transfer ke Kuta Bali sunset"
               class="w-full h-auto object-cover"
               loading="lazy"
             />
@@ -461,7 +469,7 @@ const schemaGraph = {
     </section>
 
     <!-- Mengapa Bali West Transport -->
-    <section class="py-24 bg-brand-cream">
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Pilih Kami</p>
@@ -475,10 +483,10 @@ const schemaGraph = {
             'Kendaraan ber-AC yang nyaman',
             'Penjemputan bandara tersedia 24/7',
             'Antar langsung ke hotel dan villa',
-            'Pilihan transportasi yang fleksibel',
+            'Pemantauan penerbangan untuk keterlambatan',
             'Jangkauan layanan di seluruh Bali'
           ].map((alasan) => (
-            <div class="flex items-start gap-4 p-6 bg-white">
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
               <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -489,13 +497,13 @@ const schemaGraph = {
           ))}
         </div>
         <div class="grid md:grid-cols-3 gap-4">
-          <a href="/id/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Hub Transfer Bandara</span>
           </a>
-          <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
           </a>
-          <a href="/id/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/id/about/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Tentang Bali West Transport</span>
           </a>
         </div>
@@ -503,7 +511,7 @@ const schemaGraph = {
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
@@ -511,7 +519,7 @@ const schemaGraph = {
         </div>
         <div class="space-y-4">
           {faq.map((item) => (
-            <div class="bg-brand-cream p-8">
+            <div class="bg-white p-8">
               <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.pertanyaan}</h3>
               <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
             </div>
@@ -524,9 +532,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Seminyak</h2>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Kuta</h2>
         <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
-          Baik Anda menginap di Petitenget, Batu Belig, Oberoi, atau Double Six, Bali West Transport membantu perjalanan Anda dari Bandara Ngurah Rai ke Seminyak menjadi lebih mudah, aman, dan nyaman.
+          Baik Anda menginap dekat Pantai Kuta, di Jalan Legian, maupun di Tuban, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dan terpercaya langsung ke akomodasi Anda.
         </p>
         <a
           href={whatsappUrl}
@@ -557,7 +565,7 @@ const schemaGraph = {
           ))}
         </div>
         <div class="mt-6 text-center">
-          <a href="/airport-transfer/ngurah-rai-airport-to-seminyak/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/airport-transfer/ngurah-rai-airport-to-kuta/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>
