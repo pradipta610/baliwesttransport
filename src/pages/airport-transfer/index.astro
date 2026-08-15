@@ -5,8 +5,8 @@ import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
 const pageTitle = 'Bali Airport Transfer â€“ Private Transfers from Ngurah Rai Airport | Bali West Transport';
-const pageDescription = 'Book a private Bali airport transfer from Ngurah Rai International Airport (DPS) to Ubud, Canggu, Seminyak, Uluwatu, Sanur, and all Bali areas. Professional local drivers, fixed pricing, 24-hour service, and direct hotel drop-off.';
-const pageKeywords = 'Bali airport transfer, Ngurah Rai airport transfer, private airport transfer Bali, Bali airport to Ubud, Bali airport to Canggu, Bali airport to Seminyak, Bali airport to Uluwatu, Bali airport to Sanur, DPS airport transfer, Bali private car transfer';
+const pageDescription = 'Book a private Bali airport transfer from Ngurah Rai International Airport (DPS) to Ubud, Canggu, Seminyak, Uluwatu, Sanur, Nusa Dua, and all Bali areas. Professional local drivers, fixed pricing, 24-hour service, and direct hotel drop-off.';
+const pageKeywords = 'Bali airport transfer, Ngurah Rai airport transfer, private airport transfer Bali, Bali airport to Ubud, Bali airport to Canggu, Bali airport to Seminyak, Bali airport to Uluwatu, Bali airport to Sanur, Bali airport to Nusa Dua, DPS airport transfer, Bali private car transfer';
 
 const whatsappText = 'Hi, I would like to book a private Bali airport transfer. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
@@ -83,6 +83,16 @@ const destinations = [
     note: 'Sanur is also commonly used as a departure point for fast boats to nearby islands.',
     href: '/airport-transfer/ngurah-rai-airport-to-sanur/',
     linkLabel: 'Ngurah Rai Airport to Sanur transfer details',
+  },
+  {
+    name: 'Nusa Dua',
+    description: 'Nusa Dua is a premier resort enclave known for manicured resort grounds, calm swimming beaches, and international five-star hotels.',
+    time: '20–35 minutes',
+    bestFor: 'Families, business and conference travelers, resort stays',
+    areas: 'Nusa Dua Resort Area, Tanjung Benoa, Bualu, Peninsula Island',
+    note: 'Nusa Dua sits just off the Bali Mandara Toll Road, making it one of the fastest airport transfers on the island.',
+    href: '/airport-transfer/ngurah-rai-airport-to-nusa-dua/',
+    linkLabel: 'Ngurah Rai Airport to Nusa Dua transfer details',
   },
 ];
 
@@ -168,6 +178,7 @@ const schemaGraph = {
         { '@type': 'Place', name: 'Seminyak' },
         { '@type': 'Place', name: 'Uluwatu' },
         { '@type': 'Place', name: 'Sanur' },
+        { '@type': 'Place', name: 'Nusa Dua' },
         { '@type': 'AdministrativeArea', name: 'Bali' },
       ],
       availableChannel: {

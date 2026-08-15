@@ -4,88 +4,91 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Bandara Ngurah Rai ke Uluwatu | Antar Jemput Bandara Pribadi Bali';
-const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Uluwatu bersama Bali West Transport. Harga tetap, jemput di bandara, dan antar langsung ke Pecatu, Bingin, Padang Padang, Suluban, dan Balangan.';
-const pageKeywords = 'transfer bandara ngurah rai ke uluwatu, bandara bali ke uluwatu, antar jemput bandara uluwatu, transfer bandara pribadi uluwatu, bandara DPS ke uluwatu, jemput bandara uluwatu bali, bali west transport';
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Nusa Dua | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Nusa Dua — salah satu rute bandara tercepat di Bali lewat Tol Bali Mandara, antar langsung ke resort, Tanjung Benoa, dan Peninsula Island.';
+const pageKeywords = 'transfer bandara ngurah rai ke nusa dua, bandara bali ke nusa dua, antar jemput bandara nusa dua, transfer bandara pribadi nusa dua, bandara DPS ke nusa dua, jemput bandara nusa dua bali, bali west transport';
 
-const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Uluwatu. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Nusa Dua. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const keunggulan = [
   'Supir menunggu di area kedatangan dengan papan nama',
-  'Harga tetap tanpa biaya tersembunyi',
-  'Antar langsung ke hotel, villa, dan resort di seluruh Uluwatu',
+  'Salah satu rute bandara tercepat di Bali lewat Tol Bali Mandara',
+  'Antar langsung ke resort, hotel, dan villa di seluruh Nusa Dua',
   'Kendaraan pribadi ber-AC yang nyaman',
   'Bantuan pengangkatan bagasi termasuk',
   'Pemantauan penerbangan — penjemputan disesuaikan jika penerbangan terlambat',
   'Penjemputan bandara tersedia 24 jam',
-  'Cocok untuk peselancar, keluarga, dan rombongan besar'
+  'Cocok untuk keluarga, pasangan, dan wisatawan bisnis atau konferensi'
 ];
 
-const areaUluwatu = [
-  'Pecatu',
-  'Bingin',
-  'Padang Padang',
-  'Suluban',
-  'Balangan',
-  'Dreamland'
+const areaNusaDua = [
+  'Kawasan Resort Nusa Dua',
+  'Tanjung Benoa',
+  'Bualu',
+  'Peninsula Island (Sawangan)',
+  'Pantai Geger',
+  'Area Konvensi BNDCC'
 ];
 
-const atraksiUluwatu = [
-  'Pura Uluwatu',
-  'Pantai Padang Padang',
-  'Pantai Suluban (Blue Point)',
-  'Pantai Bingin',
-  'Pantai Balangan',
-  'Pertunjukan Tari Kecak Uluwatu'
+const atraksiNusaDua = [
+  'Water Blow',
+  'Pantai Nusa Dua',
+  'Pantai Geger',
+  'Bali Collection Shopping Centre',
+  'Watersport Tanjung Benoa',
+  'Devdan Show'
 ];
 
 const tabelRute = [
-  { rute: 'Bandara Bali ke Uluwatu', jarak: '18–25 km', waktu: '35–70 mnt' },
-  { rute: 'Bandara Bali ke Bingin', jarak: '20–24 km', waktu: '40–70 mnt' },
-  { rute: 'Bandara Bali ke Padang Padang', jarak: '21–25 km', waktu: '45–75 mnt' },
-  { rute: 'Bandara Bali ke Suluban', jarak: '22–26 km', waktu: '45–80 mnt' },
-  { rute: 'Bandara Bali ke Balangan', jarak: '16–20 km', waktu: '30–60 mnt' },
+  { rute: 'Bandara Bali ke Kawasan Resort Nusa Dua', jarak: '10–13 km', waktu: '20–30 mnt' },
+  { rute: 'Bandara Bali ke Tanjung Benoa', jarak: '13–16 km', waktu: '25–35 mnt' },
+  { rute: 'Bandara Bali ke Bualu', jarak: '10–13 km', waktu: '20–30 mnt' },
+  { rute: 'Bandara Bali ke Peninsula Island', jarak: '12–15 km', waktu: '25–35 mnt' },
+  { rute: 'Bandara Bali ke Pantai Geger', jarak: '11–14 km', waktu: '22–32 mnt' },
 ];
 
 const faq = [
   {
-    pertanyaan: 'Berapa jauh Uluwatu dari Bandara Bali?',
-    jawaban: 'Uluwatu berjarak sekitar 18 hingga 25 kilometer dari Bandara Internasional I Gusti Ngurah Rai, tergantung lokasi tujuan akhir Anda di kawasan Uluwatu.'
+    pertanyaan: 'Berapa jauh Nusa Dua dari Bandara Bali?',
+    jawaban: 'Nusa Dua berjarak sekitar 10 hingga 15 kilometer dari Bandara Internasional I Gusti Ngurah Rai, menjadikannya salah satu kawasan resort terdekat dari bandara.'
   },
   {
-    pertanyaan: 'Berapa lama perjalanan dari Bandara Bali ke Uluwatu?',
-    jawaban: 'Perjalanan dari Bandara Bali ke Uluwatu biasanya memakan waktu antara 35 hingga 70 menit tergantung kondisi lalu lintas, waktu keberangkatan, dan tujuan akhir Anda.'
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Bali ke Nusa Dua?',
+    jawaban: 'Perjalanan biasanya memakan waktu 20 hingga 35 menit dalam kondisi lalu lintas normal, dan bisa mencapai sekitar 55 menit pada jam sibuk. Nusa Dua adalah salah satu transfer bandara tercepat di Bali berkat Tol Bali Mandara yang menghubungkan langsung bandara ke semenanjung.'
   },
   {
-    pertanyaan: 'Apa cara terbaik dari Bandara Ngurah Rai ke Uluwatu?',
-    jawaban: 'Transfer bandara pribadi adalah salah satu pilihan paling nyaman karena menawarkan harga tetap, penjemputan di bandara, bantuan bagasi, dan antar langsung ke hotel atau villa tanpa perlu antri taksi atau tawar-menawar harga.'
+    pertanyaan: 'Apa cara terbaik dari Bandara Ngurah Rai ke Nusa Dua?',
+    jawaban: 'Transfer bandara pribadi adalah salah satu pilihan paling nyaman karena menyediakan supir yang menunggu di area kedatangan, bantuan bagasi, dan antar langsung ke resort atau hotel tanpa perlu antri taksi atau tawar-menawar harga.'
   },
   {
-    pertanyaan: 'Apakah tersedia transfer ke Bingin dan Padang Padang?',
-    jawaban: 'Ya. Transfer bandara tersedia ke seluruh kawasan Uluwatu termasuk Bingin, Padang Padang, Suluban, Pecatu, Balangan, dan Dreamland.'
+    pertanyaan: 'Bisakah saya naik Grab atau Gojek dari Bandara Ngurah Rai ke Nusa Dua?',
+    jawaban: 'Aplikasi ride-hailing dapat dipesan dari bandara, namun penjemputan sering dibatasi ke area tertentu yang jauh dari pintu kedatangan, dan ketersediaannya bisa terbatas saat jam sibuk. Transfer pribadi yang sudah dipesan sebelumnya menghindari hal ini, karena supir sudah menunggu langsung di area kedatangan.'
+  },
+  {
+    pertanyaan: 'Apakah tersedia transfer ke Tanjung Benoa dan Peninsula Island?',
+    jawaban: 'Ya. Transfer bandara tersedia ke seluruh kawasan Nusa Dua termasuk Tanjung Benoa, Bualu, Peninsula Island (Sawangan), dan Pantai Geger.'
+  },
+  {
+    pertanyaan: 'Apakah Nusa Dua cocok untuk wisatawan bisnis dan konferensi?',
+    jawaban: 'Ya. Nusa Dua adalah kawasan resort dan konferensi utama di Bali, rumah bagi Bali Nusa Dua Convention Center dan jaringan resort internasional besar, sehingga menjadi tujuan umum bagi pelaku bisnis dengan jadwal yang padat.'
   },
   {
     pertanyaan: 'Bisakah memesan transfer bandara sebelum tiba di Bali?',
-    jawaban: 'Ya. Pemesanan lebih awal sangat dianjurkan, terutama pada periode liburan padat, untuk memastikan supir sudah siap dan terkonfirmasi saat Anda mendarat.'
-  },
-  {
-    pertanyaan: 'Apakah tersedia transfer untuk wisatawan berselancar yang membawa papan selancar?',
-    jawaban: 'Ya. Transfer bandara dapat mengakomodasi wisatawan yang membawa papan selancar dan bagasi tambahan. Mohon informasikan peralatan Anda saat pemesanan agar kendaraan yang tepat dapat disiapkan.'
+    jawaban: 'Ya. Pemesanan lebih awal sangat dianjurkan, terutama pada periode liburan dan konferensi yang padat, untuk memastikan supir sudah siap dan terkonfirmasi saat Anda mendarat.'
   }
 ];
 
 const ruteTerkait = [
   { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
-  { label: 'Bandara ke Nusa Dua', href: '/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/' },
-  { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
-  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
-  { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
   { label: 'Bandara ke Sanur', href: '/id/airport-transfer/ngurah-rai-airport-to-sanur/' },
+  { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Gilimanuk ke Nusa Dua', href: '/id/transfers/gilimanuk-to-nusa-dua/' },
   { label: 'Semua Transfer Bali', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-uluwatu/';
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -117,20 +120,19 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Bandara Ngurah Rai ke Uluwatu',
-      alternateName: 'Ngurah Rai Airport to Uluwatu Transfer',
+      name: 'Transfer Bandara Ngurah Rai ke Nusa Dua',
+      alternateName: 'Ngurah Rai Airport to Nusa Dua Transfer',
       description: pageDescription,
       serviceType: 'Transfer Bandara Pribadi',
       provider: { '@id': agencyId },
       availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
       areaServed: [
         { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
-        { '@type': 'Place', name: 'Uluwatu' },
-        { '@type': 'Place', name: 'Pecatu' },
-        { '@type': 'Place', name: 'Bingin' },
-        { '@type': 'Place', name: 'Padang Padang' },
-        { '@type': 'Place', name: 'Suluban' },
-        { '@type': 'Place', name: 'Balangan' },
+        { '@type': 'Place', name: 'Nusa Dua' },
+        { '@type': 'Place', name: 'Tanjung Benoa' },
+        { '@type': 'Place', name: 'Bualu' },
+        { '@type': 'Place', name: 'Peninsula Island' },
+        { '@type': 'Place', name: 'Pantai Geger' },
         { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
@@ -154,7 +156,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Uluwatu', item: pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Nusa Dua', item: pageUrl }
       ]
     },
     {
@@ -182,17 +184,17 @@ const schemaGraph = {
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
         <img
-          src="/images/kelingking-beach.jpg"
-          alt="Transfer pribadi dari Bandara Ngurah Rai ke Uluwatu Bali"
+          src="/images/beach-sunset-swing.jpg"
+          alt="Transfer pribadi dari Bandara Ngurah Rai ke Nusa Dua Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Uluwatu</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Nusa Dua</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Antar jemput door-to-door dari Bandara Bali ke Uluwatu — melayani Pecatu, Bingin, Padang Padang, Suluban, dan Balangan.
+          Antar jemput door-to-door dari Bandara Bali ke Nusa Dua — melayani Tanjung Benoa, Bualu, Peninsula Island, dan Pantai Geger.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -217,26 +219,26 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Antar Jemput Bandara Pribadi</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Uluwatu</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Bandara Bali ke Nusa Dua</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Pesan transfer dari Bandara Ngurah Rai ke Uluwatu bersama Bali West Transport. Perjalanan memakan waktu sekitar 35 hingga 70 menit tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Internasional I Gusti Ngurah Rai (DPS).
+              Pesan transfer dari Bandara Ngurah Rai ke Nusa Dua bersama Bali West Transport. Perjalanan memakan waktu sekitar 20 hingga 35 menit tergantung lalu lintas, dengan layanan door-to-door yang nyaman untuk wisatawan yang tiba di Bandara Internasional I Gusti Ngurah Rai (DPS).
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Uluwatu adalah salah satu destinasi paling diminati di Bali, dikenal dengan tebing dramatis, ombak selancar kelas dunia, Pura Uluwatu, dan penginapan butik tepi pantai di Pecatu, Bingin, Padang Padang, Suluban, dan Balangan. Transfer bandara yang sudah dipesan sebelumnya memungkinkan wisatawan menghindari antrian taksi, tawar-menawar harga, dan ketidakpastian transportasi setelah mendarat.
+              Nusa Dua adalah salah satu kawasan resort utama di Bali, dikenal dengan area resort yang tertata rapi, pantai yang tenang untuk berenang, hotel bintang lima internasional, dan Bali Nusa Dua Convention Center. Transfer bandara yang sudah dipesan sebelumnya memungkinkan wisatawan menghindari antrian taksi, tawar-menawar harga, dan ketidakpastian transportasi setelah mendarat — dan karena Nusa Dua terletak tepat di jalur Tol Bali Mandara, ini menjadi salah satu kawasan resort tercepat untuk dijangkau dari bandara.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Baik Anda datang untuk berselancar, bulan madu, liburan keluarga, atau menginap di villa tepi tebing, memesan transfer bandara pribadi adalah salah satu cara paling nyaman untuk langsung menuju Uluwatu dari Bandara Bali.
+              Baik Anda datang untuk liburan keluarga di pantai, bulan madu, pernikahan, atau konferensi bisnis, memesan transfer bandara pribadi adalah salah satu cara paling nyaman untuk langsung menuju Nusa Dua dari Bandara Bali.
             </p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Informasi Cepat</p>
             <div class="space-y-4">
               {[
-                ['Layanan', 'Transfer Bandara Bali ke Uluwatu'],
+                ['Layanan', 'Transfer Bandara Bali ke Nusa Dua'],
                 ['Lokasi Jemput', 'Bandara Ngurah Rai Internasional (DPS)'],
-                ['Tujuan', 'Uluwatu, Bali (Bukit Peninsula)'],
+                ['Tujuan', 'Nusa Dua, Bali (Bukit Peninsula)'],
                 ['Jenis Kendaraan', 'Mobil Pribadi dengan Supir'],
-                ['Estimasi Waktu Tempuh', '35–70 Menit'],
+                ['Estimasi Waktu Tempuh', '20–35 Menit'],
                 ['Ketersediaan', '24 Jam'],
                 ['Armada', 'Kendaraan Pribadi Ber-AC'],
                 ['Jenis Layanan', 'Jemput Bandara & Antar ke Hotel'],
@@ -260,15 +262,15 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Uluwatu</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Nusa Dua</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">18–25 km</p>
+              <p class="font-serif text-2xl text-brand-dark">10–15 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">35–70 mnt</p>
+              <p class="font-serif text-2xl text-brand-dark">20–35 mnt</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
@@ -290,14 +292,14 @@ const schemaGraph = {
           <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimasi Waktu Tempuh</p>
           <div class="grid grid-cols-3 gap-3">
             {[
-              'Dini hari: 30–45 mnt',
-              'Lalu lintas normal: 45–60 mnt',
-              'Jam sibuk: 70+ mnt'
+              'Dini hari: 15–20 mnt',
+              'Lalu lintas normal: 25–35 mnt',
+              'Jam sibuk: 40–55 mnt'
             ].map((item) => (
               <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
             ))}
           </div>
-          <p class="text-brand-dark/50 text-sm mt-4">Kedatangan pagi hari biasanya lebih cepat. Lalu lintas sore di sekitar Jimbaran dan jalan menuju Bukit Peninsula dapat memperpanjang durasi perjalanan.</p>
+          <p class="text-brand-dark/50 text-sm mt-4">Nusa Dua diuntungkan oleh Tol Bali Mandara yang terhubung langsung dari bandara — kemacetan lebih jarang terjadi di sini dibanding rute menuju Kuta, Seminyak, atau Canggu. Kedatangan malam saat musim konferensi di BNDCC bisa mengalami sedikit antrean tambahan di gerbang masuk resort.</p>
         </div>
       </div>
     </section>
@@ -306,9 +308,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Uluwatu</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Pilih Transfer Bandara Pribadi ke Uluwatu</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bagi kebanyakan wisatawan, transfer bandara pribadi adalah cara paling nyaman menuju Uluwatu karena menyediakan jemput di bandara, harga tetap, dan antar langsung ke hotel atau villa.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cara Terbaik Menuju Nusa Dua</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Pilih Transfer Bandara Pribadi ke Nusa Dua</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bagi kebanyakan wisatawan, transfer bandara pribadi adalah cara paling nyaman menuju Nusa Dua karena menyediakan jemput di bandara, kesepakatan tetap, dan antar langsung ke hotel atau resort.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {keunggulan.map((item) => (
@@ -325,25 +327,25 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Area Uluwatu yang Dilayani -->
+    <!-- Area Nusa Dua yang Dilayani -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jangkauan Pengantaran</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Uluwatu</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Bandara ke Semua Area Nusa Dua</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Bali West Transport menyediakan transfer bandara ke seluruh kawasan Uluwatu dan Bukit Peninsula. Baik Anda menginap di resort tepi tebing, surf camp di Bingin, villa di Pecatu, maupun penginapan dekat Pantai Padang Padang, kami melayani semua area utama.
+              Bali West Transport menyediakan transfer bandara ke seluruh semenanjung Nusa Dua. Baik Anda menginap di resort tepi pantai, villa di Bualu, apartemen di Peninsula Island, maupun menghadiri konferensi dekat BNDCC, kami melayani semua area utama.
             </p>
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Area Uluwatu yang Dilayani</p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Area Nusa Dua yang Dilayani</p>
             <div class="grid grid-cols-2 gap-3 mb-6">
-              {areaUluwatu.map((area) => (
+              {areaNusaDua.map((area) => (
                 <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
               ))}
             </div>
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Atraksi Populer di Sekitar</p>
             <div class="grid grid-cols-2 gap-3">
-              {atraksiUluwatu.map((atraksi) => (
+              {atraksiNusaDua.map((atraksi) => (
                 <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{atraksi}</div>
               ))}
             </div>
@@ -351,13 +353,13 @@ const schemaGraph = {
           <div class="space-y-4">
             <img
               src="/images/nusa-penida-viewpoint.jpg"
-              alt="Transfer bandara ke Uluwatu Bali tepi tebing"
+              alt="Transfer bandara ke Nusa Dua Bali kawasan resort"
               class="w-full h-64 object-cover"
               loading="lazy"
             />
             <img
-              src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&h=400&fit=crop"
-              alt="Pemandangan Pura Uluwatu Bali"
+              src="/images/kelingking-beach.jpg"
+              alt="Pantai dan kawasan resort Nusa Dua Bali"
               class="w-full h-48 object-cover"
               loading="lazy"
             />
@@ -371,12 +373,12 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Perbandingan</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara dari Bandara Bali ke Uluwatu</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Tersedia beberapa pilihan transportasi dari Bandara Ngurah Rai ke Uluwatu. Berikut perbandingannya untuk membantu Anda memilih.</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara dari Bandara Bali ke Nusa Dua</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Tersedia beberapa pilihan transportasi dari Bandara Ngurah Rai ke Nusa Dua. Berikut perbandingannya untuk membantu Anda memilih.</p>
         </div>
         <div class="grid md:grid-cols-4 gap-4 mb-12">
           {[
-            { jenis: 'Transfer Bandara Pribadi', cocok: 'Keluarga, pasangan, peselancar, rombongan', bagasi: 'Ya', langsung: 'Ya' },
+            { jenis: 'Transfer Bandara Pribadi', cocok: 'Keluarga, pasangan, wisatawan bisnis, rombongan', bagasi: 'Ya', langsung: 'Ya' },
             { jenis: 'Taksi Bandara', cocok: 'Perjalanan fleksibel', bagasi: 'Ya', langsung: 'Ya' },
             { jenis: 'Ride-Hailing (Grab/Gojek)', cocok: 'Wisatawan hemat', bagasi: 'Terbatas', langsung: 'Ya' },
             { jenis: 'Sewa Motor', cocok: 'Wisatawan solo', bagasi: 'Sangat terbatas', langsung: 'Ya' },
@@ -400,7 +402,7 @@ const schemaGraph = {
             </div>
           ))}
         </div>
-        <p class="text-brand-dark/60 text-sm text-center">Wisatawan yang membawa papan selancar, banyak koper, bepergian bersama anak-anak, atau dalam rombongan besar umumnya lebih memilih transfer bandara pribadi demi kenyamanan lebih.</p>
+        <p class="text-brand-dark/60 text-sm text-center">Wisatawan yang bepergian bersama keluarga, rombongan pernikahan, banyak koper, atau dengan jadwal konferensi yang ketat umumnya lebih memilih transfer bandara pribadi demi kenyamanan dan kepastian.</p>
       </div>
     </section>
 
@@ -409,8 +411,8 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Ikhtisar Rute</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Ringkasan Perjalanan Bandara Bali ke Uluwatu</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Jarak dan estimasi waktu tempuh dari Bandara Ngurah Rai ke masing-masing tujuan di kawasan Uluwatu.</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Ringkasan Perjalanan Bandara Bali ke Nusa Dua</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Jarak dan estimasi waktu tempuh dari Bandara Ngurah Rai ke masing-masing tujuan di kawasan Nusa Dua.</p>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
@@ -444,15 +446,15 @@ const schemaGraph = {
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jemput di Bandara</p>
             <h2 class="font-serif text-4xl text-brand-dark mb-6">Penjemputan di Bandara Bali</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Setibanya di Bandara Ngurah Rai, supir Anda akan menunggu di area setelah pengambilan bagasi dengan papan nama. Supir akan membantu membawa bagasi dan mengantar Anda ke kendaraan sebelum memulai perjalanan ke Uluwatu.
+              Setibanya di Bandara Ngurah Rai, supir Anda akan menunggu di area setelah pengambilan bagasi dengan papan nama. Supir akan membantu membawa bagasi dan mengantar Anda ke kendaraan sebelum memulai perjalanan ke Nusa Dua.
             </p>
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Layanan Ini Sangat Berguna Untuk</p>
             <div class="grid grid-cols-2 gap-3">
               {[
                 'Wisatawan pertama kali ke Bali',
                 'Keluarga dengan anak-anak',
-                'Rombongan dengan banyak koper',
-                'Peselancar dengan papan selancar',
+                'Wisatawan bisnis dan konferensi',
+                'Rombongan pernikahan',
                 'Kedatangan malam hari',
                 'Penerbangan dini hari'
               ].map((item) => (
@@ -463,7 +465,7 @@ const schemaGraph = {
           <div>
             <img
               src="/images/beach-sunset-swing.jpg"
-              alt="Transfer ke Uluwatu Bali sunset"
+              alt="Transfer ke Nusa Dua Bali sunset"
               class="w-full h-auto object-cover"
               loading="lazy"
             />
@@ -486,7 +488,7 @@ const schemaGraph = {
             'Layanan transportasi pribadi',
             'Kendaraan ber-AC yang nyaman',
             'Penjemputan bandara tersedia 24/7',
-            'Antar langsung ke hotel dan villa',
+            'Antar langsung ke hotel dan resort',
             'Pemantauan penerbangan untuk keterlambatan',
             'Jangkauan layanan di seluruh Bali'
           ].map((alasan) => (
@@ -536,9 +538,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Uluwatu</h2>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Nusa Dua</h2>
         <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
-          Baik Anda menginap di Pecatu, Bingin, Padang Padang, Suluban, maupun Balangan, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dan terpercaya langsung ke akomodasi Anda.
+          Baik Anda menginap di kawasan resort Nusa Dua, Tanjung Benoa, Bualu, maupun Peninsula Island, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dan terpercaya langsung ke akomodasi Anda.
         </p>
         <a
           href={whatsappUrl}
@@ -569,7 +571,7 @@ const schemaGraph = {
           ))}
         </div>
         <div class="mt-6 text-center">
-          <a href="/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/airport-transfer/ngurah-rai-airport-to-nusa-dua/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>
