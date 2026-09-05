@@ -1,25 +1,25 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Ngurah Rai Airport to Sanur Transfer | Distance, Travel Time & Private Pickup';
-const pageDescription = 'Travel from Ngurah Rai Airport to Sanur with a private airport transfer. Learn distance, estimated travel time, Sanur Harbour connections, and direct pickup options with Bali West Transport.';
-const pageKeywords = 'Ngurah Rai Airport to Sanur, Bali Airport to Sanur, Denpasar Airport to Sanur, airport transfer Bali to Sanur, Sanur airport transfer, DPS Airport to Sanur, private airport transfer Sanur, Bali West Transport';
+const pageTitle = 'Ngurah Rai Airport to Nusa Dua Transfer | Distance, Travel Time & Private Pickup';
+const pageDescription = 'Travel from Ngurah Rai Airport to Nusa Dua with a private airport transfer via the Bali Mandara Toll Road. Learn distance, travel time, and direct resort pickup with Bali West Transport.';
+const pageKeywords = 'Ngurah Rai Airport to Nusa Dua, Bali Airport to Nusa Dua, Denpasar Airport to Nusa Dua, airport transfer Bali to Nusa Dua, Nusa Dua airport transfer, DPS Airport to Nusa Dua, private airport transfer Nusa Dua, Bali Mandara toll road, Bali West Transport';
 
-const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Sanur. Please send me your best offer.';
+const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Nusa Dua. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const quickInfo = [
-  ['Route', 'Ngurah Rai Airport (DPS) → Sanur'],
-  ['Distance', '15–21 km'],
-  ['Travel Time', '20–45 minutes'],
+  ['Route', 'Ngurah Rai Airport (DPS) → Nusa Dua'],
+  ['Distance', '12–20 km'],
+  ['Travel Time', '20–40 minutes'],
+  ['Main Road', 'Bali Mandara Toll Road'],
   ['Service Type', 'Private Airport Transfer'],
-  ['Best For', 'Families, couples, ferry travellers'],
+  ['Best For', 'Honeymooners, families, MICE travellers, golfers'],
   ['Airport Code', 'DPS'],
-  ['Destination Coverage', 'Sanur Beach, Sindhu, Mertasari, Sanur Harbour'],
-  ['Provider', 'Bali West Transport'],
+  ['Destination Coverage', 'Nusa Dua resort strip, ITDC zone, Tanjung Benoa'],
 ];
 
 const benefits = [
@@ -29,40 +29,40 @@ const benefits = [
   'Comfortable air-conditioned vehicle',
   'Flight monitoring for delayed arrivals',
   'Luggage assistance included',
-  'Suitable for families, couples, and groups',
-  'Convenient for Sanur Harbour ferry connections'
+  'Direct drop-off inside the Nusa Dua resort gates',
+  'Suitable for couples, families, and MICE groups'
 ];
 
-const sanurReasons = [
-  'Calm beaches suitable for families',
-  'Sunrise views over the ocean',
-  'Easy access to Nusa Penida',
-  'Easy access to Nusa Lembongan',
-  'Walking and cycling paths along the beachfront',
-  'Less traffic than Canggu and Ubud'
+const nusaDuaReasons = [
+  'Calm, reef-protected beach safe for children and swimming',
+  'Master-planned, gated resort enclave managed by ITDC',
+  'Wide, quiet, landscaped roads with little street traffic',
+  'One of the largest clusters of 5-star resorts in Bali',
+  'Bali Nusa Dua Convention Centre for MICE and conferences',
+  'Golf course, water sports, and Water Blow blowhole nearby'
 ];
 
 const routeTable = [
-  { condition: 'Late Night', time: '20–25 minutes' },
-  { condition: 'Normal Traffic', time: '30–40 minutes' },
-  { condition: 'Peak Hours', time: '45–60 minutes' },
+  { condition: 'Late Night', time: '15–20 minutes' },
+  { condition: 'Normal Traffic (via toll road)', time: '20–30 minutes' },
+  { condition: 'Peak Hours', time: '35–50 minutes' },
 ];
 
 const transferOptions = [
   {
     title: 'Private Airport Transfer',
-    best: 'Families, couples, ferry travellers, and groups',
-    details: 'A private airport transfer is the most convenient option for direct pickup, luggage assistance, and hotel or harbour drop-off without arrival stress.'
+    best: 'Couples, families, MICE groups, and resort guests',
+    details: 'A private airport transfer is the most convenient option for direct pickup, luggage assistance, and drop-off at your exact resort inside the Nusa Dua gates.'
   },
   {
     title: 'Airport Taxi',
     best: 'Flexible travellers who prefer on-arrival transport',
-    details: 'Official airport taxis are available outside arrivals, but pre-booking can reduce uncertainty after a long flight.'
+    details: 'Official airport taxis are available outside arrivals, but pre-booking can reduce uncertainty and queueing time after a long flight.'
   },
   {
     title: 'Grab and Gojek',
     best: 'Solo travellers and app-based bookings',
-    details: 'Ride-hailing apps operate from designated pickup areas, although waiting times, pickup points, and busy-period availability may vary.'
+    details: 'Ride-hailing apps operate from a designated pickup area at the airport, although pickup points and waiting times can vary during busy periods.'
   },
   {
     title: 'Bluebird Taxi',
@@ -72,50 +72,49 @@ const transferOptions = [
 ];
 
 const arrivalPeriods = [
-  { period: 'Morning Arrivals', time: '20–35 minutes', note: 'Generally one of the easiest periods for airport transfers.' },
-  { period: 'Afternoon Arrivals', time: '30–50 minutes', note: 'Traffic can increase around Denpasar and Sanur.' },
-  { period: 'Evening Arrivals', time: '35–60 minutes', note: 'Usually one of the busiest periods for airport transfers.' },
-  { period: 'Late-Night Arrivals', time: '20–25 minutes', note: 'Often the fastest time to travel between the airport and Sanur.' },
+  { period: 'Morning Arrivals', time: '15–25 minutes', note: 'Generally the easiest period for airport transfers via the toll road.' },
+  { period: 'Afternoon Arrivals', time: '25–40 minutes', note: 'Traffic can build up around the Jimbaran and Simpang Siur junctions before the toll entrance.' },
+  { period: 'Evening Arrivals', time: '30–50 minutes', note: 'Usually the busiest period for airport transfers in South Bali.' },
+  { period: 'Late-Night Arrivals', time: '15–20 minutes', note: 'Often the fastest time to travel between the airport and Nusa Dua.' },
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to get from Ngurah Rai Airport to Sanur?',
-    answer: 'Most journeys take between 20 and 45 minutes depending on traffic conditions, arrival time, and your final hotel, villa, or harbour location in Sanur.'
+    question: 'How long does it take to get from Ngurah Rai Airport to Nusa Dua?',
+    answer: 'Most journeys take between 20 and 40 minutes depending on traffic conditions, arrival time, and which resort you are staying at inside the Nusa Dua enclave.'
   },
   {
-    question: 'How far is Bali Airport from Sanur?',
-    answer: 'The distance from Bali Airport to Sanur is approximately 15 to 21 kilometres depending on your exact destination.'
+    question: 'How far is Bali Airport from Nusa Dua?',
+    answer: 'The distance from Bali Airport to Nusa Dua is approximately 12 to 20 kilometres, mostly travelled via the Bali Mandara Toll Road.'
   },
   {
-    question: 'Is Sanur closer to Bali Airport than Ubud?',
-    answer: 'Yes. Sanur is significantly closer to Bali Airport than Ubud and generally requires less travel time.'
+    question: 'Is there a toll road from the airport to Nusa Dua?',
+    answer: 'Yes. The Bali Mandara Toll Road connects the airport directly to Nusa Dua and Benoa Harbour over the water, which is usually faster and more predictable than the older Ngurah Rai Bypass route through Kuta and Jimbaran.'
   },
   {
-    question: 'Can I use Grab at Bali Airport?',
-    answer: 'Yes. Grab operates from designated pickup areas at Bali Airport, although pickup zones and waiting times can vary.'
+    question: 'Is Nusa Dua good for families and honeymoons?',
+    answer: 'Yes. Nusa Dua is a gated, master-planned resort area with a calm, reef-protected beach, wide landscaped roads, and a large concentration of 5-star resorts, making it popular with families, couples, and honeymooners.'
   },
   {
-    question: 'Is Sanur a good place to stay in Bali?',
-    answer: 'Sanur is popular among families, couples, digital nomads, and travellers heading to Nusa Penida due to its relaxed atmosphere and convenient location.'
+    question: 'What is the difference between Nusa Dua and Kuta or Seminyak?',
+    answer: 'Nusa Dua is a managed resort enclave developed by ITDC (formerly BTDC) with controlled access gates, while Kuta and Seminyak are open town areas with public streets, shops, and nightlife.'
   },
   {
-    question: 'What is the best transfer option from Bali Airport to Sanur?',
-    answer: 'A private airport transfer is typically the most reliable and convenient option because it provides direct pickup, luggage assistance, and hotel or harbour drop-off.'
+    question: 'What is the best transfer option from Bali Airport to Nusa Dua?',
+    answer: 'A private airport transfer is typically the most reliable option because it provides direct pickup, luggage assistance, and drop-off at your specific resort inside the Nusa Dua zone.'
   }
 ];
 
 const relatedRoutes = [
   { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
   { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
-  { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
-  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
   { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
+  { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
   { label: 'Airport to Kuta', href: '/airport-transfer/ngurah-rai-airport-to-kuta/' },
   { label: 'All Bali Transfers', href: '/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-sanur/';
+const pageUrl = 'https://baliwesttransport.com/airport-transfer/ngurah-rai-airport-to-nusa-dua/';
 const organizationId = `${pageUrl}#organization`;
 const travelAgencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -128,9 +127,9 @@ const schemaGraph = {
   '@graph': [
     { '@type': 'Organization', '@id': organizationId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png', telephone: '+6282247648944', sameAs: [] },
     { '@type': 'TravelAgency', '@id': travelAgencyId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', telephone: '+6282247648944', areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' }, parentOrganization: { '@id': organizationId } },
-    { '@type': 'Service', '@id': serviceId, name: 'Ngurah Rai Airport to Sanur Transfer', description: pageDescription, serviceType: 'Private Airport Transfer', provider: { '@id': travelAgencyId }, areaServed: [{ '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' }, { '@type': 'Place', name: 'Sanur' }, { '@type': 'Place', name: 'Sanur Harbour' }, { '@type': 'Place', name: 'Bali Mandara Toll Road' }, { '@type': 'AdministrativeArea', name: 'Bali' }], availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl, servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' } } },
+    { '@type': 'Service', '@id': serviceId, name: 'Ngurah Rai Airport to Nusa Dua Transfer', description: pageDescription, serviceType: 'Private Airport Transfer', provider: { '@id': travelAgencyId }, areaServed: [{ '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' }, { '@type': 'Place', name: 'Nusa Dua' }, { '@type': 'Place', name: 'Tanjung Benoa' }, { '@type': 'Place', name: 'Bali Mandara Toll Road' }, { '@type': 'AdministrativeArea', name: 'Bali' }], availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl, servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' } } },
     { '@type': 'FAQPage', '@id': faqId, mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
-    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' }, { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' }, { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Sanur Transfer', item: pageUrl }] },
+    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' }, { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' }, { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Nusa Dua Transfer', item: pageUrl }] },
     { '@type': 'WebPage', '@id': webPageId, url: pageUrl, name: pageTitle, description: pageDescription, isPartOf: { '@id': organizationId }, about: { '@id': serviceId }, mainEntity: [{ '@id': serviceId }, { '@id': faqId }], breadcrumb: { '@id': breadcrumbId }, publisher: { '@id': organizationId } }
   ]
 };
@@ -142,13 +141,13 @@ const schemaGraph = {
   <main>
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="/images/beach-sunset-swing.jpg" alt="Ngurah Rai Airport to Sanur private transfer Bali" class="w-full h-full object-cover" />
+        <img src="/images/nusa-penida-viewpoint.jpg" alt="Ngurah Rai Airport to Nusa Dua private transfer Bali" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Sanur Transfer</h1>
-        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">Private airport pickup from Bali Airport to Sanur Beach, Sindhu, Mertasari, and Sanur Harbour.</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Nusa Dua Transfer</h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">Private airport pickup from Bali Airport to the Nusa Dua resort enclave via the Bali Mandara Toll Road.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">Book Your Transfer</a>
           <a href="/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Airport Transfer Hub</a>
@@ -161,10 +160,10 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Travelling from Bali Airport to Sanur</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Travelling from I Gusti Ngurah Rai International Airport to Sanur is one of the shortest airport transfers in Bali. The route usually takes around 20 to 45 minutes and covers approximately 15 to 21 kilometres depending on your exact hotel, villa, or harbour location.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Most travellers heading to Sanur choose a private airport transfer because it offers luggage assistance, direct drop-off, and avoids negotiating with airport taxis after landing.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">This route is especially useful for families, couples, and ferry travellers continuing to Sanur Harbour for Nusa Penida, Nusa Lembongan, or Nusa Ceningan.</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Travelling from Bali Airport to Nusa Dua</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Nusa Dua is one of the most straightforward airport transfers in South Bali because most of the route runs on the Bali Mandara Toll Road, a raised highway built directly over the water between the airport, Benoa Harbour, and the Nusa Dua resort zone. The journey usually takes 20 to 40 minutes and covers approximately 12 to 20 kilometres depending on which resort you are staying at.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Most travellers heading to Nusa Dua choose a private airport transfer because it offers direct drop-off inside the resort's gated entrance, luggage assistance, and no need to negotiate fares after landing.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">This route is especially useful for honeymooners, families, and MICE or conference travellers heading to the resorts and convention facilities within the Nusa Dua enclave.</p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Quick Information</p>
@@ -185,12 +184,12 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
           <div class="grid grid-cols-3 gap-8 flex-1">
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p><p class="font-serif text-2xl text-brand-dark">DPS → Sanur</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p><p class="font-serif text-2xl text-brand-dark">15–21 km</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p><p class="font-serif text-2xl text-brand-dark">20–45 min</p></div>
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p><p class="font-serif text-2xl text-brand-dark">DPS → Nusa Dua</p></div>
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p><p class="font-serif text-2xl text-brand-dark">12–20 km</p></div>
+            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p><p class="font-serif text-2xl text-brand-dark">20–40 min</p></div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
-            <div><span class="font-serif text-4xl text-brand-gold">Best Offer</span><p class="text-brand-dark/50 text-sm mt-1">Tell us your date, flight time, and drop-off point.</p></div>
+            <div><span class="font-serif text-4xl text-brand-gold">Best Offer</span><p class="text-brand-dark/50 text-sm mt-1">Tell us your date, flight time, and resort name.</p></div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Ask Best Offer</a>
           </div>
         </div>
@@ -200,12 +199,12 @@ const schemaGraph = {
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Sanur</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Stay in Sanur?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Sanur is one of Bali's most established beach destinations, known for relaxed seaside stays, calm beaches, and convenient island connections.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Nusa Dua</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Stay in Nusa Dua?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Nusa Dua is a master-planned resort enclave on Bali's southeastern coast, developed by the Indonesia Tourism Development Corporation (ITDC, formerly BTDC) since the 1970s as a controlled, high-end tourism zone.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {sanurReasons.map((reason) => (
+          {nusaDuaReasons.map((reason) => (
             <div class="flex items-start gap-4 p-6 bg-white"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{reason}</span></div>
           ))}
         </div>
@@ -217,9 +216,9 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Distance & Route</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">How Far Is Bali Airport from Sanur?</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">The distance from Bali Airport to Sanur is approximately 15 to 21 kilometres depending on your hotel location. Most routes travel via the airport exit road, Bali Mandara Toll Road, and Jalan Bypass Ngurah Rai.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">Traffic can be heavier during morning rush hour, evening peak periods, school holidays, and peak tourism seasons.</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">How Far Is Bali Airport from Nusa Dua?</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">The distance from Bali Airport to Nusa Dua is approximately 12 to 20 kilometres. Most of the drive runs on the Bali Mandara Toll Road, an elevated toll highway built over the water that connects the airport directly to Benoa Harbour and Nusa Dua without passing through the congested streets of Kuta or Jimbaran.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">Traffic tends to build up at the toll entrance and exit points during morning and evening peak hours, school holidays, and major conference or event periods at the Bali Nusa Dua Convention Centre.</p>
           </div>
           <div class="bg-brand-cream p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Average Travel Times</p>
@@ -235,7 +234,7 @@ const schemaGraph = {
 
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Transfer Options</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Ways to Get from Ngurah Rai Airport to Sanur</h2></div>
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Transfer Options</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Ways to Get from Ngurah Rai Airport to Nusa Dua</h2></div>
         <div class="grid md:grid-cols-4 gap-4">
           {transferOptions.map((option) => (
             <div class="bg-white p-6"><p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{option.title}</p><p class="text-brand-dark font-medium mb-3">{option.best}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{option.details}</p></div>
@@ -248,19 +247,19 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Sanur Harbour</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Bali Airport to Sanur Ferry Connection</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">A major reason travellers stay in Sanur is its connection to Bali's island network. From Sanur Harbour, travellers can continue to Nusa Penida, Nusa Lembongan, and Nusa Ceningan by fast boat.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">If your flight arrives the same day as your ferry departure, allow enough buffer time for immigration, luggage collection, road traffic, and harbour check-in.</p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Inside the Resort Zone</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Arriving Inside a Gated Resort Enclave</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Unlike Kuta or Seminyak, Nusa Dua is accessed through controlled entry gates managed by ITDC. Resorts, the golf course, and the convention centre sit along wide, landscaped roads inside the zone, so a private transfer that already knows the internal road layout can drop you directly at your lobby without confusion at the gate.</p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">If you are attending a conference or event at the Bali Nusa Dua Convention Centre, allow extra time during arrival and departure peaks, when event traffic adds to the normal airport flow.</p>
           </div>
-          <img src="/images/nusa-penida-viewpoint.jpg" alt="Sanur Harbour connection to Nusa Penida" class="w-full h-auto object-cover" loading="lazy" />
+          <img src="/images/kelingking-beach.jpg" alt="South Bali coastline near Nusa Dua" class="w-full h-auto object-cover" loading="lazy" />
         </div>
       </div>
     </section>
 
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arrival Periods</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Sanur Travel Time by Arrival Period</h2></div>
+        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arrival Periods</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Nusa Dua Travel Time by Arrival Period</h2></div>
         <div class="grid md:grid-cols-4 gap-4">
           {arrivalPeriods.map((item) => (
             <div class="bg-white p-6"><p class="font-serif text-2xl text-brand-dark mb-2">{item.period}</p><p class="text-brand-gold text-xl mb-3">{item.time}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{item.note}</p></div>
@@ -279,8 +278,8 @@ const schemaGraph = {
         </div>
         <div class="grid md:grid-cols-3 gap-4">
           <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport Transfer Hub</span></a>
-          <a href="/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Ubud</span></a>
           <a href="/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Uluwatu</span></a>
+          <a href="/airport-transfer/ngurah-rai-airport-to-sanur/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Sanur</span></a>
         </div>
       </div>
     </section>
@@ -299,8 +298,8 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book Now</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Sanur Transfer</h2>
-        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Whether you are staying near Sanur Beach, Sindhu, Mertasari, or heading to Sanur Harbour, Bali West Transport provides comfortable private airport transfers from Ngurah Rai Airport.</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Nusa Dua Transfer</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Whether you are staying at a resort inside the Nusa Dua enclave or attending an event at the convention centre, Bali West Transport provides comfortable private airport transfers from Ngurah Rai Airport straight to your door.</p>
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">Book Via WhatsApp</a>
       </div>
     </section>
@@ -321,4 +320,3 @@ const schemaGraph = {
   <WhatsAppFloat />
   <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
 </Layout>
-

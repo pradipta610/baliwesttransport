@@ -5,13 +5,22 @@ interface Props {
   title: string;
   description?: string;
   keywords?: string;
+  image?: string;
+  includeOrgSchema?: boolean;
 }
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { title, description = t('meta.home.desc'), keywords = t('meta.home.keywords') } = Astro.props;
+const {
+  title,
+  description = t('meta.home.desc'),
+  keywords = t('meta.home.keywords'),
+  image = '/og-image.jpg',
+  includeOrgSchema = true,
+} = Astro.props;
 const rawPathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const canonicalURL = new URL(rawPathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -39,12 +48,15 @@ const canonicalURL = new URL(rawPathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.jpg" />
-    
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,45 +81,47 @@ const canonicalURL = new URL(rawPathname, Astro.site);
       gtag('config', 'G-5BG4D25WBF');
     </script>
 
-    <!-- Schema.org -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "TravelAgency",
-      "name": "Bali West Transport",
-      "description": description,
-      "url": "https://baliwesttransport.com",
-      "telephone": ["+6282247648944", "+6285737866348"],
-      "email": "info@baliwesttransport.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gilimanuk",
-        "addressRegion": "Bali",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-8.1622",
-        "longitude": "114.4417"
-      },
-      "areaServed": [
-        { "@type": "Place", "name": "Bali" },
-        { "@type": "Place", "name": "Gilimanuk" },
-        { "@type": "Place", "name": "Ubud" },
-        { "@type": "Place", "name": "Seminyak" },
-        { "@type": "Place", "name": "Kuta" },
-        { "@type": "Place", "name": "Nusa Penida" }
-      ],
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": [
-        "https://wa.me/6282247648944"
-      ]
-    })} />
+    <!-- Schema.org (skipped when the page already provides its own full @graph, to avoid duplicate/conflicting TravelAgency entities) -->
+    {includeOrgSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Bali West Transport",
+        "description": description,
+        "url": "https://baliwesttransport.com",
+        "telephone": ["+6282247648944", "+6285737866348"],
+        "email": "info@baliwesttransport.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gilimanuk",
+          "addressRegion": "Bali",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-8.1622",
+          "longitude": "114.4417"
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Bali" },
+          { "@type": "Place", "name": "Gilimanuk" },
+          { "@type": "Place", "name": "Ubud" },
+          { "@type": "Place", "name": "Seminyak" },
+          { "@type": "Place", "name": "Kuta" },
+          { "@type": "Place", "name": "Nusa Penida" }
+        ],
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://wa.me/6282247648944"
+        ]
+      })} />
+    )}
   </head>
   <body class="font-sans antialiased text-brand-dark bg-brand-cream">
     <slot />

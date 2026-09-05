@@ -4,11 +4,11 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Bandara Ngurah Rai ke Sanur | Antar Jemput Bandara Pribadi Bali';
-const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Sanur bersama Bali West Transport. Antar langsung ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur. Kendaraan ber-AC, supir profesional, tersedia 24 jam.';
-const pageKeywords = 'transfer bandara ngurah rai ke sanur, antar jemput bandara bali ke sanur, transfer bandara pribadi sanur, bandara DPS ke sanur, jemput bandara sanur bali, transfer sanur bali, bali west transport';
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Nusa Dua | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Nusa Dua bersama Bali West Transport lewat Jalan Tol Bali Mandara. Antar langsung ke resort di kawasan Nusa Dua. Kendaraan ber-AC, supir profesional, tersedia 24 jam.';
+const pageKeywords = 'transfer bandara ngurah rai ke nusa dua, antar jemput bandara bali ke nusa dua, transfer bandara pribadi nusa dua, bandara DPS ke nusa dua, jemput bandara nusa dua bali, transfer nusa dua bali, tol bali mandara, bali west transport';
 
-const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Sanur. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Nusa Dua. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const keunggulan = [
@@ -18,51 +18,51 @@ const keunggulan = [
   'Kendaraan pribadi eksklusif ber-AC yang nyaman',
   'Pemantauan penerbangan untuk keterlambatan',
   'Bantuan bagasi sudah termasuk',
-  'Cocok untuk keluarga, pasangan, dan rombongan',
-  'Praktis untuk wisatawan yang melanjutkan perjalanan ke Pelabuhan Sanur'
+  'Antar langsung ke dalam gerbang kawasan resort Nusa Dua',
+  'Cocok untuk pasangan, keluarga, dan rombongan MICE'
 ];
 
-const alasanSanur = [
-  'Pantai tenang dan bersih, cocok untuk keluarga',
-  'Pemandangan matahari terbit langsung menghadap laut',
-  'Akses mudah ke Nusa Penida via speedboat',
-  'Akses mudah ke Nusa Lembongan dan Nusa Ceningan',
-  'Jalur pejalan kaki dan jalur sepeda sepanjang tepi pantai',
-  'Lalu lintas lebih tenang dibanding Canggu atau Seminyak'
+const alasanNusaDua = [
+  'Pantai tenang terlindung karang, aman untuk anak-anak dan berenang',
+  'Kawasan resort tertata rapi dan berpagar yang dikelola ITDC',
+  'Jalan lebar, tenang, dan tertata dengan lalu lintas jalanan minim',
+  'Salah satu kawasan dengan konsentrasi resort bintang 5 terbanyak di Bali',
+  'Bali Nusa Dua Convention Centre untuk acara MICE dan konferensi',
+  'Lapangan golf, wahana air, dan Water Blow di dekatnya'
 ];
 
 const infoRute = [
-  ['Rute', 'Bandara Ngurah Rai (DPS) → Sanur'],
-  ['Jarak', '15–21 km'],
-  ['Estimasi Waktu', '20–45 menit'],
+  ['Rute', 'Bandara Ngurah Rai (DPS) → Nusa Dua'],
+  ['Jarak', '12–20 km'],
+  ['Estimasi Waktu', '20–40 menit'],
+  ['Jalan Utama', 'Jalan Tol Bali Mandara'],
   ['Jenis Layanan', 'Transfer Bandara Pribadi'],
-  ['Cocok Untuk', 'Keluarga, pasangan, wisatawan ferry'],
+  ['Cocok Untuk', 'Pasangan bulan madu, keluarga, tamu MICE, pegolf'],
   ['Kode Bandara', 'DPS'],
-  ['Area Tujuan', 'Pantai Sanur, Sindhu, Mertasari, Pelabuhan Sanur'],
-  ['Penyedia', 'Bali West Transport'],
+  ['Area Tujuan', 'Kawasan resort Nusa Dua, zona ITDC, Tanjung Benoa'],
 ];
 
 const tabelRute = [
-  { kondisi: 'Larut Malam', waktu: '20–25 menit' },
-  { kondisi: 'Lalu Lintas Normal', waktu: '30–40 menit' },
-  { kondisi: 'Jam Sibuk', waktu: '45–60 menit' },
+  { kondisi: 'Larut Malam', waktu: '15–20 menit' },
+  { kondisi: 'Lalu Lintas Normal (via tol)', waktu: '20–30 menit' },
+  { kondisi: 'Jam Sibuk', waktu: '35–50 menit' },
 ];
 
 const pilihanTransfer = [
   {
     judul: 'Transfer Bandara Pribadi',
-    terbaik: 'Keluarga, pasangan, wisatawan ferry, dan rombongan',
-    detail: 'Transfer bandara pribadi adalah pilihan paling nyaman untuk penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan tanpa kerumitan setelah mendarat.'
+    terbaik: 'Pasangan, keluarga, rombongan MICE, dan tamu resort',
+    detail: 'Transfer bandara pribadi adalah pilihan paling nyaman untuk penjemputan langsung, bantuan bagasi, dan antar tepat ke resort Anda di dalam gerbang kawasan Nusa Dua.'
   },
   {
     judul: 'Taksi Bandara',
     terbaik: 'Wisatawan fleksibel yang memilih transportasi on-arrival',
-    detail: 'Taksi resmi tersedia di luar area kedatangan, namun pemesanan terlebih dahulu dapat mengurangi ketidakpastian setelah perjalanan panjang.'
+    detail: 'Taksi resmi tersedia di luar area kedatangan, namun pemesanan terlebih dahulu dapat mengurangi antrean dan ketidakpastian setelah perjalanan panjang.'
   },
   {
     judul: 'Grab dan Gojek',
     terbaik: 'Solo traveler dan pengguna aplikasi',
-    detail: 'Aplikasi ojol beroperasi dari area khusus di bandara, meskipun waktu tunggu, titik penjemputan, dan ketersediaan saat ramai bisa bervariasi.'
+    detail: 'Aplikasi ojol beroperasi dari area khusus di bandara, meskipun titik penjemputan dan waktu tunggu bisa bervariasi saat ramai.'
   },
   {
     judul: 'Taksi Bluebird',
@@ -72,50 +72,49 @@ const pilihanTransfer = [
 ];
 
 const periodeTiba = [
-  { periode: 'Pagi Hari', waktu: '20–35 menit', catatan: 'Umumnya salah satu waktu terbaik untuk transfer bandara.' },
-  { periode: 'Siang Hari', waktu: '30–50 menit', catatan: 'Lalu lintas mulai meningkat di sekitar Denpasar dan Sanur.' },
-  { periode: 'Malam Hari', waktu: '35–60 menit', catatan: 'Biasanya salah satu periode tersibuk untuk transfer bandara.' },
-  { periode: 'Dini Hari', waktu: '20–25 menit', catatan: 'Seringkali waktu tercepat untuk perjalanan antara bandara dan Sanur.' },
+  { periode: 'Pagi Hari', waktu: '15–25 menit', catatan: 'Umumnya periode termudah untuk transfer bandara lewat jalan tol.' },
+  { periode: 'Siang Hari', waktu: '25–40 menit', catatan: 'Lalu lintas mulai menumpuk di sekitar simpang Jimbaran dan Simpang Siur sebelum pintu tol.' },
+  { periode: 'Malam Hari', waktu: '30–50 menit', catatan: 'Biasanya periode tersibuk untuk transfer bandara di kawasan Bali Selatan.' },
+  { periode: 'Dini Hari', waktu: '15–20 menit', catatan: 'Seringkali waktu tercepat untuk perjalanan antara bandara dan Nusa Dua.' },
 ];
 
 const faq = [
   {
-    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Sanur?',
-    jawaban: 'Sebagian besar perjalanan membutuhkan waktu antara 20 hingga 45 menit tergantung kondisi lalu lintas, waktu kedatangan, dan lokasi hotel, villa, atau pelabuhan Anda di Sanur.'
+    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Nusa Dua?',
+    jawaban: 'Sebagian besar perjalanan membutuhkan waktu antara 20 hingga 40 menit tergantung kondisi lalu lintas, waktu kedatangan, dan resort tempat Anda menginap di dalam kawasan Nusa Dua.'
   },
   {
-    pertanyaan: 'Berapa jauh Bandara Bali dari Sanur?',
-    jawaban: 'Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung tujuan akhir Anda.'
+    pertanyaan: 'Berapa jauh Bandara Bali dari Nusa Dua?',
+    jawaban: 'Jarak dari Bandara Bali ke Nusa Dua sekitar 12 hingga 20 kilometer, sebagian besar dilalui melalui Jalan Tol Bali Mandara.'
   },
   {
-    pertanyaan: 'Apakah Sanur lebih dekat ke Bandara Bali dibanding Ubud?',
-    jawaban: 'Ya. Sanur jauh lebih dekat ke Bandara Bali dibanding Ubud dan umumnya membutuhkan waktu perjalanan yang lebih singkat.'
+    pertanyaan: 'Apakah ada jalan tol dari bandara ke Nusa Dua?',
+    jawaban: 'Ya. Jalan Tol Bali Mandara menghubungkan bandara langsung ke Nusa Dua dan Pelabuhan Benoa di atas laut, yang biasanya lebih cepat dan lebih pasti dibanding rute lama melalui Kuta dan Jimbaran.'
   },
   {
-    pertanyaan: 'Bisakah menggunakan Grab di Bandara Bali?',
-    jawaban: 'Bisa. Grab beroperasi dari area penjemputan khusus di Bandara Bali, meskipun zona penjemputan dan waktu tunggu bisa bervariasi.'
+    pertanyaan: 'Apakah Nusa Dua cocok untuk keluarga dan bulan madu?',
+    jawaban: 'Ya. Nusa Dua adalah kawasan resort berpagar yang tertata rapi dengan pantai tenang terlindung karang, jalan lebar dan asri, serta konsentrasi resort bintang 5 yang tinggi, sehingga populer di kalangan keluarga, pasangan, dan pengantin baru.'
   },
   {
-    pertanyaan: 'Apakah Sanur cocok sebagai tempat menginap di Bali?',
-    jawaban: 'Sanur sangat populer di kalangan keluarga, pasangan, digital nomad, dan wisatawan yang akan menuju Nusa Penida karena suasananya yang tenang dan lokasinya yang strategis.'
+    pertanyaan: 'Apa perbedaan Nusa Dua dengan Kuta atau Seminyak?',
+    jawaban: 'Nusa Dua adalah kawasan resort terkelola yang dikembangkan oleh ITDC (dahulu BTDC) dengan akses gerbang yang terkontrol, sementara Kuta dan Seminyak adalah area terbuka dengan jalan umum, toko, dan kehidupan malam.'
   },
   {
-    pertanyaan: 'Apa pilihan transfer terbaik dari Bandara Bali ke Sanur?',
-    jawaban: 'Transfer bandara pribadi umumnya menjadi pilihan paling andal dan nyaman karena menyediakan penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan.'
+    pertanyaan: 'Apa pilihan transfer terbaik dari Bandara Bali ke Nusa Dua?',
+    jawaban: 'Transfer bandara pribadi umumnya menjadi pilihan paling andal karena menyediakan penjemputan langsung, bantuan bagasi, dan antar tepat ke resort Anda di dalam zona Nusa Dua.'
   }
 ];
 
 const ruteTerkait = [
   { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
   { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
-  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
-  { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
   { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
+  { label: 'Bandara ke Sanur', href: '/id/airport-transfer/ngurah-rai-airport-to-sanur/' },
   { label: 'Bandara ke Kuta', href: '/id/airport-transfer/ngurah-rai-airport-to-kuta/' },
   { label: 'Semua Transfer Bali', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-sanur/';
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -147,16 +146,16 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Bandara Ngurah Rai ke Sanur',
-      alternateName: 'Ngurah Rai Airport to Sanur Transfer',
+      name: 'Transfer Bandara Ngurah Rai ke Nusa Dua',
+      alternateName: 'Ngurah Rai Airport to Nusa Dua Transfer',
       description: pageDescription,
       serviceType: 'Transfer Bandara Pribadi',
       provider: { '@id': agencyId },
       availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
       areaServed: [
         { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
-        { '@type': 'Place', name: 'Sanur' },
-        { '@type': 'Place', name: 'Pelabuhan Sanur' },
+        { '@type': 'Place', name: 'Nusa Dua' },
+        { '@type': 'Place', name: 'Tanjung Benoa' },
         { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
@@ -180,7 +179,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Sanur', item: pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Nusa Dua', item: pageUrl }
       ]
     },
     {
@@ -207,14 +206,14 @@ const schemaGraph = {
     <!-- Hero -->
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="/images/beach-sunset-swing.jpg" alt="Transfer pribadi dari Bandara Ngurah Rai ke Sanur Bali" class="w-full h-full object-cover" />
+        <img src="/images/nusa-penida-viewpoint.jpg" alt="Transfer pribadi dari Bandara Ngurah Rai ke Nusa Dua Bali" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Sanur</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Nusa Dua</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">
-          Antar jemput pribadi dari Bandara Bali ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur.
+          Antar jemput pribadi dari Bandara Bali ke kawasan resort Nusa Dua lewat Jalan Tol Bali Mandara.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">
@@ -234,15 +233,15 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Perjalanan dari Bandara Bali ke Sanur</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Perjalanan dari Bandara Bali ke Nusa Dua</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Perjalanan dari Bandara Ngurah Rai Internasional ke Sanur adalah salah satu transfer bandara terpendek di Bali. Rute ini biasanya membutuhkan waktu sekitar 20 hingga 45 menit dan mencakup jarak sekitar 15 hingga 21 kilometer tergantung lokasi hotel, villa, atau pelabuhan Anda.
+              Nusa Dua adalah salah satu transfer bandara paling lancar di Bali Selatan karena sebagian besar rutenya melewati Jalan Tol Bali Mandara, jalan tol layang yang dibangun langsung di atas laut menghubungkan bandara, Pelabuhan Benoa, dan kawasan resort Nusa Dua. Perjalanan biasanya membutuhkan waktu 20 hingga 40 menit dan mencakup jarak sekitar 12 hingga 20 kilometer tergantung resort tempat Anda menginap.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Sebagian besar wisatawan yang menuju Sanur memilih transfer bandara pribadi karena menawarkan bantuan bagasi, antar langsung ke tujuan, dan terhindar dari negosiasi taksi setelah mendarat.
+              Sebagian besar wisatawan yang menuju Nusa Dua memilih transfer bandara pribadi karena menawarkan antar langsung hingga ke dalam gerbang resort, bantuan bagasi, dan terhindar dari negosiasi harga setelah mendarat.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Rute ini sangat berguna untuk keluarga, pasangan, dan wisatawan ferry yang akan melanjutkan perjalanan ke Pelabuhan Sanur menuju Nusa Penida, Nusa Lembongan, atau Nusa Ceningan.
+              Rute ini sangat berguna untuk pasangan bulan madu, keluarga, dan wisatawan MICE atau konferensi yang menuju resort dan fasilitas konvensi di dalam kawasan Nusa Dua.
             </p>
           </div>
           <div class="bg-white p-8">
@@ -267,21 +266,21 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Sanur</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Nusa Dua</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">15–21 km</p>
+              <p class="font-serif text-2xl text-brand-dark">12–20 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">20–45 mnt</p>
+              <p class="font-serif text-2xl text-brand-dark">20–40 mnt</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
               <span class="font-serif text-4xl text-brand-gold">Penawaran Terbaik</span>
-              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal, jam penerbangan, dan tujuan Anda.</p>
+              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal, jam penerbangan, dan nama resort Anda.</p>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">
               Minta Penawaran Terbaik
@@ -291,16 +290,16 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Mengapa Sanur -->
+    <!-- Mengapa Nusa Dua -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Sanur</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Menginap di Sanur?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Sanur adalah salah satu destinasi pantai paling mapan di Bali, dikenal dengan suasana santai tepi laut, pantai tenang, dan koneksi ke pulau-pulau sekitar.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Nusa Dua</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Menginap di Nusa Dua?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Nusa Dua adalah kawasan resort tertata rapi di pesisir tenggara Bali, dikembangkan oleh Indonesia Tourism Development Corporation (ITDC, dahulu BTDC) sejak tahun 1970-an sebagai zona wisata terkontrol dan kelas atas.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {alasanSanur.map((alasan) => (
+          {alasanNusaDua.map((alasan) => (
             <div class="flex items-start gap-4 p-6 bg-white">
               <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,12 +319,12 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jarak & Rute</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Seberapa Jauh Bandara Bali dari Sanur?</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Seberapa Jauh Bandara Bali dari Nusa Dua?</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung lokasi hotel Anda. Sebagian besar rute melewati jalan keluar bandara, Jalan Tol Bali Mandara, dan Jalan Bypass Ngurah Rai.
+              Jarak dari Bandara Bali ke Nusa Dua sekitar 12 hingga 20 kilometer. Sebagian besar perjalanan melewati Jalan Tol Bali Mandara, jalan tol layang di atas laut yang menghubungkan bandara langsung ke Pelabuhan Benoa dan Nusa Dua tanpa melewati jalanan padat Kuta atau Jimbaran.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Lalu lintas bisa lebih padat saat jam sibuk pagi, sore hari, liburan sekolah, dan musim wisata ramai.
+              Lalu lintas cenderung menumpuk di pintu masuk dan keluar tol saat jam sibuk pagi dan sore, liburan sekolah, serta periode konferensi atau acara besar di Bali Nusa Dua Convention Centre.
             </p>
           </div>
           <div class="bg-brand-cream p-8">
@@ -348,7 +347,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pilihan Transportasi</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Sanur</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Nusa Dua</h2>
         </div>
         <div class="grid md:grid-cols-4 gap-4">
           {pilihanTransfer.map((pilihan) => (
@@ -362,21 +361,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Koneksi Ferry Sanur -->
+    <!-- Kawasan Berpagar -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pelabuhan Sanur</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Bandara Bali ke Koneksi Ferry Sanur</h2>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Di Dalam Zona Resort</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Tiba di Kawasan Resort Berpagar</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Salah satu alasan utama wisatawan memilih Sanur adalah koneksinya ke jaringan pulau Bali. Dari Pelabuhan Sanur, wisatawan dapat melanjutkan perjalanan ke Nusa Penida, Nusa Lembongan, dan Nusa Ceningan menggunakan speedboat.
+              Berbeda dari Kuta atau Seminyak, akses ke Nusa Dua melalui gerbang masuk yang dikontrol dan dikelola oleh ITDC. Resort, lapangan golf, dan pusat konvensi berada di sepanjang jalan lebar dan asri di dalam zona tersebut, sehingga supir transfer yang sudah memahami tata jalan internal dapat mengantar Anda langsung ke lobi tanpa kebingungan di gerbang.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Jika penerbangan Anda tiba pada hari yang sama dengan keberangkatan ferry, pastikan ada waktu buffer yang cukup untuk imigrasi, pengambilan bagasi, perjalanan darat, dan check-in di pelabuhan.
+              Jika Anda menghadiri konferensi atau acara di Bali Nusa Dua Convention Centre, sisihkan waktu tambahan saat jam sibuk kedatangan dan keberangkatan acara, karena lalu lintas event menambah kepadatan arus bandara.
             </p>
           </div>
-          <img src="/images/nusa-penida-viewpoint.jpg" alt="Koneksi Pelabuhan Sanur ke Nusa Penida" class="w-full h-auto object-cover" loading="lazy" />
+          <img src="/images/kelingking-beach.jpg" alt="Pesisir Bali Selatan dekat Nusa Dua" class="w-full h-auto object-cover" loading="lazy" />
         </div>
       </div>
     </section>
@@ -386,7 +385,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Periode Kedatangan</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Waktu Tempuh Bandara Bali ke Sanur Berdasarkan Waktu Kedatangan</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Waktu Tempuh Bandara Bali ke Nusa Dua Berdasarkan Waktu Kedatangan</h2>
         </div>
         <div class="grid md:grid-cols-4 gap-4">
           {periodeTiba.map((item) => (
@@ -424,11 +423,11 @@ const schemaGraph = {
           <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Hub Transfer Bandara</span>
           </a>
-          <a href="/id/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Bandara ke Ubud</span>
-          </a>
           <a href="/id/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Bandara ke Uluwatu</span>
+          </a>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-sanur/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bandara ke Sanur</span>
           </a>
         </div>
       </div>
@@ -456,9 +455,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Sanur</h2>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Nusa Dua</h2>
         <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
-          Baik Anda menginap di Pantai Sanur, Sindhu, Mertasari, atau akan menuju Pelabuhan Sanur, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dari Bandara Ngurah Rai ke Sanur.
+          Baik Anda menginap di resort dalam kawasan Nusa Dua atau menghadiri acara di pusat konvensi, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dari Bandara Ngurah Rai langsung ke tujuan Anda.
         </p>
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -484,7 +483,7 @@ const schemaGraph = {
           ))}
         </div>
         <div class="mt-6 text-center">
-          <a href="/airport-transfer/ngurah-rai-airport-to-sanur/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/airport-transfer/ngurah-rai-airport-to-nusa-dua/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>

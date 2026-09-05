@@ -4,118 +4,116 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Bandara Ngurah Rai ke Sanur | Antar Jemput Bandara Pribadi Bali';
-const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Sanur bersama Bali West Transport. Antar langsung ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur. Kendaraan ber-AC, supir profesional, tersedia 24 jam.';
-const pageKeywords = 'transfer bandara ngurah rai ke sanur, antar jemput bandara bali ke sanur, transfer bandara pribadi sanur, bandara DPS ke sanur, jemput bandara sanur bali, transfer sanur bali, bali west transport';
+const pageTitle = 'Transfer Bandara Ngurah Rai ke Kuta | Antar Jemput Bandara Pribadi Bali';
+const pageDescription = 'Pesan transfer pribadi dari Bandara Ngurah Rai ke Kuta bersama Bali West Transport. Jarak sebenarnya, estimasi waktu yang jujur, dan antar langsung ke hotel Anda. Kendaraan ber-AC, supir profesional, tersedia 24 jam.';
+const pageKeywords = 'transfer bandara ngurah rai ke kuta, antar jemput bandara bali ke kuta, transfer bandara pribadi kuta, bandara DPS ke kuta, jemput bandara kuta bali, transfer kuta bali, bali west transport';
 
-const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Sanur. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan transfer dari Bandara Ngurah Rai ke Kuta. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
 const keunggulan = [
-  'Supir menunggu di area kedatangan bandara',
-  'Penawaran fleksibel tanpa biaya tersembunyi',
-  'Tanpa negosiasi harga setelah mendarat',
-  'Kendaraan pribadi eksklusif ber-AC yang nyaman',
+  'Supir menunggu di area kedatangan, tanpa antre di loket taksi',
+  'Penawaran tetap disepakati sebelum Anda mendarat, tanpa tawar-menawar',
+  'Kendaraan ber-AC yang nyaman dengan ruang untuk papan selancar dan bagasi ekstra',
   'Pemantauan penerbangan untuk keterlambatan',
   'Bantuan bagasi sudah termasuk',
-  'Cocok untuk keluarga, pasangan, dan rombongan',
-  'Praktis untuk wisatawan yang melanjutkan perjalanan ke Pelabuhan Sanur'
+  'Antar langsung ke hotel Anda, bukan ke titik drop-off bersama',
+  'Cocok untuk solo traveler, pasangan, dan rombongan',
+  'Berguna untuk transit singkat antar penerbangan atau kapal ferry'
 ];
 
-const alasanSanur = [
-  'Pantai tenang dan bersih, cocok untuk keluarga',
-  'Pemandangan matahari terbit langsung menghadap laut',
-  'Akses mudah ke Nusa Penida via speedboat',
-  'Akses mudah ke Nusa Lembongan dan Nusa Ceningan',
-  'Jalur pejalan kaki dan jalur sepeda sepanjang tepi pantai',
-  'Lalu lintas lebih tenang dibanding Canggu atau Seminyak'
+const alasanKuta = [
+  'Pantai wisata pertama di Bali dan spot selancar paling ramah untuk pemula',
+  'Kawasan wisata utama yang paling dekat dengan Bandara Ngurah Rai',
+  'Pilihan hotel budget dan menengah paling beragam di Bali Selatan',
+  'Beachwalk Mall, Discovery Shopping Mall, dan Pasar Seni Kuta',
+  'Salah satu titik menonton matahari terbenam paling terkenal di Bali',
+  'Restoran dan kehidupan malam di sepanjang Jalan Legian'
 ];
 
 const infoRute = [
-  ['Rute', 'Bandara Ngurah Rai (DPS) → Sanur'],
-  ['Jarak', '15–21 km'],
-  ['Estimasi Waktu', '20–45 menit'],
+  ['Rute', 'Bandara Ngurah Rai (DPS) → Kuta'],
+  ['Jarak', '5–8 km'],
+  ['Estimasi Waktu', '10–30 menit'],
   ['Jenis Layanan', 'Transfer Bandara Pribadi'],
-  ['Cocok Untuk', 'Keluarga, pasangan, wisatawan ferry'],
+  ['Cocok Untuk', 'Wisatawan pertama kali, peselancar, backpacker, transit singkat'],
   ['Kode Bandara', 'DPS'],
-  ['Area Tujuan', 'Pantai Sanur, Sindhu, Mertasari, Pelabuhan Sanur'],
-  ['Penyedia', 'Bali West Transport'],
+  ['Area Tujuan', 'Pantai Kuta, Kuta Square, perbatasan Legian, Tuban'],
 ];
 
 const tabelRute = [
-  { kondisi: 'Larut Malam', waktu: '20–25 menit' },
-  { kondisi: 'Lalu Lintas Normal', waktu: '30–40 menit' },
-  { kondisi: 'Jam Sibuk', waktu: '45–60 menit' },
+  { kondisi: 'Larut Malam', waktu: '8–15 menit' },
+  { kondisi: 'Lalu Lintas Normal', waktu: '15–25 menit' },
+  { kondisi: 'Jam Sibuk / Jam Matahari Terbenam', waktu: '30–45 menit' },
 ];
 
 const pilihanTransfer = [
   {
     judul: 'Transfer Bandara Pribadi',
-    terbaik: 'Keluarga, pasangan, wisatawan ferry, dan rombongan',
-    detail: 'Transfer bandara pribadi adalah pilihan paling nyaman untuk penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan tanpa kerumitan setelah mendarat.'
+    terbaik: 'Wisatawan yang mau harga pasti dan antar langsung ke hotel',
+    detail: 'Meskipun jaraknya pendek, transfer yang dipesan lebih dulu berarti tidak perlu jalan ke titik penjemputan, tanpa negosiasi harga, dan supir yang sudah tahu lokasi hotel Anda.'
   },
   {
     judul: 'Taksi Bandara',
     terbaik: 'Wisatawan fleksibel yang memilih transportasi on-arrival',
-    detail: 'Taksi resmi tersedia di luar area kedatangan, namun pemesanan terlebih dahulu dapat mengurangi ketidakpastian setelah perjalanan panjang.'
+    detail: 'Taksi resmi tersedia tepat di luar area kedatangan dan menjadi pilihan yang masuk akal untuk jarak pendek ke Kuta jika Anda tidak keberatan mengantre.'
   },
   {
     judul: 'Grab dan Gojek',
-    terbaik: 'Solo traveler dan pengguna aplikasi',
-    detail: 'Aplikasi ojol beroperasi dari area khusus di bandara, meskipun waktu tunggu, titik penjemputan, dan ketersediaan saat ramai bisa bervariasi.'
+    terbaik: 'Solo traveler dengan bagasi ringan',
+    detail: 'Aplikasi ojol harus menjemput dari zona khusus yang jauh dari terminal, yang justru bisa menambah waktu berjalan dan menunggu lebih lama dari waktu perjalanannya sendiri.'
   },
   {
-    judul: 'Taksi Bluebird',
-    terbaik: 'Wisatawan yang sudah familiar dengan layanan taksi Bali',
-    detail: 'Bluebird Group dikenal luas di Bali dan bisa menjadi alternatif ketika tersedia di sekitar area bandara.'
+    judul: 'Jalan Kaki',
+    terbaik: 'Wisatawan yang menginap di Tuban tanpa bagasi',
+    detail: 'Sebagian wilayah Tuban berbatasan langsung dengan bandara, sehingga berjalan kaki secara teknis memungkinkan untuk beberapa hotel, namun tidak praktis dengan bagasi atau di tengah cuaca panas dan lembap Bali.'
   },
 ];
 
 const periodeTiba = [
-  { periode: 'Pagi Hari', waktu: '20–35 menit', catatan: 'Umumnya salah satu waktu terbaik untuk transfer bandara.' },
-  { periode: 'Siang Hari', waktu: '30–50 menit', catatan: 'Lalu lintas mulai meningkat di sekitar Denpasar dan Sanur.' },
-  { periode: 'Malam Hari', waktu: '35–60 menit', catatan: 'Biasanya salah satu periode tersibuk untuk transfer bandara.' },
-  { periode: 'Dini Hari', waktu: '20–25 menit', catatan: 'Seringkali waktu tercepat untuk perjalanan antara bandara dan Sanur.' },
+  { periode: 'Pagi Hari', waktu: '10–20 menit', catatan: 'Umumnya periode tercepat untuk jarak pendek menuju Kuta.' },
+  { periode: 'Siang Hari', waktu: '15–30 menit', catatan: 'Lalu lintas menumpuk bertahap di sepanjang Jalan Raya Tuban dan Jalan Kartika Plaza.' },
+  { periode: 'Sore / Jam Matahari Terbenam', waktu: '25–45 menit', catatan: 'Jalan di sepanjang pantai padat karena wisatawan menuju Pantai Kuta untuk menikmati sunset.' },
+  { periode: 'Dini Hari', waktu: '8–15 menit', catatan: 'Waktu tercepat sepanjang hari untuk menuju Kuta dari bandara.' },
 ];
 
 const faq = [
   {
-    pertanyaan: 'Berapa lama perjalanan dari Bandara Ngurah Rai ke Sanur?',
-    jawaban: 'Sebagian besar perjalanan membutuhkan waktu antara 20 hingga 45 menit tergantung kondisi lalu lintas, waktu kedatangan, dan lokasi hotel, villa, atau pelabuhan Anda di Sanur.'
+    pertanyaan: 'Berapa jauh Kuta dari Bandara Bali?',
+    jawaban: 'Kuta adalah salah satu kawasan wisata terdekat dari Bandara Ngurah Rai, sekitar 5 hingga 8 kilometer tergantung lokasi hotel Anda antara Tuban dan pusat Kuta.'
   },
   {
-    pertanyaan: 'Berapa jauh Bandara Bali dari Sanur?',
-    jawaban: 'Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung tujuan akhir Anda.'
+    pertanyaan: 'Bisakah berjalan kaki dari bandara ke Kuta?',
+    jawaban: 'Sebagian wilayah Tuban di sisi selatan Kuta memang berbatasan dengan bandara, sehingga secara teknis bisa dijangkau dengan jalan kaki untuk beberapa hotel. Namun ini tidak disarankan jika membawa bagasi, dan sebagian besar Kuta tetap membutuhkan kendaraan.'
   },
   {
-    pertanyaan: 'Apakah Sanur lebih dekat ke Bandara Bali dibanding Ubud?',
-    jawaban: 'Ya. Sanur jauh lebih dekat ke Bandara Bali dibanding Ubud dan umumnya membutuhkan waktu perjalanan yang lebih singkat.'
+    pertanyaan: 'Sebenarnya berapa lama transfer dari bandara ke Kuta?',
+    jawaban: 'Meskipun jaraknya pendek, waktu tempuh biasanya berkisar 10 hingga 30 menit, dan bisa memanjang menjadi 30 hingga 45 menit saat jam sibuk atau menjelang matahari terbenam ketika jalan di sepanjang pantai ramai.'
   },
   {
-    pertanyaan: 'Bisakah menggunakan Grab di Bandara Bali?',
-    jawaban: 'Bisa. Grab beroperasi dari area penjemputan khusus di Bandara Bali, meskipun zona penjemputan dan waktu tunggu bisa bervariasi.'
+    pertanyaan: 'Kenapa harus pesan transfer pribadi untuk jarak sependek ini?',
+    jawaban: 'Untuk perjalanan sependek ini, nilainya bukan pada kenyamanan perjalanan panjang, melainkan kepraktisan: tidak perlu antre di loket taksi, harga sudah disepakati sebelum mendarat, dan antar langsung ke hotel Anda beserta bagasi atau papan selancar.'
   },
   {
-    pertanyaan: 'Apakah Sanur cocok sebagai tempat menginap di Bali?',
-    jawaban: 'Sanur sangat populer di kalangan keluarga, pasangan, digital nomad, dan wisatawan yang akan menuju Nusa Penida karena suasananya yang tenang dan lokasinya yang strategis.'
+    pertanyaan: 'Apakah Kuta cocok untuk wisatawan pertama kali ke Bali?',
+    jawaban: 'Ya. Kuta memiliki pantai selancar paling ramah untuk pemula di Bali, pilihan akomodasi budget dan menengah paling beragam, serta menjadi kawasan wisata terdekat dari bandara sehingga logistik kedatangan jadi sederhana.'
   },
   {
-    pertanyaan: 'Apa pilihan transfer terbaik dari Bandara Bali ke Sanur?',
-    jawaban: 'Transfer bandara pribadi umumnya menjadi pilihan paling andal dan nyaman karena menyediakan penjemputan langsung, bantuan bagasi, dan antar ke hotel atau pelabuhan.'
+    pertanyaan: 'Apa perbedaan Kuta, Legian, dan Tuban?',
+    jawaban: 'Ketiga kawasan ini berdampingan di sepanjang garis pantai yang sama. Tuban paling tenang dan paling dekat dengan bandara, Kuta adalah yang paling ramai dan pusat aktivitas, sementara Legian di utara umumnya lebih tenang dengan kesan sedikit lebih mewah.'
   }
 ];
 
 const ruteTerkait = [
   { label: 'Hub Transfer Bandara', href: '/id/airport-transfer/' },
-  { label: 'Bandara ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
-  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
   { label: 'Bandara ke Seminyak', href: '/id/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Bandara ke Canggu', href: '/id/airport-transfer/ngurah-rai-airport-to-canggu/' },
   { label: 'Bandara ke Uluwatu', href: '/id/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
-  { label: 'Bandara ke Kuta', href: '/id/airport-transfer/ngurah-rai-airport-to-kuta/' },
+  { label: 'Bandara ke Nusa Dua', href: '/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/' },
   { label: 'Semua Transfer Bali', href: '/id/transfers/' }
 ];
 
-const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-sanur/';
+const pageUrl = 'https://baliwesttransport.com/id/airport-transfer/ngurah-rai-airport-to-kuta/';
 const orgId = `${pageUrl}#organization`;
 const agencyId = `${pageUrl}#travel-agency`;
 const serviceId = `${pageUrl}#service`;
@@ -147,16 +145,17 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Bandara Ngurah Rai ke Sanur',
-      alternateName: 'Ngurah Rai Airport to Sanur Transfer',
+      name: 'Transfer Bandara Ngurah Rai ke Kuta',
+      alternateName: 'Ngurah Rai Airport to Kuta Transfer',
       description: pageDescription,
       serviceType: 'Transfer Bandara Pribadi',
       provider: { '@id': agencyId },
       availableLanguage: [{ '@type': 'Language', name: 'Indonesian' }, { '@type': 'Language', name: 'English' }],
       areaServed: [
         { '@type': 'Place', name: 'Bandara Ngurah Rai Internasional' },
-        { '@type': 'Place', name: 'Sanur' },
-        { '@type': 'Place', name: 'Pelabuhan Sanur' },
+        { '@type': 'Place', name: 'Kuta' },
+        { '@type': 'Place', name: 'Tuban' },
+        { '@type': 'Place', name: 'Legian' },
         { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
@@ -180,7 +179,7 @@ const schemaGraph = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://baliwesttransport.com/id/' },
         { '@type': 'ListItem', position: 2, name: 'Transfer Bandara', item: 'https://baliwesttransport.com/id/airport-transfer/' },
-        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Sanur', item: pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Transfer Bandara Ngurah Rai ke Kuta', item: pageUrl }
       ]
     },
     {
@@ -207,14 +206,14 @@ const schemaGraph = {
     <!-- Hero -->
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="/images/beach-sunset-swing.jpg" alt="Transfer pribadi dari Bandara Ngurah Rai ke Sanur Bali" class="w-full h-full object-cover" />
+        <img src="/images/beach-sunset-swing.jpg" alt="Transfer pribadi dari Bandara Ngurah Rai ke Kuta Bali" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Antar Jemput Bandara Pribadi — Bali West Transport</p>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Sanur</h1>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Bandara Ngurah Rai ke Kuta</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">
-          Antar jemput pribadi dari Bandara Bali ke Pantai Sanur, Sindhu, Mertasari, dan Pelabuhan Sanur.
+          Antar jemput pribadi dari Bandara Bali ke Pantai Kuta, Kuta Square, dan perbatasan Legian.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">
@@ -234,15 +233,15 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Perjalanan dari Bandara Bali ke Sanur</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Perjalanan dari Bandara Bali ke Kuta</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Perjalanan dari Bandara Ngurah Rai Internasional ke Sanur adalah salah satu transfer bandara terpendek di Bali. Rute ini biasanya membutuhkan waktu sekitar 20 hingga 45 menit dan mencakup jarak sekitar 15 hingga 21 kilometer tergantung lokasi hotel, villa, atau pelabuhan Anda.
+              Kuta adalah salah satu transfer terpendek di Bali, hanya berjarak 5 hingga 8 kilometer dari Bandara Ngurah Rai. Saat lalu lintas lengang, perjalanan bisa memakan waktu sesingkat 10 menit, meskipun umumnya membutuhkan 15 hingga 30 menit, dan bisa lebih dari 30 menit menjelang matahari terbenam saat jalan di sepanjang pantai ramai. Kami memilih menyampaikan ini secara jujur daripada melebih-lebihkan sebagai perjalanan lima menit.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Sebagian besar wisatawan yang menuju Sanur memilih transfer bandara pribadi karena menawarkan bantuan bagasi, antar langsung ke tujuan, dan terhindar dari negosiasi taksi setelah mendarat.
+              Untuk jarak sependek ini, nilai dari transfer pribadi bukan pada perjalanan yang panjang dan nyaman, melainkan kepraktisan: tidak perlu antre di loket taksi, harga sudah disepakati sebelum mendarat, dan antar langsung ke hotel Anda, bukan ke titik drop-off bersama.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Rute ini sangat berguna untuk keluarga, pasangan, dan wisatawan ferry yang akan melanjutkan perjalanan ke Pelabuhan Sanur menuju Nusa Penida, Nusa Lembongan, atau Nusa Ceningan.
+              Rute ini cocok untuk wisatawan pertama kali ke Bali, peselancar dengan papan atau perlengkapan ekstra, backpacker, dan siapa pun dengan transit singkat antar penerbangan atau ferry yang ingin satu urusan lebih sedikit setelah mendarat.
             </p>
           </div>
           <div class="bg-white p-8">
@@ -267,21 +266,21 @@ const schemaGraph = {
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
-              <p class="font-serif text-2xl text-brand-dark">DPS → Sanur</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Kuta</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Jarak</p>
-              <p class="font-serif text-2xl text-brand-dark">15–21 km</p>
+              <p class="font-serif text-2xl text-brand-dark">5–8 km</p>
             </div>
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
-              <p class="font-serif text-2xl text-brand-dark">20–45 mnt</p>
+              <p class="font-serif text-2xl text-brand-dark">10–30 mnt</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
               <span class="font-serif text-4xl text-brand-gold">Penawaran Terbaik</span>
-              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal, jam penerbangan, dan tujuan Anda.</p>
+              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal, jam penerbangan, dan nama hotel Anda.</p>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">
               Minta Penawaran Terbaik
@@ -291,16 +290,16 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Mengapa Sanur -->
+    <!-- Mengapa Kuta -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Sanur</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Menginap di Sanur?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Sanur adalah salah satu destinasi pantai paling mapan di Bali, dikenal dengan suasana santai tepi laut, pantai tenang, dan koneksi ke pulau-pulau sekitar.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Kuta</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Mengapa Menginap di Kuta?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Kuta adalah kawasan wisata pantai pertama di Bali dan tetap yang paling mudah diakses, berada tepat di sebelah bandara dengan pilihan akomodasi budget dan menengah paling beragam di Bali.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {alasanSanur.map((alasan) => (
+          {alasanKuta.map((alasan) => (
             <div class="flex items-start gap-4 p-6 bg-white">
               <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,12 +319,12 @@ const schemaGraph = {
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jarak & Rute</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Seberapa Jauh Bandara Bali dari Sanur?</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Seberapa Jauh Bandara Bali dari Kuta?</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Jarak dari Bandara Bali ke Sanur sekitar 15 hingga 21 kilometer tergantung lokasi hotel Anda. Sebagian besar rute melewati jalan keluar bandara, Jalan Tol Bali Mandara, dan Jalan Bypass Ngurah Rai.
+              Jarak dari Bandara Bali ke Kuta hanya sekitar 5 hingga 8 kilometer, menjadikannya salah satu kawasan wisata terdekat dari Bandara Ngurah Rai. Tidak ada jalan tol di rute ini; lalu lintas melewati Jalan Raya Tuban, Jalan Kartika Plaza, dan Jalan Legian.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Lalu lintas bisa lebih padat saat jam sibuk pagi, sore hari, liburan sekolah, dan musim wisata ramai.
+              Karena jaraknya sangat pendek, kondisi lalu lintas lebih menentukan daripada jumlah kilometer. Jalan yang lengang pukul 3 pagi bisa berarti perjalanan 8 menit, sementara rute yang sama menjelang matahari terbenam, saat semua orang menuju Pantai Kuta, bisa memakan waktu tiga sampai empat kali lipat.
             </p>
           </div>
           <div class="bg-brand-cream p-8">
@@ -348,7 +347,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pilihan Transportasi</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Sanur</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Cara Terbaik dari Bandara Ngurah Rai ke Kuta</h2>
         </div>
         <div class="grid md:grid-cols-4 gap-4">
           {pilihanTransfer.map((pilihan) => (
@@ -362,21 +361,21 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Koneksi Ferry Sanur -->
+    <!-- Kuta, Legian, Tuban -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pelabuhan Sanur</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Bandara Bali ke Koneksi Ferry Sanur</h2>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Kuta, Legian & Tuban</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Anda Menginap di Bagian Kuta yang Mana?</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Salah satu alasan utama wisatawan memilih Sanur adalah koneksinya ke jaringan pulau Bali. Dari Pelabuhan Sanur, wisatawan dapat melanjutkan perjalanan ke Nusa Penida, Nusa Lembongan, dan Nusa Ceningan menggunakan speedboat.
+              Kuta, Legian, dan Tuban berada di sepanjang garis pantai yang sama, sehingga "Kuta" pada pemesanan hotel bisa berarti waktu transfer yang sangat berbeda. Tuban paling dekat dengan bandara dan umumnya lebih tenang, pusat Kuta paling ramai dengan kehidupan malam dan pusat perbelanjaan terbanyak, sementara Legian di utara lebih tenang dengan kesan sedikit lebih mewah.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Jika penerbangan Anda tiba pada hari yang sama dengan keberangkatan ferry, pastikan ada waktu buffer yang cukup untuk imigrasi, pengambilan bagasi, perjalanan darat, dan check-in di pelabuhan.
+              Memberi tahu supir nama hotel dan area yang tepat, bukan sekadar "Kuta", membantu menghindari kebingungan saat drop-off karena penomoran jalan di kawasan ini tidak selalu mudah diikuti.
             </p>
           </div>
-          <img src="/images/nusa-penida-viewpoint.jpg" alt="Koneksi Pelabuhan Sanur ke Nusa Penida" class="w-full h-auto object-cover" loading="lazy" />
+          <img src="/images/nusa-penida-viewpoint.jpg" alt="Kawasan pantai Bali Selatan dekat Kuta" class="w-full h-auto object-cover" loading="lazy" />
         </div>
       </div>
     </section>
@@ -386,7 +385,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Periode Kedatangan</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Waktu Tempuh Bandara Bali ke Sanur Berdasarkan Waktu Kedatangan</h2>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Waktu Tempuh Bandara Bali ke Kuta Berdasarkan Waktu Kedatangan</h2>
         </div>
         <div class="grid md:grid-cols-4 gap-4">
           {periodeTiba.map((item) => (
@@ -424,11 +423,11 @@ const schemaGraph = {
           <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Hub Transfer Bandara</span>
           </a>
-          <a href="/id/airport-transfer/ngurah-rai-airport-to-ubud/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Bandara ke Ubud</span>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-seminyak/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bandara ke Seminyak</span>
           </a>
-          <a href="/id/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Bandara ke Uluwatu</span>
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bandara ke Nusa Dua</span>
           </a>
         </div>
       </div>
@@ -456,9 +455,9 @@ const schemaGraph = {
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan Sekarang</p>
-        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Sanur</h2>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Bandara Ngurah Rai ke Kuta</h2>
         <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
-          Baik Anda menginap di Pantai Sanur, Sindhu, Mertasari, atau akan menuju Pelabuhan Sanur, Bali West Transport menyediakan transfer bandara pribadi yang nyaman dari Bandara Ngurah Rai ke Sanur.
+          Baik Anda menginap di dekat Pantai Kuta, Kuta Square, atau perbatasan Legian, Bali West Transport menyediakan transfer pribadi dengan harga pasti, tanpa antre, dari Bandara Ngurah Rai langsung ke hotel Anda.
         </p>
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -484,7 +483,7 @@ const schemaGraph = {
           ))}
         </div>
         <div class="mt-6 text-center">
-          <a href="/airport-transfer/ngurah-rai-airport-to-sanur/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+          <a href="/airport-transfer/ngurah-rai-airport-to-kuta/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
             View this page in English
           </a>
         </div>
