@@ -4,112 +4,83 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Ngurah Rai Airport to Kuta Transfer | Distance, Travel Time & Private Pickup';
-const pageDescription = 'Travel from Ngurah Rai Airport to Kuta with a private airport transfer. Learn the real distance, honest travel time, and direct hotel pickup with Bali West Transport.';
-const pageKeywords = 'Ngurah Rai Airport to Kuta, Bali Airport to Kuta, Denpasar Airport to Kuta, airport transfer Bali to Kuta, Kuta airport transfer, DPS Airport to Kuta, private airport transfer Kuta, Bali West Transport';
+const pageTitle = 'Ngurah Rai Airport to Kuta Transfer | Private Airport Pickup';
+const pageDescription = 'Book a private transfer from Ngurah Rai Airport to Kuta — one of Bali\'s shortest airport routes, with a driver waiting at arrivals and direct drop-off to your hotel or villa.';
+const pageKeywords = 'Ngurah Rai Airport to Kuta, Bali Airport to Kuta, DPS Airport to Kuta, airport transfer Kuta, Kuta airport transfer, private transfer Bali Airport to Kuta, airport pickup Kuta, Bali West Transport';
 
 const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Kuta. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
-const quickInfo = [
-  ['Route', 'Ngurah Rai Airport (DPS) → Kuta'],
-  ['Distance', '5–8 km'],
-  ['Travel Time', '10–30 minutes'],
-  ['Service Type', 'Private Airport Transfer'],
-  ['Best For', 'First-time visitors, surfers, backpackers, short layovers'],
-  ['Airport Code', 'DPS'],
-  ['Destination Coverage', 'Kuta Beach, Kuta Square, Legian border, Tuban'],
-];
-
 const benefits = [
-  'Driver waiting at arrivals area, no queueing at the taxi counter',
-  'Fixed offer agreed before you land, no on-arrival haggling',
-  'Comfortable air-conditioned vehicle with space for surfboards and extra luggage',
-  'Flight monitoring for delayed arrivals',
+  'Driver waiting at arrivals area with name board',
+  'One of the shortest airport transfers in Bali',
+  'Direct transfer to hotels, villas, and resorts throughout Kuta',
+  'Comfortable private air-conditioned vehicle',
   'Luggage assistance included',
-  'Direct drop-off at your hotel, not a shared drop-off point',
-  'Suitable for solo travellers, couples, and groups',
-  'Useful for short layovers between flights or ferries'
+  'Flight monitoring — pickup adjusted if flight is delayed',
+  'Airport pickup available 24 hours',
+  'No taxi queue or fare negotiation after a long flight'
 ];
 
-const kutaReasons = [
-  "Bali's original tourist beach and most beginner-friendly surf break",
-  'The closest major tourist strip to Ngurah Rai Airport',
-  'Widest range of budget and mid-range hotels in South Bali',
-  'Beachwalk Mall, Discovery Shopping Mall, and Kuta Art Market',
-  'One of the most famous sunset viewpoints on the island',
-  'Restaurants and nightlife along Jalan Legian'
+const kutaAreas = [
+  'Kuta Beach',
+  'Jalan Legian',
+  'Kuta Square',
+  'Tuban',
+  'Double Six Beach',
+  'Kuta Art Market'
+];
+
+const kutaAttractions = [
+  'Kuta Beach Sunset',
+  'Waterbom Bali',
+  'Beachwalk Shopping Centre',
+  'Kuta Art Market',
+  'Legian Beach',
+  'Kuta Theatre'
 ];
 
 const routeTable = [
-  { condition: 'Late Night', time: '8–15 minutes' },
-  { condition: 'Normal Traffic', time: '15–25 minutes' },
-  { condition: 'Peak Hours / Sunset Traffic', time: '30–45 minutes' },
-];
-
-const transferOptions = [
-  {
-    title: 'Private Airport Transfer',
-    best: 'Travellers who want a fixed price and direct hotel drop-off',
-    details: 'Even over a short distance, a pre-booked transfer means no walk to a pickup zone, no fare negotiation, and a driver who already knows your hotel.'
-  },
-  {
-    title: 'Airport Taxi',
-    best: 'Flexible travellers who prefer on-arrival transport',
-    details: 'Official airport taxis are available just outside arrivals and are a reasonable option for the short hop into Kuta if you are happy to queue.'
-  },
-  {
-    title: 'Grab and Gojek',
-    best: 'Solo travellers with light luggage',
-    details: 'Ride-hailing apps must collect you from a designated pickup zone away from the terminal, which can add more walking and waiting time than the drive itself.'
-  },
-  {
-    title: 'Walking',
-    best: 'Travellers staying in Tuban with no luggage',
-    details: 'Parts of Tuban border the airport directly, so walking is technically possible for some hotels, but it is not practical with luggage or in Bali\'s heat and humidity.'
-  },
-];
-
-const arrivalPeriods = [
-  { period: 'Morning Arrivals', time: '10–20 minutes', note: 'Generally the quickest period for the short run into Kuta.' },
-  { period: 'Afternoon Arrivals', time: '15–30 minutes', note: 'Traffic builds up gradually along Jalan Raya Tuban and Jalan Kartika Plaza.' },
-  { period: 'Evening / Sunset Arrivals', time: '25–45 minutes', note: 'Beachfront roads get congested as visitors head to Kuta Beach for sunset.' },
-  { period: 'Late-Night Arrivals', time: '8–15 minutes', note: 'The fastest time of day to reach Kuta from the airport.' },
+  { route: 'Bali Airport to Kuta Beach', distance: '4–7 km', time: '10–20 min' },
+  { route: 'Bali Airport to Jalan Legian', distance: '5–8 km', time: '12–22 min' },
+  { route: 'Bali Airport to Tuban', distance: '2–4 km', time: '8–15 min' },
+  { route: 'Bali Airport to Kuta Square', distance: '5–7 km', time: '12–20 min' },
+  { route: 'Bali Airport to Double Six Beach', distance: '6–9 km', time: '15–25 min' },
 ];
 
 const faqs = [
   {
     question: 'How far is Kuta from Bali Airport?',
-    answer: 'Kuta is one of the closest tourist areas to Ngurah Rai Airport, roughly 5 to 8 kilometres away depending on your exact hotel between Tuban and central Kuta.'
+    answer: 'Kuta is approximately 4 to 8 kilometres from I Gusti Ngurah Rai International Airport, making it one of the closest tourist areas to the airport.'
   },
   {
-    question: 'Can I walk from the airport to Kuta?',
-    answer: 'Parts of Tuban, on the southern edge of Kuta, do border the airport, so walking is technically possible for a few hotels. It is not recommended with luggage, and most of Kuta is still a proper drive away.'
+    question: 'How long does it take to get from Bali Airport to Kuta?',
+    answer: 'The journey typically takes 10 to 20 minutes in normal traffic. During peak periods — especially evenings around Jalan Legian and the beach road — it can take 30 to 40 minutes.'
   },
   {
-    question: 'How long does a transfer from the airport to Kuta actually take?',
-    answer: 'Despite the short distance, travel time typically ranges from 10 to 30 minutes, and can stretch to 30 to 45 minutes during peak traffic or around sunset when beachfront roads get busy.'
+    question: 'Is it worth booking a private transfer for such a short route?',
+    answer: 'Many travellers still prefer a pre-booked transfer for Kuta because it avoids taxi queues and fare negotiation right after landing. Your driver is waiting at arrivals with a name board, ready to go — no searching for a ride after a long flight, and no walking to a designated ride-hailing pickup point with luggage.'
   },
   {
-    question: 'Why book a private transfer for such a short distance?',
-    answer: 'For a trip this short, the value is convenience rather than comfort over a long ride: no queue at the taxi counter, a fixed price agreed before landing, and a direct drop-off at your hotel with your luggage or surfboard.'
+    question: 'What is the best way to get from Ngurah Rai Airport to Kuta?',
+    answer: 'A private airport transfer is one of the most convenient options because it provides a driver waiting at arrivals, luggage assistance, and direct hotel or villa drop-off without taxi queues or price negotiation.'
   },
   {
-    question: 'Is Kuta a good place for first-time visitors to Bali?',
-    answer: 'Yes. Kuta has Bali\'s most beginner-friendly surf beach, the widest range of budget and mid-range accommodation, and is the closest tourist area to the airport, which makes arrival logistics simple.'
+    question: 'Do you provide transfers to Tuban and Legian?',
+    answer: 'Yes. Airport transfers are available throughout the Kuta area including Tuban, Jalan Legian, Kuta Square, and Double Six Beach.'
   },
   {
-    question: 'What is the difference between Kuta, Legian, and Tuban?',
-    answer: 'These three areas sit next to each other along the same stretch of coast. Tuban is quieter and closest to the airport, Kuta is the busiest and most central, and Legian to the north is generally calmer with a more upscale feel.'
+    question: 'Can I book an airport transfer before arriving in Bali?',
+    answer: 'Yes. Advance booking is recommended, especially during peak holiday periods, to ensure your driver is confirmed and ready upon arrival.'
   }
 ];
 
 const relatedRoutes = [
   { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
-  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
-  { label: 'Airport to Canggu', href: '/airport-transfer/ngurah-rai-airport-to-canggu/' },
-  { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
   { label: 'Airport to Nusa Dua', href: '/airport-transfer/ngurah-rai-airport-to-nusa-dua/' },
+  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
   { label: 'All Bali Transfers', href: '/transfers/' }
 ];
 
@@ -124,12 +95,81 @@ const webPageId = `${pageUrl}#webpage`;
 const schemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': organizationId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png', telephone: '+6282247648944', sameAs: [] },
-    { '@type': 'TravelAgency', '@id': travelAgencyId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', telephone: '+6282247648944', areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' }, parentOrganization: { '@id': organizationId } },
-    { '@type': 'Service', '@id': serviceId, name: 'Ngurah Rai Airport to Kuta Transfer', description: pageDescription, serviceType: 'Private Airport Transfer', provider: { '@id': travelAgencyId }, areaServed: [{ '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' }, { '@type': 'Place', name: 'Kuta' }, { '@type': 'Place', name: 'Tuban' }, { '@type': 'Place', name: 'Legian' }, { '@type': 'AdministrativeArea', name: 'Bali' }], availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl, servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' } } },
-    { '@type': 'FAQPage', '@id': faqId, mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
-    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' }, { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' }, { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Kuta Transfer', item: pageUrl }] },
-    { '@type': 'WebPage', '@id': webPageId, url: pageUrl, name: pageTitle, description: pageDescription, isPartOf: { '@id': organizationId }, about: { '@id': serviceId }, mainEntity: [{ '@id': serviceId }, { '@id': faqId }], breadcrumb: { '@id': breadcrumbId }, publisher: { '@id': organizationId } }
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      sameAs: []
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': travelAgencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Bali, Indonesia'
+      },
+      parentOrganization: { '@id': organizationId }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Ngurah Rai Airport to Kuta Transfer',
+      description: pageDescription,
+      serviceType: 'Private Airport Transfer',
+      provider: { '@id': travelAgencyId },
+      areaServed: [
+        { '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' },
+        { '@type': 'Place', name: 'Kuta' },
+        { '@type': 'Place', name: 'Tuban' },
+        { '@type': 'Place', name: 'Legian' },
+        { '@type': 'AdministrativeArea', name: 'Bali' }
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: {
+          '@type': 'ContactPoint',
+          telephone: '+6282247648944',
+          contactType: 'customer service'
+        }
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' },
+        { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Kuta Transfer', item: pageUrl }
+      ]
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: { '@id': organizationId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': organizationId }
+    }
   ]
 };
 ---
@@ -138,36 +178,70 @@ const schemaGraph = {
   <Header />
 
   <main>
+    <!-- Hero -->
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="/images/beach-sunset-swing.jpg" alt="Ngurah Rai Airport to Kuta private transfer Bali" class="w-full h-full object-cover" />
+        <img
+          src="/images/beach-sunset-swing.jpg"
+          alt="Private transfer from Ngurah Rai Airport to Kuta Bali"
+          class="w-full h-full object-cover"
+        />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Kuta Transfer</h1>
-        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">Private airport pickup from Bali Airport to Kuta Beach, Kuta Square, and the Legian border.</p>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          Private door-to-door airport transfer from Bali Airport to Kuta — covering Kuta Beach, Jalan Legian, Tuban, and Kuta Square.
+        </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">Book Your Transfer</a>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book Your Transfer
+          </a>
           <a href="/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Airport Transfer Hub</a>
         </div>
       </div>
     </section>
 
+    <!-- Quick Answer + Intro -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Travelling from Bali Airport to Kuta</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Kuta is one of the shortest transfers in Bali, sitting only 5 to 8 kilometres from Ngurah Rai Airport. In light traffic the drive can take as little as 10 minutes, though it commonly takes 15 to 30 minutes, and can stretch past 30 minutes around sunset when the beachfront roads fill up. We would rather tell you that honestly than oversell a five-minute hop.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">For a distance this short, the point of a private transfer isn't a long, comfortable ride, it's skipping the taxi queue, having a fixed price agreed before you land, and getting a direct drop-off at your hotel instead of a shared pickup point.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">This route suits first-time visitors, surfers with boards or extra gear, backpackers, and anyone with a short layover between flights or ferries who wants one less thing to figure out after landing.</p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Private Airport Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Bali Airport to Kuta</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Book a private transfer from Ngurah Rai Airport to Kuta with Bali West Transport. The journey takes approximately 10 to 20 minutes depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via I Gusti Ngurah Rai International Airport (DPS).
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Kuta is one of the closest tourist areas to the airport, known for its long sunset beach, surf breaks, Jalan Legian's shopping and nightlife, and easy access to Waterbom Bali. Because the route is short, some travellers assume a transfer isn't necessary — but a pre-booked driver still means no taxi queue, no fare negotiation, and no walking to a designated ride-hailing pickup point after a long flight.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Whether you're arriving late at night, travelling with family, or simply want a straightforward start to your holiday, booking a private airport transfer is one of the easiest ways to reach Kuta directly from Bali Airport.
+            </p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Quick Information</p>
             <div class="space-y-4">
-              {quickInfo.map(([label, value]) => (
+              {[
+                ['Service', 'Bali Airport Transfer to Kuta'],
+                ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
+                ['Destination', 'Kuta, Bali'],
+                ['Transport Type', 'Private Car with Driver'],
+                ['Estimated Travel Time', '10–20 Minutes'],
+                ['Availability', '24 Hours'],
+                ['Vehicle', 'Private Air-Conditioned Vehicle'],
+                ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
+                ['Provider', 'Bali West Transport'],
+              ].map(([label, value]) => (
                 <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
                   <span class="text-brand-dark/50 text-sm">{label}</span>
                   <span class="text-brand-dark font-medium text-sm text-right">{value}</span>
@@ -179,137 +253,328 @@ const schemaGraph = {
       </div>
     </section>
 
+    <!-- Route Overview Card -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
           <div class="grid grid-cols-3 gap-8 flex-1">
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p><p class="font-serif text-2xl text-brand-dark">DPS → Kuta</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p><p class="font-serif text-2xl text-brand-dark">5–8 km</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p><p class="font-serif text-2xl text-brand-dark">10–30 min</p></div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Kuta</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
+              <p class="font-serif text-2xl text-brand-dark">4–8 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
+              <p class="font-serif text-2xl text-brand-dark">10–20 min</p>
+            </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
-            <div><span class="font-serif text-4xl text-brand-gold">Best Offer</span><p class="text-brand-dark/50 text-sm mt-1">Tell us your date, flight time, and hotel name.</p></div>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Ask Best Offer</a>
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
+            </div>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Ask Best Offer
+            </a>
           </div>
+        </div>
+        <div class="mt-6 bg-brand-cream p-6">
+          <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimated Travel Times</p>
+          <div class="grid grid-cols-3 gap-3">
+            {[
+              'Early morning: 8–12 min',
+              'Normal traffic: 15–20 min',
+              'Peak traffic: 30–40 min'
+            ].map((item) => (
+              <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
+            ))}
+          </div>
+          <p class="text-brand-dark/50 text-sm mt-4">Kuta is one of the shortest airport routes in Bali. The main slowdown point is Jalan Legian and the beach-road approach during evening hours, when traffic can add 15–20 minutes to the journey.</p>
         </div>
       </div>
     </section>
 
+    <!-- Why Book Private Transfer -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Kuta</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Stay in Kuta?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Kuta is Bali's original beach resort town and still its most accessible, sitting right next to the airport with the island's widest spread of budget and mid-range places to stay.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Best Way to Get There</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose a Private Airport Transfer to Kuta</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Even on a short route, a private airport transfer means no taxi queue, no fare negotiation, and a driver waiting directly at arrivals with your name board.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {kutaReasons.map((reason) => (
-            <div class="flex items-start gap-4 p-6 bg-white"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{reason}</span></div>
+          {benefits.map((benefit) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{benefit}</span>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
+    <!-- Kuta Areas Covered -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Distance & Route</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">How Far Is Bali Airport from Kuta?</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">The distance from Bali Airport to Kuta is only about 5 to 8 kilometres, making it one of the closest tourist areas to Ngurah Rai Airport. There is no toll road on this route; traffic runs via Jalan Raya Tuban, Jalan Kartika Plaza, and Jalan Legian.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">Because the distance is so short, traffic conditions matter more than kilometres. A near-empty road at 3am can mean an 8-minute ride, while the same route around sunset, when everyone heads to Kuta Beach, can take three or four times as long.</p>
-          </div>
-          <div class="bg-brand-cream p-8">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Average Travel Times</p>
-            <div class="space-y-4">
-              {routeTable.map((row) => (
-                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4"><span class="text-brand-dark/50 text-sm">{row.condition}</span><span class="text-brand-dark font-medium text-sm text-right">{row.time}</span></div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off Coverage</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Airport Transfers to All Kuta Areas</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Bali West Transport provides airport transfers throughout Kuta and neighbouring Tuban. Whether you're staying near the beach, on Jalan Legian, or close to Kuta Square, we cover all major areas.
+            </p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Kuta Areas Covered</p>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              {kutaAreas.map((area) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
+              ))}
+            </div>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Popular Attractions Nearby</p>
+            <div class="grid grid-cols-2 gap-3">
+              {kutaAttractions.map((attraction) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{attraction}</div>
               ))}
             </div>
           </div>
+          <div class="space-y-4">
+            <img
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Airport transfer to Kuta Bali beach area"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/images/kelingking-beach.jpg"
+              alt="Kuta Bali beach and Jalan Legian area"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Transport Options Comparison -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Transfer Options</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Ways to Get from Ngurah Rai Airport to Kuta</h2></div>
-        <div class="grid md:grid-cols-4 gap-4">
-          {transferOptions.map((option) => (
-            <div class="bg-white p-6"><p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{option.title}</p><p class="text-brand-dark font-medium mb-3">{option.best}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{option.details}</p></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Comparison</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">How to Get from Bali Airport to Kuta</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Several transport options are available from Ngurah Rai Airport to Kuta. Here is a comparison to help you decide.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4 mb-12">
+          {[
+            { type: 'Private Airport Transfer', best: 'Families, late-night arrivals, groups', luggage: 'Yes', direct: 'Yes' },
+            { type: 'Airport Taxi', best: 'Flexible travel', luggage: 'Yes', direct: 'Yes' },
+            { type: 'Ride-Hailing Apps', best: 'Budget travellers', luggage: 'Moderate', direct: 'Yes' },
+            { type: 'Walking', best: 'Very light luggage, nearby Tuban hotels', luggage: 'Limited', direct: 'Yes' },
+          ].map((opt) => (
+            <div class="bg-white p-6">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{opt.type}</p>
+              <div class="space-y-3 text-sm">
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Best For</span>
+                  <span class="text-brand-dark/70">{opt.best}</span>
+                </div>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Luggage Friendly</span>
+                  <span class="text-brand-dark/70">{opt.luggage}</span>
+                </div>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Direct Transfer</span>
+                  <span class="text-brand-dark/70">{opt.direct}</span>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+        <p class="text-brand-dark/60 text-sm text-center">Because Kuta is so close to the airport, some visitors do walk or use ride-hailing — but families, late-night arrivals, and travellers with luggage generally still prefer a pre-booked private transfer for the certainty of a driver waiting at arrivals.</p>
       </div>
     </section>
 
+    <!-- Travel Summary Table -->
     <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Route Overview</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Kuta Travel Summary</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Distance and estimated travel time from Ngurah Rai Airport to each destination within the Kuta area.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-brand-dark text-brand-cream">
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Route</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Distance</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Estimated Travel Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {routeTable.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-brand-cream' : 'bg-white'}>
+                  <td class="px-6 py-4 text-brand-dark font-medium">{row.route}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{row.distance}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{row.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-brand-dark/50 text-sm mt-4">Travel times are estimates and may vary depending on traffic conditions and time of day.</p>
+      </div>
+    </section>
+
+    <!-- Meet and Greet -->
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Kuta, Legian & Tuban</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Which Part of Kuta Are You Staying In?</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Kuta, Legian, and Tuban run along one continuous stretch of coast, so "Kuta" on a hotel booking can mean very different transfer times. Tuban sits closest to the airport and is generally quieter, central Kuta is the busiest with the most nightlife and shopping, and Legian to the north is calmer with a slightly more upscale feel.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">Telling your driver the exact hotel name and area, rather than just "Kuta", helps avoid confusion at drop-off since street numbering in this part of Bali is not always straightforward.</p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Airport Pickup</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Meet and Greet at Bali Airport</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Upon arrival at Ngurah Rai Airport, your driver will meet you after baggage collection with a name board. The driver will assist with luggage and escort you to your vehicle before beginning the short journey to Kuta.
+            </p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">This Service Is Especially Useful For</p>
+            <div class="grid grid-cols-2 gap-3">
+              {[
+                'First-time visitors to Bali',
+                'Families with children',
+                'Late-night arrivals',
+                'Early-morning flights',
+                'Groups with multiple bags',
+                'Travellers who prefer no queueing'
+              ].map((item) => (
+                <div class="bg-white p-4 text-brand-dark/70 text-sm">{item}</div>
+              ))}
+            </div>
           </div>
-          <img src="/images/nusa-penida-viewpoint.jpg" alt="South Bali beach area near Kuta" class="w-full h-auto object-cover" loading="lazy" />
+          <div>
+            <img
+              src="/images/beach-sunset-swing.jpg"
+              alt="Kuta Bali sunset beach transfer"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-24 bg-brand-cream">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arrival Periods</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Kuta Travel Time by Arrival Period</h2></div>
-        <div class="grid md:grid-cols-4 gap-4">
-          {arrivalPeriods.map((item) => (
-            <div class="bg-white p-6"><p class="font-serif text-2xl text-brand-dark mb-2">{item.period}</p><p class="text-brand-gold text-xl mb-3">{item.time}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{item.note}</p></div>
-          ))}
-        </div>
-      </div>
-    </section>
-
+    <!-- Why Bali West Transport -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2><p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, private drivers, and customised Bali tours.</p></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, private drivers, and customised Bali tours.</p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {benefits.map((benefit) => (
-            <div class="flex items-start gap-4 p-6 bg-brand-cream"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{benefit}</span></div>
+          {[
+            'Professional local drivers',
+            'Private transportation service',
+            'Comfortable air-conditioned vehicles',
+            'Airport pickup available 24/7',
+            'Direct hotel and villa transfer',
+            'Flight monitoring for delayed arrivals',
+            'Service coverage throughout Bali'
+          ].map((reason) => (
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{reason}</span>
+            </div>
           ))}
         </div>
         <div class="grid md:grid-cols-3 gap-4">
-          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport Transfer Hub</span></a>
-          <a href="/airport-transfer/ngurah-rai-airport-to-seminyak/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Seminyak</span></a>
-          <a href="/airport-transfer/ngurah-rai-airport-to-nusa-dua/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Nusa Dua</span></a>
+          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Airport Transfer Hub</span>
+          </a>
+          <a href="/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Private Bali Tours</span>
+          </a>
+          <a href="/about/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">About Bali West Transport</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+        </div>
         <div class="space-y-4">
           {faqs.map((faq) => (
-            <div class="bg-white p-8"><h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3><p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p></div>
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book Now</p>
         <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Kuta Transfer</h2>
-        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Whether you are staying near Kuta Beach, Kuta Square, or on the Legian border, Bali West Transport provides a fixed-price, no-queue private transfer from Ngurah Rai Airport straight to your hotel.</p>
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">Book Via WhatsApp</a>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
+          Whether you're staying near Kuta Beach, on Jalan Legian, or in Tuban, Bali West Transport provides comfortable and reliable private airport transfers from Ngurah Rai Airport directly to your accommodation.
+        </p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Book Via WhatsApp
+        </a>
       </div>
     </section>
 
+    <!-- Related Routes -->
     <section class="py-16 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p><h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2></div>
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
-            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium text-sm">{route.label}</span></a>
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{route.label}</span>
+            </a>
           ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-kuta/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+            Lihat halaman ini dalam Bahasa Indonesia
+          </a>
         </div>
       </div>
     </section>

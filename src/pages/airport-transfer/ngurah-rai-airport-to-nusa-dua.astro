@@ -4,113 +4,88 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Ngurah Rai Airport to Nusa Dua Transfer | Distance, Travel Time & Private Pickup';
-const pageDescription = 'Travel from Ngurah Rai Airport to Nusa Dua with a private airport transfer via the Bali Mandara Toll Road. Learn distance, travel time, and direct resort pickup with Bali West Transport.';
-const pageKeywords = 'Ngurah Rai Airport to Nusa Dua, Bali Airport to Nusa Dua, Denpasar Airport to Nusa Dua, airport transfer Bali to Nusa Dua, Nusa Dua airport transfer, DPS Airport to Nusa Dua, private airport transfer Nusa Dua, Bali Mandara toll road, Bali West Transport';
+const pageTitle = 'Ngurah Rai Airport to Nusa Dua Transfer | Private Airport Pickup';
+const pageDescription = 'Book a private transfer from Ngurah Rai Airport to Nusa Dua — one of Bali\'s fastest airport routes via the Bali Mandara Toll Road, with direct drop-off to resorts, Tanjung Benoa, and Peninsula Island.';
+const pageKeywords = 'Ngurah Rai Airport to Nusa Dua, Bali Airport to Nusa Dua, DPS Airport to Nusa Dua, airport transfer Nusa Dua, Nusa Dua airport transfer, private transfer Bali Airport to Nusa Dua, airport pickup Nusa Dua, Bali West Transport';
 
 const whatsappText = 'Hi, I would like to book a private transfer from Ngurah Rai Airport to Nusa Dua. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
 
-const quickInfo = [
-  ['Route', 'Ngurah Rai Airport (DPS) → Nusa Dua'],
-  ['Distance', '12–20 km'],
-  ['Travel Time', '20–40 minutes'],
-  ['Main Road', 'Bali Mandara Toll Road'],
-  ['Service Type', 'Private Airport Transfer'],
-  ['Best For', 'Honeymooners, families, MICE travellers, golfers'],
-  ['Airport Code', 'DPS'],
-  ['Destination Coverage', 'Nusa Dua resort strip, ITDC zone, Tanjung Benoa'],
-];
-
 const benefits = [
-  'Driver waiting at arrivals area',
-  'Flexible offer with no hidden fees',
-  'No fare negotiation after landing',
-  'Comfortable air-conditioned vehicle',
-  'Flight monitoring for delayed arrivals',
+  'Driver waiting at arrivals area with name board',
+  'One of the fastest airport routes in Bali via the Bali Mandara Toll Road',
+  'Direct transfer to resorts, hotels, and villas throughout Nusa Dua',
+  'Comfortable private air-conditioned vehicle',
   'Luggage assistance included',
-  'Direct drop-off inside the Nusa Dua resort gates',
-  'Suitable for couples, families, and MICE groups'
+  'Flight monitoring — pickup adjusted if flight is delayed',
+  'Airport pickup available 24 hours',
+  'Suitable for families, couples, and business or conference travellers'
 ];
 
-const nusaDuaReasons = [
-  'Calm, reef-protected beach safe for children and swimming',
-  'Master-planned, gated resort enclave managed by ITDC',
-  'Wide, quiet, landscaped roads with little street traffic',
-  'One of the largest clusters of 5-star resorts in Bali',
-  'Bali Nusa Dua Convention Centre for MICE and conferences',
-  'Golf course, water sports, and Water Blow blowhole nearby'
+const nusaDuaAreas = [
+  'Nusa Dua Resort Area',
+  'Tanjung Benoa',
+  'Bualu',
+  'Peninsula Island (Sawangan)',
+  'Geger Beach',
+  'BNDCC Convention Area'
+];
+
+const nusaDuaAttractions = [
+  'Water Blow',
+  'Nusa Dua Beach',
+  'Geger Beach',
+  'Bali Collection Shopping Centre',
+  'Tanjung Benoa Water Sports',
+  'Devdan Show'
 ];
 
 const routeTable = [
-  { condition: 'Late Night', time: '15–20 minutes' },
-  { condition: 'Normal Traffic (via toll road)', time: '20–30 minutes' },
-  { condition: 'Peak Hours', time: '35–50 minutes' },
-];
-
-const transferOptions = [
-  {
-    title: 'Private Airport Transfer',
-    best: 'Couples, families, MICE groups, and resort guests',
-    details: 'A private airport transfer is the most convenient option for direct pickup, luggage assistance, and drop-off at your exact resort inside the Nusa Dua gates.'
-  },
-  {
-    title: 'Airport Taxi',
-    best: 'Flexible travellers who prefer on-arrival transport',
-    details: 'Official airport taxis are available outside arrivals, but pre-booking can reduce uncertainty and queueing time after a long flight.'
-  },
-  {
-    title: 'Grab and Gojek',
-    best: 'Solo travellers and app-based bookings',
-    details: 'Ride-hailing apps operate from a designated pickup area at the airport, although pickup points and waiting times can vary during busy periods.'
-  },
-  {
-    title: 'Bluebird Taxi',
-    best: 'Travellers familiar with Bali taxi services',
-    details: 'Bluebird Group is widely known in Bali and can be an alternative when available around the airport area.'
-  },
-];
-
-const arrivalPeriods = [
-  { period: 'Morning Arrivals', time: '15–25 minutes', note: 'Generally the easiest period for airport transfers via the toll road.' },
-  { period: 'Afternoon Arrivals', time: '25–40 minutes', note: 'Traffic can build up around the Jimbaran and Simpang Siur junctions before the toll entrance.' },
-  { period: 'Evening Arrivals', time: '30–50 minutes', note: 'Usually the busiest period for airport transfers in South Bali.' },
-  { period: 'Late-Night Arrivals', time: '15–20 minutes', note: 'Often the fastest time to travel between the airport and Nusa Dua.' },
+  { route: 'Bali Airport to Nusa Dua Resort Area', distance: '10–13 km', time: '20–30 min' },
+  { route: 'Bali Airport to Tanjung Benoa', distance: '13–16 km', time: '25–35 min' },
+  { route: 'Bali Airport to Bualu', distance: '10–13 km', time: '20–30 min' },
+  { route: 'Bali Airport to Peninsula Island', distance: '12–15 km', time: '25–35 min' },
+  { route: 'Bali Airport to Geger Beach', distance: '11–14 km', time: '22–32 min' },
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to get from Ngurah Rai Airport to Nusa Dua?',
-    answer: 'Most journeys take between 20 and 40 minutes depending on traffic conditions, arrival time, and which resort you are staying at inside the Nusa Dua enclave.'
+    question: 'How far is Nusa Dua from Bali Airport?',
+    answer: 'Nusa Dua is approximately 10 to 15 kilometres from I Gusti Ngurah Rai International Airport, making it one of the closest resort areas to the airport.'
   },
   {
-    question: 'How far is Bali Airport from Nusa Dua?',
-    answer: 'The distance from Bali Airport to Nusa Dua is approximately 12 to 20 kilometres, mostly travelled via the Bali Mandara Toll Road.'
+    question: 'How long does it take to get from Bali Airport to Nusa Dua?',
+    answer: 'The journey typically takes 20 to 35 minutes in normal traffic, and up to around 55 minutes during peak periods. Nusa Dua is one of the fastest airport transfers in Bali thanks to the direct Bali Mandara Toll Road connecting the airport to the peninsula.'
   },
   {
-    question: 'Is there a toll road from the airport to Nusa Dua?',
-    answer: 'Yes. The Bali Mandara Toll Road connects the airport directly to Nusa Dua and Benoa Harbour over the water, which is usually faster and more predictable than the older Ngurah Rai Bypass route through Kuta and Jimbaran.'
+    question: 'What is the best way to get from Ngurah Rai Airport to Nusa Dua?',
+    answer: 'A private airport transfer is one of the most convenient options because it provides a driver waiting at arrivals, luggage assistance, and direct resort or hotel drop-off without taxi queues or price negotiation.'
   },
   {
-    question: 'Is Nusa Dua good for families and honeymoons?',
-    answer: 'Yes. Nusa Dua is a gated, master-planned resort area with a calm, reef-protected beach, wide landscaped roads, and a large concentration of 5-star resorts, making it popular with families, couples, and honeymooners.'
+    question: 'Can I use Grab or Gojek from Ngurah Rai Airport to Nusa Dua?',
+    answer: 'Ride-hailing apps can be booked from the airport, but pickup is often restricted to a designated zone away from the arrivals curb, and availability can be limited during peak hours. A pre-booked private transfer avoids this, with your driver waiting directly at arrivals.'
   },
   {
-    question: 'What is the difference between Nusa Dua and Kuta or Seminyak?',
-    answer: 'Nusa Dua is a managed resort enclave developed by ITDC (formerly BTDC) with controlled access gates, while Kuta and Seminyak are open town areas with public streets, shops, and nightlife.'
+    question: 'Do you provide transfers to Tanjung Benoa and Peninsula Island?',
+    answer: 'Yes. Airport transfers are available throughout the Nusa Dua area including Tanjung Benoa, Bualu, Peninsula Island (Sawangan), and Geger Beach.'
   },
   {
-    question: 'What is the best transfer option from Bali Airport to Nusa Dua?',
-    answer: 'A private airport transfer is typically the most reliable option because it provides direct pickup, luggage assistance, and drop-off at your specific resort inside the Nusa Dua zone.'
+    question: 'Is Nusa Dua suitable for business and conference travellers?',
+    answer: 'Yes. Nusa Dua is Bali\'s main conference and resort district, home to the Bali Nusa Dua Convention Center and major international resort chains, making it a common destination for business travellers arriving on a tight schedule.'
+  },
+  {
+    question: 'Can I book an airport transfer before arriving in Bali?',
+    answer: 'Yes. Advance booking is recommended, especially during peak holiday and conference periods, to ensure your driver is confirmed and ready upon arrival.'
   }
 ];
 
 const relatedRoutes = [
   { label: 'Airport Transfer Hub', href: '/airport-transfer/' },
-  { label: 'Airport to Ubud', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
+  { label: 'Airport to Kuta', href: '/airport-transfer/ngurah-rai-airport-to-kuta/' },
   { label: 'Airport to Uluwatu', href: '/airport-transfer/ngurah-rai-airport-to-uluwatu/' },
   { label: 'Airport to Sanur', href: '/airport-transfer/ngurah-rai-airport-to-sanur/' },
-  { label: 'Airport to Kuta', href: '/airport-transfer/ngurah-rai-airport-to-kuta/' },
+  { label: 'Airport to Seminyak', href: '/airport-transfer/ngurah-rai-airport-to-seminyak/' },
+  { label: 'Gilimanuk to Nusa Dua', href: '/transfers/gilimanuk-to-nusa-dua/' },
   { label: 'All Bali Transfers', href: '/transfers/' }
 ];
 
@@ -125,12 +100,83 @@ const webPageId = `${pageUrl}#webpage`;
 const schemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': organizationId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png', telephone: '+6282247648944', sameAs: [] },
-    { '@type': 'TravelAgency', '@id': travelAgencyId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', telephone: '+6282247648944', areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' }, parentOrganization: { '@id': organizationId } },
-    { '@type': 'Service', '@id': serviceId, name: 'Ngurah Rai Airport to Nusa Dua Transfer', description: pageDescription, serviceType: 'Private Airport Transfer', provider: { '@id': travelAgencyId }, areaServed: [{ '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' }, { '@type': 'Place', name: 'Nusa Dua' }, { '@type': 'Place', name: 'Tanjung Benoa' }, { '@type': 'Place', name: 'Bali Mandara Toll Road' }, { '@type': 'AdministrativeArea', name: 'Bali' }], availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl, servicePhone: { '@type': 'ContactPoint', telephone: '+6282247648944', contactType: 'customer service' } } },
-    { '@type': 'FAQPage', '@id': faqId, mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
-    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' }, { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' }, { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Nusa Dua Transfer', item: pageUrl }] },
-    { '@type': 'WebPage', '@id': webPageId, url: pageUrl, name: pageTitle, description: pageDescription, isPartOf: { '@id': organizationId }, about: { '@id': serviceId }, mainEntity: [{ '@id': serviceId }, { '@id': faqId }], breadcrumb: { '@id': breadcrumbId }, publisher: { '@id': organizationId } }
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png',
+      telephone: '+6282247648944',
+      sameAs: []
+    },
+    {
+      '@type': 'TravelAgency',
+      '@id': travelAgencyId,
+      name: 'Bali West Transport',
+      url: 'https://baliwesttransport.com/',
+      telephone: '+6282247648944',
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Bali, Indonesia'
+      },
+      parentOrganization: { '@id': organizationId }
+    },
+    {
+      '@type': 'Service',
+      '@id': serviceId,
+      name: 'Ngurah Rai Airport to Nusa Dua Transfer',
+      description: pageDescription,
+      serviceType: 'Private Airport Transfer',
+      provider: { '@id': travelAgencyId },
+      areaServed: [
+        { '@type': 'Place', name: 'I Gusti Ngurah Rai International Airport' },
+        { '@type': 'Place', name: 'Nusa Dua' },
+        { '@type': 'Place', name: 'Tanjung Benoa' },
+        { '@type': 'Place', name: 'Bualu' },
+        { '@type': 'Place', name: 'Peninsula Island' },
+        { '@type': 'Place', name: 'Geger Beach' },
+        { '@type': 'AdministrativeArea', name: 'Bali' }
+      ],
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: pageUrl,
+        servicePhone: {
+          '@type': 'ContactPoint',
+          telephone: '+6282247648944',
+          contactType: 'customer service'
+        }
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Airport Transfer', item: 'https://baliwesttransport.com/airport-transfer/' },
+        { '@type': 'ListItem', position: 3, name: 'Ngurah Rai Airport to Nusa Dua Transfer', item: pageUrl }
+      ]
+    },
+    {
+      '@type': 'WebPage',
+      '@id': webPageId,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: { '@id': organizationId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': organizationId }
+    }
   ]
 };
 ---
@@ -139,36 +185,70 @@ const schemaGraph = {
   <Header />
 
   <main>
+    <!-- Hero -->
     <section class="relative min-h-screen flex items-center justify-center">
       <div class="absolute inset-0">
-        <img src="/images/nusa-penida-viewpoint.jpg" alt="Ngurah Rai Airport to Nusa Dua private transfer Bali" class="w-full h-full object-cover" />
+        <img
+          src="/images/beach-sunset-swing.jpg"
+          alt="Private transfer from Ngurah Rai Airport to Nusa Dua Bali"
+          class="w-full h-full object-cover"
+        />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
         <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Airport Transfer — Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Ngurah Rai Airport to Nusa Dua Transfer</h1>
-        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-light drop-shadow-md">Private airport pickup from Bali Airport to the Nusa Dua resort enclave via the Bali Mandara Toll Road.</p>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
+          Private door-to-door airport transfer from Bali Airport to Nusa Dua — covering Tanjung Benoa, Bualu, Peninsula Island, and Geger Beach.
+        </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors">Book Your Transfer</a>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Book Your Transfer
+          </a>
           <a href="/airport-transfer/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Airport Transfer Hub</a>
         </div>
       </div>
     </section>
 
+    <!-- Quick Answer + Intro -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Travelling from Bali Airport to Nusa Dua</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Nusa Dua is one of the most straightforward airport transfers in South Bali because most of the route runs on the Bali Mandara Toll Road, a raised highway built directly over the water between the airport, Benoa Harbour, and the Nusa Dua resort zone. The journey usually takes 20 to 40 minutes and covers approximately 12 to 20 kilometres depending on which resort you are staying at.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Most travellers heading to Nusa Dua choose a private airport transfer because it offers direct drop-off inside the resort's gated entrance, luggage assistance, and no need to negotiate fares after landing.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">This route is especially useful for honeymooners, families, and MICE or conference travellers heading to the resorts and convention facilities within the Nusa Dua enclave.</p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Private Airport Transfer</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Bali Airport to Nusa Dua</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Book a private transfer from Ngurah Rai Airport to Nusa Dua with Bali West Transport. The journey takes approximately 20 to 35 minutes depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via I Gusti Ngurah Rai International Airport (DPS).
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Nusa Dua is one of Bali's premier resort enclaves, known for manicured resort grounds, calm swimming beaches, international five-star hotels, and the Bali Nusa Dua Convention Center. A pre-booked airport transfer lets travellers avoid taxi queues, price negotiations, and transportation uncertainty after landing — and because Nusa Dua sits just off the Bali Mandara Toll Road, it's one of the quickest resort areas to reach from the airport.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Whether you're travelling for a family beach holiday, a honeymoon, a wedding, or a business conference, booking a private airport transfer is one of the most convenient ways to reach Nusa Dua directly from Bali Airport.
+            </p>
           </div>
           <div class="bg-white p-8">
             <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Quick Information</p>
             <div class="space-y-4">
-              {quickInfo.map(([label, value]) => (
+              {[
+                ['Service', 'Bali Airport Transfer to Nusa Dua'],
+                ['Pickup Location', 'Ngurah Rai International Airport (DPS)'],
+                ['Destination', 'Nusa Dua, Bali (Bukit Peninsula)'],
+                ['Transport Type', 'Private Car with Driver'],
+                ['Estimated Travel Time', '20–35 Minutes'],
+                ['Availability', '24 Hours'],
+                ['Vehicle', 'Private Air-Conditioned Vehicle'],
+                ['Service Type', 'Airport Pickup & Hotel Drop-Off'],
+                ['Provider', 'Bali West Transport'],
+              ].map(([label, value]) => (
                 <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4">
                   <span class="text-brand-dark/50 text-sm">{label}</span>
                   <span class="text-brand-dark font-medium text-sm text-right">{value}</span>
@@ -180,137 +260,328 @@ const schemaGraph = {
       </div>
     </section>
 
+    <!-- Route Overview Card -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="bg-brand-cream p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
           <div class="grid grid-cols-3 gap-8 flex-1">
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p><p class="font-serif text-2xl text-brand-dark">DPS → Nusa Dua</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p><p class="font-serif text-2xl text-brand-dark">12–20 km</p></div>
-            <div><p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p><p class="font-serif text-2xl text-brand-dark">20–40 min</p></div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
+              <p class="font-serif text-2xl text-brand-dark">DPS → Nusa Dua</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Distance</p>
+              <p class="font-serif text-2xl text-brand-dark">10–15 km</p>
+            </div>
+            <div>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Time</p>
+              <p class="font-serif text-2xl text-brand-dark">20–35 min</p>
+            </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
-            <div><span class="font-serif text-4xl text-brand-gold">Best Offer</span><p class="text-brand-dark/50 text-sm mt-1">Tell us your date, flight time, and resort name.</p></div>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap">Ask Best Offer</a>
+            <div>
+              <span class="font-serif text-4xl text-brand-gold">Flexible Offer</span>
+              <p class="text-brand-dark/50 text-sm mt-1">Tell us your date & group size.</p>
+            </div>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Ask Best Offer
+            </a>
           </div>
+        </div>
+        <div class="mt-6 bg-brand-cream p-6">
+          <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Estimated Travel Times</p>
+          <div class="grid grid-cols-3 gap-3">
+            {[
+              'Early morning: 15–20 min',
+              'Normal traffic: 25–35 min',
+              'Peak traffic: 40–55 min'
+            ].map((item) => (
+              <div class="bg-white p-3 text-brand-dark/70 text-sm text-center">{item}</div>
+            ))}
+          </div>
+          <p class="text-brand-dark/50 text-sm mt-4">Nusa Dua benefits from the Bali Mandara Toll Road, which connects directly from the airport — delays are less common here than on routes into Kuta, Seminyak, or Canggu. Evening arrivals during conference season at BNDCC can see slightly longer waits at resort entrance gates.</p>
         </div>
       </div>
     </section>
 
+    <!-- Why Book Private Transfer -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Nusa Dua</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Stay in Nusa Dua?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Nusa Dua is a master-planned resort enclave on Bali's southeastern coast, developed by the Indonesia Tourism Development Corporation (ITDC, formerly BTDC) since the 1970s as a controlled, high-end tourism zone.</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Best Way to Get There</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose a Private Airport Transfer to Nusa Dua</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">For most visitors, a private airport transfer is the most convenient way to reach Nusa Dua because it includes airport meet and greet, a fixed arrangement, and direct hotel or resort drop-off.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {nusaDuaReasons.map((reason) => (
-            <div class="flex items-start gap-4 p-6 bg-white"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{reason}</span></div>
+          {benefits.map((benefit) => (
+            <div class="flex items-start gap-4 p-6 bg-white">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{benefit}</span>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
+    <!-- Nusa Dua Areas Covered -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Distance & Route</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">How Far Is Bali Airport from Nusa Dua?</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">The distance from Bali Airport to Nusa Dua is approximately 12 to 20 kilometres. Most of the drive runs on the Bali Mandara Toll Road, an elevated toll highway built over the water that connects the airport directly to Benoa Harbour and Nusa Dua without passing through the congested streets of Kuta or Jimbaran.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">Traffic tends to build up at the toll entrance and exit points during morning and evening peak hours, school holidays, and major conference or event periods at the Bali Nusa Dua Convention Centre.</p>
-          </div>
-          <div class="bg-brand-cream p-8">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-6">Average Travel Times</p>
-            <div class="space-y-4">
-              {routeTable.map((row) => (
-                <div class="flex justify-between gap-4 border-b border-brand-dark/10 pb-4"><span class="text-brand-dark/50 text-sm">{row.condition}</span><span class="text-brand-dark font-medium text-sm text-right">{row.time}</span></div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off Coverage</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Airport Transfers to All Nusa Dua Areas</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Bali West Transport provides airport transfers throughout the Nusa Dua peninsula. Whether you're staying at a beachfront resort, a villa in Bualu, an apartment on Peninsula Island, or attending a conference near BNDCC, we cover all major areas.
+            </p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Nusa Dua Areas Covered</p>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              {nusaDuaAreas.map((area) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{area}</div>
+              ))}
+            </div>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Popular Attractions Nearby</p>
+            <div class="grid grid-cols-2 gap-3">
+              {nusaDuaAttractions.map((attraction) => (
+                <div class="bg-brand-cream p-4 text-brand-dark/70 text-sm">{attraction}</div>
               ))}
             </div>
           </div>
+          <div class="space-y-4">
+            <img
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Airport transfer to Nusa Dua Bali resort coastline"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/images/kelingking-beach.jpg"
+              alt="Nusa Dua Bali beach and resort area"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Transport Options Comparison -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Transfer Options</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Best Ways to Get from Ngurah Rai Airport to Nusa Dua</h2></div>
-        <div class="grid md:grid-cols-4 gap-4">
-          {transferOptions.map((option) => (
-            <div class="bg-white p-6"><p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{option.title}</p><p class="text-brand-dark font-medium mb-3">{option.best}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{option.details}</p></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Comparison</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">How to Get from Bali Airport to Nusa Dua</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Several transport options are available from Ngurah Rai Airport to Nusa Dua. Here is a comparison to help you decide.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4 mb-12">
+          {[
+            { type: 'Private Airport Transfer', best: 'Families, couples, business travellers, groups', luggage: 'Yes', direct: 'Yes' },
+            { type: 'Airport Taxi', best: 'Flexible travel', luggage: 'Yes', direct: 'Yes' },
+            { type: 'Ride-Hailing Apps', best: 'Budget travellers', luggage: 'Moderate', direct: 'Yes' },
+            { type: 'Scooter Rental', best: 'Solo travellers', luggage: 'Limited', direct: 'Yes' },
+          ].map((opt) => (
+            <div class="bg-white p-6">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">{opt.type}</p>
+              <div class="space-y-3 text-sm">
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Best For</span>
+                  <span class="text-brand-dark/70">{opt.best}</span>
+                </div>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Luggage Friendly</span>
+                  <span class="text-brand-dark/70">{opt.luggage}</span>
+                </div>
+                <div>
+                  <span class="text-brand-dark/40 block text-xs mb-1">Direct Transfer</span>
+                  <span class="text-brand-dark/70">{opt.direct}</span>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+        <p class="text-brand-dark/60 text-sm text-center">Visitors arriving with families, wedding groups, multiple bags, or on a fixed conference schedule often prefer private airport transfers for added comfort and reliability.</p>
       </div>
     </section>
 
+    <!-- Travel Summary Table -->
     <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Route Overview</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Nusa Dua Travel Summary</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Distance and estimated travel time from Ngurah Rai Airport to each destination within the Nusa Dua area.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-brand-dark text-brand-cream">
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Route</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Distance</th>
+                <th class="text-left px-6 py-4 font-medium tracking-wide">Estimated Travel Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {routeTable.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-brand-cream' : 'bg-white'}>
+                  <td class="px-6 py-4 text-brand-dark font-medium">{row.route}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{row.distance}</td>
+                  <td class="px-6 py-4 text-brand-dark/70">{row.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-brand-dark/50 text-sm mt-4">Travel times are estimates and may vary depending on traffic conditions and time of day.</p>
+      </div>
+    </section>
+
+    <!-- Meet and Greet -->
+    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Inside the Resort Zone</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Arriving Inside a Gated Resort Enclave</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">Unlike Kuta or Seminyak, Nusa Dua is accessed through controlled entry gates managed by ITDC. Resorts, the golf course, and the convention centre sit along wide, landscaped roads inside the zone, so a private transfer that already knows the internal road layout can drop you directly at your lobby without confusion at the gate.</p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">If you are attending a conference or event at the Bali Nusa Dua Convention Centre, allow extra time during arrival and departure peaks, when event traffic adds to the normal airport flow.</p>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Airport Pickup</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Meet and Greet at Bali Airport</h2>
+            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
+              Upon arrival at Ngurah Rai Airport, your driver will meet you after baggage collection with a name board. The driver will assist with luggage and escort you to your vehicle before beginning the journey to Nusa Dua.
+            </p>
+            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">This Service Is Especially Useful For</p>
+            <div class="grid grid-cols-2 gap-3">
+              {[
+                'First-time visitors to Bali',
+                'Families with children',
+                'Business and conference travellers',
+                'Wedding groups',
+                'Late-night arrivals',
+                'Early-morning flights'
+              ].map((item) => (
+                <div class="bg-white p-4 text-brand-dark/70 text-sm">{item}</div>
+              ))}
+            </div>
           </div>
-          <img src="/images/kelingking-beach.jpg" alt="South Bali coastline near Nusa Dua" class="w-full h-auto object-cover" loading="lazy" />
+          <div>
+            <img
+              src="/images/beach-sunset-swing.jpg"
+              alt="Nusa Dua Bali sunset beach transfer"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="py-24 bg-brand-cream">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arrival Periods</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Bali Airport to Nusa Dua Travel Time by Arrival Period</h2></div>
-        <div class="grid md:grid-cols-4 gap-4">
-          {arrivalPeriods.map((item) => (
-            <div class="bg-white p-6"><p class="font-serif text-2xl text-brand-dark mb-2">{item.period}</p><p class="text-brand-gold text-xl mb-3">{item.time}</p><p class="text-brand-dark/70 text-sm leading-relaxed">{item.note}</p></div>
-          ))}
-        </div>
-      </div>
-    </section>
-
+    <!-- Why Bali West Transport -->
     <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2><p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, private drivers, and customised Bali tours.</p></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Bali West Transport?</h2>
+          <p class="text-brand-dark/60 mt-4 max-w-2xl mx-auto">Bali West Transport provides private transportation services across Bali for airport transfers, hotel transfers, private drivers, and customised Bali tours.</p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {benefits.map((benefit) => (
-            <div class="flex items-start gap-4 p-6 bg-brand-cream"><div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-brand-dark/70">{benefit}</span></div>
+          {[
+            'Professional local drivers',
+            'Private transportation service',
+            'Comfortable air-conditioned vehicles',
+            'Airport pickup available 24/7',
+            'Direct hotel and resort transfer',
+            'Flight monitoring for delayed arrivals',
+            'Service coverage throughout Bali'
+          ].map((reason) => (
+            <div class="flex items-start gap-4 p-6 bg-brand-cream">
+              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-brand-dark/70">{reason}</span>
+            </div>
           ))}
         </div>
         <div class="grid md:grid-cols-3 gap-4">
-          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport Transfer Hub</span></a>
-          <a href="/airport-transfer/ngurah-rai-airport-to-uluwatu/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Uluwatu</span></a>
-          <a href="/airport-transfer/ngurah-rai-airport-to-sanur/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium">Airport to Sanur</span></a>
+          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Airport Transfer Hub</span>
+          </a>
+          <a href="/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Private Bali Tours</span>
+          </a>
+          <a href="/about/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">About Bali West Transport</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p><h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2></div>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+        </div>
         <div class="space-y-4">
           {faqs.map((faq) => (
-            <div class="bg-white p-8"><h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3><p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p></div>
+            <div class="bg-white p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="py-24 bg-brand-dark text-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book Now</p>
         <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Ngurah Rai Airport to Nusa Dua Transfer</h2>
-        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Whether you are staying at a resort inside the Nusa Dua enclave or attending an event at the convention centre, Bali West Transport provides comfortable private airport transfers from Ngurah Rai Airport straight to your door.</p>
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors">Book Via WhatsApp</a>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">
+          Whether you're staying in the Nusa Dua resort area, Tanjung Benoa, Bualu, or Peninsula Island, Bali West Transport provides comfortable and reliable private airport transfers from Ngurah Rai Airport directly to your accommodation.
+        </p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-12 py-5 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Book Via WhatsApp
+        </a>
       </div>
     </section>
 
+    <!-- Related Routes -->
     <section class="py-16 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12"><p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p><h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2></div>
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Related Airport Transfer Routes</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Other Bali Airport Transfer Destinations</h2>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
-            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors"><span class="text-brand-dark font-medium text-sm">{route.label}</span></a>
+            <a href={route.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+              <span class="text-brand-dark font-medium text-sm">{route.label}</span>
+            </a>
           ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/id/airport-transfer/ngurah-rai-airport-to-nusa-dua/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
+            Lihat halaman ini dalam Bahasa Indonesia
+          </a>
         </div>
       </div>
     </section>

@@ -2,8 +2,8 @@
 import BlogPost from '../../../layouts/BlogPost.astro';
 
 const pageTitle = 'Transfer Bandara vs Taksi Bali: Mana yang Harus Kamu Pesan? (2026)';
-const pageDescription = 'Bandingkan transfer bandara, taksi resmi, dan Grab/Gojek di Ngurah Rai. Harga aktual, aturan titik jemput, dan saran jujur agar kamu memilih transportasi yang tepat untuk perjalananmu.';
-const pageKeywords = 'transfer bandara vs taksi bali, harga taksi bandara bali, transfer pribadi bandara bali, grab gojek bandara bali, pilihan transportasi bandara ngurah rai';
+const pageDescription = 'Bandingkan transfer pribadi, taksi resmi, Grab/Gojek, shuttle hotel, dan shared shuttle di Bandara Ngurah Rai. Harga aktual, aturan titik jemput, dan saran jujur untuk perjalananmu.';
+const pageKeywords = 'transfer bandara vs taksi bali, harga taksi bandara bali, transfer pribadi bandara bali, grab gojek bandara bali, shared shuttle bandara bali, pilihan transportasi bandara ngurah rai';
 
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent('Halo, saya ingin memesan transfer bandara pribadi di Bali. Mohon informasi penawaran terbaik Anda.')}`;
 
@@ -37,6 +37,14 @@ const faqs = [
     pertanyaan: 'Apakah taksi Bandara Bali menggunakan argo?',
     jawaban: 'Taksi resmi dari Bandara Internasional Ngurah Rai tidak menggunakan argo. Mereka beroperasi dengan sistem tarif zona tetap. Kamu membayar harga yang dikutip di counter taksi dan menerima tiket sebelum naik. Hindari pengemudi tidak resmi di luar terminal yang mencoba bernegosiasi — selalu gunakan counter resmi.'
   },
+  {
+    pertanyaan: 'Apa itu shared shuttle bandara di Bali, dan apa bedanya dengan transfer pribadi?',
+    jawaban: 'Shared shuttle adalah van atau bus dengan jadwal tetap yang dibagi dengan penumpang lain, dioperasikan oleh Perama Tour atau Kura-Kura Bus. Rutenya dan jam keberangkatannya sudah ditentukan, berhenti di titik-titik tetap, bukan tepat di hotelmu. Transfer pribadi dipesan khusus untukmu, berangkat begitu penerbanganmu mendarat, dan mengantar langsung ke pintu.'
+  },
+  {
+    pertanyaan: 'Apakah shared shuttle lebih murah dari transfer bandara pribadi di Bali?',
+    jawaban: 'Umumnya ya, karena biayanya dibagi ke beberapa penumpang dan rutenya sudah tetap. Trade-off-nya adalah fleksibilitas lebih rendah — kamu mengikuti jadwal shuttle, bukan jadwalmu sendiri, dan mungkin perlu taksi singkat atau jalan kaki dari titik drop-off ke akomodasi akhirmu.'
+  },
 ];
 
 const pageUrl = 'https://baliwesttransport.com/id/blog/airport-transfer-vs-taxi-bali/';
@@ -69,7 +77,7 @@ const schemaGraph = {
       headline: pageTitle,
       description: pageDescription,
       datePublished: '2026-06-08',
-      dateModified: '2026-06-08',
+      dateModified: '2026-08-16',
       inLanguage: 'id',
       author: { '@type': 'Organization', name: 'Bali West Transport', url: 'https://baliwesttransport.com' },
       publisher: {
@@ -100,9 +108,9 @@ const schemaGraph = {
   heroAlt="Supir transfer pribadi di area kedatangan Bandara Ngurah Rai Bali"
   category="Transfer Bandara"
   publishDate="8 Juni 2026"
-  readTime="7 menit baca"
+  readTime="9 menit baca"
   articleTitle="Transfer Bandara vs Taksi Bali: Mana yang Harus Kamu Pesan?"
-  articleSubtitle="Semua pilihan transportasi di Bandara Ngurah Rai dijelaskan — dengan harga aktual, aturan titik jemput, dan saran jujur."
+  articleSubtitle="Semua pilihan transportasi di Bandara Ngurah Rai dijelaskan — termasuk shared shuttle — dengan harga aktual, aturan titik jemput, dan saran jujur."
   relatedServices={relatedServices}
   schemaGraph={schemaGraph}
 >
@@ -132,6 +140,11 @@ const schemaGraph = {
       <span class="comparison-card-title">Shuttle Hotel</span>
       <h3>Terbaik untuk resort mid-range & luxury</h3>
       <p>Banyak resort menyediakan penjemputan bandara yang sudah termasuk dalam harga kamar atau dengan biaya tambahan tetap. Tanyakan ke akomodasimu sebelum mendarat.</p>
+    </div>
+    <div class="comparison-card">
+      <span class="comparison-card-title">Shared Shuttle</span>
+      <h3>Terbaik untuk solo traveler hemat</h3>
+      <p>Van dengan jadwal tetap yang dibagi dengan penumpang lain, dioperasikan oleh Perama Tour atau Kura-Kura Bus. Lebih murah dari transfer pribadi, tapi tidak antar langsung ke pintu hotel dan jam keberangkatan sudah ditentukan.</p>
     </div>
   </div>
 
@@ -219,13 +232,36 @@ const schemaGraph = {
 
   <p>Banyak resort mid-range dan luxury di Bali menawarkan penjemputan bandara. Sebagian sudah termasuk dalam harga kamar; yang lain mengenakan biaya IDR 100.000 – 200.000. Tanyakan ke akomodasimu sebelum mendarat. Jika hotelmu menawarkannya, ini sering menjadi pilihan termudah — wajah familiar dari tim resort, titik pertemuan yang jelas, dan bagasi dibantu.</p>
 
+  <h2>Pilihan 5 — Shared Shuttle (Perama, Kura-Kura Bus)</h2>
+
+  <p>Shared shuttle adalah van atau bus dengan jadwal tetap yang dibagi dengan wisatawan lain, bukan dipesan khusus untukmu sendiri. Di Bali, kategori ini dioperasikan oleh operator mapan seperti <strong>Perama Tour</strong> dan <strong>Kura-Kura Bus</strong>, terpisah dari sistem taksi atau ride-hailing bandara.</p>
+
+  <p><strong>Cara kerjanya:</strong></p>
+  <ul>
+    <li>Pesan kursi di muka, bisa online atau di counter.</li>
+    <li>Keberangkatan mengikuti jadwal tetap, bukan on-demand.</li>
+    <li>Shuttle berhenti di titik-titik drop-off yang sudah ditentukan, bukan tepat di depan pintu hotelmu — mungkin perlu taksi singkat, Grab, atau jalan kaki dari titik terdekat ke hotel.</li>
+    <li>Tarif umumnya lebih murah dari transfer pribadi karena kendaraan dibagi dan rutenya sudah tetap.</li>
+  </ul>
+
+  <div class="tip-box">
+    <p><strong>Trade-off-nya:</strong> Shared shuttle cocok untuk wisatawan dengan jadwal fleksibel dan bagasi ringan yang tidak keberatan berbagi kendaraan dan berjalan sedikit di akhir rute. Jika kamu tiba larut malam, bepergian bersama keluarga, atau ingin diantar langsung ke pintu, transfer pribadi atau taksi resmi adalah pilihan yang lebih praktis — jadwal shared shuttle biasanya terbatas di luar jam siang hari.</p>
+  </div>
+
+  <p><strong>Cocok untuk:</strong></p>
+  <ul>
+    <li>Solo traveler dan backpacker dengan budget terbatas</li>
+    <li>Wisatawan yang memang sudah mengikuti rute shuttle tetap (misalnya lanjut ke Ubud atau pelabuhan Gilimanuk)</li>
+    <li>Yang nyaman mengecek jadwal dan memesan jam keberangkatan tertentu di muka</li>
+  </ul>
+
   <h2>Perbandingan Langsung</h2>
 
-  <p><strong>Kenyamanan:</strong> Transfer pribadi unggul. Supir di area kedatangan, tanpa berjalan jauh, tanpa antri.</p>
-  <p><strong>Harga:</strong> Grab/Gojek unggul — saat tidak ada surge dan kamu bersedia berjalan.</p>
-  <p><strong>Keandalan:</strong> Transfer pribadi dan taksi resmi setara. Keandalan Grab/Gojek bergantung pada ketersediaan pengemudi dan koneksi aplikasi di bandara.</p>
-  <p><strong>Keamanan:</strong> Semua pilihan aman jika digunakan melalui saluran resmi. Gunakan counter Koperasi untuk taksi. Konfirmasi hanya melalui aplikasi untuk Grab/Gojek. Untuk transfer pribadi, pesan melalui penyedia yang terpercaya.</p>
-  <p><strong>Fleksibilitas:</strong> Grab/Gojek unggul. Tidak perlu pre-booking, tarif ditampilkan di aplikasi sebelum konfirmasi.</p>
+  <p><strong>Kenyamanan:</strong> Transfer pribadi unggul. Supir di area kedatangan, tanpa berjalan jauh, tanpa antri, tanpa jadwal tetap.</p>
+  <p><strong>Harga:</strong> Shared shuttle dan Grab/Gojek paling murah — shared shuttle kalau rutemu cocok dengan titik pemberhentiannya, Grab/Gojek saat tidak ada surge dan kamu bersedia berjalan.</p>
+  <p><strong>Keandalan:</strong> Transfer pribadi dan taksi resmi setara. Keandalan Grab/Gojek bergantung pada ketersediaan pengemudi dan koneksi aplikasi di bandara. Keandalan shared shuttle bergantung pada operator yang menepati jadwal yang dipublikasikan.</p>
+  <p><strong>Keamanan:</strong> Semua pilihan aman jika digunakan melalui saluran resmi. Gunakan counter Koperasi untuk taksi. Konfirmasi hanya melalui aplikasi untuk Grab/Gojek. Untuk transfer pribadi dan shared shuttle, pesan melalui operator yang sudah mapan dan terpercaya.</p>
+  <p><strong>Fleksibilitas:</strong> Grab/Gojek unggul untuk penjemputan on-demand. Shared shuttle paling tidak fleksibel — kamu mengikuti jadwal operator, bukan jadwalmu sendiri.</p>
 
   <h2>Apa yang Terjadi Jika Kamu Mengabaikan Pilihan Resmi</h2>
 
@@ -257,10 +293,10 @@ const schemaGraph = {
 
   <p>Artikel ini adalah bagian dari seri Panduan Wisata Bali West Transport:</p>
   <ul>
-    <li><a href="/id/blog/panduan-supir-pribadi-bali/">Panduan Supir Pribadi Bali</a> — Apa yang dimaksud dengan sewa supir seharian, apa yang perlu diketahui, dan cara memesannya.</li>
-    <li><a href="/id/blog/cara-dari-gilimanuk-ke-ubud/">Cara Pergi dari Gilimanuk ke Ubud</a> — Panduan lengkap dari pelabuhan ferry barat Bali menuju Ubud.</li>
+    <li><a href="/id/blog/bali-private-driver-guide/">Panduan Supir Pribadi Bali</a> — Apa yang dimaksud dengan sewa supir seharian, apa yang perlu diketahui, dan cara memesannya.</li>
+    <li><a href="/id/blog/how-to-get-from-gilimanuk-to-ubud/">Cara Pergi dari Gilimanuk ke Ubud</a> — Panduan lengkap dari pelabuhan ferry barat Bali menuju Ubud.</li>
     <li><a href="/id/blog/cara-terbaik-dari-gilimanuk-ke-ubud/">Cara Terbaik dari Gilimanuk ke Ubud</a> — Perbandingan biaya, waktu, dan kenyamanan setiap rute.</li>
-    <li><a href="/id/blog/panduan-pelabuhan-ferry-gilimanuk/">Panduan Pelabuhan Ferry Gilimanuk</a> — Semua yang perlu diketahui tentang penyeberangan Gilimanuk–Ketapang.</li>
+    <li><a href="/id/blog/gilimanuk-ferry-port-guide/">Panduan Pelabuhan Ferry Gilimanuk</a> — Semua yang perlu diketahui tentang penyeberangan Gilimanuk–Ketapang.</li>
   </ul>
 
   <div class="mt-8">
