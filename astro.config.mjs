@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel';
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -32,7 +33,7 @@ function sitemapIntegration() {
         const lastmod = new Date().toISOString().slice(0, 10);
         const urls = pages
           .map((p) => '/' + p.pathname)
-          .filter((pathname) => !pathname.includes('404'))
+          .filter((pathname) => !pathname.includes('404') && !pathname.startsWith('/admin/'))
           .sort();
 
         const body = urls
@@ -52,7 +53,13 @@ function sitemapIntegration() {
 export default defineConfig({
   site: SITE,
   trailingSlash: 'always',
+  // Pages stay static; only /api/media/* (the owner's media uploader) runs as functions.
+  adapter: vercel({ maxDuration: 60 }),
   integrations: [tailwind(), sitemapIntegration()],
+  vite: {
+    // jsquash loads its WASM via import.meta.url, which Vite's dep pre-bundling breaks in dev
+    optimizeDeps: { exclude: ['@jsquash/webp'] },
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'id'],

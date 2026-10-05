@@ -4,3 +4,4 @@ dist
 .env
 CLAUDE.md
 .windsurfrules
+.vercel

@@ -1,0 +1,130 @@
+---
+// Owner-facing media library. Static shell; everything behind it goes
+// through /api/media/* which needs the admin session. Not linked anywhere,
+// noindex, and excluded from the sitemap.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/baliwesttransport-favicon.png" />
+    <title>Media Library — Bali West Transport</title>
+  </head>
+  <body class="bg-brand-cream text-brand-dark font-sans antialiased min-h-screen">
+    <!-- Login -->
+    <main id="login-view" class="hidden min-h-screen flex items-center justify-center px-4">
+      <form id="login-form" class="bg-white w-full max-w-sm p-8 shadow-sm">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-2">Bali West Transport</p>
+        <h1 class="font-serif text-3xl mb-6">Media Library</h1>
+        <label for="password" class="block text-sm text-brand-dark/70 mb-2">Password</label>
+        <input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          class="w-full border border-brand-dark/20 px-4 py-3 mb-4 focus:outline-none focus:border-brand-gold"
+        />
+        <p id="login-error" class="hidden text-sm text-red-700 mb-4"></p>
+        <button class="w-full bg-brand-gold text-white py-3 font-medium hover:bg-brand-dark transition-colors">Masuk</button>
+      </form>
+    </main>
+
+    <!-- App -->
+    <div id="app-view" class="hidden min-h-screen flex flex-col">
+      <header class="bg-brand-dark text-brand-cream px-4 md:px-6 py-4 flex items-center justify-between gap-4">
+        <div class="min-w-0">
+          <p class="text-brand-gold text-xs tracking-widest uppercase">Bali West Transport</p>
+          <h1 class="font-serif text-xl md:text-2xl truncate">Media Library</h1>
+        </div>
+        <button id="logout" class="text-sm border border-brand-cream/30 px-4 py-2 hover:border-brand-gold hover:text-brand-gold transition-colors">
+          Keluar
+        </button>
+      </header>
+
+      <div class="flex-1 flex flex-col md:flex-row min-h-0">
+        <!-- Folders -->
+        <aside class="md:w-72 md:shrink-0 bg-white border-b md:border-b-0 md:border-r border-brand-dark/10 p-4">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-xs tracking-widest uppercase text-brand-dark/60">Folder</h2>
+            <button id="new-root-folder" class="text-sm text-brand-gold hover:text-brand-dark font-medium">+ Folder baru</button>
+          </div>
+          <nav id="folder-tree" class="space-y-0.5 max-h-48 md:max-h-none overflow-y-auto text-sm"></nav>
+          <div class="mt-6 p-3 bg-brand-cream text-xs text-brand-dark/70 leading-relaxed">
+            Foto otomatis diubah ke WebP, maksimal 1920px, sekitar 350 KB. Video otomatis jadi MP4 720p dan dibuatkan
+            gambar cover. Tidak perlu resize sendiri.
+          </div>
+        </aside>
+
+        <!-- Folder content -->
+        <main class="flex-1 min-w-0 p-4 md:p-8">
+          <div id="empty-state" class="hidden text-center py-24">
+            <h2 class="font-serif text-3xl mb-3">Belum ada folder</h2>
+            <p class="text-brand-dark/70 mb-6">Buat folder per layanan atau topik, misalnya “armada”, “gilimanuk-to-ubud”, “tim-driver”.</p>
+            <button data-action="new-root-folder" class="bg-brand-gold text-white px-6 py-3 font-medium hover:bg-brand-dark transition-colors">
+              Buat folder pertama
+            </button>
+          </div>
+
+          <div id="folder-view" class="hidden">
+            <nav id="breadcrumb" class="text-sm text-brand-dark/60 mb-2 flex flex-wrap gap-1"></nav>
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+              <h2 id="folder-title" class="font-serif text-3xl break-all"></h2>
+              <div class="flex flex-wrap gap-2">
+                <label class="bg-brand-gold text-white px-5 py-2.5 text-sm font-medium cursor-pointer hover:bg-brand-dark transition-colors">
+                  Upload foto / video
+                  <input id="file-input" type="file" multiple accept="image/*,video/*,.heic,.heif" class="sr-only" />
+                </label>
+                <button id="new-subfolder" class="border border-brand-dark/20 px-4 py-2.5 text-sm hover:border-brand-gold">+ Subfolder</button>
+                <button id="rename-folder" class="border border-brand-dark/20 px-4 py-2.5 text-sm hover:border-brand-gold">Ganti nama</button>
+                <button id="delete-folder" class="border border-red-700/30 text-red-700 px-4 py-2.5 text-sm hover:bg-red-700 hover:text-white">Hapus folder</button>
+              </div>
+            </div>
+
+            <div id="dropzone" class="border-2 border-dashed border-brand-dark/15 bg-white/60 p-6 text-center text-sm text-brand-dark/60 mb-6 transition-colors">
+              Tarik &amp; lepas foto atau video ke sini
+            </div>
+
+            <div id="upload-queue" class="hidden bg-white p-4 mb-6 space-y-3"></div>
+
+            <div id="selection-bar" class="hidden sticky top-2 z-10 bg-brand-dark text-brand-cream px-4 py-3 mb-4 flex items-center justify-between">
+              <span id="selection-count" class="text-sm"></span>
+              <div class="flex gap-3 text-sm">
+                <button id="clear-selection" class="hover:text-brand-gold">Batal</button>
+                <button id="delete-selected" class="text-red-300 hover:text-red-200 font-medium">Hapus</button>
+              </div>
+            </div>
+
+            <div id="subfolders" class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3 mb-6"></div>
+            <p id="folder-empty" class="hidden text-sm text-brand-dark/60 py-12 text-center">Folder ini masih kosong.</p>
+            <div id="files" class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <p id="loading" class="fixed inset-0 flex items-center justify-center text-brand-dark/60 text-sm">Memuat…</p>
+
+    <dialog id="dialog" class="backdrop:bg-black/50 p-0 w-[min(92vw,28rem)] bg-white text-brand-dark">
+      <form method="dialog" class="p-6">
+        <h3 id="dialog-title" class="font-serif text-2xl mb-2"></h3>
+        <p id="dialog-text" class="text-sm text-brand-dark/70 mb-4 break-words"></p>
+        <input id="dialog-input" class="w-full border border-brand-dark/20 px-3 py-2 mb-1 focus:outline-none focus:border-brand-gold" />
+        <p id="dialog-hint" class="text-xs text-brand-dark/50 mb-4"></p>
+        <div class="flex justify-end gap-2">
+          <button value="cancel" class="px-4 py-2 text-sm hover:text-brand-gold">Batal</button>
+          <button id="dialog-ok" value="ok" class="bg-brand-gold text-white px-5 py-2 text-sm font-medium hover:bg-brand-dark"></button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:max-w-sm z-50 space-y-2"></div>
+
+    <script>
+      import '../../scripts/media-admin';
+    </script>
+  </body>
+</html>
