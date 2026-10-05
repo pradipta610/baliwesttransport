@@ -4,101 +4,100 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import WhatsAppFloat from '../../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Transfer Gilimanuk ke Ubud | Antar Jemput Pribadi dari Pelabuhan Gilimanuk';
-const pageDescription = 'Pesan transfer pribadi Gilimanuk ke Ubud bersama Bali West Transport. Layanan door-to-door, supir lokal profesional, kendaraan ber-AC, jadwal fleksibel, dan perjalanan aman dari Pelabuhan Gilimanuk ke Ubud Bali.';
-const pageKeywords = 'transfer gilimanuk ke ubud, antar jemput gilimanuk ubud, transfer pribadi gilimanuk ubud, pelabuhan gilimanuk ke ubud, supir pribadi bali, bali west transport, transfer gilimanuk, ketapang gilimanuk ferry transfer, mobil sewa gilimanuk ubud';
+// Keyword utama: "sewa mobil + supir Gilimanuk ke Ubud" (transaksional).
+// Pertanyaan informasi ("berapa jam", "naik apa") milik artikel blog —
+// jangan link ke artikel itu dari sini (link dengan keyword sama memperparah kanibalisasi).
+const pageTitle = 'Mobil + Supir Gilimanuk ke Ubud | Transfer dari Pelabuhan Gilimanuk';
+const pageDescription = 'Mobil pribadi dengan supir dari Pelabuhan Gilimanuk ke Ubud. 125–140 km, 3,5–4,5 jam, jemputan menyesuaikan jadwal kapal, bisa mampir ke Tanah Lot atau Taman Ayun. Pesan via WhatsApp.';
+const pageKeywords = 'mobil gilimanuk ke ubud, sewa mobil dan supir gilimanuk ubud, transfer gilimanuk ke ubud, antar jemput pelabuhan gilimanuk ubud, travel gilimanuk ubud, transfer ijen ke ubud';
 
-const whatsappText = 'Halo, saya ingin memesan transfer pribadi dari Gilimanuk ke Ubud. Mohon informasi penawaran terbaik Anda.';
+const whatsappText = 'Halo, saya ingin memesan mobil pribadi dari Gilimanuk ke Ubud. Mohon informasi penawaran terbaik Anda.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+const waPath = 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z';
 
-// SEO: Benefit list as direct answers (AEO)
-const keunggulan = [
-  'Kendaraan pribadi eksklusif untuk Anda dan rombongan',
-  'Transfer langsung dari Pelabuhan Gilimanuk ke akomodasi Anda di Ubud',
-  'Supir lokal profesional dengan pengetahuan rute Bali yang mendalam',
-  'Kendaraan ber-AC yang nyaman',
-  'Jadwal keberangkatan yang fleksibel',
-  'Cocok untuk solo traveler, pasangan, keluarga, dan rombongan',
-  'Layanan transportasi yang aman dan terpercaya',
-  'Harga transparan tanpa biaya tersembunyi',
+const alasan = [
+  { judul: 'Jemputan menyesuaikan jadwal kapal', teks: 'Kirim jam penyeberangan Anda dari Ketapang. Supir memantau kabar Anda lewat WhatsApp dan menunggu di pintu keluar pelabuhan saat Anda tiba.' },
+  { judul: 'Supir lokal Bali Barat', teks: 'Supir kami tinggal di Bali Barat dan rutin melewati jalur ini, termasuk ruas padat di Tabanan dan Mengwi.' },
+  { judul: 'Satu mobil dari awal sampai akhir', teks: 'Tidak perlu naik bus ke Terminal Ubung lalu cari kendaraan lagi ke Ubud. Mobil yang sama mengantar Anda sampai depan penginapan.' },
+  { judul: 'Bisa mampir sesuai keinginan', teks: 'Berhenti makan, ke toilet, atau mampir ke pura di jalan. Sampaikan saja, rutenya kami atur.' },
+];
+
+const areaUbud = [
+  { area: 'Sayan, Kedewatan, Penestanan', catatan: 'Sisi barat Ubud — area pertama yang dilewati dari arah Gilimanuk.' },
+  { area: 'Pusat Ubud & Monkey Forest', catatan: 'Jalan sempit dan satu arah. Beberapa homestay masuk gang, jadi mobil berhenti di akses terdekat.' },
+  { area: 'Tegallalang & Payangan', catatan: 'Utara pusat Ubud. Tambahkan sekitar 20–30 menit.' },
+  { area: 'Mas, Peliatan, Pejeng', catatan: 'Selatan dan timur pusat Ubud, lewat jalan desa.' },
 ];
 
 const lokasiJemput = [
-  'Pelabuhan Gilimanuk',
-  'Hotel di Gilimanuk',
-  'Penginapan sekitarnya',
-  'Lokasi penjemputan khusus di sekitar Bali Barat',
+  'Pelabuhan Gilimanuk (pintu keluar penumpang)',
+  'Hotel dan homestay di Gilimanuk',
+  'Pemuteran dan area Pulau Menjangan',
+  'Medewi, Negara, dan alamat lain di Bali Barat',
 ];
 
 const lokasiAntar = [
-  'Hotel dan resort',
-  'Villa pribadi',
-  'Guest house',
-  'Properti Airbnb',
-  'Objek wisata di Ubud',
-  'Tujuan khusus di seluruh area Ubud',
+  'Hotel, resort, dan villa di Ubud',
+  'Guesthouse dan penginapan Airbnb',
+  'Tempat retreat yoga dan wellness',
+  'Alamat mana pun di area Ubud',
 ];
 
-const areaTujuan = [
-  'Pusat Ubud',
-  'Area Monkey Forest',
-  'Campuhan Ridge Walk',
-  'Tegallalang',
-  'Penestanan',
-  'Sayan',
-  'Kedewatan',
-  'Desa Mas',
+const pengguna = [
+  { judul: 'Pendaki Kawah Ijen', teks: 'Selesai mendaki Ijen di Banyuwangi lalu menyeberang pagi itu juga? Kami jemput di Gilimanuk, Anda bisa istirahat di mobil sampai Ubud.' },
+  { judul: 'Perjalanan darat dari Jawa', teks: 'Tiba dengan kereta di Stasiun Ketapang Banyuwangi atau berkendara dari Surabaya dan Yogyakarta, lalu menyeberang dengan kapal Ketapang–Gilimanuk.' },
+  { judul: 'Diving dan wisata alam', teks: 'Selesai dari Pulau Menjangan, Pemuteran, atau Taman Nasional Bali Barat dan lanjut ke Ubud.' },
+  { judul: 'Keluarga dan rombongan', teks: 'Membawa anak, stroller, dan koper besar jauh lebih mudah dengan mobil pribadi dibanding bus yang harus ganti di Terminal Ubung.' },
 ];
 
-const pemandanganRute = [
-  'Pedesaan Bali Barat',
-  'Desa-desa Bali tradisional',
-  'Sawah dan perkebunan',
-  'Panorama pegunungan',
-  'Pasar lokal dan area budaya',
+const pemberhentian = [
+  { nama: 'Pura Rambut Siwi', lokasi: 'Di jalur utama', teks: 'Pura di atas tebing laut dekat Yeh Embang, dekat dari area parkir.' },
+  { nama: 'Pantai Medewi & Soka', lokasi: 'Di jalur utama', teks: 'Pantai pasir hitam dengan warung — pas untuk makan siang dan istirahat.' },
+  { nama: 'Pura Taman Ayun, Mengwi', lokasi: 'Searah jalan', teks: 'Pura kerajaan, bagian dari lanskap subak Bali yang diakui UNESCO.' },
+  { nama: 'Tanah Lot', lokasi: 'Sedikit memutar', teks: 'Pura laut paling terkenal di Bali. Ramai saat sunset, siapkan waktu lebih.' },
+  { nama: 'Sawah Jatiluwih', lokasi: 'Memutar cukup jauh', teks: 'Terasering sawah warisan UNESCO di perbukitan. Cocok jika berangkat pagi.' },
 ];
 
-// AEO: FAQ with natural Indonesian questions
+const perbandingan = [
+  { judul: 'Mobil pribadi', teks: 'Door-to-door, berangkat saat Anda tiba, bisa mampir. Paling cocok untuk bawaan banyak, keluarga, dan kapal malam.' },
+  { judul: 'Shuttle wisata', teks: 'Jam berangkat tetap dan kursi berbagi. Cocok jika jadwal kapal Anda pas dengan jadwalnya.' },
+  { judul: 'Bus umum', teks: 'Paling murah, tapi harus ganti di Terminal Ubung Denpasar dan masih perlu kendaraan lagi ke Ubud.' },
+];
+
 const faq = [
   {
-    pertanyaan: 'Berapa lama perjalanan dari Gilimanuk ke Ubud?',
-    jawaban: 'Perjalanan dari Gilimanuk ke Ubud biasanya memakan waktu antara 3,5 hingga 4,5 jam tergantung kondisi lalu lintas dan lokasi tujuan Anda di Ubud.',
+    pertanyaan: 'Berapa lama perjalanan mobil dari Gilimanuk ke Ubud?',
+    jawaban: 'Sekitar 3,5–4,5 jam berkendara. Kemacetan di Tabanan dan Mengwi pada sore hari serta upacara adat di jalan bisa menambah waktu. Pemberhentian yang Anda minta dihitung terpisah.',
   },
   {
-    pertanyaan: 'Apakah ini transfer pribadi atau berbagi dengan penumpang lain?',
-    jawaban: 'Ini adalah transfer pribadi. Kendaraan dipesan secara eksklusif untuk Anda dan rombongan, tidak berbagi dengan penumpang lain.',
+    pertanyaan: 'Berapa jarak Pelabuhan Gilimanuk ke Ubud?',
+    jawaban: 'Sekitar 125–140 km, tergantung lokasi penginapan. Sayan dan Kedewatan di sisi barat Ubud paling dekat; Tegallalang di utara paling jauh.',
   },
   {
-    pertanyaan: 'Apakah bisa dijemput langsung di Pelabuhan Gilimanuk?',
-    jawaban: 'Ya. Kami menyediakan penjemputan langsung di Pelabuhan Gilimanuk dan dapat menyesuaikan waktu dengan jadwal kedatangan feri Anda.',
+    pertanyaan: 'Bagaimana jika kapal dari Ketapang terlambat?',
+    jawaban: 'Beri tahu rencana jam penyeberangan saat memesan, lalu kabari kami saat naik kapal. Supir memantau kabar Anda lewat WhatsApp dan menjemput saat Anda tiba di pelabuhan.',
   },
   {
-    pertanyaan: 'Apakah tersedia untuk rombongan?',
-    jawaban: 'Ya. Kami menyediakan pilihan kendaraan yang sesuai untuk perorangan, pasangan, keluarga, maupun rombongan besar.',
+    pertanyaan: 'Bisa mampir ke Tanah Lot atau Jatiluwih?',
+    jawaban: 'Bisa. Sampaikan saat memesan supaya rute dan waktunya kami atur. Tiket masuk pura dan sawah dibayar langsung di lokasi.',
   },
   {
-    pertanyaan: 'Apakah bisa berhenti di tengah perjalanan?',
-    jawaban: 'Ya. Atas permintaan, pemberhentian singkat untuk makan, istirahat, atau melihat pemandangan dapat diatur selama perjalanan.',
-  },
-  {
-    pertanyaan: 'Bisakah memesan transfer di hari yang sama?',
-    jawaban: 'Tergantung ketersediaan, pemesanan di hari yang sama mungkin bisa dilakukan. Namun kami sangat menyarankan untuk memesan jauh hari sebelumnya.',
+    pertanyaan: 'Kendaraan apa yang dipakai?',
+    jawaban: 'Mobil ber-AC untuk maksimal 4 penumpang beserta bagasi. Untuk rombongan besar tersedia minibus 19 kursi. Sebutkan jika membawa papan selancar, stroller, atau bagasi ekstra.',
   },
   {
     pertanyaan: 'Berapa harga transfer Gilimanuk ke Ubud?',
-    jawaban: 'Harga bervariasi tergantung jenis kendaraan dan jumlah penumpang. Hubungi kami via WhatsApp untuk mendapatkan penawaran terbaik.',
+    jawaban: 'Harga tergantung jenis kendaraan, jumlah penumpang, dan pemberhentian. Hubungi kami via WhatsApp untuk penawaran terbaik.',
   },
 ];
 
 const ruteTerkait = [
-  { label: 'Gilimanuk ke Ubud', href: '/id/transfers/gilimanuk-to-ubud/' },
-  { label: 'Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
-  { label: 'Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
-  { label: 'Gilimanuk ke Seminyak', href: '/id/transfers/gilimanuk-to-seminyak/' },
-  { label: 'Gilimanuk ke Uluwatu', href: '/id/transfers/gilimanuk-to-uluwatu/' },
-  { label: 'Gilimanuk ke Sanur', href: '/id/transfers/gilimanuk-to-sanur/' },
-  { label: 'Gilimanuk ke Lovina', href: '/id/transfers/' },
-  { label: 'Gilimanuk ke Amed', href: '/id/transfers/' },
+  { label: 'Transfer Gilimanuk ke Canggu', href: '/id/transfers/gilimanuk-to-canggu/' },
+  { label: 'Transfer Gilimanuk ke Seminyak', href: '/id/transfers/gilimanuk-to-seminyak/' },
+  { label: 'Transfer Gilimanuk ke Tanah Lot', href: '/id/transfers/gilimanuk-to-tanah-lot/' },
+  { label: 'Transfer Gilimanuk ke Sanur', href: '/id/transfers/gilimanuk-to-sanur/' },
+  { label: 'Transfer Gilimanuk ke Kuta', href: '/id/transfers/gilimanuk-to-kuta/' },
+  { label: 'Transfer Bandara Ngurah Rai ke Ubud', href: '/id/airport-transfer/ngurah-rai-airport-to-ubud/' },
 ];
 
 // Schema
@@ -138,7 +137,7 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Transfer Gilimanuk ke Ubud',
+      name: 'Mobil + Supir Gilimanuk ke Ubud',
       alternateName: 'Gilimanuk to Ubud Transfer',
       description: pageDescription,
       serviceType: 'Transfer pribadi',
@@ -148,10 +147,9 @@ const schemaGraph = {
         { '@type': 'Language', name: 'English' },
       ],
       areaServed: [
-        { '@type': 'Place', name: 'Gilimanuk' },
+        { '@type': 'Place', name: 'Pelabuhan Gilimanuk' },
         { '@type': 'Place', name: 'Ubud' },
         { '@type': 'AdministrativeArea', name: 'Bali' },
-        { '@type': 'Country', name: 'Indonesia' },
       ],
       availableChannel: {
         '@type': 'ServiceChannel',
@@ -208,16 +206,16 @@ const schemaGraph = {
       <div class="absolute inset-0">
         <img
           src="/images/kelingking-beach.jpg"
-          alt="Transfer pribadi dari Gilimanuk ke Ubud Bali"
+          alt="Mobil pribadi dari Gilimanuk ke Ubud, Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Transfer Pribadi — Bali West Transport</p>
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Mobil + Supir — Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Transfer Gilimanuk ke Ubud</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Layanan antar jemput door-to-door dari Pelabuhan Gilimanuk ke Ubud dengan supir lokal profesional.
+          Supir menunggu Anda di Pelabuhan Gilimanuk dan mengantar langsung ke hotel atau villa Anda di Ubud.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -226,45 +224,76 @@ const schemaGraph = {
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
           >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
             Pesan Transfer Sekarang
           </a>
-          <a href="/id/transfers/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Lihat Semua Transfer</a>
+          <a href="#rute" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">Lihat Rute</a>
         </div>
       </div>
     </section>
 
-    <!-- Intro -->
+    <!-- 2. Jawaban Singkat -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Cepat</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Transfer Pribadi dari Gilimanuk ke Ubud</h2>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jawaban Singkat</p>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Mobil Pribadi dari Gilimanuk ke Ubud</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Cara tercepat dan paling praktis untuk perjalanan dari Gilimanuk ke Ubud adalah dengan transfer pribadi. Perjalanan membutuhkan waktu sekitar 3 jam tergantung lalu lintas, dengan layanan door-to-door langsung dari Pelabuhan Gilimanuk ke akomodasi Anda di Ubud.
+              Pesan transfer pribadi dari Gilimanuk ke Ubud bersama Bali West Transport. Perjalanan memakan waktu sekitar 3,5–4,5 jam tergantung lalu lintas, dengan layanan door-to-door yang nyaman bagi wisatawan yang tiba lewat kapal Ketapang–Gilimanuk dari Jawa.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Layanan ini ideal untuk wisatawan yang tiba dari Jawa via Feri Ketapang–Gilimanuk dan ingin perjalanan bebas kerumitan menuju jantung budaya Bali, tanpa harus menunggu transportasi umum atau berbagi kendaraan dengan penumpang lain.
+              Cocok untuk pendaki Ijen, wisatawan jalur darat, keluarga, dan siapa pun yang membawa banyak bagasi. Dijemput di pintu keluar pelabuhan, diantar sampai penginapan, dan pesan lewat WhatsApp.
             </p>
           </div>
           <div class="space-y-4">
-            <img src="/images/nusa-penida-viewpoint.jpg" alt="Pemandangan Bali di rute Gilimanuk ke Ubud" class="w-full h-auto" loading="lazy" />
+            <img
+              src="/images/nusa-penida-viewpoint.jpg"
+              alt="Pemandangan pantai Bali dalam perjalanan transfer pribadi"
+              class="w-full h-auto"
+              loading="lazy"
+            />
             <div class="grid grid-cols-2 gap-4">
-              <img src="/images/beach-sunset-swing.jpg" alt="Sunset Bali" class="w-full h-48 object-cover" loading="lazy" />
-              <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop" alt="Sawah terasering Tegallalang Bali" class="w-full h-48 object-cover" loading="lazy" />
+              <img
+                src="/images/beach-sunset-swing.jpg"
+                alt="Pantai Bali saat matahari terbenam"
+                class="w-full h-48 object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop"
+                alt="Sawah terasering dekat Ubud"
+                class="w-full h-48 object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Ringkasan Rute -->
-    <section class="py-16 bg-brand-cream">
+    <!-- 3. Mengapa Memilih Kami -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Kami</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Alasan Memesan Transfer Ini</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          {alasan.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.judul}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.teks}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Jarak dan Waktu Tempuh -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Rute</p>
@@ -275,14 +304,14 @@ const schemaGraph = {
               <p class="font-serif text-2xl text-brand-dark">125–140 km</p>
             </div>
             <div>
-              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Est. Waktu</p>
+              <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Estimasi</p>
               <p class="font-serif text-2xl text-brand-dark">3,5–4,5 jam</p>
             </div>
           </div>
           <div class="md:border-l md:border-brand-dark/10 md:pl-8 flex flex-col items-start gap-4">
             <div>
               <span class="font-serif text-4xl text-brand-gold">Penawaran Fleksibel</span>
-              <p class="text-brand-dark/50 text-sm mt-1">Informasikan tanggal & jumlah penumpang.</p>
+              <p class="text-brand-dark/50 text-sm mt-1">Sebutkan tanggal & jumlah penumpang.</p>
             </div>
             <a
               href={whatsappUrl}
@@ -290,171 +319,170 @@ const schemaGraph = {
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             >
-              Minta Penawaran Terbaik
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
+              Minta Penawaran
             </a>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jarak dan Waktu Tempuh</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Berapa Lama Perjalanannya</h2>
+            <p class="text-brand-dark/70 leading-relaxed mb-4">
+              Jaraknya 125–140 km dengan waktu tempuh 3,5–4,5 jam. Jalurnya menyusuri pesisir barat daya Bali lewat Negara dan Tabanan, lalu masuk ke arah Ubud dari Mengwi.
+            </p>
+            <p class="text-brand-dark/70 leading-relaxed">
+              Berangkat pagi biasanya paling cepat. Lalu lintas di Tabanan dan Mengwi melambat pada sore hari, juga saat ada upacara adat yang memakai jalan.
+            </p>
+          </div>
+          <div class="space-y-3">
+            {areaUbud.map((item) => (
+              <div class="bg-white p-5">
+                <p class="font-medium text-brand-dark">{item.area}</p>
+                <p class="text-brand-dark/60 text-sm mt-1">{item.catatan}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Keunggulan -->
+    <!-- 5 & 6. Lokasi Jemput dan Antar -->
     <section class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Mengapa Memilih Kami</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Keunggulan Transfer Gilimanuk ke Ubud Kami</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {keunggulan.map((item) => (
-            <div class="flex items-start gap-4 p-6 bg-brand-cream">
-              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <span class="text-brand-dark/70">{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Lokasi Jemput & Antar -->
-    <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Penjemputan</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Penjemputan di Gilimanuk</h2>
-            <p class="text-brand-dark/70 mb-6">Kami dapat menjemput dari:</p>
-            <div class="space-y-3 mb-6">
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Penjemputan di Bali Barat</h2>
+            <ul class="space-y-3 mb-6">
               {lokasiJemput.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70">{item}</span>
-                </div>
+                <li class="flex items-center gap-3 bg-brand-cream p-4 text-brand-dark/70">
+                  <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
               ))}
-            </div>
-            <p class="text-brand-dark/50 text-sm">Supir kami akan berkoordinasi sebelum keberangkatan untuk memastikan proses penjemputan berjalan lancar.</p>
+            </ul>
+            <p class="text-brand-dark/50 text-sm">Supir mengirim pesan sebelum kapal bersandar untuk memberi tahu titik temu.</p>
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pengantaran</p>
             <h2 class="font-serif text-3xl text-brand-dark mb-6">Lokasi Pengantaran di Ubud</h2>
-            <p class="text-brand-dark/70 mb-6">Kami mengantarkan langsung ke:</p>
-            <div class="space-y-3 mb-8">
+            <ul class="space-y-3 mb-6">
               {lokasiAntar.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70">{item}</span>
-                </div>
+                <li class="flex items-center gap-3 bg-brand-cream p-4 text-brand-dark/70">
+                  <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
               ))}
-            </div>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Area Populer di Ubud</p>
-              <div class="grid grid-cols-2 gap-3">
-                {areaTujuan.map((area) => (
-                  <div class="bg-white p-3 text-brand-dark/60 text-sm">{area}</div>
-                ))}
-              </div>
-            </div>
+            </ul>
+            <p class="text-brand-dark/50 text-sm">Kirim alamat lengkap atau pin Google Maps saat memesan.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Dari Jawa -->
-    <section class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Tiba dari Jawa</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal untuk Wisatawan yang Tiba dari Jawa</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Banyak wisatawan menyeberang dari Banyuwangi ke Bali via Feri Ketapang–Gilimanuk sebelum melanjutkan perjalanan ke Ubud.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
-              Daripada mengatur beberapa moda transportasi, transfer pribadi memungkinkan Anda langsung melanjutkan perjalanan dari Gilimanuk ke Ubud dalam satu perjalanan yang nyaman, tanpa ganti kendaraan.
-            </p>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pemandangan Sepanjang Rute</p>
-              <div class="grid grid-cols-2 gap-3">
-                {pemandanganRute.map((item) => (
-                  <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop"
-              alt="Wisatawan tiba dari Jawa ke Bali via Pelabuhan Gilimanuk"
-              class="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ – AEO -->
+    <!-- 7. Siapa yang Memakai Transfer Ini -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Pertanyaan yang Sering Diajukan</h2>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Cocok Untuk</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Siapa yang Memakai Transfer Ini</h2>
         </div>
-        <div class="space-y-4">
-          {faq.map((item) => (
+        <div class="grid md:grid-cols-2 gap-6">
+          {pengguna.map((item) => (
             <div class="bg-white p-8">
-              <h3 class="font-serif text-xl text-brand-dark mb-3">{item.pertanyaan}</h3>
-              <p class="text-brand-dark/70 leading-relaxed">{item.jawaban}</p>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.judul}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.teks}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-16 bg-brand-cream">
+    <!-- 8. Gambaran Perjalanan -->
+    <section id="rute" class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">Pesan Transfer Gilimanuk ke Ubud</h3>
-            <p class="text-brand-dark/60">Hindari kerumitan transportasi umum. Perjalanan langsung bersama supir lokal berpengalaman.</p>
-          </div>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Pesan Transfer Sekarang
-          </a>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Gambaran Perjalanan</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">Rute dan Tempat Singgah</h2>
+          <p class="text-brand-dark/60 max-w-2xl mx-auto">Gilimanuk → Negara → Medewi → Tabanan → Mengwi → Ubud. Tambahkan tempat singgah saat memesan.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pemberhentian.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-2">{item.lokasi}</p>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.nama}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.teks}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- Rute Terkait -->
-    <section class="py-16 bg-white">
+    <!-- 9. Keuntungan Transfer Pribadi -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Perbandingan</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Keuntungan Transfer Pribadi</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {perbandingan.map((item, i) => (
+            <div class={`p-8 ${i === 0 ? 'bg-brand-dark text-brand-cream' : 'bg-white'}`}>
+              <h3 class={`font-serif text-2xl mb-3 ${i === 0 ? 'text-brand-gold' : 'text-brand-dark'}`}>{item.judul}</h3>
+              <p class={`leading-relaxed ${i === 0 ? 'text-brand-cream/80' : 'text-brand-dark/70'}`}>{item.teks}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Transfer Lainnya</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Rute Transfer dari Gilimanuk</h2>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Pertanyaan yang Sering Diajukan</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid lg:grid-cols-2 gap-4">
+          {faq.map((item) => (
+            <div class="bg-brand-cream p-6">
+              <h3 class="font-serif text-xl text-brand-dark mb-2">{item.pertanyaan}</h3>
+              <p class="text-brand-dark/70 text-sm leading-relaxed">{item.jawaban}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Ajakan Memesan -->
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pesan via WhatsApp</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Pesan Transfer Gilimanuk ke Ubud</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Kirim tanggal, jam kapal, jumlah penumpang, dan alamat di Ubud. Kami balas dengan penawaran terbaik.</p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
+          Pesan Sekarang
+        </a>
+      </div>
+    </section>
+
+    <!-- Rute Terkait -->
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Rute Lainnya</p>
+          <h2 class="font-serif text-3xl text-brand-dark">Transfer Lain dari Gilimanuk</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {ruteTerkait.map((rute) => (
-            <a href={rute.href} class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <a href={rute.href} class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
               <span class="text-brand-dark font-medium text-sm">{rute.label}</span>
             </a>
           ))}
@@ -462,54 +490,25 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Panduan Perjalanan -->
+    <!-- Jelajahi -->
     <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Panduan Perjalanan</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Merencanakan Perjalanan dari Gilimanuk?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Baca panduan lengkap kami yang membahas semua pilihan transportasi dari Pelabuhan Gilimanuk ke Ubud — bus, shuttle, dan transfer pribadi dalam satu perbandingan.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <a href="/id/blog/how-to-get-from-gilimanuk-to-ubud/" class="block bg-brand-cream p-8 hover:bg-brand-gold/10 transition-colors group">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Panduan Wisata</p>
-            <h3 class="font-serif text-2xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">Cara ke Ubud dari Gilimanuk: Bus, Shuttle & Transfer Pribadi</h3>
-            <p class="text-brand-dark/60 text-sm leading-relaxed mb-4">Waktu tempuh, biaya, langkah demi langkah, dan tips bagi pelancong yang baru tiba — semua pilihan transportasi dibandingkan dalam satu panduan.</p>
-            <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-widest uppercase font-medium group-hover:text-brand-gold transition-colors">
-              Baca Panduan
-              <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Jelajahi Lebih -->
-    <section class="py-16 bg-brand-cream">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jelajahi Lebih</p>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Jelajahi</p>
           <h2 class="font-serif text-3xl text-brand-dark">Layanan Lainnya dari Bali West Transport</h2>
         </div>
-        <div class="grid md:grid-cols-4 gap-4">
-          <a href="/id/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Beranda</span>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a href="/id/transfers/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Semua Transfer Gilimanuk</span>
           </a>
-          <a href="/id/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Transfer Bandara</span>
+          <a href="/id/blog/gilimanuk-ferry-port-guide/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Panduan Pelabuhan Gilimanuk</span>
           </a>
-          <a href="/id/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Tur Pribadi Bali</span>
+          <a href="/id/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Transfer Bandara Bali</span>
           </a>
-          <a href="/id/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Tentang Kami</span>
-          </a>
-        </div>
-        <div class="mt-6 text-center">
-          <a href="/transfers/gilimanuk-to-ubud/" class="text-brand-dark/40 hover:text-brand-dark/70 text-sm transition-colors">
-            View this page in English
+          <a href="/id/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Tur Pribadi</span>
           </a>
         </div>
       </div>

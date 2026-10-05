@@ -357,6 +357,32 @@ const ui = {
     color: #f5f0e8 !important;
   }
 
+  /* Early booking box: bridges an informational guide to its service page */
+  .blog-content :global(.booking-box) {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    padding: 1.75rem 2rem;
+    margin: 2rem 0 2.5rem;
+  }
+  .blog-content :global(.booking-box p) {
+    color: rgba(245, 240, 232, 0.8);
+    margin-bottom: 1.25rem;
+  }
+  .blog-content :global(.booking-box strong) {
+    color: #c9a962;
+  }
+  .blog-content :global(.booking-box a:not(.cta-inline)) {
+    color: #f5f0e8;
+  }
+  .blog-content :global(.booking-box .cta-inline) {
+    background: #c9a962;
+    color: #1a1a1a !important;
+    margin: 0;
+  }
+  .blog-content :global(.booking-box .cta-inline:hover) {
+    background: #f5f0e8;
+  }
+
   /* First h2 has no top margin */
   .blog-content :global(h2:first-of-type) {
     margin-top: 0;

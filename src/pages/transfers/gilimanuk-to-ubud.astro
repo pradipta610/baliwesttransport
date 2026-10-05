@@ -4,95 +4,100 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
 
-const pageTitle = 'Gilimanuk to Ubud Transfer | Private Transfer from Gilimanuk Ferry Port';
-const pageDescription = 'Book a private Gilimanuk to Ubud transfer with Bali West Transport. Door-to-door service, professional local drivers, air-conditioned vehicles, flexible pickup times, and safe travel from Gilimanuk Ferry Port to Ubud.';
-const pageKeywords = 'Gilimanuk to Ubud transfer, private transfer Gilimanuk to Ubud, Gilimanuk Ferry Port to Ubud, Bali private driver, Bali West Transport, Gilimanuk transfer, Ubud transfer, Ketapang Gilimanuk ferry transfer';
+// Primary keyword: "Gilimanuk to Ubud private car / driver" (transactional).
+// The informational "how to get from Gilimanuk to Ubud" belongs to the blog guide —
+// don't link up to it from here (same-keyword link feeds the cannibalisation).
+const pageTitle = 'Gilimanuk to Ubud Private Car with Driver | Ferry Port Transfer';
+const pageDescription = 'Private car with driver from Gilimanuk Ferry Port to Ubud. 125–140 km, 3.5–4.5 hours, pickup timed to your ferry, optional stops at Tanah Lot or Taman Ayun. Book on WhatsApp.';
+const pageKeywords = 'Gilimanuk to Ubud private car, Gilimanuk to Ubud driver, Gilimanuk to Ubud transfer, Gilimanuk Ferry Port to Ubud, private transfer Gilimanuk Ubud, Ijen to Ubud transfer';
 
-const whatsappText = 'Hi, I would like to book a private Gilimanuk to Ubud transfer. Please send me your best offer.';
+const whatsappText = 'Hi, I would like to book a private car from Gilimanuk to Ubud. Please send me your best offer.';
 const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(whatsappText)}`;
+const waPath = 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z';
 
-const benefits = [
-  'Private vehicle exclusively for you and your group',
-  'Direct transfer from Gilimanuk Ferry Port to your accommodation in Ubud',
-  'Professional local drivers with extensive Bali route knowledge',
-  'Comfortable air-conditioned vehicles',
-  'Flexible departure schedules',
-  'Suitable for solo travellers, couples, families, and groups',
-  'Safe and reliable transportation service',
-  'Transparent pricing with no hidden fees'
+const reasons = [
+  { title: 'Pickup timed to your ferry', text: 'Send us your crossing time from Ketapang. Your driver keeps in touch on WhatsApp and meets you at the port exit when you actually arrive.' },
+  { title: 'Local West Bali drivers', text: 'Our drivers are based in West Bali and drive this road regularly, including the busy stretch through Tabanan and Mengwi.' },
+  { title: 'One car, start to finish', text: 'No bus to Ubung terminal and no second ride to Ubud. The same car takes you from the port to your accommodation door.' },
+  { title: 'Stops when you want them', text: 'Meal breaks, toilet stops, or a temple visit on the way. Tell us what you would like and we plan the route around it.' },
+];
+
+const ubudAreas = [
+  { area: 'Sayan, Kedewatan, Penestanan', note: 'Western edge of Ubud — the first areas you reach coming from Gilimanuk.' },
+  { area: 'Central Ubud & Monkey Forest', note: 'Narrow one-way streets. Some homestays sit down footpaths, so the driver stops at the nearest car access.' },
+  { area: 'Tegallalang & Payangan', note: 'North of the centre. Allow roughly 20–30 extra minutes.' },
+  { area: 'Mas, Peliatan, Pejeng', note: 'South and east of the centre, reached through the village roads.' },
 ];
 
 const pickupLocations = [
-  'Gilimanuk Ferry Port',
-  'Hotels in Gilimanuk',
-  'Nearby accommodations',
-  'Custom pickup locations around West Bali'
+  'Gilimanuk Ferry Port (passenger exit)',
+  'Hotels and homestays in Gilimanuk',
+  'Pemuteran and Menjangan Island area',
+  'Medewi, Negara, and other West Bali addresses',
 ];
 
 const dropoffLocations = [
-  'Hotels and resorts',
-  'Private villas',
-  'Guesthouses',
-  'Airbnb properties',
-  'Tourist attractions in Ubud',
-  'Custom destinations throughout the Ubud area'
+  'Hotels, resorts, and villas in Ubud',
+  'Guesthouses and Airbnb stays',
+  'Yoga retreats and wellness resorts',
+  'Any address in the greater Ubud area',
 ];
 
-const popularDestinations = [
-  'Ubud Centre',
-  'Monkey Forest Area',
-  'Campuhan Ridge Walk',
-  'Tegallalang',
-  'Penestanan',
-  'Sayan',
-  'Kedewatan',
-  'Mas Village'
+const travellers = [
+  { title: 'Ijen crater hikers', text: 'Finishing the Kawah Ijen hike in Banyuwangi and crossing the same morning? We pick you up at Gilimanuk so you can rest in the car to Ubud.' },
+  { title: 'Overland from Java', text: 'Arriving by train at Banyuwangi Ketapang station or by car from Surabaya and Yogyakarta, then crossing on the Ketapang–Gilimanuk ferry.' },
+  { title: 'Divers and nature trips', text: 'Leaving Menjangan Island, Pemuteran, or West Bali National Park for the second half of your trip in Ubud.' },
+  { title: 'Families and groups', text: 'Children, prams, and big bags are easier in a private car than on a bus with a change at Ubung terminal.' },
 ];
 
-const journeyHighlights = [
-  'West Bali countryside',
-  'Traditional Balinese villages',
-  'Rice fields and plantations',
-  'Mountain views',
-  'Local markets and cultural areas'
+const stops = [
+  { name: 'Rambut Siwi Temple', where: 'On the main road', text: 'Clifftop sea temple near Yeh Embang, a short walk from the car park.' },
+  { name: 'Medewi & Soka beaches', where: 'On the main road', text: 'Black-sand coast with warungs — a good place for lunch and a stretch.' },
+  { name: 'Taman Ayun Temple, Mengwi', where: 'On the way in', text: 'Royal water temple, part of Bali\'s UNESCO-listed subak landscape.' },
+  { name: 'Tanah Lot', where: 'Short detour', text: 'Bali\'s best-known sea temple. Popular at sunset, so allow extra time.' },
+  { name: 'Jatiluwih rice terraces', where: 'Longer detour', text: 'UNESCO-listed terraces in the hills. Best if you leave the port early.' },
+];
+
+const benefits = [
+  { title: 'Private car', text: 'Door to door, leaves when you arrive, stops on request. Best for luggage, families, and late ferries.' },
+  { title: 'Tourist shuttle', text: 'Fixed departure times and shared seats. Works if your ferry lines up with the schedule.' },
+  { title: 'Public bus', text: 'Cheapest, but you change at Ubung terminal in Denpasar and still need a ride to Ubud.' },
 ];
 
 const faqs = [
   {
-    question: 'How long does it take to get from Gilimanuk to Ubud?',
-    answer: 'The journey typically takes between 3.5 and 4.5 hours depending on traffic and your exact destination in Ubud.'
+    question: 'How long does a private car from Gilimanuk to Ubud take?',
+    answer: 'Plan for 3.5–4.5 hours of driving. Traffic around Tabanan and Mengwi in the late afternoon and temple ceremonies on the road can add time. Any stops you ask for come on top of that.'
   },
   {
-    question: 'Is this a private transfer?',
-    answer: 'Yes. All transfers are private, meaning the vehicle is reserved exclusively for you and your group.'
+    question: 'How far is Gilimanuk Ferry Port from Ubud?',
+    answer: 'About 125–140 km, depending on where you stay. Sayan and Kedewatan on the western edge of Ubud are the closest; Tegallalang in the north is the furthest.'
   },
   {
-    question: 'Can I be picked up directly at Gilimanuk Ferry Port?',
-    answer: 'Yes. We provide direct pickup from Gilimanuk Ferry Port and can coordinate with your ferry arrival time.'
+    question: 'What happens if my ferry from Ketapang is delayed?',
+    answer: 'Tell us your planned crossing time when you book and message us when you board. Your driver follows your updates on WhatsApp and meets you when you arrive at the port.'
   },
   {
-    question: 'Can I book a transfer for a group?',
-    answer: 'Yes. We offer vehicle options suitable for individuals, couples, families, and larger groups.'
+    question: 'Can we stop at Tanah Lot or Jatiluwih on the way?',
+    answer: 'Yes. Let us know when you book so we can plan the route and timing. Entrance fees at temples and rice terraces are paid on site.'
   },
   {
-    question: 'Are there stops along the way?',
-    answer: 'Yes. Upon request, reasonable stops for meals, refreshments, or sightseeing can be arranged during the journey.'
+    question: 'What vehicle will we get?',
+    answer: 'An air-conditioned car for up to 4 passengers with luggage. For bigger groups we offer a 19-seat minibus. Mention surfboards, prams, or extra bags so we send the right vehicle.'
   },
   {
-    question: 'Can I book a same-day transfer?',
-    answer: 'Subject to availability, same-day bookings may be possible. We recommend booking in advance whenever possible.'
+    question: 'How do I book?',
+    answer: 'Message us on WhatsApp with your travel date, ferry crossing time, number of passengers, and your Ubud address. We reply with a best offer and confirm the booking.'
   }
 ];
 
 const relatedRoutes = [
-  { label: 'Gilimanuk to Ubud', href: '/transfers/gilimanuk-to-ubud/' },
-  { label: 'Ubud to Gilimanuk', href: '/transfers/' },
-  { label: 'Gilimanuk to Canggu', href: '/transfers/gilimanuk-to-canggu/' },
-  { label: 'Gilimanuk to Kuta', href: '/transfers/gilimanuk-to-kuta/' },
-  { label: 'Gilimanuk to Seminyak', href: '/transfers/gilimanuk-to-seminyak/' },
-  { label: 'Gilimanuk to Uluwatu', href: '/transfers/gilimanuk-to-uluwatu/' },
-  { label: 'Gilimanuk to Sanur', href: '/transfers/gilimanuk-to-sanur/' },
-  { label: 'Airport to Ubud Transfer', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' }
+  { label: 'Gilimanuk to Canggu Transfer', href: '/transfers/gilimanuk-to-canggu/' },
+  { label: 'Gilimanuk to Seminyak Transfer', href: '/transfers/gilimanuk-to-seminyak/' },
+  { label: 'Gilimanuk to Tanah Lot Transfer', href: '/transfers/gilimanuk-to-tanah-lot/' },
+  { label: 'Gilimanuk to Sanur Transfer', href: '/transfers/gilimanuk-to-sanur/' },
+  { label: 'Gilimanuk to Kuta Transfer', href: '/transfers/gilimanuk-to-kuta/' },
+  { label: 'Ngurah Rai Airport to Ubud Transfer', href: '/airport-transfer/ngurah-rai-airport-to-ubud/' },
 ];
 
 const pageUrl = 'https://baliwesttransport.com/transfers/gilimanuk-to-ubud/';
@@ -132,25 +137,17 @@ const schemaGraph = {
     {
       '@type': 'Service',
       '@id': serviceId,
-      name: 'Gilimanuk to Ubud Transfer',
+      name: 'Gilimanuk to Ubud Private Car with Driver',
+      alternateName: 'Gilimanuk to Ubud Transfer',
       description: pageDescription,
       serviceType: 'Private transfer',
       provider: {
         '@id': travelAgencyId
       },
       areaServed: [
-        {
-          '@type': 'Place',
-          name: 'Gilimanuk'
-        },
-        {
-          '@type': 'Place',
-          name: 'Ubud'
-        },
-        {
-          '@type': 'AdministrativeArea',
-          name: 'Bali'
-        }
+        { '@type': 'Place', name: 'Gilimanuk Ferry Port' },
+        { '@type': 'Place', name: 'Ubud' },
+        { '@type': 'AdministrativeArea', name: 'Bali' }
       ],
       availableChannel: {
         '@type': 'ServiceChannel',
@@ -178,24 +175,9 @@ const schemaGraph = {
       '@type': 'BreadcrumbList',
       '@id': breadcrumbId,
       itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://baliwesttransport.com/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Transfers',
-          item: 'https://baliwesttransport.com/transfers/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Gilimanuk to Ubud Transfer',
-          item: pageUrl
-        }
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://baliwesttransport.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Transfers', item: 'https://baliwesttransport.com/transfers/' },
+        { '@type': 'ListItem', position: 3, name: 'Gilimanuk to Ubud Transfer', item: pageUrl }
       ]
     },
     {
@@ -204,26 +186,11 @@ const schemaGraph = {
       url: pageUrl,
       name: pageTitle,
       description: pageDescription,
-      isPartOf: {
-        '@id': organizationId
-      },
-      about: {
-        '@id': serviceId
-      },
-      mainEntity: [
-        {
-          '@id': serviceId
-        },
-        {
-          '@id': faqId
-        }
-      ],
-      breadcrumb: {
-        '@id': breadcrumbId
-      },
-      publisher: {
-        '@id': organizationId
-      }
+      isPartOf: { '@id': organizationId },
+      about: { '@id': serviceId },
+      mainEntity: [{ '@id': serviceId }, { '@id': faqId }],
+      breadcrumb: { '@id': breadcrumbId },
+      publisher: { '@id': organizationId }
     }
   ]
 };
@@ -238,16 +205,16 @@ const schemaGraph = {
       <div class="absolute inset-0">
         <img
           src="/images/kelingking-beach.jpg"
-          alt="Private transfer from Gilimanuk to Ubud Bali"
+          alt="Private car transfer from Gilimanuk to Ubud, Bali"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Transfer — Bali West Transport</p>
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-6 drop-shadow-md">Private Car with Driver — Bali West Transport</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-8 leading-tight drop-shadow-lg">Gilimanuk to Ubud Transfer</h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-2xl mx-auto font-light drop-shadow-md">
-          Door-to-door private transfer from Gilimanuk Ferry Port to Ubud with professional local drivers.
+          Your driver meets you at Gilimanuk Ferry Port and takes you straight to your Ubud hotel or villa.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -256,47 +223,45 @@ const schemaGraph = {
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
           >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
             Book Your Transfer
           </a>
-          <a href="/transfers/" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">View All Transfers</a>
+          <a href="#journey" class="border border-white/50 hover:bg-white/10 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all">See the Route</a>
         </div>
       </div>
     </section>
 
-    <!-- Intro Text -->
+    <!-- 2. Quick Answer -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Quick Answer</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Transfer from Gilimanuk to Ubud</h2>
+            <h2 class="font-serif text-4xl text-brand-dark mb-6">Private Car from Gilimanuk to Ubud</h2>
             <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              The fastest and most convenient way to travel from Gilimanuk to Ubud is by private transfer. The journey takes approximately 3 hours depending on traffic and provides direct door-to-door transportation from Gilimanuk Ferry Port to your accommodation in Ubud.
+              Book a private transfer from Gilimanuk to Ubud with Bali West Transport. The journey takes approximately 3.5–4.5 hours depending on traffic and provides a comfortable door-to-door transport solution for travellers arriving via the Ketapang–Gilimanuk ferry from Java.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
-              This service is ideal for travellers arriving from Java via the Ketapang–Gilimanuk Ferry who want a hassle-free journey to Bali's cultural heart, without the inconvenience of waiting for public transport or sharing vehicles with other passengers.
+              It suits Ijen hikers, overland travellers, families, and anyone carrying luggage. Pickup is at the port exit, drop-off is at your accommodation, and you book on WhatsApp.
             </p>
           </div>
           <div class="space-y-4">
             <img
               src="/images/nusa-penida-viewpoint.jpg"
-              alt="Scenic Bali landscape on the way to Ubud"
+              alt="Bali coastline seen on a private transfer"
               class="w-full h-auto"
               loading="lazy"
             />
             <div class="grid grid-cols-2 gap-4">
               <img
                 src="/images/beach-sunset-swing.jpg"
-                alt="Bali sunset"
+                alt="Bali beach at sunset"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
               <img
                 src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&h=300&fit=crop"
-                alt="Bali rice terraces Tegallalang"
+                alt="Rice terraces near Ubud"
                 class="w-full h-48 object-cover"
                 loading="lazy"
               />
@@ -306,10 +271,28 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Route Overview Card -->
-    <section class="py-16 bg-brand-cream">
+    <!-- 3. Why Choose This Transfer -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-brand-dark/10">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Book This Transfer with Us</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          {reasons.map((item) => (
+            <div class="bg-brand-cream p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Distance and Travel Time -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           <div class="grid grid-cols-3 gap-8 flex-1">
             <div>
               <p class="text-brand-dark/40 text-xs uppercase tracking-widest mb-2">Route</p>
@@ -335,161 +318,157 @@ const schemaGraph = {
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
             >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
               Ask Best Offer
             </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Why Choose Us</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Why Choose Our Gilimanuk to Ubud Transfer?</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {benefits.map((benefit) => (
-            <div class="flex items-start gap-4 p-6 bg-brand-cream">
-              <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Distance and Travel Time</p>
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">How Long the Drive Takes</h2>
+            <p class="text-brand-dark/70 leading-relaxed mb-4">
+              The drive covers 125–140 km and takes 3.5–4.5 hours. The road follows Bali's south-west coast through Negara and Tabanan, then turns inland at Mengwi towards Ubud.
+            </p>
+            <p class="text-brand-dark/70 leading-relaxed">
+              Morning departures are usually quickest. Expect slower traffic through Tabanan and Mengwi in the late afternoon, and on ceremony days when processions use the road.
+            </p>
+          </div>
+          <div class="space-y-3">
+            {ubudAreas.map((item) => (
+              <div class="bg-white p-5">
+                <p class="font-medium text-brand-dark">{item.area}</p>
+                <p class="text-brand-dark/60 text-sm mt-1">{item.note}</p>
               </div>
-              <span class="text-brand-dark/70">{benefit}</span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Pickup & Drop-off -->
-    <section class="py-24 bg-brand-cream">
+    <!-- 5 & 6. Pickup and Drop-off -->
+    <section class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-16">
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Pickup</p>
-            <h2 class="font-serif text-3xl text-brand-dark mb-6">Pickup Locations in Gilimanuk</h2>
-            <p class="text-brand-dark/70 mb-6">We can arrange pickup from:</p>
-            <div class="space-y-3 mb-6">
+            <h2 class="font-serif text-3xl text-brand-dark mb-6">Pickup Locations in West Bali</h2>
+            <ul class="space-y-3 mb-6">
               {pickupLocations.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70">{item}</span>
-                </div>
+                <li class="flex items-center gap-3 bg-brand-cream p-4 text-brand-dark/70">
+                  <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
               ))}
-            </div>
-            <p class="text-brand-dark/50 text-sm">Our driver will coordinate with you before arrival to ensure a smooth pickup experience.</p>
+            </ul>
+            <p class="text-brand-dark/50 text-sm">Your driver messages you before the ferry docks with where to meet.</p>
           </div>
           <div>
             <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Drop-off</p>
             <h2 class="font-serif text-3xl text-brand-dark mb-6">Drop-off Locations in Ubud</h2>
-            <p class="text-brand-dark/70 mb-6">We provide direct drop-off to:</p>
-            <div class="space-y-3 mb-8">
+            <ul class="space-y-3 mb-6">
               {dropoffLocations.map((item) => (
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <span class="text-brand-dark/70">{item}</span>
-                </div>
+                <li class="flex items-center gap-3 bg-brand-cream p-4 text-brand-dark/70">
+                  <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
               ))}
-            </div>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Popular Areas in Ubud</p>
-              <div class="grid grid-cols-2 gap-3">
-                {popularDestinations.map((destination) => (
-                  <div class="bg-white p-3 text-brand-dark/60 text-sm">{destination}</div>
-                ))}
-              </div>
-            </div>
+            </ul>
+            <p class="text-brand-dark/50 text-sm">Share your exact address or a Google Maps pin when you book.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Arriving from Java -->
-    <section class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Arriving from Java</p>
-            <h2 class="font-serif text-4xl text-brand-dark mb-6">Ideal for Travellers Arriving from Java</h2>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-6">
-              Many travellers cross from Banyuwangi to Bali via the Ketapang-Gilimanuk Ferry before continuing their journey to Ubud.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">
-              Instead of arranging multiple transportation options, a private transfer allows you to travel directly from Gilimanuk to Ubud in one comfortable journey. This is particularly convenient for travellers carrying luggage, families with children, and visitors arriving after long ferry crossings.
-            </p>
-            <div>
-              <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Along the Route You May See</p>
-              <div class="grid grid-cols-2 gap-3">
-                {journeyHighlights.map((item) => (
-                  <div class="bg-brand-cream p-3 text-brand-dark/70 text-sm">{item}</div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&h=600&fit=crop"
-              alt="Travellers arriving from Java to Bali via Gilimanuk Ferry"
-              class="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
+    <!-- 7. Who Uses This Transfer -->
     <section class="py-24 bg-brand-cream">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
-          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Who It's For</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Who Uses This Transfer</h2>
         </div>
-        <div class="space-y-4">
-          {faqs.map((faq) => (
+        <div class="grid md:grid-cols-2 gap-6">
+          {travellers.map((item) => (
             <div class="bg-white p-8">
-              <h3 class="font-serif text-2xl text-brand-dark mb-3">{faq.question}</h3>
-              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{item.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-16 bg-brand-cream">
+    <!-- 8. Journey Overview -->
+    <section id="journey" class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="bg-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 class="font-serif text-2xl text-brand-dark mb-2">Book Your Gilimanuk to Ubud Transfer</h3>
-            <p class="text-brand-dark/60">Avoid the stress of public transport. Travel directly with an experienced local driver.</p>
-          </div>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-8 py-4 text-sm tracking-widest uppercase transition-colors whitespace-nowrap"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Book Your Transfer Now
-          </a>
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Journey Overview</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">The Route and Optional Stops</h2>
+          <p class="text-brand-dark/60 max-w-2xl mx-auto">Gilimanuk → Negara → Medewi → Tabanan → Mengwi → Ubud. Add any of these stops when you book.</p>
         </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {stops.map((stop) => (
+            <div class="bg-brand-cream p-8">
+              <p class="text-brand-gold text-xs tracking-widest uppercase mb-2">{stop.where}</p>
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{stop.name}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{stop.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Benefits of Private Transfer -->
+    <section class="py-24 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Compare</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Benefits of a Private Transfer</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          {benefits.map((item, i) => (
+            <div class={`p-8 ${i === 0 ? 'bg-brand-dark text-brand-cream' : 'bg-white'}`}>
+              <h3 class={`font-serif text-2xl mb-3 ${i === 0 ? 'text-brand-gold' : 'text-brand-dark'}`}>{item.title}</h3>
+              <p class={`leading-relaxed ${i === 0 ? 'text-brand-cream/80' : 'text-brand-dark/70'}`}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark">Frequently Asked Questions</h2>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-4">
+          {faqs.map((faq) => (
+            <div class="bg-brand-cream p-6">
+              <h3 class="font-serif text-xl text-brand-dark mb-2">{faq.question}</h3>
+              <p class="text-brand-dark/70 text-sm leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Call To Action -->
+    <section class="py-24 bg-brand-dark text-brand-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Book on WhatsApp</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-6">Book Your Gilimanuk to Ubud Transfer</h2>
+        <p class="text-brand-cream/70 text-lg mb-10 max-w-2xl mx-auto">Send your date, ferry time, number of passengers, and Ubud address. We reply with a best offer.</p>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-10 py-4 text-sm tracking-widest uppercase transition-colors"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d={waPath}/></svg>
+          Book Your Transfer Now
+        </a>
       </div>
     </section>
 
@@ -498,7 +477,7 @@ const schemaGraph = {
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">More Routes</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Other Transfer Routes</h2>
+          <h2 class="font-serif text-3xl text-brand-dark">Other Transfers from Gilimanuk</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {relatedRoutes.map((route) => (
@@ -510,49 +489,25 @@ const schemaGraph = {
       </div>
     </section>
 
-    <!-- Travel Guide -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-12">
-          <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Travel Guide</p>
-          <h2 class="font-serif text-3xl text-brand-dark">Planning Your Journey from Gilimanuk?</h2>
-          <p class="text-brand-dark/60 mt-4 max-w-xl mx-auto">Read our full guide covering all transport options from Gilimanuk Ferry Port to Ubud — bus, shuttle, and private transfer compared.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-          <a href="/blog/how-to-get-from-gilimanuk-to-ubud/" class="block bg-brand-cream p-8 hover:bg-brand-gold/10 transition-colors group">
-            <p class="text-brand-gold text-xs tracking-widest uppercase mb-3">Travel Guide</p>
-            <h3 class="font-serif text-2xl text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">How to Get from Gilimanuk to Ubud: Bus, Shuttle & Private Transfer</h3>
-            <p class="text-brand-dark/60 text-sm leading-relaxed mb-4">Travel times, costs, step-by-step instructions, and tips for arriving travellers — all transport options compared in one guide.</p>
-            <span class="inline-flex items-center gap-2 text-brand-dark text-xs tracking-widest uppercase font-medium group-hover:text-brand-gold transition-colors">
-              Read the Guide
-              <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Explore More -->
-    <section class="py-16 bg-brand-cream">
+    <section class="py-16 bg-white">
       <div class="max-w-6xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-brand-gold text-sm tracking-widest uppercase mb-4">Explore More</p>
           <h2 class="font-serif text-3xl text-brand-dark">More from Bali West Transport</h2>
         </div>
-        <div class="grid md:grid-cols-4 gap-4">
-          <a href="/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Home</span>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a href="/transfers/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">All Gilimanuk Transfers</span>
           </a>
-          <a href="/airport-transfer/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">Airport Transfer</span>
+          <a href="/blog/gilimanuk-ferry-port-guide/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Gilimanuk Ferry Port Guide</span>
           </a>
-          <a href="/tours/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
+          <a href="/airport-transfer/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
+            <span class="text-brand-dark font-medium">Bali Airport Transfer</span>
+          </a>
+          <a href="/tours/" class="bg-brand-cream p-6 text-center hover:bg-brand-gold/10 transition-colors">
             <span class="text-brand-dark font-medium">Private Tours</span>
-          </a>
-          <a href="/about/" class="bg-white p-6 text-center hover:bg-brand-gold/10 transition-colors">
-            <span class="text-brand-dark font-medium">About Us</span>
           </a>
         </div>
       </div>
