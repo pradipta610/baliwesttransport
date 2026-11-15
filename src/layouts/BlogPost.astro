@@ -18,6 +18,7 @@ export interface Props {
   articleSubtitle?: string;
   relatedServices?: Array<{ label: string; href: string }>;
   schemaGraph: object;
+  bookingMessage?: string;
 }
 
 const {
@@ -33,14 +34,15 @@ const {
   articleSubtitle,
   relatedServices = [],
   schemaGraph,
+  bookingMessage,
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const isID = lang === 'id';
 
-const waText = isID
+const waText = bookingMessage ?? (isID
   ? 'Halo, saya membaca panduan wisata Anda dan ingin memesan transfer pribadi di Bali. Mohon informasi penawaran terbaik Anda.'
-  : 'Hi, I read your travel guide and would like to book a private transfer in Bali. Please send me your best offer.';
+  : 'Hi, I read your travel guide and would like to book a private transfer in Bali. Please send me your best offer.');
 const waUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(waText)}`;
 
 const ui = {
@@ -51,8 +53,8 @@ const ui = {
   sidebarLabel: isID ? 'Pesan Sekarang' : 'Book Now',
   sidebarHeading: isID ? 'Siap Memesan Transfer?' : 'Ready to Book Your Transfer?',
   sidebarDesc: isID
-    ? 'Hindari antrean. Pesan transfer bandara pribadi dengan supir lokal Bali via WhatsApp.'
-    : 'Skip the queue. Book a private airport transfer with a local Bali driver.',
+    ? 'Kirim rute, tanggal, jumlah penumpang, dan bagasi untuk penawaran transfer pribadi Anda.'
+    : 'Send your route, date, passenger count, and luggage details for a private transfer offer.',
   sidebarBtn: isID ? 'Pesan via WhatsApp' : 'Book via WhatsApp',
   relatedLabel: isID ? 'Layanan Terkait' : 'Related Services',
   ctaLabel: isID ? 'Pesan Sekarang' : 'Book Now',
@@ -340,6 +342,10 @@ const ui = {
   /* Inline CTA link */
   .blog-content :global(.cta-inline) {
     display: inline-flex;
+    max-width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
     align-items: center;
     gap: 0.5rem;
     background: #1a1a1a;
@@ -355,6 +361,9 @@ const ui = {
   .blog-content :global(.cta-inline:hover) {
     background: #2d2d2d;
     color: #f5f0e8 !important;
+  }
+  .blog-content :global(.cta-inline svg) {
+    flex-shrink: 0;
   }
 
   /* Early booking box: bridges an informational guide to its service page */

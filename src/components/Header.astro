@@ -41,15 +41,15 @@ const transferGroups = [
 ];
 
 const navLinks = [
-  { href: lang === 'en' ? '/' : `/${lang}`, label: t('nav.home') },
-  { href: lang === 'en' ? '/tours' : `/${lang}/tours`, label: t('nav.tours') },
+  { href: lang === 'en' ? '/' : `/${lang}/`, label: t('nav.home') },
+  { href: lang === 'en' ? '/tours/' : `/${lang}/tours/`, label: t('nav.tours') },
   {
-    href: lang === 'en' ? '/transfers' : `/${lang}/transfers`,
+    href: lang === 'en' ? '/transfers/' : `/${lang}/transfers/`,
     label: t('nav.transfers'),
     groups: transferGroups
   },
   { href: lang === 'en' ? '/blog/' : `/${lang}/blog/`, label: lang === 'en' ? 'Blog' : 'Blog' },
-  { href: lang === 'en' ? '/about' : `/${lang}/about`, label: t('nav.about') },
+  { href: lang === 'en' ? '/about/' : `/${lang}/about/`, label: t('nav.about') },
 ];
 ---
 
@@ -57,7 +57,7 @@ const navLinks = [
   <nav class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="flex items-center justify-between h-20">
       <div class="flex items-center gap-8">
-        <a href={lang === 'en' ? '/' : `/${lang}`} class="flex items-center transition-colors duration-300">
+        <a href={lang === 'en' ? '/' : `/${lang}/`} class="flex items-center transition-colors duration-300">
           <img src="/baliwesttransport-favicon.png" alt="Bali West Transport" class="h-16 md:h-20 w-auto" id="logo-img" />
         </a>
         
