@@ -8,6 +8,8 @@
     { "source": "/media/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }] }
   ],
   "redirects": [
+    { "source": "/transfers/hotel-to-hotel", "destination": "/transfers/hotel-to-hotel/", "permanent": true },
+    { "source": "/id/transfers/hotel-to-hotel", "destination": "/id/transfers/hotel-to-hotel/", "permanent": true },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.baliwesttransport.com" }],

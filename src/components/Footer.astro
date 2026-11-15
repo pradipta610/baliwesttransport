@@ -36,6 +36,7 @@ const currentYear = new Date().getFullYear();
             </svg>
           </summary>
           <ul class="space-y-3 text-brand-cream/60">
+            <li><a href={lang === 'en' ? '/transfers/hotel-to-hotel/' : '/id/transfers/hotel-to-hotel/'} class="hover:text-brand-cream transition-colors">{lang === 'en' ? 'Hotel to Hotel Transfers' : 'Antar Jemput Hotel'}</a></li>
             <li><a href={lang === 'en' ? '/transfers/' : `/${lang}/transfers/`} class="hover:text-brand-cream transition-colors">{lang === 'en' ? 'All Transfers' : 'Semua Transfer'}</a></li>
             <li><a href={lang === 'en' ? '/airport-transfer/' : `/${lang}/airport-transfer/`} class="hover:text-brand-cream transition-colors">{lang === 'en' ? 'Bali Airport Transfer' : 'Transfer Bandara Bali'}</a></li>
           </ul>

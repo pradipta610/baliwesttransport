@@ -1,0 +1,24 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+const isID = getLangFromUrl(Astro.url) === 'id';
+const prefix = isID ? '/id' : '';
+const services = [
+  { title: isID ? 'Antar Hotel & Vila' : 'Hotel & Villa Transfers', text: isID ? 'Pindah penginapan antar wilayah Bali dengan mobil pribadi. Kirim dua alamat untuk penawaran perjalanan Anda.' : 'Move between accommodation across Bali in a private car. Send both addresses for an offer for your journey.', href: `${prefix}/transfers/hotel-to-hotel/` },
+  { title: isID ? 'Transfer Bandara' : 'Airport Transfers', text: isID ? 'Atur penjemputan atau pengantaran Bandara Ngurah Rai sesuai penerbangan dan alamat penginapan Anda.' : 'Arrange a Ngurah Rai Airport pickup or drop-off around your flight and accommodation address.', href: `${prefix}/airport-transfer/` },
+  { title: isID ? 'Transfer Pelabuhan Gilimanuk' : 'Gilimanuk Ferry Transfers', text: isID ? 'Lanjutkan perjalanan dari feri ke Ubud, Canggu, Sanur, dan tujuan Bali lainnya.' : 'Continue from the ferry to Ubud, Canggu, Sanur, and other Bali destinations.', href: '#gilimanuk-routes' },
+];
+---
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{isID ? 'Antar Jemput di Seluruh Bali' : 'Private Transfers Across Bali'}</h2>
+    <p class="text-brand-dark/70 leading-relaxed max-w-3xl mb-10">{isID ? 'Bali West Transport melayani perjalanan antar hotel, vila, bandara, dan Pelabuhan Gilimanuk. Penjemputan dapat dimulai dari wilayah Bali yang Anda perlukan. Kirim titik asal, tujuan, tanggal, serta jumlah penumpang untuk mengonfirmasi rute dan kendaraan.' : 'Bali West Transport arranges journeys between hotels, villas, the airport, and Gilimanuk Ferry Port. Request pickup in the Bali area you need. Send your starting point, destination, date, and passenger count to confirm the route and vehicle.'}</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      {services.map(service => (
+        <a href={service.href} class="block bg-brand-cream p-6 md:p-8 hover:bg-brand-gold/10 transition-colors">
+          <h3 class="font-serif text-2xl text-brand-dark mb-4">{service.title}</h3>
+          <p class="text-brand-dark/70 leading-relaxed">{service.text}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

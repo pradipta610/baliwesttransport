@@ -48,8 +48,8 @@ export const ui = {
     'tours.price_unit': 'per tour',
     
     'transfers.hero.subtitle': 'Seamless Travel',
-    'transfers.hero.title': 'Transfers',
-    'transfers.hero.desc': 'Premium vehicles for your journey across Bali',
+    'transfers.hero.title': 'Bali Private Transfers',
+    'transfers.hero.desc': 'Hotel, villa, airport, and ferry port pickups across Bali. Tell us where you need to go.',
 
     'testimonials.subtitle': 'Testimonials',
     'testimonials.title': 'What Our Guests Say',
@@ -72,8 +72,8 @@ export const ui = {
     'meta.tours.desc': "Explore Bali your way with our 8-hour private tour. Visit Ubud, Uluwatu, Nusa Penida & more. English-speaking driver, AC vehicle, snacks included. Book via WhatsApp - instant confirmation.",
     'meta.tours.keywords': "Bali private tour, Bali day trip, custom Bali tour, Ubud tour, Uluwatu sunset tour, Tegallalang rice terrace, Bali temple tour, private driver Bali",
 
-    'meta.transfers.title': "Gilimanuk to Bali Transfers | Private Car Service | Bali West Transport",
-    'meta.transfers.desc': "Reliable private transfers from Gilimanuk Harbour to Ubud, Seminyak, Kuta, Sanur & all Bali destinations. Meet & greet service with flexible offers. Book 24/7 via WhatsApp.",
+    'meta.transfers.title': "Bali Private Transfers | Hotel, Airport & Ferry Pickup",
+    'meta.transfers.desc': "Private transfers across Bali for hotel changes, Ngurah Rai Airport, and Gilimanuk Ferry Port. Send your pickup and destination for a custom offer.",
     'meta.transfers.keywords': "Gilimanuk transfer, Gilimanuk to Ubud, Gilimanuk to Seminyak, Bali private transfer, Java to Bali transfer, ferry transfer Bali, Gilimanuk harbour pickup",
 
     'meta.about.title': "About Bali West Transport | Trusted Local Tour Operator Since 2020",
@@ -122,8 +122,8 @@ export const ui = {
     'tours.price_unit': 'per tur',
     
     'transfers.hero.subtitle': 'Perjalanan Mulus',
-    'transfers.hero.title': 'Antar Jemput',
-    'transfers.hero.desc': 'Kendaraan premium untuk perjalanan Anda di Bali',
+    'transfers.hero.title': 'Antar Jemput Seluruh Bali',
+    'transfers.hero.desc': 'Jemput dan antar hotel, vila, bandara, serta pelabuhan di seluruh Bali. Sampaikan rute perjalanan Anda.',
 
     'testimonials.subtitle': 'Testimoni',
     'testimonials.title': 'Apa Kata Tamu Kami',
@@ -146,8 +146,8 @@ export const ui = {
     'meta.tours.desc': "Jelajahi Bali sesuai keinginan Anda dengan tur pribadi 8 jam. Kunjungi Ubud, Uluwatu, Nusa Penida & lainnya. Supir ramah, mobil AC, snack termasuk. Pesan via WhatsApp - konfirmasi instan.",
     'meta.tours.keywords': "tur pribadi Bali, wisata Bali, paket tour Bali, tur Ubud, tur Uluwatu, sawah Tegallalang, tur pura Bali, supir pribadi Bali",
 
-    'meta.transfers.title': "Transfer Gilimanuk ke Seluruh Bali | Mobil Pribadi | Bali West Transport",
-    'meta.transfers.desc': "Transfer terpercaya dari Pelabuhan Gilimanuk ke Ubud, Seminyak, Kuta, Sanur & seluruh Bali. Penjemputan di pelabuhan dengan penawaran fleksibel. Pesan 24/7 via WhatsApp.",
+    'meta.transfers.title': "Antar Jemput Seluruh Bali | Hotel, Bandara & Pelabuhan",
+    'meta.transfers.desc': "Antar jemput pribadi seluruh Bali untuk pindah hotel, Bandara Ngurah Rai, dan Pelabuhan Gilimanuk. Kirim lokasi jemput dan tujuan untuk penawaran.",
     'meta.transfers.keywords': "transfer Gilimanuk, Gilimanuk ke Ubud, Gilimanuk ke Seminyak, transfer pribadi Bali, transfer Java Bali, penjemputan ferry Bali",
 
     'meta.about.title': "Tentang Bali West Transport | Operator Tur Lokal Terpercaya",

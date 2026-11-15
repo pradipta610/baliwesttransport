@@ -1,0 +1,324 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import WhatsAppFloat from './WhatsAppFloat.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+const isID = getLangFromUrl(Astro.url) === 'id';
+const prefix = isID ? '/id' : '';
+const copy = isID ? {
+  title: 'Antar Jemput Hotel di Bali | Mobil Pribadi Antar Wilayah',
+  description: 'Pindah hotel atau vila di Bali dengan mobil pribadi. Jemput dan antar di Ubud, Canggu, Seminyak, Sanur, Uluwatu, Lovina, dan wilayah Bali lainnya.',
+  label: 'Bali West Transport',
+  heading: 'Antar Jemput Hotel di Bali',
+  intro: 'Pindah penginapan dengan koper? Pesan mobil pribadi dari hotel atau vila Anda ke alamat berikutnya di Bali.',
+  book: 'Minta Penawaran via WhatsApp',
+  explore: 'Lihat Area Penjemputan',
+  answerHeading: 'Bisa jemput dari hotel mana saja?',
+  answer: 'Bali West Transport menerima antar jemput hotel dan vila di seluruh Bali. Anda dapat memesan perjalanan satu arah antar wilayah, seperti Ubud ke Canggu, Legian ke Canggu, atau Sanur ke Uluwatu. Kirim dua alamat, tanggal perjalanan, jumlah penumpang, dan bagasi lewat WhatsApp. Kami mengonfirmasi titik jemput, kendaraan, waktu perjalanan, serta penawaran sebelum pemesanan.',
+  areasHeading: 'Dari Penginapan Anda ke Tujuan Berikutnya',
+  areasIntro: 'Berikut beberapa area yang dapat Anda pilih. Untuk desa atau penginapan di luar daftar, kirim pin lokasi agar akses mobil dan rutenya dapat diperiksa.',
+  areas: [
+    { title: 'Ubud & Gianyar', text: 'Jemput dari penginapan di pusat Ubud, Sayan, Kedewatan, atau sekitarnya. Kirim pin vila dan beri tahu jika aksesnya melalui gang sempit.' },
+    { title: 'Canggu & Bali Selatan', text: 'Atur perjalanan antar Canggu, Pererenan, Legian, Seminyak, Kuta, Jimbaran, Nusa Dua, dan Uluwatu sesuai alamat tujuan Anda.' },
+    { title: 'Sanur & Bali Timur', text: 'Pesan antar hotel di Sanur, Sidemen, Amed, atau area lainnya di Bali Timur. Untuk perjalanan yang terhubung kapal, sertakan nama pelabuhan dan waktu check-in.' },
+    { title: 'Lovina & Bali Utara', text: 'Pindah penginapan ke atau dari Lovina, Singaraja, Munduk, dan sekitarnya. Sampaikan rencana perjalanan agar waktu jemput dapat disesuaikan.' },
+  ],
+  benefitsHeading: 'Apa Manfaat Memesan Mobil Pribadi?',
+  benefits: [
+    { title: 'Satu perjalanan untuk rombongan Anda', text: 'Mobil dipesan untuk perjalanan rombongan Anda dari titik jemput yang disepakati ke penginapan berikutnya. Koper ikut dalam kendaraan yang dikonfirmasi saat pemesanan.' },
+    { title: 'Jemput di hotel atau vila', text: 'Bagikan alamat dan pin lokasi agar titik temu jelas. Untuk gang yang tidak bisa dilalui mobil, sepakati akses terdekat sebelum hari perjalanan.' },
+    { title: 'Rute dan penawaran disepakati lebih dulu', text: 'Periksa tujuan, kendaraan, waktu jemput, dan biaya sebelum konfirmasi. Jika perlu mampir, sampaikan dari awal agar masuk dalam rencana perjalanan.' },
+  ],
+  priceHeading: 'Berapa Harga Antar Jemput Hotel di Bali?',
+  priceAnswer: 'Harga diberikan melalui penawaran sesuai perjalanan. Kirim dua alamat, tanggal dan jam, jumlah orang, serta bagasi untuk mendapatkan penawaran yang relevan. Perjalanan pendek antar area Bali Selatan dan perjalanan ke Bali Utara atau Timur membutuhkan rencana rute dan kendaraan yang berbeda.',
+  priceChecklistHeading: 'Periksa detail ini sebelum menyetujui harga',
+  priceChecklist: ['Asal dan tujuan, termasuk perjalanan satu arah atau pulang-pergi.', 'Jenis kendaraan serta kapasitas penumpang dan bagasi.', 'Apakah bahan bakar, parkir, dan tol termasuk dalam penawaran.', 'Biaya untuk tambahan pemberhentian, waktu tunggu, atau perubahan rute.', 'Cara pembayaran, kebutuhan uang muka, dan ketentuan perubahan atau pembatalan.'],
+  priceCta: 'Minta Harga untuk Rute Saya',
+  timeHeading: 'Berapa Lama Perjalanan Antar Hotel?',
+  timeAnswer: 'Berikut contoh perkiraan berkendara untuk membantu menyusun rencana awal. Waktu aktual dapat lebih lama karena alamat hotel, kemacetan, akses vila, dan pemberhentian. Minta perkiraan untuk dua alamat Anda sebelum menetapkan jam jemput.',
+  routeLabel: 'Contoh rute',
+  timeLabel: 'Perkiraan awal berkendara',
+  times: [
+    { route: 'Canggu ke Ubud', time: 'Sekitar 1 jam 15 menit' },
+    { route: 'Sanur ke Uluwatu', time: 'Sekitar 1 jam 15 menit' },
+    { route: 'Amed ke Ubud', time: 'Sekitar 2 jam 30 menit' },
+  ],
+  timeNote: 'Perkiraan ini mencakup perjalanan darat. Sampaikan batas waktu check-in penginapan, kapal, atau penerbangan agar waktu cadangan dapat dibahas. Semua jam jemput dikonfirmasi dalam waktu Bali (WITA).',
+  detailsHeading: 'Apa yang Perlu Disiapkan untuk Booking?',
+  details: [
+    { title: 'Dua alamat lengkap', text: 'Kirim nama hotel atau vila asal dan tujuan beserta pin lokasi. Jika mobil tidak bisa mencapai pintu penginapan, sepakati titik temu yang dapat diakses.' },
+    { title: 'Penumpang dan bagasi', text: 'Sebutkan jumlah orang, koper besar, tas, stroller, atau papan selancar. Jika perlu kursi anak, tanyakan ketersediaannya sebelum konfirmasi.' },
+    { title: 'Waktu check-out dan check-in', text: 'Berikan tanggal dan jam jemput yang diinginkan. Durasi bergantung dua alamat, lalu lintas, dan pemberhentian yang disepakati.' },
+  ],
+  confirmationHeading: 'Kapan pemesanan dianggap terkonfirmasi?',
+  confirmationText: 'Selesaikan percakapan pemesanan dengan konfirmasi dari tim Bali West Transport mengenai jadwal, titik temu, kendaraan, harga, serta instruksi pembayaran yang berlaku. Simpan detail tersebut dan pastikan nomor WhatsApp Anda dapat dihubungi untuk koordinasi penjemputan.',
+  journeyHeading: 'Perjalanan Antar Hotel, Sesuai Rencana Anda',
+  journeyText: 'Perjalanan dimulai dari titik jemput yang disepakati menuju penginapan berikutnya. Untuk berhenti makan, menjemput teman, atau mampir di perjalanan, sampaikan sebelum meminta penawaran. Kami mengonfirmasi pengaruhnya terhadap rute, waktu, dan biaya bersama detail pemesanan.',
+  offerText: 'Penawaran disesuaikan dengan asal dan tujuan, tanggal, kendaraan, bagasi, serta pemberhentian. Anda menerima detail perjalanan untuk diperiksa sebelum menyetujui pemesanan.',
+  photoAlt: 'Penumpang dan bagasi di samping mobil Bali West Transport',
+  photoCaption: 'Foto perjalanan dari koleksi Bali West Transport.',
+  faqHeading: 'Pertanyaan Sebelum Pindah Hotel',
+  faqs: [
+    { question: 'Apakah melayani antar jemput di seluruh Bali?', answer: 'Ya. Bali West Transport menerima permintaan perjalanan antar hotel dan vila di seluruh Bali. Kirim alamat asal dan tujuan untuk konfirmasi akses mobil, kendaraan, jadwal, dan penawaran.' },
+    { question: 'Bisa pesan dari Legian ke Canggu atau Ubud ke Uluwatu?', answer: 'Bisa. Kirim dua nama penginapan atau pin lokasi, tanggal, dan jam jemput. Rute antar wilayah dapat dipesan dalam arah yang Anda perlukan.' },
+    { question: 'Berapa lama perjalanan antar hotel?', answer: 'Durasi bergantung alamat lengkap, waktu keberangkatan, kondisi lalu lintas, dan pemberhentian. Minta perkiraan untuk rute Anda saat memesan, terutama jika harus mengejar waktu check-in kapal atau penerbangan.' },
+    { question: 'Apakah koper dan stroller bisa dibawa?', answer: 'Sampaikan jumlah dan ukuran bagasi, termasuk stroller atau papan selancar, sebelum memesan. Kendaraan dikonfirmasi sesuai kebutuhan rombongan dan ruang bagasi.' },
+    { question: 'Bisa berhenti di perjalanan atau pesan perjalanan pulang?', answer: 'Sebutkan pemberhentian atau perjalanan pulang saat meminta penawaran. Detail rute dan setiap perjalanan dikonfirmasi terlebih dahulu.' },
+    { question: 'Bagaimana cara mendapatkan harga?', answer: 'Hubungi WhatsApp Bali West Transport dengan alamat jemput dan tujuan, tanggal, jam, jumlah penumpang, serta bagasi. Kami mengirim penawaran sesuai perjalanan untuk Anda konfirmasi.' },
+  ],
+  relatedHeading: 'Layanan Transfer Lainnya',
+  related: ['Semua Transfer Bali', 'Transfer Bandara Bali', 'Gilimanuk ke Ubud', 'Gilimanuk ke Canggu'],
+  finalHeading: 'Ke Mana Penginapan Anda Berikutnya?',
+  finalText: 'Kirim dua alamat dan detail rombongan. Kami bantu mengatur perjalanan antar hotel Anda di Bali.',
+  message: 'Halo, saya ingin memesan antar jemput hotel di Bali. Hotel/alamat jemput: __. Hotel/alamat tujuan: __. Tanggal dan jam (WITA): __. Penumpang: __. Bagasi: __. Pemberhentian tambahan: __. Mohon penawaran terbaik.',
+} : {
+  title: 'Bali Hotel to Hotel Transfer | Private Car Between Areas',
+  description: 'Moving hotels or villas in Bali? Book a private transfer between Ubud, Canggu, Seminyak, Sanur, Uluwatu, Lovina, and other Bali areas. Request an offer.',
+  label: 'Bali West Transport',
+  heading: 'Bali Hotel to Hotel Transfers',
+  intro: 'Checking out with suitcases? Arrange a private car from your hotel or villa to your next accommodation in Bali.',
+  book: 'Request an Offer on WhatsApp',
+  explore: 'Explore Pickup Areas',
+  answerHeading: 'Where can you pick us up?',
+  answer: 'Bali West Transport accepts hotel and villa transfers throughout Bali. Book a one-way journey between areas, such as Ubud to Canggu, Legian to Canggu, or Sanur to Uluwatu. Send both addresses, your travel date, passenger count, and luggage details on WhatsApp. We confirm the meeting point, vehicle, estimated journey time, and offer before you book.',
+  areasHeading: 'From Your Hotel to Your Next Stay',
+  areasIntro: 'These are some of the areas you can request. For a village or accommodation outside this list, send a map pin so we can check vehicle access and the route.',
+  areas: [
+    { title: 'Ubud & Gianyar', text: 'Arrange pickup from central Ubud, Sayan, Kedewatan, or nearby accommodation. Share your villa pin and tell us if the entrance is down a narrow lane.' },
+    { title: 'Canggu & South Bali', text: 'Arrange travel between Canggu, Pererenan, Legian, Seminyak, Kuta, Jimbaran, Nusa Dua, and Uluwatu using your accommodation addresses.' },
+    { title: 'Sanur & East Bali', text: 'Request a hotel transfer in Sanur, Sidemen, Amed, or another East Bali area. For a boat connection, include the harbour name and check-in time.' },
+    { title: 'Lovina & North Bali', text: 'Move to or from accommodation in Lovina, Singaraja, Munduk, and surrounding areas. Share your onward plans so we can discuss a suitable pickup time.' },
+  ],
+  benefitsHeading: 'Why Book a Private Hotel Transfer?',
+  benefits: [
+    { title: 'One journey for your group', text: 'The car is booked for your group to travel from the agreed pickup point to your next stay. Your luggage travels in the vehicle confirmed during booking.' },
+    { title: 'Hotel or villa pickup', text: 'Share the address and map pin to agree on a clear meeting point. For lanes a car cannot enter, agree on the nearest accessible pickup point before travel day.' },
+    { title: 'Agree on the route and offer in advance', text: 'Review the destination, vehicle, pickup time, and cost before confirming. Mention requested stops early so they can be included in the journey plan.' },
+  ],
+  priceHeading: 'How Much Does a Bali Hotel Transfer Cost?',
+  priceAnswer: 'Prices are quoted for your journey. Send both addresses, the date and time, passenger count, and luggage details for a relevant offer. A short journey between South Bali areas and a drive to North or East Bali require different route and vehicle arrangements.',
+  priceChecklistHeading: 'Check these details before accepting an offer',
+  priceChecklist: ['Pickup and destination, including whether you need one-way or return travel.', 'Vehicle type and capacity for passengers and luggage.', 'Whether fuel, parking, and tolls are included in the offer.', 'Charges for additional stops, waiting time, or changes to the route.', 'Payment arrangements, any deposit requirement, and change or cancellation terms.'],
+  priceCta: 'Ask for My Route Price',
+  timeHeading: 'How Long Does a Hotel Transfer Take?',
+  timeAnswer: 'Use these driving-time examples as a starting point for planning. Actual journeys can take longer because of hotel addresses, traffic, villa access, and stops. Ask for an estimate for both of your addresses before settling on a pickup time.',
+  routeLabel: 'Example route',
+  timeLabel: 'Initial driving estimate',
+  times: [
+    { route: 'Canggu to Ubud', time: 'Around 1 hour 15 minutes' },
+    { route: 'Sanur to Uluwatu', time: 'Around 1 hour 15 minutes' },
+    { route: 'Amed to Ubud', time: 'Around 2 hours 30 minutes' },
+  ],
+  timeNote: 'These estimates cover the road journey. Share your accommodation check-in, boat, or flight deadline so we can discuss time to allow around it. All pickup times are confirmed in Bali time (WITA).',
+  detailsHeading: 'What Do You Need to Book?',
+  details: [
+    { title: 'Both accommodation addresses', text: 'Send hotel or villa names and map pins. If a car cannot reach your door, agree on an accessible meeting point before pickup.' },
+    { title: 'Passengers and luggage', text: 'Include large suitcases, backpacks, prams, or surfboards. If you need a child seat, ask about availability before confirming the booking.' },
+    { title: 'Check-out and check-in times', text: 'Share the date and your preferred pickup time. Journey time depends on both addresses, traffic, and any agreed stops.' },
+  ],
+  confirmationHeading: 'When is my booking confirmed?',
+  confirmationText: 'Complete your booking conversation with confirmation from the Bali West Transport team of the schedule, meeting point, vehicle, price, and applicable payment instructions. Keep those details and make sure your WhatsApp number can receive pickup updates.',
+  journeyHeading: 'Plan the Journey Between Stays',
+  journeyText: 'Your journey runs from the agreed pickup point to your next accommodation. If you would like a meal break, another passenger pickup, or a stop along the way, mention it when requesting an offer. We confirm how it affects the route, timing, and cost with your booking details.',
+  offerText: 'Your offer depends on the pickup and destination, date, vehicle, luggage, and requested stops. Review the journey details before confirming your booking.',
+  photoAlt: 'Travellers with luggage beside a Bali West Transport car',
+  photoCaption: 'Journey photos from the Bali West Transport collection.',
+  faqHeading: 'Before You Move Hotels',
+  faqs: [
+    { question: 'Do you arrange hotel transfers across Bali?', answer: 'Yes. Bali West Transport accepts hotel and villa transfer requests throughout Bali. Send your pickup and destination addresses to confirm vehicle access, the vehicle, timing, and an offer.' },
+    { question: 'Can I book Legian to Canggu or Ubud to Uluwatu?', answer: 'Yes. Send both accommodation names or map pins, the date, and your preferred pickup time. You can request travel between areas in the direction you need.' },
+    { question: 'How long does a hotel transfer take?', answer: 'Journey time depends on the exact addresses, departure time, traffic, and stops. Ask for an estimate for your route when booking, especially if you have a boat check-in or flight to meet.' },
+    { question: 'Can we bring suitcases and a pram?', answer: 'Share the number and size of your bags, including prams or surfboards, before booking. We confirm a vehicle for your group and luggage requirements.' },
+    { question: 'Can we request stops or a return transfer?', answer: 'Include requested stops or a return journey when asking for an offer. The route and details of each journey are confirmed in advance.' },
+    { question: 'How do I get a transfer price?', answer: 'Message Bali West Transport on WhatsApp with the pickup and destination addresses, date, time, passenger count, and luggage. We send an offer for your journey for you to confirm.' },
+  ],
+  relatedHeading: 'Other Transfer Services',
+  related: ['All Bali Transfers', 'Bali Airport Transfers', 'Gilimanuk to Ubud', 'Gilimanuk to Canggu'],
+  finalHeading: 'Where Are You Staying Next?',
+  finalText: 'Send both addresses and your group details. We can help arrange the drive between your Bali stays.',
+  message: 'Hi, I would like a Bali hotel to hotel transfer. Pickup hotel/address: __. Destination hotel/address: __. Date and time (Bali time): __. Passengers: __. Luggage: __. Additional stops: __. Please send your best offer.',
+};
+const whatsappUrl = `https://wa.me/6282247648944?text=${encodeURIComponent(copy.message)}`;
+const pageUrl = `https://baliwesttransport.com${prefix}/transfers/hotel-to-hotel/`;
+const organizationId = `${pageUrl}#organization`;
+const travelAgencyId = `${pageUrl}#travel-agency`;
+const serviceId = `${pageUrl}#service`;
+const faqId = `${pageUrl}#faq`;
+const breadcrumbId = `${pageUrl}#breadcrumb`;
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': organizationId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', logo: 'https://baliwesttransport.com/baliwesttransport-favicon.png' },
+    { '@type': 'TravelAgency', '@id': travelAgencyId, name: 'Bali West Transport', url: 'https://baliwesttransport.com/', telephone: '+6285737866348', areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' }, parentOrganization: { '@id': organizationId } },
+    {
+      '@type': 'Service', '@id': serviceId, name: copy.heading, description: copy.description,
+      serviceType: 'Private hotel to hotel transfer', provider: { '@id': travelAgencyId },
+      image: 'https://baliwesttransport.com/media/gilimanuk-ubud/1000623126.webp',
+      areaServed: { '@type': 'AdministrativeArea', name: 'Bali, Indonesia' },
+      availableChannel: { '@type': 'ServiceChannel', serviceUrl: pageUrl },
+    },
+    { '@type': 'FAQPage', '@id': faqId, mainEntity: copy.faqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
+    { '@type': 'BreadcrumbList', '@id': breadcrumbId, itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isID ? 'Beranda' : 'Home', item: `https://baliwesttransport.com${prefix}/` },
+      { '@type': 'ListItem', position: 2, name: isID ? 'Transfer Bali' : 'Bali Transfers', item: `https://baliwesttransport.com${prefix}/transfers/` },
+      { '@type': 'ListItem', position: 3, name: copy.heading, item: pageUrl },
+    ] },
+    { '@type': 'WebPage', '@id': `${pageUrl}#webpage`, url: pageUrl, name: copy.title, description: copy.description, inLanguage: isID ? 'id' : 'en', about: { '@id': serviceId }, mainEntity: [{ '@id': serviceId }, { '@id': faqId }], breadcrumb: { '@id': breadcrumbId }, publisher: { '@id': organizationId } },
+  ],
+};
+const relatedPaths = ['/transfers/', '/airport-transfer/', '/transfers/gilimanuk-to-ubud/', '/transfers/gilimanuk-to-canggu/'];
+---
+
+<Layout title={copy.title} description={copy.description} includeOrgSchema={false}>
+  <Header />
+  <main>
+    <section class="relative min-h-screen flex items-center justify-center">
+      <img src="/media/gilimanuk-ubud/1000623126.webp" width="1599" height="899" alt={copy.photoAlt} fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative max-w-5xl mx-auto px-6 py-24 pt-40 text-center text-white">
+        <p class="text-brand-gold text-sm tracking-widest uppercase mb-6">{copy.label}</p>
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">{copy.heading}</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-white/90">{copy.intro}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" data-ga-location="hotel_transfer_hero" class="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-4 text-sm tracking-widest uppercase">{copy.book}</a>
+          <a href="#areas" class="border border-white/60 hover:bg-white/10 px-6 py-4 text-sm tracking-widest uppercase">{copy.explore}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-cream">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{copy.answerHeading}</h2>
+        <p class="text-brand-dark/70 text-lg leading-relaxed">{copy.answer}</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-10">{copy.benefitsHeading}</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {copy.benefits.map(benefit => (
+            <div class="bg-brand-cream p-6 md:p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{benefit.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{benefit.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="py-20 bg-brand-cream scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{copy.areasHeading}</h2>
+        <p class="text-brand-dark/70 leading-relaxed max-w-3xl mb-10">{copy.areasIntro}</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          {copy.areas.map(area => (
+            <div class="bg-white p-6 md:p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{area.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{area.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="py-20 bg-white scroll-mt-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{copy.priceHeading}</h2>
+        <p class="text-brand-dark/70 text-lg leading-relaxed mb-8">{copy.priceAnswer}</p>
+        <h3 class="font-serif text-2xl text-brand-dark mb-4">{copy.priceChecklistHeading}</h3>
+        <ul class="list-disc pl-6 space-y-3 text-brand-dark/70 leading-relaxed mb-8">
+          {copy.priceChecklist.map(item => <li>{item}</li>)}
+        </ul>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" data-ga-location="hotel_transfer_price" class="inline-flex justify-center bg-brand-dark hover:bg-brand-dark-lighter text-brand-cream px-6 py-4 text-sm tracking-widest uppercase">{copy.priceCta}</a>
+      </div>
+    </section>
+
+    <section id="travel-time" class="py-20 bg-brand-cream scroll-mt-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{copy.timeHeading}</h2>
+        <p class="text-brand-dark/70 leading-relaxed mb-8">{copy.timeAnswer}</p>
+        <table class="w-full text-left text-brand-dark mb-6">
+          <thead>
+            <tr class="bg-brand-dark text-brand-cream">
+              <th scope="col" class="p-4 font-medium">{copy.routeLabel}</th>
+              <th scope="col" class="p-4 font-medium">{copy.timeLabel}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {copy.times.map(item => <tr class="bg-white border-b border-brand-dark/10"><th scope="row" class="p-4 font-medium">{item.route}</th><td class="p-4 text-brand-dark/70">{item.time}</td></tr>)}
+          </tbody>
+        </table>
+        <p class="text-brand-dark/70 leading-relaxed">{copy.timeNote}</p>
+      </div>
+    </section>
+
+    <section id="requirements" class="py-20 bg-white scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-10">{copy.detailsHeading}</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {copy.details.map(detail => (
+            <div class="bg-brand-cream p-6 md:p-8">
+              <h3 class="font-serif text-2xl text-brand-dark mb-3">{detail.title}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{detail.text}</p>
+            </div>
+          ))}
+        </div>
+        <div class="mt-8 max-w-3xl">
+          <h3 class="font-serif text-2xl text-brand-dark mb-4">{copy.confirmationHeading}</h3>
+          <p class="text-brand-dark/70 leading-relaxed">{copy.confirmationText}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-10 items-center">
+        <figure>
+          <img src="/media/gilimanuk-canggu/1000294433.webp" width="1600" height="1200" loading="lazy" alt={isID ? 'Penumpang di dalam mobil transfer Bali West Transport' : 'Passengers inside a Bali West Transport car'} class="w-full h-auto" />
+          <figcaption class="text-brand-dark/50 text-sm mt-3">{copy.photoCaption}</figcaption>
+        </figure>
+        <div>
+          <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">{copy.journeyHeading}</h2>
+          <p class="text-brand-dark/70 leading-relaxed mb-5">{copy.journeyText}</p>
+          <p class="text-brand-dark/70 leading-relaxed">{copy.offerText}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-10">{copy.faqHeading}</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {copy.faqs.map(faq => (
+            <div class="bg-brand-cream p-6">
+              <h3 class="font-serif text-xl text-brand-dark mb-3">{faq.question}</h3>
+              <p class="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark text-brand-cream">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-3xl md:text-5xl mb-6">{copy.finalHeading}</h2>
+        <p class="text-brand-cream/75 leading-relaxed mb-8">{copy.finalText}</p>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" data-ga-location="hotel_transfer_bottom" class="inline-flex justify-center bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-4 text-sm tracking-widest uppercase">{copy.book}</a>
+      </div>
+    </section>
+
+    <section class="py-16 bg-brand-cream">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <h2 class="font-serif text-3xl text-brand-dark mb-8">{copy.relatedHeading}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {relatedPaths.map((path, index) => <a href={`${prefix}${path}`} class="bg-white p-6 text-brand-dark hover:bg-brand-gold/10">{copy.related[index]}</a>)}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
